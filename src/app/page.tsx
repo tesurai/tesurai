@@ -1,22 +1,19 @@
 // Tesurai company landing page.
-// Rebuilt from the live page with every Abbelo reference removed:
-//  - nav + footer Abbelo links dropped
-//  - "Tessa × Abbelo" section replaced by the Abbelo-free "Wiring Tessa" steps
-//  - "Beyond Abbelo" → "Beyond a person"; the Abbelo card is now a generic
-//    "People" card (keeps the Live proof-of-life)
-//  - hero + consulting copy reworded off Abbelo
-// Colors: black / white / grey only (the Live badge is grey, not green).
+// Positioning: Tesurai builds AI that measures who you're becoming.
+// Tessa is the engine. Today she scores people (B2C, live). Next:
+// she scores the teams those people work in (B2B beachhead).
+// Page is black/white/grey only, no pricing on the page (intentional).
 
-const CAL_LINK = "https://cal.com/tesurai"; // swap for the real handle/slug
+const CAL_LINK = "https://cal.com/tesurai";
 
 export const metadata = {
   title: "Tesurai | AI that measures who you’re becoming",
   description:
-    "Tesurai is a company building AI that turns change into something you can measure. Our first intelligence, Tessa, models you over time and scores your growth — built to measure far more.",
+    "Tesurai builds AI that measures who you’re becoming. Tessa turns the signals you already have into one score, a 90-day forecast, and the next move to move it — for people, and for the teams they work in.",
   openGraph: {
     title: "Tesurai | AI that measures who you’re becoming",
     description:
-      "Tesurai is a company building AI that turns change into something you can measure. Our first intelligence, Tessa, models you over time and scores your growth — built to measure far more.",
+      "Tesurai builds AI that measures who you’re becoming. Tessa turns the signals you already have into one score, a 90-day forecast, and the next move to move it — for people, and for the teams they work in.",
     siteName: "Tesurai",
     type: "website",
   },
@@ -24,7 +21,7 @@ export const metadata = {
     card: "summary_large_image",
     title: "Tesurai | AI that measures who you’re becoming",
     description:
-      "Tesurai is a company building AI that turns change into something you can measure. Our first intelligence, Tessa, models you over time and scores your growth — built to measure far more.",
+      "Tesurai builds AI that measures who you’re becoming. Tessa turns the signals you already have into one score, a 90-day forecast, and the next move to move it — for people, and for the teams they work in.",
   },
 };
 
@@ -68,21 +65,51 @@ export default function Page() {
       </header>
 
       {/* Hero */}
-      <section className="px-6 sm:px-10 pt-44 sm:pt-56 pb-28 sm:pb-40 max-w-[1100px] mx-auto">
+      <section className="px-6 sm:px-10 pt-44 sm:pt-56 pb-20 sm:pb-28 max-w-[1100px] mx-auto">
         <p className="text-[12px] font-mono tracking-[0.18em] uppercase text-white/35 mb-8">
           Tesurai
         </p>
         <h1 className="text-[clamp(2.4rem,6vw,5.5rem)] font-light leading-[1.04] tracking-[-0.035em] text-white max-w-[16ch]">
           We build AI that measures who you’re becoming.
         </h1>
-        <p className="mt-10 text-[clamp(1.05rem,2vw,1.4rem)] font-light leading-relaxed text-white/55 max-w-[640px]">
-          Tesurai is a company building intelligence that turns change into something you can
-          see. Our first, Tessa, models a person over time and scores their growth. She’s live
-          today, scoring real growth — and she’s built to measure far more.
+        <p className="mt-10 text-[clamp(1.05rem,2vw,1.4rem)] font-light leading-relaxed text-white/55 max-w-[680px]">
+          One score that predicts the outcome you actually care about, a 90-day forecast you can
+          trust, and the single next move to move the score. For people, and for the teams they
+          work in.
+        </p>
+        <div className="mt-12 flex flex-wrap items-center gap-4">
+          <a
+            href={CAL_LINK}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 bg-white text-black px-7 py-3.5 text-[13px] font-medium tracking-[0.04em] rounded-full hover:bg-white/85 transition-all duration-300"
+          >
+            Book a call
+            <ArrowRight />
+          </a>
+          <a
+            href="#wiring"
+            className="inline-flex items-center gap-2 text-white/70 border border-white/20 px-7 py-3.5 text-[13px] font-light tracking-[0.04em] rounded-full hover:text-white hover:border-white/40 transition-all duration-300"
+          >
+            See how Tessa wires in
+          </a>
+        </div>
+      </section>
+
+      {/* Live-today proof */}
+      <section className="px-6 sm:px-10 py-20 sm:py-28 max-w-[1100px] mx-auto border-t border-white/[0.06]">
+        <p className="text-[12px] font-mono tracking-[0.18em] uppercase text-white/35 mb-6">
+          [ Live today ]
+        </p>
+        <p className="text-[clamp(1.1rem,1.8vw,1.35rem)] font-light leading-relaxed text-white/70 max-w-[760px]">
+          Tessa already scores who a person is becoming on her first product. Now we bring the
+          same engine to the teams those people work in — so every manager has one number that
+          tracks who each employee is becoming inside your company, and one move to make this
+          week.
         </p>
       </section>
 
-      {/* Tessa — Moneyball */}
+      {/* Tessa — Moneyball mechanism */}
       <section className="px-6 sm:px-10 py-24 sm:py-32 max-w-[1100px] mx-auto border-t border-white/[0.06]">
         <p className="text-[12px] font-mono tracking-[0.18em] uppercase text-white/35 mb-6">
           [ Tessa ]
@@ -90,62 +117,81 @@ export default function Page() {
         <h2 className="text-[clamp(1.8rem,3.5vw,3rem)] font-light leading-[1.1] tracking-[-0.025em] text-white/90 max-w-[20ch]">
           Moneyball for what actually matters.
         </h2>
-        <div className="mt-8 grid gap-6 md:grid-cols-2 max-w-[900px]">
-          <p className="text-[clamp(1rem,1.6vw,1.2rem)] font-light leading-relaxed text-white/50">
-            In Moneyball, a team stopped trusting gut and started measuring the few signals that
-            actually win games, and beat everyone who didn’t. Tessa does that for the things still
-            run on instinct: who you’re becoming, how a business is really doing, where a team is
-            heading.
-          </p>
-          <p className="text-[clamp(1rem,1.6vw,1.2rem)] font-light leading-relaxed text-white/50">
-            She builds a living model of the subject, finds the metrics that actually predict the
-            outcome, and turns them into a score you can move and a forecast you can trust. A new
-            way to play the game, in places that were never kept score.
-          </p>
+        <p className="mt-8 text-[clamp(1rem,1.6vw,1.2rem)] font-light leading-relaxed text-white/50 max-w-[680px]">
+          Most tools give you forty metrics. Tessa picks the three that actually predict your
+          outcome this quarter — and tells you which one to move first.
+        </p>
+
+        <div className="mt-16 grid gap-12 sm:grid-cols-3 max-w-[1000px]">
+          {[
+            {
+              n: "Signals in",
+              d: "We wire the data that already exists in your stack — HRIS, Slack, calendar, perf reviews, surveys, whatever real.",
+            },
+            {
+              n: "Score out",
+              d: "One 0–100 score per subject, fit to the outcome you actually care about. Re-fit weekly as your business changes.",
+            },
+            {
+              n: "Move next",
+              d: "The single next move that lifts the score most — delivered to the human who needs it, every week.",
+            },
+          ].map((row) => (
+            <div key={row.n}>
+              <p className="text-[13px] font-mono tracking-[0.12em] uppercase text-white/45 mb-4">
+                {row.n}
+              </p>
+              <p className="text-[15px] font-light leading-relaxed text-white/55">{row.d}</p>
+            </div>
+          ))}
         </div>
       </section>
 
-      {/* Wiring Tessa — four steps (replaces the old Tessa × Abbelo section) */}
-      <section className="px-6 sm:px-10 py-24 sm:py-32 max-w-[1100px] mx-auto border-t border-white/[0.06]">
+      {/* Wiring Tessa — engagement spec */}
+      <section
+        id="wiring"
+        className="px-6 sm:px-10 py-24 sm:py-32 max-w-[1100px] mx-auto border-t border-white/[0.06] scroll-mt-24"
+      >
         <p className="text-[12px] font-mono tracking-[0.18em] uppercase text-white/35 mb-6">
           [ Wiring Tessa ]
         </p>
-        <h2 className="text-[clamp(1.8rem,3.5vw,3rem)] font-light leading-[1.1] tracking-[-0.025em] text-white/90 max-w-[20ch]">
-          Four steps from gut to score.
+        <h2 className="text-[clamp(1.8rem,3.5vw,3rem)] font-light leading-[1.1] tracking-[-0.025em] text-white/90 max-w-[22ch]">
+          From gut to score in three weeks.
         </h2>
-        <p className="mt-8 text-[clamp(1rem,1.6vw,1.2rem)] font-light leading-relaxed text-white/50 max-w-[640px]">
-          Tessa doesn’t replace the work — she names what to measure, watches it move, and tells
-          you the next thing to do.
+        <p className="mt-8 text-[clamp(1rem,1.6vw,1.2rem)] font-light leading-relaxed text-white/50 max-w-[680px]">
+          White glove, end to end. You don’t build anything — we wire Tessa into the systems you
+          already run on, score the outcome you already care about, and ship the next move into
+          the inbox of the human who needs it.
         </p>
 
         <div className="mt-16 grid gap-10 sm:gap-12 sm:grid-cols-2 lg:grid-cols-4 max-w-[1100px]">
           {[
             {
-              n: "01",
-              t: "Name the subject.",
-              d: "Person, company, creator, team — whatever you want to see becoming.",
+              n: "Week 1",
+              t: "Outcome",
+              d: "We sit with you to name the one outcome you’d bet the quarter on, and the subjects whose scores we’ll move — employees, teams, customers.",
             },
             {
-              n: "02",
-              t: "Connect the signal.",
-              d: "Check-ins, dashboards, posts, commitments — whatever the subject actually does.",
+              n: "Week 2",
+              t: "Wire",
+              d: "We connect Tessa to the data that already exists in your stack — HRIS, Slack, calendar, perf tools, CRM. OAuth in, no code from you.",
             },
             {
-              n: "03",
-              t: "Tessa fits the model.",
-              d: "She finds the few signals that actually predict the outcome and turns them into one score.",
+              n: "Week 3",
+              t: "Score",
+              d: "The first scores and 90-day forecast land. Each manager gets their first weekly move. Real numbers, not a survey.",
             },
             {
-              n: "04",
-              t: "You get the move.",
-              d: "A score you can move, a 90-day forecast, and the one move that moves it most.",
+              n: "Ongoing",
+              t: "Re-fit",
+              d: "Tessa re-fits the model every week as your business changes. The score updates, the next move ships into Slack every Monday.",
             },
           ].map((s) => (
             <div key={s.n}>
-              <p className="text-[13px] font-mono tracking-[0.12em] text-white/30 mb-4 tabular-nums">
+              <p className="text-[12px] font-mono tracking-[0.16em] uppercase text-white/35 mb-3">
                 {s.n}
               </p>
-              <h3 className="text-[clamp(1rem,1.3vw,1.15rem)] font-light tracking-[-0.01em] text-white/90 mb-3">
+              <h3 className="text-[clamp(1.05rem,1.4vw,1.2rem)] font-light tracking-[-0.01em] text-white/90 mb-3">
                 {s.t}
               </h3>
               <p className="text-[14px] font-light leading-relaxed text-white/50">{s.d}</p>
@@ -154,18 +200,14 @@ export default function Page() {
         </div>
       </section>
 
-      {/* Beyond a person */}
+      {/* Where Tessa scores — focused two-card */}
       <section className="px-6 sm:px-10 py-24 sm:py-32 max-w-[1100px] mx-auto border-t border-white/[0.06]">
         <p className="text-[12px] font-mono tracking-[0.18em] uppercase text-white/35 mb-6">
-          [ Beyond a person ]
+          [ Where Tessa scores ]
         </p>
-        <h2 className="text-[clamp(1.8rem,3.5vw,3rem)] font-light leading-[1.1] tracking-[-0.025em] text-white/90 max-w-[22ch]">
-          The same engine measures more than a person.
+        <h2 className="text-[clamp(1.8rem,3.5vw,3rem)] font-light leading-[1.1] tracking-[-0.025em] text-white/90 max-w-[24ch]">
+          The same engine, measuring more than a person.
         </h2>
-        <p className="mt-8 text-[clamp(1rem,1.6vw,1.2rem)] font-light leading-relaxed text-white/50 max-w-[680px]">
-          Tessa models any system that changes over time and makes its progress legible. A person
-          becoming who they want to be is the first case. It is not the last.
-        </p>
 
         <div className="mt-16 grid gap-px sm:grid-cols-2 bg-white/[0.06] border border-white/[0.06] rounded-2xl overflow-hidden">
           <div className="bg-black p-8 sm:p-10 flex flex-col">
@@ -182,36 +224,8 @@ export default function Page() {
             </h3>
             <p className="text-[15px] font-light leading-relaxed text-white/50">
               Tessa reads every check-in, commitment, and habit, and turns it into a
-              becoming-score from 0 to 100 — the first number that tracks the person you’re turning
-              into. Live today.
-            </p>
-          </div>
-          <div className="bg-black p-8 sm:p-10 flex flex-col">
-            <div className="flex items-center gap-3 mb-5">
-              <span className="text-[11px] font-mono tracking-[0.14em] uppercase text-white/40">
-                Founders
-              </span>
-            </div>
-            <h3 className="text-[clamp(1.25rem,2vw,1.6rem)] font-light tracking-[-0.02em] text-white/90 mb-4">
-              Your company, scored
-            </h3>
-            <p className="text-[15px] font-light leading-relaxed text-white/50">
-              Point Tessa at your metrics and she models the health of the business itself — where
-              it’s strong, where it’s drifting, and where the next 90 days are heading.
-            </p>
-          </div>
-          <div className="bg-black p-8 sm:p-10 flex flex-col">
-            <div className="flex items-center gap-3 mb-5">
-              <span className="text-[11px] font-mono tracking-[0.14em] uppercase text-white/40">
-                Creators
-              </span>
-            </div>
-            <h3 className="text-[clamp(1.25rem,2vw,1.6rem)] font-light tracking-[-0.02em] text-white/90 mb-4">
-              The pattern behind the reach
-            </h3>
-            <p className="text-[15px] font-light leading-relaxed text-white/50">
-              Tessa reads what your audience actually responds to across everything you post, and
-              tells you what to make next instead of guessing.
+              becoming-score from 0 to 100 — the first number that tracks the person you’re
+              turning into. Live today.
             </p>
           </div>
           <div className="bg-black p-8 sm:p-10 flex flex-col">
@@ -221,90 +235,131 @@ export default function Page() {
               </span>
             </div>
             <h3 className="text-[clamp(1.25rem,2vw,1.6rem)] font-light tracking-[-0.02em] text-white/90 mb-4">
-              Performance you can see move
+              Your employees, scored
             </h3>
             <p className="text-[15px] font-light leading-relaxed text-white/50">
-              Measure output and culture as they actually change, week over week, so a team knows
-              what it’s becoming, not just what it shipped.
+              Point Tessa at the signals you already have — HRIS, Slack, calendar, perf reviews —
+              and she scores who each employee is becoming inside your company. Every manager
+              gets one move per direct report, every week.
             </p>
+          </div>
+        </div>
+
+        <p className="mt-12 text-[15px] font-light leading-relaxed text-white/40 max-w-[680px]">
+          Beyond people and teams, the same engine measures companies, customers, and audiences.
+          Tessa is built to measure any system that changes over time.
+        </p>
+      </section>
+
+      {/* Is Tessa for you? — honest filter */}
+      <section className="px-6 sm:px-10 py-24 sm:py-32 max-w-[1100px] mx-auto border-t border-white/[0.06]">
+        <p className="text-[12px] font-mono tracking-[0.18em] uppercase text-white/35 mb-6">
+          [ Is Tessa for you? ]
+        </p>
+        <h2 className="text-[clamp(1.8rem,3.5vw,3rem)] font-light leading-[1.1] tracking-[-0.025em] text-white/90 max-w-[18ch]">
+          The honest filter.
+        </h2>
+
+        <div className="mt-14 grid gap-10 sm:gap-px sm:grid-cols-2 sm:bg-white/[0.06] sm:border sm:border-white/[0.06] sm:rounded-2xl overflow-hidden">
+          <div className="bg-black p-8 sm:p-10">
+            <p className="text-[12px] font-mono tracking-[0.16em] uppercase text-white/55 mb-5">
+              Yes if
+            </p>
+            <ul className="space-y-4">
+              {[
+                "You have one outcome you’d bet the quarter on.",
+                "You already have at least one stream of signal — HRIS, perf tool, Slack, CRM, anything real.",
+                "You’re tired of dashboards that don’t end in a decision.",
+              ].map((line) => (
+                <li
+                  key={line}
+                  className="text-[15px] font-light leading-relaxed text-white/65 pl-5 relative"
+                >
+                  <span className="absolute left-0 top-[0.6em] inline-block w-2 h-px bg-white/40" />
+                  {line}
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div className="bg-black p-8 sm:p-10">
+            <p className="text-[12px] font-mono tracking-[0.16em] uppercase text-white/35 mb-5">
+              Not yet if
+            </p>
+            <ul className="space-y-4">
+              {[
+                "You want a dashboard, not a score.",
+                "You want a chatbot or a coach.",
+                "The outcome you care about isn’t yet named — Tessa works when the target is sharp.",
+              ].map((line) => (
+                <li
+                  key={line}
+                  className="text-[15px] font-light leading-relaxed text-white/35 pl-5 relative"
+                >
+                  <span className="absolute left-0 top-[0.6em] inline-block w-2 h-px bg-white/20" />
+                  {line}
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
       </section>
 
-      {/* How we build */}
+      {/* FAQ */}
       <section className="px-6 sm:px-10 py-24 sm:py-32 max-w-[1100px] mx-auto border-t border-white/[0.06]">
         <p className="text-[12px] font-mono tracking-[0.18em] uppercase text-white/35 mb-6">
-          [ How we build ]
+          [ Questions, answered ]
         </p>
-        <div className="grid gap-12 sm:grid-cols-3 max-w-[1000px]">
+        <div className="mt-12 grid gap-12 sm:grid-cols-2 max-w-[1000px]">
           {[
             {
-              n: "01",
-              d: "Model the subject, not the surface. A real picture of how something is changing beats a wall of disconnected metrics.",
+              q: "How is Tessa different from Lattice, Culture Amp, or Gong?",
+              a: "Those products give you a dashboard or a coach. Tessa picks the few signals that actually predict your outcome, and ships you one score, one forecast, and one next move. Fewer numbers, more conviction.",
             },
             {
-              n: "02",
-              d: "One score, one next move. Intelligence is only useful when it ends in a decision a person can actually make.",
+              q: "Who owns the data?",
+              a: "You do. We work in your warehouse when you have one, and host yours when you don’t. Your data never trains anyone else’s model.",
             },
             {
-              n: "03",
-              d: "The person stays in charge. Tessa reads, scores, and forecasts. You decide.",
+              q: "What if our signals are messy?",
+              a: "They always are. We wire what’s there, score against what matters, and tell you when a signal stream is too noisy to trust. Honesty beats false precision.",
             },
-          ].map((p) => (
-            <div key={p.n}>
-              <p className="text-[13px] font-mono tracking-[0.12em] text-white/30 mb-4 tabular-nums">
-                {p.n}
-              </p>
-              <p className="text-[clamp(1rem,1.5vw,1.15rem)] font-light leading-relaxed text-white/60">
-                {p.d}
-              </p>
+            {
+              q: "What happens after the first three weeks?",
+              a: "Tessa re-fits the model weekly as your business changes, ships the next move to the right human, and the score keeps moving. You meet with us monthly to recalibrate the outcome.",
+            },
+          ].map((f) => (
+            <div key={f.q}>
+              <h3 className="text-[clamp(1.05rem,1.5vw,1.2rem)] font-light tracking-[-0.01em] text-white/90 mb-3">
+                {f.q}
+              </h3>
+              <p className="text-[14px] font-light leading-relaxed text-white/55">{f.a}</p>
             </div>
           ))}
         </div>
       </section>
 
-      {/* What's next */}
+      {/* Closing CTA */}
       <section className="px-6 sm:px-10 py-28 sm:py-40 max-w-[1100px] mx-auto border-t border-white/[0.06] text-center">
         <p className="text-[12px] font-mono tracking-[0.18em] uppercase text-white/35 mb-6">
-          [ What’s next ]
+          [ Next ]
         </p>
-        <h2 className="text-[clamp(1.8rem,4vw,3.4rem)] font-light leading-[1.08] tracking-[-0.03em] text-white/90 max-w-[16ch] mx-auto">
-          Tessa is the first of many.
+        <h2 className="text-[clamp(1.8rem,4vw,3.4rem)] font-light leading-[1.08] tracking-[-0.03em] text-white/90 max-w-[18ch] mx-auto">
+          Ready to see who your team is becoming?
         </h2>
-        <p className="mt-8 text-[clamp(1rem,1.7vw,1.25rem)] font-light leading-relaxed text-white/50 max-w-[600px] mx-auto">
-          Tesurai is a company, not a single product. More are coming, each built on the same
-          belief: if you can measure it, you can change it.
+        <p className="mt-8 text-[clamp(1rem,1.6vw,1.2rem)] font-light leading-relaxed text-white/50 max-w-[560px] mx-auto">
+          One outcome. One score. One move per week. Book a call to scope the first three weeks.
         </p>
-      </section>
-
-      {/* Consulting */}
-      <section className="px-6 sm:px-10 py-24 sm:py-36 max-w-[1100px] mx-auto border-t border-white/[0.06]">
-        <p className="text-[12px] font-mono tracking-[0.18em] uppercase text-white/35 mb-6">
-          [ Consulting ]
-        </p>
-        <h2 className="text-[clamp(1.8rem,3.5vw,3rem)] font-light leading-[1.1] tracking-[-0.025em] text-white/90 max-w-[18ch]">
-          Work with me directly.
-        </h2>
-        <div className="mt-8 grid gap-6 md:grid-cols-2 max-w-[900px]">
-          <p className="text-[clamp(1rem,1.6vw,1.2rem)] font-light leading-relaxed text-white/50">
-            I’m Matthew Werner, founder of Tesurai. I build AI that measures what matters — Tessa
-            for people, teams, and businesses.
-          </p>
-          <p className="text-[clamp(1rem,1.6vw,1.2rem)] font-light leading-relaxed text-white/50">
-            I take on a small number of founders and teams to help them build AI products and turn
-            their business into something they can actually measure and move — the Moneyball way.
-            If that’s the game you want to play, let’s talk.
-          </p>
+        <div className="mt-12 flex flex-wrap items-center justify-center gap-4">
+          <a
+            href={CAL_LINK}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 bg-white text-black px-8 py-4 text-[14px] font-medium tracking-[0.04em] rounded-full hover:bg-white/85 transition-all duration-300"
+          >
+            Book a call
+            <ArrowRight />
+          </a>
         </div>
-        <a
-          href={CAL_LINK}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-flex items-center gap-2 mt-12 bg-white text-black px-8 py-4 text-[14px] font-medium tracking-[0.04em] rounded-full hover:bg-white/85 transition-all duration-300"
-        >
-          Book a call
-          <ArrowRight />
-        </a>
         <p className="mt-5 text-[13px] font-light text-white/35">
           Or email{" "}
           <a
