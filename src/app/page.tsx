@@ -11,11 +11,11 @@
 const CAL_LINK = "https://cal.com/tesurai";
 
 export const metadata = {
-  title: "Tesurai | Make every customer win",
+  title: "Tesurai | Find the moves that win every customer",
   description:
     "Tesurai puts Tessa in your product so each customer gets the next move they need to win. When more customers win, more of them stay and your business compounds. The same Tessa runs inside Abbelo today, helping real people grow.",
   openGraph: {
-    title: "Tesurai | Make every customer win",
+    title: "Tesurai | Find the moves that win every customer",
     description:
       "Tesurai puts Tessa in your product so each customer gets the next move they need to win. When more customers win, more of them stay and your business compounds. The same Tessa runs inside Abbelo today, helping real people grow.",
     siteName: "Tesurai",
@@ -23,7 +23,7 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Tesurai | Make every customer win",
+    title: "Tesurai | Find the moves that win every customer",
     description:
       "Tesurai puts Tessa in your product so each customer gets the next move they need to win. When more customers win, more of them stay and your business compounds. The same Tessa runs inside Abbelo today, helping real people grow.",
   },
@@ -73,8 +73,8 @@ export default function Page() {
         <p className="text-[12px] font-mono tracking-[0.18em] uppercase text-white/35 mb-8">
           Tesurai
         </p>
-        <h1 className="text-[clamp(2.4rem,5.5vw,5rem)] font-extralight leading-[1.05] tracking-[-0.025em] text-white max-w-[18ch]">
-          Make every customer win.
+        <h1 className="text-[clamp(2.2rem,5vw,4.5rem)] font-extralight leading-[1.08] tracking-[-0.025em] text-white max-w-[22ch]">
+          Find the moves that win every customer.
         </h1>
         <p className="mt-10 text-[clamp(1rem,1.55vw,1.2rem)] font-light leading-relaxed text-white/65 max-w-[640px]">
           People sign up for your product wanting something. Most quit before they get there.
