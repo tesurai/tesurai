@@ -11,21 +11,21 @@
 const CAL_LINK = "https://cal.com/tesurai";
 
 export const metadata = {
-  title: "Tesurai | Help every customer get the result they came for",
+  title: "Tesurai | Make every customer win",
   description:
-    "Tesurai builds Tessa into your product. Tessa watches every one of your customers, learns what works, and tells each of them the next thing to do. The same Tessa runs inside Abbelo today, helping real people grow. We set the whole thing up so more of your customers get the result they came for.",
+    "Tesurai puts Tessa in your product so each customer gets the next move they need to win. When more customers win, more of them stay and your business compounds. The same Tessa runs inside Abbelo today, helping real people grow.",
   openGraph: {
-    title: "Tesurai | Help every customer get the result they came for",
+    title: "Tesurai | Make every customer win",
     description:
-      "Tesurai builds Tessa into your product. Tessa watches every one of your customers, learns what works, and tells each of them the next thing to do. The same Tessa runs inside Abbelo today, helping real people grow. We set the whole thing up so more of your customers get the result they came for.",
+      "Tesurai puts Tessa in your product so each customer gets the next move they need to win. When more customers win, more of them stay and your business compounds. The same Tessa runs inside Abbelo today, helping real people grow.",
     siteName: "Tesurai",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Tesurai | Help every customer get the result they came for",
+    title: "Tesurai | Make every customer win",
     description:
-      "Tesurai builds Tessa into your product. Tessa watches every one of your customers, learns what works, and tells each of them the next thing to do. The same Tessa runs inside Abbelo today, helping real people grow. We set the whole thing up so more of your customers get the result they came for.",
+      "Tesurai puts Tessa in your product so each customer gets the next move they need to win. When more customers win, more of them stay and your business compounds. The same Tessa runs inside Abbelo today, helping real people grow.",
   },
 };
 
@@ -73,14 +73,14 @@ export default function Page() {
         <p className="text-[12px] font-mono tracking-[0.18em] uppercase text-white/35 mb-8">
           Tesurai
         </p>
-        <h1 className="text-[clamp(2.2rem,5vw,4.5rem)] font-extralight leading-[1.1] tracking-[-0.025em] text-white max-w-[22ch]">
-          Help every customer get the result they came for.
+        <h1 className="text-[clamp(2.4rem,5.5vw,5rem)] font-extralight leading-[1.05] tracking-[-0.025em] text-white max-w-[18ch]">
+          Make every customer win.
         </h1>
         <p className="mt-10 text-[clamp(1rem,1.55vw,1.2rem)] font-light leading-relaxed text-white/65 max-w-[640px]">
-          Tesurai builds Tessa into your product. Tessa watches every one of your customers,
-          learns what works, and tells each of them the next thing to do. It is already running
-          inside Abbelo today, helping real people grow. We set the whole thing up so more of
-          your customers reach what they came for.
+          People sign up for your product wanting something. Most quit before they get there.
+          Tesurai puts Tessa in your product so each customer gets the next move they need to
+          win. When more customers win, your business compounds. The same Tessa runs inside
+          Abbelo today, helping real people grow.
         </p>
         <div className="mt-12">
           <a
@@ -101,13 +101,14 @@ export default function Page() {
           [ What we believe ]
         </p>
         <h2 className="text-[clamp(1.7rem,3.2vw,2.6rem)] font-light leading-[1.15] tracking-[-0.02em] text-white max-w-[22ch]">
-          Most customers never get the result they came for.
+          Customers do not churn. They quit.
         </h2>
         <p className="mt-8 text-[clamp(1rem,1.55vw,1.2rem)] font-light leading-relaxed text-white/65 max-w-[720px]">
-          People sign up for your product because they want something. A new skill. A new
-          habit. A new shape. A better life. Most of them quit before they get there. We
-          believe your product can do better than that. With Tessa watching each customer and
-          pointing them at the next move, more of them reach what they came for.
+          Churn is a polite word for what really happens. A real person signed up for your
+          product because they wanted something. They could not get to it. They walked away.
+          We believe the way to grow is not to chase more sign ups. The way to grow is to help
+          the customers you already have actually get there. Then they stay. Then they tell
+          their friends. That is when a consumer business starts to compound.
         </p>
       </section>
 
@@ -200,11 +201,11 @@ export default function Page() {
           [ Next ]
         </p>
         <h2 className="text-[clamp(1.8rem,3.8vw,3rem)] font-light leading-[1.1] tracking-[-0.025em] text-white max-w-[20ch] mx-auto">
-          Help more of your customers get there.
+          More wins. More growth.
         </h2>
         <p className="mt-8 text-[clamp(1rem,1.55vw,1.2rem)] font-light leading-relaxed text-white/60 max-w-[560px] mx-auto">
           Book a call. We will look at your product together and figure out what it takes to
-          get more customers to their result. You will see a clear price before any work starts.
+          get more customers to win. You will see a clear price before any work starts.
         </p>
         <div className="mt-12 flex flex-wrap items-center justify-center gap-4">
           <a
