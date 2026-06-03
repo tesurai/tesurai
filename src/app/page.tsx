@@ -73,7 +73,7 @@ export default function Page() {
           Tesurai
         </p>
         <h1 className="text-[clamp(2.2rem,5vw,4.5rem)] font-extralight leading-[1.08] tracking-[-0.025em] text-white max-w-[22ch]">
-          The intelligence layer for consumer products.
+          The intelligence layer for consumer products
         </h1>
         <p className="mt-10 text-[clamp(1rem,1.55vw,1.2rem)] font-light leading-relaxed text-white/65 max-w-[640px]">
           Tessa watches every customer, predicts where they are heading, and sends them the
