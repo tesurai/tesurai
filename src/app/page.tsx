@@ -1,29 +1,31 @@
 // Tesurai company landing page.
-// One product: Tessa, set up in your business for you. For solo founders
-// building consumer apps and products that real people use.
-// Visual system applied here is in the x.ai family: pure black, single
-// type weight (normal), hairline borders, mono labels and numerals,
-// outline pills with one filled pill per page.
-// Copy rules: fifth grade reading level, clear not concise, no dashes anywhere.
+// Tesurai sells one thing: putting Tessa in your product so more of your
+// customers get the result they came for. For founders building consumer
+// apps and products that real people use.
+// Visual system in the x.ai family. Pure black. Lighter type. Hairline
+// borders. Mono labels and numerals. Outline pills with one filled pill
+// per page on the closing CTA.
+// Copy rules: fifth grade reading level, clear not concise, no dashes
+// anywhere. No language that frames Tessa as a team replacement.
 
 const CAL_LINK = "https://cal.com/tesurai";
 
 export const metadata = {
-  title: "Tesurai | We put Tessa in your business",
+  title: "Tesurai | Help every customer get the result they came for",
   description:
-    "Tesurai is for solo founders building consumer apps and products. We figure out your business, build the formula for Tessa, and put it into your product. You stay solo. Your customers get better results without you having to hire a team.",
+    "Tesurai builds Tessa into your product. Tessa watches every one of your customers, learns what works, and tells each of them the next thing to do. The same Tessa runs inside Abbelo today, helping real people grow. We set the whole thing up so more of your customers get the result they came for.",
   openGraph: {
-    title: "Tesurai | We put Tessa in your business",
+    title: "Tesurai | Help every customer get the result they came for",
     description:
-      "Tesurai is for solo founders building consumer apps and products. We figure out your business, build the formula for Tessa, and put it into your product. You stay solo. Your customers get better results without you having to hire a team.",
+      "Tesurai builds Tessa into your product. Tessa watches every one of your customers, learns what works, and tells each of them the next thing to do. The same Tessa runs inside Abbelo today, helping real people grow. We set the whole thing up so more of your customers get the result they came for.",
     siteName: "Tesurai",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Tesurai | We put Tessa in your business",
+    title: "Tesurai | Help every customer get the result they came for",
     description:
-      "Tesurai is for solo founders building consumer apps and products. We figure out your business, build the formula for Tessa, and put it into your product. You stay solo. Your customers get better results without you having to hire a team.",
+      "Tesurai builds Tessa into your product. Tessa watches every one of your customers, learns what works, and tells each of them the next thing to do. The same Tessa runs inside Abbelo today, helping real people grow. We set the whole thing up so more of your customers get the result they came for.",
   },
 };
 
@@ -59,7 +61,7 @@ export default function Page() {
             href={CAL_LINK}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-white border border-white/25 px-5 py-2 text-[12px] font-normal tracking-[0.1em] uppercase rounded-full hover:bg-white hover:text-black transition-all duration-300"
+            className="text-white border border-white/25 px-5 py-2 text-[12px] font-light tracking-[0.1em] uppercase rounded-full hover:bg-white hover:text-black transition-all duration-300"
           >
             Book a call
           </a>
@@ -67,26 +69,25 @@ export default function Page() {
       </header>
 
       {/* Hero */}
-      <section className="px-6 sm:px-10 pt-52 sm:pt-64 pb-24 sm:pb-32 max-w-[1100px] mx-auto">
+      <section className="px-6 sm:px-10 pt-44 sm:pt-56 pb-20 sm:pb-28 max-w-[1100px] mx-auto">
         <p className="text-[12px] font-mono tracking-[0.18em] uppercase text-white/35 mb-8">
           Tesurai
         </p>
-        <h1 className="text-[clamp(2.6rem,6.5vw,6rem)] font-normal leading-[1.02] tracking-[-0.04em] text-white max-w-[16ch]">
-          We put Tessa in your business.
+        <h1 className="text-[clamp(2.2rem,5vw,4.5rem)] font-extralight leading-[1.1] tracking-[-0.025em] text-white max-w-[22ch]">
+          Help every customer get the result they came for.
         </h1>
-        <p className="mt-10 text-[clamp(1.05rem,2vw,1.4rem)] font-normal leading-relaxed text-white/65 max-w-[700px]">
-          Tesurai is for solo founders building apps and products that real people use. Tessa
-          is the AI system that watches every one of your customers and tells each of them the
-          next thing to do. It is already running inside Abbelo today. We bring Tessa into your
-          product and set the whole thing up for you. You stay solo while your customers get
-          better results.
+        <p className="mt-10 text-[clamp(1rem,1.55vw,1.2rem)] font-light leading-relaxed text-white/65 max-w-[640px]">
+          Tesurai builds Tessa into your product. Tessa watches every one of your customers,
+          learns what works, and tells each of them the next thing to do. It is already running
+          inside Abbelo today, helping real people grow. We set the whole thing up so more of
+          your customers reach what they came for.
         </p>
-        <div className="mt-14">
+        <div className="mt-12">
           <a
             href={CAL_LINK}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 text-white border border-white/25 px-7 py-4 text-[13px] font-normal tracking-[0.04em] rounded-full hover:bg-white hover:text-black transition-all duration-300"
+            className="inline-flex items-center gap-2 text-white border border-white/25 px-7 py-4 text-[13px] font-light tracking-[0.04em] rounded-full hover:bg-white hover:text-black transition-all duration-300"
           >
             Book a call
             <ArrowRight />
@@ -99,15 +100,14 @@ export default function Page() {
         <p className="text-[12px] font-mono tracking-[0.18em] uppercase text-white/35 mb-6">
           [ What we believe ]
         </p>
-        <h2 className="text-[clamp(1.8rem,3.5vw,3rem)] font-normal leading-[1.08] tracking-[-0.03em] text-white max-w-[20ch]">
-          You do not need a big team to build a big business.
+        <h2 className="text-[clamp(1.7rem,3.2vw,2.6rem)] font-light leading-[1.15] tracking-[-0.02em] text-white max-w-[22ch]">
+          Most customers never get the result they came for.
         </h2>
-        <p className="mt-8 text-[clamp(1rem,1.6vw,1.2rem)] font-normal leading-relaxed text-white/65 max-w-[720px]">
-          The best tools used to belong to big companies with big teams. That is changing fast.
-          One founder with the right AI can now do the work of many people. We are here for
-          solo founders building consumer apps and products. The ones who want to grow a real
-          business without hiring a big team to do it. We bring you the tools you need, and we
-          set them up for you, all the way through.
+        <p className="mt-8 text-[clamp(1rem,1.55vw,1.2rem)] font-light leading-relaxed text-white/65 max-w-[720px]">
+          People sign up for your product because they want something. A new skill. A new
+          habit. A new shape. A better life. Most of them quit before they get there. We
+          believe your product can do better than that. With Tessa watching each customer and
+          pointing them at the next move, more of them reach what they came for.
         </p>
       </section>
 
@@ -116,14 +116,15 @@ export default function Page() {
         <p className="text-[12px] font-mono tracking-[0.18em] uppercase text-white/35 mb-6">
           [ Tessa ]
         </p>
-        <h2 className="text-[clamp(1.8rem,3.5vw,3rem)] font-normal leading-[1.08] tracking-[-0.03em] text-white max-w-[22ch]">
-          Built to do the work of a team.
+        <h2 className="text-[clamp(1.7rem,3.2vw,2.6rem)] font-light leading-[1.15] tracking-[-0.02em] text-white max-w-[22ch]">
+          How Tessa helps each customer succeed.
         </h2>
-        <p className="mt-8 text-[clamp(1rem,1.6vw,1.2rem)] font-normal leading-relaxed text-white/65 max-w-[720px]">
-          Tessa gives every one of your customers a score from 0 to 100. The score shows how
-          close that customer is to the result they came to your product for. Tessa also tells
-          each customer the next thing to do, and shows you the big picture of who is doing
-          well and who is stuck. We put Tessa in your business in three steps.
+        <p className="mt-8 text-[clamp(1rem,1.55vw,1.2rem)] font-light leading-relaxed text-white/65 max-w-[720px]">
+          Tessa watches every one of your customers as they use your product. It gives each
+          customer a score from 0 to 100, showing how close they are to the result they came
+          for. Then it tells them the next thing to do, the one small step that will move their
+          score up the most. And it shows you the big picture, so you can see which customers
+          are doing well and which ones need help. We put Tessa in your product in three steps.
         </p>
 
         <div className="mt-16 grid gap-5 sm:gap-6 sm:grid-cols-3 max-w-[1100px]">
@@ -140,21 +141,21 @@ export default function Page() {
             },
             {
               n: "03",
-              t: "Put it in your business",
-              d: "We connect Tessa to your product and to the tools you already use. We get it live in your business in about three weeks. You stay solo. Tessa runs every day, scoring every customer and pointing them at their next move.",
+              t: "Put it in your product",
+              d: "We connect Tessa to your product and to the tools you already use. We get it live in about three weeks. From then on, Tessa runs every day. It scores every customer and gives each one the next move that gets them closer to the result they came for.",
             },
           ].map((s) => (
             <div
               key={s.n}
               className="bg-white/[0.02] border border-white/[0.10] rounded-lg p-6 sm:p-7 flex flex-col"
             >
-              <p className="text-[clamp(2rem,3.5vw,2.75rem)] font-mono font-normal leading-none tracking-[-0.02em] text-white/35 mb-8 tabular-nums">
+              <p className="text-[clamp(2rem,3.5vw,2.75rem)] font-mono font-light leading-none tracking-[-0.02em] text-white/35 mb-8 tabular-nums">
                 {s.n}
               </p>
-              <h3 className="text-[clamp(1.1rem,1.5vw,1.3rem)] font-normal tracking-[-0.015em] text-white mb-3">
+              <h3 className="text-[clamp(1.05rem,1.4vw,1.25rem)] font-light tracking-[-0.01em] text-white mb-3">
                 {s.t}
               </h3>
-              <p className="text-[14.5px] font-normal leading-relaxed text-white/60">{s.d}</p>
+              <p className="text-[14.5px] font-light leading-relaxed text-white/60">{s.d}</p>
             </div>
           ))}
         </div>
@@ -170,23 +171,23 @@ export default function Page() {
             Case 001 / 2026
           </span>
         </div>
-        <h2 className="text-[clamp(1.8rem,3.5vw,3rem)] font-normal leading-[1.08] tracking-[-0.03em] text-white max-w-[18ch]">
+        <h2 className="text-[clamp(1.7rem,3.2vw,2.6rem)] font-light leading-[1.15] tracking-[-0.02em] text-white max-w-[20ch]">
           How Abbelo uses Tessa.
         </h2>
         <div className="mt-8 grid gap-6 md:grid-cols-2 max-w-[920px]">
-          <p className="text-[clamp(1rem,1.6vw,1.2rem)] font-normal leading-relaxed text-white/65">
+          <p className="text-[clamp(1rem,1.55vw,1.2rem)] font-light leading-relaxed text-white/65">
             Abbelo is an app that helps people grow into who they want to be. People sign up to
             work on themselves. They talk through their goals out loud, like a voice call with
             a coach. Tessa runs behind every one of those sessions, listening and learning.
           </p>
-          <p className="text-[clamp(1rem,1.6vw,1.2rem)] font-normal leading-relaxed text-white/65">
+          <p className="text-[clamp(1rem,1.55vw,1.2rem)] font-light leading-relaxed text-white/65">
             Tessa reads each session. It tracks the habits people keep and the promises they
             make. It gives each user a score from 0 to 100, which shows how much they have
             grown over time. And it gives them the next small step to take, the one thing that
             will move their score up the most.
           </p>
         </div>
-        <p className="mt-10 text-[clamp(1.05rem,1.7vw,1.3rem)] font-normal leading-relaxed text-white/75 max-w-[760px]">
+        <p className="mt-10 text-[clamp(1.05rem,1.65vw,1.25rem)] font-light leading-relaxed text-white/75 max-w-[760px]">
           Abbelo is live today. Tessa is running inside it, scoring real users every day. The
           same Tessa we set up for you is the one running there. You can see how it works in a
           real product before we ever touch yours.
@@ -198,12 +199,12 @@ export default function Page() {
         <p className="text-[12px] font-mono tracking-[0.18em] uppercase text-white/35 mb-6">
           [ Next ]
         </p>
-        <h2 className="text-[clamp(1.8rem,4vw,3.4rem)] font-normal leading-[1.05] tracking-[-0.035em] text-white max-w-[18ch] mx-auto">
-          Let us put Tessa in your business.
+        <h2 className="text-[clamp(1.8rem,3.8vw,3rem)] font-light leading-[1.1] tracking-[-0.025em] text-white max-w-[20ch] mx-auto">
+          Help more of your customers get there.
         </h2>
-        <p className="mt-8 text-[clamp(1rem,1.6vw,1.2rem)] font-normal leading-relaxed text-white/60 max-w-[560px] mx-auto">
+        <p className="mt-8 text-[clamp(1rem,1.55vw,1.2rem)] font-light leading-relaxed text-white/60 max-w-[560px] mx-auto">
           Book a call. We will look at your product together and figure out what it takes to
-          put Tessa in it. You will see a clear price before any work starts.
+          get more customers to their result. You will see a clear price before any work starts.
         </p>
         <div className="mt-12 flex flex-wrap items-center justify-center gap-4">
           <a
@@ -216,7 +217,7 @@ export default function Page() {
             <ArrowRight />
           </a>
         </div>
-        <p className="mt-5 text-[13px] font-normal text-white/40">
+        <p className="mt-5 text-[13px] font-light text-white/40">
           Or email{" "}
           <a
             href="mailto:hello@tesurai.com"
@@ -236,7 +237,7 @@ export default function Page() {
           <div className="flex items-center gap-8">
             <a
               href="mailto:hello@tesurai.com"
-              className="text-white/50 hover:text-white text-[14px] font-normal transition-colors"
+              className="text-white/50 hover:text-white text-[14px] font-light transition-colors"
             >
               hello@tesurai.com
             </a>
