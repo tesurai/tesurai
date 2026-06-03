@@ -1,10 +1,11 @@
 // Tesurai company landing page.
 // Tesurai is a portfolio of AI tools and consulting.
-// Two things are promoted now: Tessa (a free tool) and consulting (the paid product).
-// Tessa is free on the page. The live free tool is coming soon; until the
-// reusable Tessa system lands, the Tessa section shows an honest "free, coming
-// soon" state plus a real case study of how Abbelo uses Tessa.
+// Two things are promoted now: Tessa (a free tool, live on this page) and
+// consulting (the paid product). The Tessa tool is built from the abbelo
+// Tessa recipe (one shot judge prompt, no persistence, no ledger).
 // Copy rules: fifth grade reading level, clear not concise, no dashes anywhere.
+
+import TessaTool from "./tessa-tool";
 
 const CAL_LINK = "https://cal.com/tesurai";
 
@@ -168,16 +169,7 @@ export default function Page() {
           ))}
         </div>
 
-        <div className="mt-16 rounded-2xl border border-white/[0.12] bg-white/[0.02] p-8 sm:p-10 max-w-[1000px]">
-          <p className="text-[12px] font-mono tracking-[0.16em] uppercase text-white/45 mb-3">
-            Free for everyone
-          </p>
-          <p className="text-[clamp(1.05rem,1.7vw,1.3rem)] font-light leading-relaxed text-white/80">
-            Tessa is free. No sign up. No email. We are putting her right here on this page so
-            you can use her for free. She is coming very soon. Want her sooner? Book a call and
-            we will set her up with you.
-          </p>
-        </div>
+        <TessaTool />
       </section>
 
       {/* Case study: Abbelo */}
