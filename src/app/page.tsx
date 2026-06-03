@@ -9,11 +9,11 @@ const CAL_LINK = "https://cal.com/tesurai";
 export const metadata = {
   title: "Tesurai | We put Tessa in your business",
   description:
-    "We figure out your business, build the formula for Tessa, and put it into your product. You stay solo. Your customers get better results without you having to hire.",
+    "Tesurai is for solo founders building consumer apps and products. We figure out your business, build the formula for Tessa, and put it into your product. You stay solo. Your customers get better results without you having to hire a team.",
   openGraph: {
     title: "Tesurai | We put Tessa in your business",
     description:
-      "We figure out your business, build the formula for Tessa, and put it into your product. You stay solo. Your customers get better results without you having to hire.",
+      "Tesurai is for solo founders building consumer apps and products. We figure out your business, build the formula for Tessa, and put it into your product. You stay solo. Your customers get better results without you having to hire a team.",
     siteName: "Tesurai",
     type: "website",
   },
@@ -21,7 +21,7 @@ export const metadata = {
     card: "summary_large_image",
     title: "Tesurai | We put Tessa in your business",
     description:
-      "We figure out your business, build the formula for Tessa, and put it into your product. You stay solo. Your customers get better results without you having to hire.",
+      "Tesurai is for solo founders building consumer apps and products. We figure out your business, build the formula for Tessa, and put it into your product. You stay solo. Your customers get better results without you having to hire a team.",
   },
 };
 
@@ -73,9 +73,11 @@ export default function Page() {
           We put Tessa in your business.
         </h1>
         <p className="mt-10 text-[clamp(1.05rem,2vw,1.4rem)] font-light leading-relaxed text-white/55 max-w-[700px]">
-          Tessa is an AI system that watches every customer in your product and tells them the
-          next thing to do. It is the same Tessa that runs inside Abbelo today. We put it in
-          your business next, end to end. You stay solo.
+          Tesurai is for solo founders building apps and products that real people use. Tessa
+          is the AI system that watches every one of your customers and tells each of them the
+          next thing to do. It is already running inside Abbelo today. We bring Tessa into your
+          product and set the whole thing up for you. You stay solo while your customers get
+          better results.
         </p>
         <div className="mt-12">
           <a
@@ -100,9 +102,10 @@ export default function Page() {
         </h2>
         <p className="mt-8 text-[clamp(1rem,1.6vw,1.2rem)] font-light leading-relaxed text-white/55 max-w-[720px]">
           The best tools used to belong to big companies with big teams. That is changing fast.
-          One founder with the right AI can do the work of many people. We are here for the
-          next wave of solo founders building billion dollar businesses. We bring you the
-          tools, and we set them up for you.
+          One founder with the right AI can now do the work of many people. We are here for
+          solo founders building consumer apps and products. The ones who want to grow a real
+          business without hiring a big team to do it. We bring you the tools you need, and we
+          set them up for you, all the way through.
         </p>
       </section>
 
@@ -115,9 +118,10 @@ export default function Page() {
           Built to do the work of a team.
         </h2>
         <p className="mt-8 text-[clamp(1rem,1.6vw,1.2rem)] font-light leading-relaxed text-white/55 max-w-[720px]">
-          Tessa scores every customer in your product from 0 to 100, tells each one the next
-          thing to do, and shows you the big picture of who is doing well and who is stuck. We
-          put Tessa in your business in three steps.
+          Tessa gives every one of your customers a score from 0 to 100. The score shows how
+          close that customer is to the result they came to your product for. Tessa also tells
+          each customer the next thing to do, and shows you the big picture of who is doing
+          well and who is stuck. We put Tessa in your business in three steps.
         </p>
 
         <div className="mt-16 grid gap-12 sm:grid-cols-3 max-w-[1100px]">
@@ -125,17 +129,17 @@ export default function Page() {
             {
               n: "Step 1",
               t: "Figure out your business",
-              d: "We sit with you and learn your product, your customers, and the one result you want them to reach.",
+              d: "We sit down with you and learn your product. We learn who your customers are and what they came to do. Together we pick the one result you want every customer to reach. That is the thing Tessa will measure them against.",
             },
             {
               n: "Step 2",
               t: "Build the formula",
-              d: "We build the version of Tessa that fits your business. What it watches, how it scores, and the next move it gives each customer.",
+              d: "We build the version of Tessa that fits your product. We pick what it watches, how it scores each customer, and the kind of next move it gives them. This is the formula that turns your customer data into one clear number from 0 to 100.",
             },
             {
               n: "Step 3",
               t: "Put it in your business",
-              d: "We wire Tessa into your product and the tools you already use. You stay solo. Tessa runs.",
+              d: "We connect Tessa to your product and to the tools you already use. We get it live in your business in about three weeks. You stay solo. Tessa runs every day, scoring every customer and pointing them at their next move.",
             },
           ].map((s) => (
             <div key={s.n}>
@@ -161,19 +165,21 @@ export default function Page() {
         </h2>
         <div className="mt-8 grid gap-6 md:grid-cols-2 max-w-[920px]">
           <p className="text-[clamp(1rem,1.6vw,1.2rem)] font-light leading-relaxed text-white/55">
-            Abbelo is an app that helps people grow. People use it to work on themselves. They
-            talk through their goals out loud, like a voice call. Tessa runs behind every one of
-            those sessions.
+            Abbelo is an app that helps people grow into who they want to be. People sign up to
+            work on themselves. They talk through their goals out loud, like a voice call with a
+            coach. Tessa runs behind every one of those sessions, listening and learning.
           </p>
           <p className="text-[clamp(1rem,1.6vw,1.2rem)] font-light leading-relaxed text-white/55">
             Tessa reads each session. It tracks the habits people keep and the promises they
-            make. It gives each user a score from 0 to 100, and it gives them the next small
-            step to take.
+            make. It gives each user a score from 0 to 100, which shows how much they have
+            grown over time. And it gives them the next small step to take, the one thing that
+            will move their score up the most.
           </p>
         </div>
         <p className="mt-10 text-[clamp(1.05rem,1.7vw,1.3rem)] font-light leading-relaxed text-white/70 max-w-[760px]">
-          Abbelo is live today. Tessa is running inside it, scoring real users. The same system
-          we set up for you is the one that runs there.
+          Abbelo is live today. Tessa is running inside it, scoring real users every day. The
+          same Tessa we set up for you is the one running there. You can see how it works in a
+          real product before we ever touch yours.
         </p>
       </section>
 
@@ -186,8 +192,8 @@ export default function Page() {
           Let us put Tessa in your business.
         </h2>
         <p className="mt-8 text-[clamp(1rem,1.6vw,1.2rem)] font-light leading-relaxed text-white/50 max-w-[560px] mx-auto">
-          Book a call. We will look at your product together and scope what it takes. You see a
-          clear price before any work starts.
+          Book a call. We will look at your product together and figure out what it takes to
+          put Tessa in it. You will see a clear price before any work starts.
         </p>
         <div className="mt-12 flex flex-wrap items-center justify-center gap-4">
           <a
