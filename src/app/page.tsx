@@ -1,33 +1,30 @@
 // Tesurai company landing page.
-// Tesurai sells one thing: putting Tessa in your product so more of your
-// customers get the result they came for. For founders building consumer
-// apps and products that real people use.
-// Visual system in the x.ai family. Pure black. Lighter type. Hairline
-// borders. Mono labels and numerals. Outline pills with one filled pill
-// per page on the closing CTA.
-// Copy rules: fifth grade reading level, clear not concise, no dashes
-// anywhere. No language that frames Tessa as a team replacement.
+// Voice: written as if Tessa is a $100M+ category-defining product. Confident,
+// declarative, short. The category is "the intelligence layer for consumer
+// products." Less first-person, more product-as-protagonist. Proof up front.
+// Copy rules unchanged: fifth grade reading level, no dashes anywhere, no
+// pronouns for Tessa, no language framing Tessa as a team replacement.
 
 import PayButton from "./pay-button";
 
 const CAL_LINK = "https://cal.com/tesurai";
 
 export const metadata = {
-  title: "Tesurai | Find the moves that win every customer",
+  title: "Tesurai | The intelligence layer for consumer products",
   description:
-    "Tesurai puts Tessa in your product so each customer gets the next move they need to win. When more customers win, more of them stay and your business compounds. The same Tessa runs inside Abbelo today, helping real people grow.",
+    "Tessa watches every customer, predicts where they are heading, and sends the next move that wins. Live in Abbelo today. Built into your product next.",
   openGraph: {
-    title: "Tesurai | Find the moves that win every customer",
+    title: "Tesurai | The intelligence layer for consumer products",
     description:
-      "Tesurai puts Tessa in your product so each customer gets the next move they need to win. When more customers win, more of them stay and your business compounds. The same Tessa runs inside Abbelo today, helping real people grow.",
+      "Tessa watches every customer, predicts where they are heading, and sends the next move that wins. Live in Abbelo today. Built into your product next.",
     siteName: "Tesurai",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Tesurai | Find the moves that win every customer",
+    title: "Tesurai | The intelligence layer for consumer products",
     description:
-      "Tesurai puts Tessa in your product so each customer gets the next move they need to win. When more customers win, more of them stay and your business compounds. The same Tessa runs inside Abbelo today, helping real people grow.",
+      "Tessa watches every customer, predicts where they are heading, and sends the next move that wins. Live in Abbelo today. Built into your product next.",
   },
 };
 
@@ -76,13 +73,11 @@ export default function Page() {
           Tesurai
         </p>
         <h1 className="text-[clamp(2.2rem,5vw,4.5rem)] font-extralight leading-[1.08] tracking-[-0.025em] text-white max-w-[22ch]">
-          Find the moves that win every customer.
+          The intelligence layer for consumer products.
         </h1>
         <p className="mt-10 text-[clamp(1rem,1.55vw,1.2rem)] font-light leading-relaxed text-white/65 max-w-[640px]">
-          People sign up for your product wanting something. Most quit before they get there.
-          Tesurai puts Tessa in your product so each customer gets the next move they need to
-          win. When more customers win, your business compounds. The same Tessa runs inside
-          Abbelo today, helping real people grow.
+          Tessa watches every customer, predicts where they are heading, and sends them the
+          next move that wins. Live in Abbelo today. Built into your product next.
         </p>
         <div className="mt-12">
           <a
@@ -106,11 +101,10 @@ export default function Page() {
           Customers do not churn. They quit.
         </h2>
         <p className="mt-8 text-[clamp(1rem,1.55vw,1.2rem)] font-light leading-relaxed text-white/65 max-w-[720px]">
-          Churn is a polite word for what really happens. A real person signed up for your
-          product because they wanted something. They could not get to it. They walked away.
-          We believe the way to grow is not to chase more sign ups. The way to grow is to help
-          the customers you already have actually get there. Then they stay. Then they tell
-          their friends. That is when a consumer business starts to compound.
+          Churn is a polite word. A person signed up because they wanted something. They could
+          not get there. They walked away. The way to compound is not more sign ups. It is
+          getting the customers you already won to the outcome they came for. They stay. They
+          tell others. The business compounds.
         </p>
       </section>
 
@@ -123,9 +117,8 @@ export default function Page() {
           Two paths for every customer.
         </h2>
         <p className="mt-8 text-[clamp(1rem,1.55vw,1.2rem)] font-light leading-relaxed text-white/65 max-w-[720px]">
-          Every customer takes some path through your product. Without Tessa, most of them
-          get stuck and walk away. With Tessa watching and looping back the next move, most
-          of them get to the result they came for.
+          Every customer takes some path through your product. Without Tessa, most walk away.
+          With Tessa, most get to what they came for.
         </p>
 
         <div className="mt-16 grid gap-5 sm:gap-6 sm:grid-cols-2 max-w-[1100px]">
@@ -138,10 +131,10 @@ export default function Page() {
               {[
                 "Signs up wanting a result.",
                 "Tries the product on their own.",
-                "Gets stuck somewhere in the middle.",
+                "Gets stuck.",
                 "Does not know what to do next.",
-                "Walks away before the result.",
-                "Becomes one more lost customer.",
+                "Walks away.",
+                "One more lost customer.",
               ].map((step, i) => (
                 <li
                   key={i}
@@ -171,9 +164,9 @@ export default function Page() {
                 "Signs up wanting a result.",
                 "Tessa watches what they do.",
                 "Tessa predicts where they are heading.",
-                "Tessa loops back the next move.",
-                "They stay on the path.",
-                "They get to the result they came for.",
+                "Tessa sends the next move.",
+                "Customer stays on the path.",
+                "Customer gets the result.",
               ].map((step, i) => (
                 <li
                   key={i}
@@ -204,13 +197,10 @@ export default function Page() {
           Tessa sees each customer's future.
         </h2>
         <p className="mt-8 text-[clamp(1rem,1.55vw,1.2rem)] font-light leading-relaxed text-white/65 max-w-[720px]">
-          Tessa watches what each customer has done in the past and what they are doing right
-          now. It finds the patterns that actually matter, then predicts where that customer
-          is heading. Tessa shows them the outcome they will get if they stay on this path. As
-          each customer responds, Tessa loops the new information back into their picture and
-          gives them fresh feedback. Over time you see the whole funnel, who is winning, who
-          is stuck, and what to change for each one. We help you build the formula and put it
-          in your product in three steps.
+          Tessa reads what each customer has done and what they are doing now. It finds the
+          patterns that decide the outcome. It shows each customer where they are heading and
+          sends the next move that changes it. The funnel rolls up so you see every customer
+          at once.
         </p>
 
         <div className="mt-16 grid gap-5 sm:gap-6 sm:grid-cols-3 max-w-[1100px]">
@@ -218,17 +208,17 @@ export default function Page() {
             {
               n: "01",
               t: "Figure out your business",
-              d: "We sit down with you and learn your product. We learn who your customers are and what they came to do. Together we pick the one outcome you want every customer to reach. That is the target Tessa will predict and steer them toward.",
+              d: "We learn your product, your customers, and the one outcome you want every customer to reach. That outcome becomes the target Tessa steers toward.",
             },
             {
               n: "02",
               t: "Build the formula",
-              d: "We build the version of Tessa that fits your product. We pick what patterns it watches in your customer data, how it predicts where each customer is heading, and the kind of feedback loops it sends back. This is the formula that turns your customer data into a clear forecast and a fresh next move for each user.",
+              d: "We build the version of Tessa that fits your product. The patterns it watches. The predictions it makes. The feedback it loops. The formula that turns your customer data into outcomes.",
             },
             {
               n: "03",
               t: "Put it in your product",
-              d: "We put Tessa inside your product and connect it to the tools you already use. About three weeks from start to live. From then on, Tessa runs every day. It shows each customer where they are heading, and as they respond, it loops fresh feedback to keep them on the path to winning.",
+              d: "We put Tessa inside your product. Live in three weeks. From there, Tessa runs every day, predicting and looping feedback to every customer.",
             },
           ].map((s) => (
             <div
@@ -258,68 +248,64 @@ export default function Page() {
           </span>
         </div>
         <h2 className="text-[clamp(1.7rem,3.2vw,2.6rem)] font-light leading-[1.15] tracking-[-0.02em] text-white max-w-[20ch]">
-          How Abbelo uses Tessa.
+          Abbelo runs on Tessa.
         </h2>
         <div className="mt-8 grid gap-6 md:grid-cols-2 max-w-[920px]">
           <p className="text-[clamp(1rem,1.55vw,1.2rem)] font-light leading-relaxed text-white/65">
-            Abbelo is an app that helps people grow into who they want to be. People sign up to
-            work on themselves. They talk through their goals out loud, like a voice call with
-            a coach. Tessa runs behind every one of those sessions, listening and learning.
+            Abbelo is a consumer app for people who want to grow into who they want to be. Users
+            talk through their goals out loud, like a voice call with a coach.
           </p>
           <p className="text-[clamp(1rem,1.55vw,1.2rem)] font-light leading-relaxed text-white/65">
-            Tessa reads each session. It tracks the habits people keep and the promises they
-            make. It gives each user a score from 0 to 100, which shows how much they have
-            grown over time. And it gives them the next small step to take, the one thing that
-            will move their score up the most.
+            Tessa reads every session. It tracks the habits and promises each user makes. It
+            scores their growth from 0 to 100. It sends the next small step that lifts the
+            score most.
           </p>
         </div>
         <p className="mt-10 text-[clamp(1.05rem,1.65vw,1.25rem)] font-light leading-relaxed text-white/75 max-w-[760px]">
-          Abbelo is live today. Tessa is running inside it, scoring real users every day. The
-          same Tessa we set up for you is the one running there. You can see how it works in a
-          real product before we ever touch yours.
+          Live today. Real users scored every day. The same Tessa runs there as the one built
+          into your product. See it work in a real consumer product before we ever touch yours.
         </p>
       </section>
 
-      {/* Founding customer */}
+      {/* Get started */}
       <section className="px-6 sm:px-10 py-24 sm:py-32 max-w-[1100px] mx-auto border-t border-white/[0.10]">
         <div className="flex flex-wrap items-baseline gap-x-5 gap-y-2 mb-6">
           <p className="text-[12px] font-mono tracking-[0.18em] uppercase text-white/35">
-            [ Founding customer ]
+            [ Get started ]
           </p>
           <span className="text-[11px] font-mono tracking-[0.16em] uppercase text-white/25 tabular-nums">
-            First 5 founders only
+            Founding cohort pricing
           </span>
         </div>
-        <h2 className="text-[clamp(1.7rem,3.2vw,2.6rem)] font-light leading-[1.15] tracking-[-0.02em] text-white max-w-[24ch]">
-          Be one of the first five founders.
+        <h2 className="text-[clamp(1.7rem,3.2vw,2.6rem)] font-light leading-[1.15] tracking-[-0.02em] text-white max-w-[22ch]">
+          Start with Tessa.
         </h2>
         <p className="mt-8 text-[clamp(1rem,1.55vw,1.2rem)] font-light leading-relaxed text-white/65 max-w-[720px]">
-          We are bringing Tessa to the first five consumer founders at founding founder
-          pricing. One time fee. After that, the price goes up. Here is what happens once you
-          pay.
+          $2,500 one time. Three weeks to live in your product. Here is what happens once you
+          start.
         </p>
 
         <div className="mt-16 grid gap-5 sm:gap-6 sm:grid-cols-2 lg:grid-cols-4 max-w-[1100px]">
           {[
             {
               n: "01",
-              t: "Pay the fee",
-              d: "$2,500 one time. Card or bank. You see a receipt right away in your email from Stripe.",
+              t: "Pay",
+              d: "$2,500 one time. Card or bank. Receipt in your email right away.",
             },
             {
               n: "02",
-              t: "Kickoff call",
-              d: "We meet within two business days. We learn your product and pick the one result you want every customer to reach.",
+              t: "Kickoff",
+              d: "We meet within two business days. We learn your product and pick the outcome every customer should reach.",
             },
             {
               n: "03",
-              t: "Three weeks of work",
-              d: "We figure out your business, build the formula, and put Tessa inside your product. You stay out of the build.",
+              t: "Build",
+              d: "Three weeks of work. We figure out your business, build the formula, and put Tessa inside your product.",
             },
             {
               n: "04",
-              t: "Tessa goes live",
-              d: "Tessa runs every day inside your product. We meet monthly after that to keep Tessa aimed at the right outcome.",
+              t: "Live",
+              d: "Tessa runs every day inside your product. Monthly check ins to keep Tessa aimed at the right outcome.",
             },
           ].map((s) => (
             <div
@@ -346,20 +332,20 @@ export default function Page() {
               $2,500
             </p>
             <p className="text-[13px] font-light text-white/45 mt-3">
-              One time fee. Founding founder price. Goes up after the first five.
+              One time. Founding cohort pricing.
             </p>
           </div>
           <div className="flex flex-col items-start sm:items-end gap-3">
             <PayButton />
             <p className="text-[13px] font-light text-white/40">
-              Not ready?{" "}
+              Or{" "}
               <a
                 href={CAL_LINK}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-white/60 hover:text-white transition-colors"
               >
-                Book a call first.
+                book a call first.
               </a>
             </p>
           </div>
@@ -375,8 +361,7 @@ export default function Page() {
           More wins. More growth.
         </h2>
         <p className="mt-8 text-[clamp(1rem,1.55vw,1.2rem)] font-light leading-relaxed text-white/60 max-w-[560px] mx-auto">
-          Book a call. We will look at your product together and figure out what it takes to
-          get more customers to win. You will see a clear price before any work starts.
+          Book a call. We will look at your product and answer your questions.
         </p>
         <div className="mt-12 flex flex-wrap items-center justify-center gap-4">
           <a
