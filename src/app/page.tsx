@@ -1,28 +1,29 @@
 // Tesurai company landing page.
-// Positioning: Tessa is the leverage that lets a solo founder serve thousands
-// of customers like a real growth team. Tessa scores every customer, finds
-// the patterns across the funnel, and ships the next move — for each user
-// and for the founder. Today she also lives in a separate B2C product
-// (becoming-score for individuals), which is the live proof of the engine.
+// Tesurai is a portfolio of AI tools and consulting.
+// Two things are promoted now: Tessa (a free tool) and consulting (the paid product).
+// Tessa is free on the page. The live free tool is coming soon; until the
+// reusable Tessa system lands, the Tessa section shows an honest "free, coming
+// soon" state plus a real case study of how Abbelo uses Tessa.
+// Copy rules: fifth grade reading level, clear not concise, no dashes anywhere.
 
 const CAL_LINK = "https://cal.com/tesurai";
 
 export const metadata = {
-  title: "Tesurai | AI that measures who you’re becoming",
+  title: "Tesurai | AI tools and consulting for founders",
   description:
-    "Tessa scores every customer in your product — what’s working, what’s not, and the next move to lift them. The customer success team, growth analyst, and data engineer you don’t have to hire.",
+    "Tesurai is a portfolio of AI tools and consulting. Our first tool is Tessa, and she is free. We help founders give their customers a better experience and better results.",
   openGraph: {
-    title: "Tesurai | AI that measures who you’re becoming",
+    title: "Tesurai | AI tools and consulting for founders",
     description:
-      "Tessa scores every customer in your product — what’s working, what’s not, and the next move to lift them. The customer success team, growth analyst, and data engineer you don’t have to hire.",
+      "Tesurai is a portfolio of AI tools and consulting. Our first tool is Tessa, and she is free. We help founders give their customers a better experience and better results.",
     siteName: "Tesurai",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Tesurai | AI that measures who you’re becoming",
+    title: "Tesurai | AI tools and consulting for founders",
     description:
-      "Tessa scores every customer in your product — what’s working, what’s not, and the next move to lift them. The customer success team, growth analyst, and data engineer you don’t have to hire.",
+      "Tesurai is a portfolio of AI tools and consulting. Our first tool is Tessa, and she is free. We help founders give their customers a better experience and better results.",
   },
 };
 
@@ -55,6 +56,12 @@ export default function Page() {
         </span>
         <nav className="flex items-center gap-5 sm:gap-7">
           <a
+            href="#tessa"
+            className="hidden sm:inline text-white/60 hover:text-white text-[13px] font-light tracking-[0.06em] transition-colors"
+          >
+            Tessa
+          </a>
+          <a
             href={CAL_LINK}
             target="_blank"
             rel="noopener noreferrer"
@@ -70,13 +77,13 @@ export default function Page() {
         <p className="text-[12px] font-mono tracking-[0.18em] uppercase text-white/35 mb-8">
           Tesurai
         </p>
-        <h1 className="text-[clamp(2.4rem,6vw,5.5rem)] font-light leading-[1.04] tracking-[-0.035em] text-white max-w-[16ch]">
-          We build AI that measures who you’re becoming.
+        <h1 className="text-[clamp(2.4rem,6vw,5.5rem)] font-light leading-[1.04] tracking-[-0.035em] text-white max-w-[15ch]">
+          Build a big business with a small team.
         </h1>
-        <p className="mt-10 text-[clamp(1.05rem,2vw,1.4rem)] font-light leading-relaxed text-white/55 max-w-[700px]">
-          Tessa scores who each of your customers is becoming inside your product — what’s
-          working, what’s not, and the single move that lifts them next. So one founder can
-          serve thousands like a real growth team.
+        <p className="mt-10 text-[clamp(1.05rem,2vw,1.4rem)] font-light leading-relaxed text-white/55 max-w-[680px]">
+          Tesurai is a group of AI tools and hands on help for founders. Our first tool is Tessa,
+          and she is free. Our consulting is how we work with you to help your customers get
+          better results.
         </p>
         <div className="mt-12 flex flex-wrap items-center gap-4">
           <a
@@ -89,69 +96,67 @@ export default function Page() {
             <ArrowRight />
           </a>
           <a
-            href="#wiring"
+            href="#tessa"
             className="inline-flex items-center gap-2 text-white/70 border border-white/20 px-7 py-3.5 text-[13px] font-light tracking-[0.04em] rounded-full hover:text-white hover:border-white/40 transition-all duration-300"
           >
-            See how Tessa wires in
+            Meet Tessa, free
           </a>
         </div>
       </section>
 
-      {/* Live-today proof */}
-      <section className="px-6 sm:px-10 py-20 sm:py-28 max-w-[1100px] mx-auto border-t border-white/[0.06]">
-        <p className="text-[12px] font-mono tracking-[0.18em] uppercase text-white/35 mb-6">
-          [ Live today ]
-        </p>
-        <p className="text-[clamp(1.1rem,1.8vw,1.35rem)] font-light leading-relaxed text-white/70 max-w-[760px]">
-          Tessa already scores who a person is becoming on her first product. Now we point the
-          same engine at your customers — so every founder can see, for every user, what’s
-          working and what to do next.
-        </p>
-      </section>
-
-      {/* Belief / manifesto */}
+      {/* The belief */}
       <section className="px-6 sm:px-10 py-24 sm:py-32 max-w-[1100px] mx-auto border-t border-white/[0.06]">
         <p className="text-[12px] font-mono tracking-[0.18em] uppercase text-white/35 mb-6">
-          [ The belief ]
-        </p>
-        <h2 className="text-[clamp(1.8rem,3.5vw,3rem)] font-light leading-[1.1] tracking-[-0.025em] text-white/90 max-w-[22ch]">
-          You don’t need a big team to build a massive business.
-        </h2>
-        <p className="mt-8 text-[clamp(1rem,1.6vw,1.2rem)] font-light leading-relaxed text-white/55 max-w-[720px]">
-          Tesurai is built for the next wave of solo founders building billion-dollar
-          businesses. Tessa is the leverage — the customer success team, growth analyst, and
-          data engineer you don’t have to hire. One number per customer. One pattern across the
-          funnel. One move per week.
-        </p>
-      </section>
-
-      {/* Tessa — Moneyball mechanism */}
-      <section className="px-6 sm:px-10 py-24 sm:py-32 max-w-[1100px] mx-auto border-t border-white/[0.06]">
-        <p className="text-[12px] font-mono tracking-[0.18em] uppercase text-white/35 mb-6">
-          [ Tessa ]
+          [ What we believe ]
         </p>
         <h2 className="text-[clamp(1.8rem,3.5vw,3rem)] font-light leading-[1.1] tracking-[-0.025em] text-white/90 max-w-[20ch]">
-          Moneyball for what actually matters.
+          You do not need a big team to build a big business.
         </h2>
-        <p className="mt-8 text-[clamp(1rem,1.6vw,1.2rem)] font-light leading-relaxed text-white/50 max-w-[700px]">
-          Most tools give you forty metrics on a dashboard you have to staff. Tessa picks the
-          three signals that actually predict your customers’ outcome — and tells you which one
-          to move first, for each user and for the funnel as a whole.
+        <p className="mt-8 text-[clamp(1rem,1.6vw,1.2rem)] font-light leading-relaxed text-white/55 max-w-[720px]">
+          The best tools used to belong to big companies with big teams. That is changing fast.
+          One founder with the right AI can now do the work of many people. We are here for the
+          next wave of solo founders. The ones who want to build a billion dollar business
+          without a giant team. We give you the tools and the help to do it.
+        </p>
+      </section>
+
+      {/* Tessa: free tool */}
+      <section
+        id="tessa"
+        className="px-6 sm:px-10 py-24 sm:py-32 max-w-[1100px] mx-auto border-t border-white/[0.06] scroll-mt-24"
+      >
+        <div className="flex items-center gap-3 mb-6">
+          <p className="text-[12px] font-mono tracking-[0.18em] uppercase text-white/35">
+            [ Tessa ]
+          </p>
+          <span className="text-[10px] font-light tracking-[0.12em] uppercase text-white/55 border border-white/25 rounded-full px-2.5 py-0.5">
+            Free
+          </span>
+        </div>
+        <h2 className="text-[clamp(1.8rem,3.5vw,3rem)] font-light leading-[1.1] tracking-[-0.025em] text-white/90 max-w-[18ch]">
+          Meet Tessa. She is free.
+        </h2>
+        <p className="mt-8 text-[clamp(1rem,1.6vw,1.2rem)] font-light leading-relaxed text-white/55 max-w-[720px]">
+          Tessa is an AI that watches how people use your product. She learns what works and
+          what does not. Then she gives each person a score from 0 to 100. The score shows how
+          close they are to the result they came for. Tessa tells each person the one thing to
+          do next. And she shows you, the founder, the big picture. You see who is doing well,
+          who is stuck, and why.
         </p>
 
         <div className="mt-16 grid gap-12 sm:grid-cols-3 max-w-[1000px]">
           {[
             {
-              n: "Signals in",
-              d: "We wire Tessa to every user signal in your product — events, conversions, drop-offs, billing, support. Whatever you already emit.",
+              n: "She watches",
+              d: "Tessa looks at what your users do inside your product. Every step they take, every win, every place they get stuck.",
             },
             {
-              n: "Score out",
-              d: "One 0–100 becoming-score per customer, fit to the outcome they came for. Re-fit weekly as your product changes.",
+              n: "She scores",
+              d: "Tessa turns all of that into one simple score from 0 to 100 for each user. The score tells you how each person is really doing.",
             },
             {
-              n: "Move next",
-              d: "The single next move that lifts each customer toward their outcome — surfaced to you, or delivered straight to them.",
+              n: "She guides",
+              d: "Tessa tells each user the next best thing to do. And she shows you what your top users do that the rest do not.",
             },
           ].map((row) => (
             <div key={row.n}>
@@ -162,119 +167,122 @@ export default function Page() {
             </div>
           ))}
         </div>
+
+        <div className="mt-16 rounded-2xl border border-white/[0.12] bg-white/[0.02] p-8 sm:p-10 max-w-[1000px]">
+          <p className="text-[12px] font-mono tracking-[0.16em] uppercase text-white/45 mb-3">
+            Free for everyone
+          </p>
+          <p className="text-[clamp(1.05rem,1.7vw,1.3rem)] font-light leading-relaxed text-white/80">
+            Tessa is free. No sign up. No email. We are putting her right here on this page so
+            you can use her for free. She is coming very soon. Want her sooner? Book a call and
+            we will set her up with you.
+          </p>
+        </div>
       </section>
 
-      {/* Wiring Tessa — engagement spec */}
+      {/* Case study: Abbelo */}
+      <section className="px-6 sm:px-10 py-24 sm:py-32 max-w-[1100px] mx-auto border-t border-white/[0.06]">
+        <p className="text-[12px] font-mono tracking-[0.18em] uppercase text-white/35 mb-6">
+          [ Case study ]
+        </p>
+        <h2 className="text-[clamp(1.8rem,3.5vw,3rem)] font-light leading-[1.1] tracking-[-0.025em] text-white/90 max-w-[18ch]">
+          How Abbelo uses Tessa.
+        </h2>
+        <div className="mt-8 grid gap-6 md:grid-cols-2 max-w-[920px]">
+          <p className="text-[clamp(1rem,1.6vw,1.2rem)] font-light leading-relaxed text-white/55">
+            Abbelo is an app that helps people grow. People use it to work on themselves. They
+            talk through their goals out loud, like a voice call. Behind every one of those
+            sessions sits Tessa.
+          </p>
+          <p className="text-[clamp(1rem,1.6vw,1.2rem)] font-light leading-relaxed text-white/55">
+            Tessa listens to each session. She watches the habits people keep and the promises
+            they make. Then she gives each person a becoming score from 0 to 100. The score
+            shows how much they are growing over time. Tessa also gives them the next small step
+            to take.
+          </p>
+        </div>
+        <p className="mt-10 text-[clamp(1.05rem,1.7vw,1.3rem)] font-light leading-relaxed text-white/70 max-w-[760px]">
+          This is live in Abbelo today. It is the same Tessa we are giving away free here. So
+          you do not have to wonder if she works. She is already at work, helping real people
+          grow.
+        </p>
+      </section>
+
+      {/* Consulting: paid product */}
       <section
-        id="wiring"
+        id="consulting"
         className="px-6 sm:px-10 py-24 sm:py-32 max-w-[1100px] mx-auto border-t border-white/[0.06] scroll-mt-24"
       >
         <p className="text-[12px] font-mono tracking-[0.18em] uppercase text-white/35 mb-6">
-          [ Wiring Tessa ]
+          [ Consulting ]
         </p>
-        <h2 className="text-[clamp(1.8rem,3.5vw,3rem)] font-light leading-[1.1] tracking-[-0.025em] text-white/90 max-w-[22ch]">
-          From gut to score in three weeks.
+        <h2 className="text-[clamp(1.8rem,3.5vw,3rem)] font-light leading-[1.1] tracking-[-0.025em] text-white/90 max-w-[18ch]">
+          Work with us.
         </h2>
-        <p className="mt-8 text-[clamp(1rem,1.6vw,1.2rem)] font-light leading-relaxed text-white/50 max-w-[700px]">
-          White glove, end to end. You don’t build anything new — we wire Tessa to your
-          product, score every customer against the outcome you actually care about, and ship
-          the next move into the inbox of the human who needs it.
+        <p className="mt-8 text-[clamp(1rem,1.6vw,1.2rem)] font-light leading-relaxed text-white/55 max-w-[720px]">
+          Tessa is the free tool. Our consulting is how we help you the most. We work with you
+          one on one. We learn your business and your customers. We find the one result that
+          matters most to them. Then we set up the right tools so your customers get there. This
+          is what Tesurai sells right now.
         </p>
 
-        <div className="mt-16 grid gap-10 sm:gap-12 sm:grid-cols-2 lg:grid-cols-4 max-w-[1100px]">
+        <div className="mt-14 grid gap-px sm:grid-cols-2 bg-white/[0.06] border border-white/[0.06] rounded-2xl overflow-hidden max-w-[1000px]">
           {[
             {
-              n: "Week 1",
-              t: "Outcome",
-              d: "We sit with you to name the outcome your customers came for, and the success signal we’ll score against.",
+              t: "We learn your business",
+              d: "We sit with you and study your product and your customers. We learn what a win looks like for the people you serve.",
             },
             {
-              n: "Week 2",
-              t: "Wire",
-              d: "We wire Tessa to your event stream — Mixpanel, Amplitude, Segment, PostHog, Stripe, your own DB — in an afternoon. You write nothing new.",
+              t: "We find what matters",
+              d: "We pick the one result that matters most for your customers. Then we figure out what to measure to get them there.",
             },
             {
-              n: "Week 3",
-              t: "Score",
-              d: "Every customer gets their first score. You see the funnel — top producers, low potential, the patterns between them — and the first move per cohort.",
+              t: "We set up your tools",
+              d: "We wire up Tessa and the other tools you need. We fit them into what you already use, without breaking it.",
             },
             {
-              n: "Ongoing",
-              t: "Re-fit",
-              d: "Tessa re-fits weekly as your product changes. Each customer’s next move ships into your dashboard, or straight to them.",
+              t: "We stay with you",
+              d: "We do not set it and leave. We keep working with you, week after week, to make your results better over time.",
             },
-          ].map((s) => (
-            <div key={s.n}>
-              <p className="text-[12px] font-mono tracking-[0.16em] uppercase text-white/35 mb-3">
-                {s.n}
-              </p>
-              <h3 className="text-[clamp(1.05rem,1.4vw,1.2rem)] font-light tracking-[-0.01em] text-white/90 mb-3">
-                {s.t}
+          ].map((card) => (
+            <div key={card.t} className="bg-black p-8 sm:p-10">
+              <h3 className="text-[clamp(1.1rem,1.6vw,1.35rem)] font-light tracking-[-0.01em] text-white/90 mb-3">
+                {card.t}
               </h3>
-              <p className="text-[14px] font-light leading-relaxed text-white/50">{s.d}</p>
+              <p className="text-[15px] font-light leading-relaxed text-white/55">{card.d}</p>
             </div>
           ))}
         </div>
-      </section>
 
-      {/* Where Tessa scores — two cards (People live + Founders) */}
-      <section className="px-6 sm:px-10 py-24 sm:py-32 max-w-[1100px] mx-auto border-t border-white/[0.06]">
-        <p className="text-[12px] font-mono tracking-[0.18em] uppercase text-white/35 mb-6">
-          [ Where Tessa scores ]
-        </p>
-        <h2 className="text-[clamp(1.8rem,3.5vw,3rem)] font-light leading-[1.1] tracking-[-0.025em] text-white/90 max-w-[24ch]">
-          The same engine, measuring more than a person.
-        </h2>
-
-        <div className="mt-16 grid gap-px sm:grid-cols-2 bg-white/[0.06] border border-white/[0.06] rounded-2xl overflow-hidden">
-          <div className="bg-black p-8 sm:p-10 flex flex-col">
-            <div className="flex items-center gap-3 mb-5">
-              <span className="text-[11px] font-mono tracking-[0.14em] uppercase text-white/40">
-                People
-              </span>
-              <span className="text-[10px] font-light tracking-[0.12em] uppercase text-white/55 border border-white/25 rounded-full px-2.5 py-0.5">
-                Live
-              </span>
-            </div>
-            <h3 className="text-[clamp(1.25rem,2vw,1.6rem)] font-light tracking-[-0.02em] text-white/90 mb-4">
-              Becoming, scored
-            </h3>
-            <p className="text-[15px] font-light leading-relaxed text-white/50">
-              Tessa reads every check-in, commitment, and habit, and turns it into a
-              becoming-score from 0 to 100 — the first number that tracks the person someone is
-              turning into. Live today.
-            </p>
-          </div>
-          <div className="bg-black p-8 sm:p-10 flex flex-col">
-            <div className="flex items-center gap-3 mb-5">
-              <span className="text-[11px] font-mono tracking-[0.14em] uppercase text-white/40">
-                Founders
-              </span>
-            </div>
-            <h3 className="text-[clamp(1.25rem,2vw,1.6rem)] font-light tracking-[-0.02em] text-white/90 mb-4">
-              Your customers, scored
-            </h3>
-            <p className="text-[15px] font-light leading-relaxed text-white/50">
-              Tessa scores who each of your customers is becoming inside your product. The
-              funnel rolls up so you see what your top producers do that the bottom don’t — and
-              the next move for every user, every week.
-            </p>
-          </div>
+        <div className="mt-12 flex flex-wrap items-center gap-4">
+          <a
+            href={CAL_LINK}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 bg-white text-black px-8 py-4 text-[14px] font-medium tracking-[0.04em] rounded-full hover:bg-white/85 transition-all duration-300"
+          >
+            Book a call
+            <ArrowRight />
+          </a>
+          <p className="text-[13px] font-light text-white/35">
+            Or email{" "}
+            <a
+              href="mailto:hello@tesurai.com"
+              className="text-white/55 hover:text-white transition-colors"
+            >
+              hello@tesurai.com
+            </a>
+          </p>
         </div>
-
-        <p className="mt-12 text-[15px] font-light leading-relaxed text-white/40 max-w-[680px]">
-          Beyond people and founders, the same engine measures teams, companies, and audiences.
-          Tessa is built to measure any system that changes over time.
-        </p>
       </section>
 
-      {/* Is Tessa for you? — honest filter */}
+      {/* Is this for you */}
       <section className="px-6 sm:px-10 py-24 sm:py-32 max-w-[1100px] mx-auto border-t border-white/[0.06]">
         <p className="text-[12px] font-mono tracking-[0.18em] uppercase text-white/35 mb-6">
-          [ Is Tessa for you? ]
+          [ Is this for you? ]
         </p>
-        <h2 className="text-[clamp(1.8rem,3.5vw,3rem)] font-light leading-[1.1] tracking-[-0.025em] text-white/90 max-w-[18ch]">
-          The honest filter.
+        <h2 className="text-[clamp(1.8rem,3.5vw,3rem)] font-light leading-[1.1] tracking-[-0.025em] text-white/90 max-w-[16ch]">
+          Let us be honest.
         </h2>
 
         <div className="mt-14 grid gap-10 sm:gap-px sm:grid-cols-2 sm:bg-white/[0.06] sm:border sm:border-white/[0.06] sm:rounded-2xl overflow-hidden">
@@ -284,9 +292,9 @@ export default function Page() {
             </p>
             <ul className="space-y-4">
               {[
-                "You’re a founder building something serious — and you don’t want to hire a customer success or growth team to do it.",
-                "Your product already emits events somewhere — Mixpanel, Amplitude, Segment, PostHog, Stripe, your own DB.",
-                "You believe one number per customer beats a dashboard of forty.",
+                "You are a founder, and people already use your product.",
+                "You want your customers to get better results.",
+                "You want to grow without hiring a big team.",
               ].map((line) => (
                 <li
                   key={line}
@@ -304,9 +312,9 @@ export default function Page() {
             </p>
             <ul className="space-y-4">
               {[
-                "You don’t have customers in your product yet — Tessa needs real signal to score.",
-                "You want a dashboard, a chatbot, or AI insights without a model behind them.",
-                "The outcome your customers came for isn’t yet named — Tessa works when the target is sharp.",
+                "No one uses your product yet. Tessa needs real people to watch.",
+                "You want a tool you never think about. Tessa works best when you care about one clear result.",
+                "You are not sure what a win looks like for your customers. We can help you find it on a call.",
               ].map((line) => (
                 <li
                   key={line}
@@ -329,20 +337,20 @@ export default function Page() {
         <div className="mt-12 grid gap-12 sm:grid-cols-2 max-w-[1000px]">
           {[
             {
-              q: "How is Tessa different from Mixpanel, Amplitude, or PostHog?",
-              a: "Those give you dashboards you have to staff and interpret. Tessa gives you one score per customer and the single next move to lift them — for every user, every week. Fewer numbers, more conviction. The dashboards still exist; you just don’t have to live in them.",
+              q: "How much does Tessa cost?",
+              a: "Tessa is free. There is no sign up and no email. We are putting her right on this page so you can use her for free.",
             },
             {
-              q: "Who owns the data?",
-              a: "You do. Tessa runs in your warehouse when you have one, and hers when you don’t. Your customers’ data never trains anyone else’s model.",
+              q: "Then how does Tesurai make money?",
+              a: "We make money from consulting. That is the paid help we give founders one on one. Tessa stays free for everyone.",
             },
             {
-              q: "What if our signals are messy?",
-              a: "They always are. We wire what’s there, score against what matters, and tell you when a stream is too noisy to trust. Honesty beats false precision.",
+              q: "Is Tessa real, or just an idea?",
+              a: "She is real and live today. The app Abbelo uses Tessa right now to score how its users are growing and to give them the next step.",
             },
             {
-              q: "What happens after the first three weeks?",
-              a: "Tessa re-fits the model weekly as your product changes and your customers move. Each week the score updates, the next move ships, the funnel patterns sharpen. You meet with us monthly to recalibrate the outcome.",
+              q: "What do I need to use Tessa?",
+              a: "You need a product that people use, and one clear result you want for them. We help you with the rest on a call.",
             },
           ].map((f) => (
             <div key={f.q}>
@@ -360,12 +368,12 @@ export default function Page() {
         <p className="text-[12px] font-mono tracking-[0.18em] uppercase text-white/35 mb-6">
           [ Next ]
         </p>
-        <h2 className="text-[clamp(1.8rem,4vw,3.4rem)] font-light leading-[1.08] tracking-[-0.03em] text-white/90 max-w-[20ch] mx-auto">
-          Ready to see who your customers are becoming?
+        <h2 className="text-[clamp(1.8rem,4vw,3.4rem)] font-light leading-[1.08] tracking-[-0.03em] text-white/90 max-w-[16ch] mx-auto">
+          Let us help you grow.
         </h2>
-        <p className="mt-8 text-[clamp(1rem,1.6vw,1.2rem)] font-light leading-relaxed text-white/50 max-w-[600px] mx-auto">
-          One score per customer. One pattern across the funnel. One move per week. Book a call
-          to scope the first three weeks.
+        <p className="mt-8 text-[clamp(1rem,1.6vw,1.2rem)] font-light leading-relaxed text-white/50 max-w-[560px] mx-auto">
+          Tessa is free. Our consulting is how we help you win. Book a call and we will look at
+          your business together.
         </p>
         <div className="mt-12 flex flex-wrap items-center justify-center gap-4">
           <a
