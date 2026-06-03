@@ -57,12 +57,10 @@ export default function Page() {
         </span>
         <nav className="flex items-center gap-5 sm:gap-7">
           <a
-            href={CAL_LINK}
-            target="_blank"
-            rel="noopener noreferrer"
+            href="#get-started"
             className="text-white border border-white/25 px-5 py-2 text-[12px] font-light tracking-[0.1em] uppercase rounded-full hover:bg-white hover:text-black transition-all duration-300"
           >
-            Book a call
+            Get started
           </a>
         </nav>
       </header>
@@ -76,20 +74,9 @@ export default function Page() {
           The intelligence layer for consumer products
         </h1>
         <p className="mt-10 text-[clamp(1rem,1.55vw,1.2rem)] font-light leading-relaxed text-white/65 max-w-[640px]">
-          Tessa watches every customer, predicts where they are heading, and sends them the
-          next move that wins. Live in Abbelo today. Built into your product next.
+          Tessa tracks every customer's metric, predicts where they are heading based on their
+          past, and keeps them on the line to the outcome they came for.
         </p>
-        <div className="mt-12">
-          <a
-            href={CAL_LINK}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 text-white border border-white/25 px-7 py-4 text-[13px] font-light tracking-[0.04em] rounded-full hover:bg-white hover:text-black transition-all duration-300"
-          >
-            Book a call
-            <ArrowRight />
-          </a>
-        </div>
       </section>
 
       {/* What we believe */}
@@ -98,13 +85,13 @@ export default function Page() {
           [ What we believe ]
         </p>
         <h2 className="text-[clamp(1.7rem,3.2vw,2.6rem)] font-light leading-[1.15] tracking-[-0.02em] text-white max-w-[22ch]">
-          Customers do not churn. They quit.
+          Customer outcomes are not chance. They are patterns.
         </h2>
         <p className="mt-8 text-[clamp(1rem,1.55vw,1.2rem)] font-light leading-relaxed text-white/65 max-w-[720px]">
-          Churn is a polite word. A person signed up because they wanted something. They could
-          not get there. They walked away. The way to compound is not more sign ups. It is
-          getting the customers you already won to the outcome they came for. They stay. They
-          tell others. The business compounds.
+          Every customer who uses your product leaves a trail. Inside the trail are patterns.
+          The patterns predict the next outcome. Read them and you can change what happens,
+          before it happens. Customers stay on the line. They get what they came for. The
+          business compounds.
         </p>
       </section>
 
@@ -197,10 +184,9 @@ export default function Page() {
           Tessa sees each customer's future.
         </h2>
         <p className="mt-8 text-[clamp(1rem,1.55vw,1.2rem)] font-light leading-relaxed text-white/65 max-w-[720px]">
-          Tessa reads what each customer has done and what they are doing now. It finds the
-          patterns that decide the outcome. It shows each customer where they are heading and
-          sends the next move that changes it. The funnel rolls up so you see every customer
-          at once.
+          Tessa is not chance. It reads each customer's past, predicts where they are heading
+          next, and sends the move that keeps them on the line to the outcome they came for.
+          The funnel rolls up so you see every customer at once.
         </p>
 
         <div className="mt-16 grid gap-5 sm:gap-6 sm:grid-cols-3 max-w-[1100px]">
@@ -268,7 +254,10 @@ export default function Page() {
       </section>
 
       {/* Get started */}
-      <section className="px-6 sm:px-10 py-24 sm:py-32 max-w-[1100px] mx-auto border-t border-white/[0.10]">
+      <section
+        id="get-started"
+        className="px-6 sm:px-10 py-24 sm:py-32 max-w-[1100px] mx-auto border-t border-white/[0.10] scroll-mt-24"
+      >
         <div className="flex flex-wrap items-baseline gap-x-5 gap-y-2 mb-6">
           <p className="text-[12px] font-mono tracking-[0.18em] uppercase text-white/35">
             [ Get started ]
