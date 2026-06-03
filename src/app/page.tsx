@@ -74,8 +74,9 @@ export default function Page() {
           The intelligence layer for consumer products
         </h1>
         <p className="mt-10 text-[clamp(1rem,1.55vw,1.2rem)] font-light leading-relaxed text-white/65 max-w-[640px]">
-          Tessa tracks every user's metric, predicts where they are heading based on their
-          past, and keeps them on the line to the outcome they came for.
+          Tessa uses each user's past data to predict where they are heading, then gives
+          feedback built around them to help them stay on the path to the outcome they came
+          for.
         </p>
       </section>
 
