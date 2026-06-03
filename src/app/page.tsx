@@ -12,11 +12,11 @@ const CAL_LINK = "https://cal.com/tesurai";
 export const metadata = {
   title: "Tesurai | The intelligence layer for consumer products",
   description:
-    "Tessa watches every customer, predicts where they are heading, and sends the next move that wins. Live in Abbelo today. Built into your product next.",
+    "Tessa watches every user, predicts where they are heading, and sends the next move that wins. Live in Abbelo today. Built into your product next.",
   openGraph: {
     title: "Tesurai | The intelligence layer for consumer products",
     description:
-      "Tessa watches every customer, predicts where they are heading, and sends the next move that wins. Live in Abbelo today. Built into your product next.",
+      "Tessa watches every user, predicts where they are heading, and sends the next move that wins. Live in Abbelo today. Built into your product next.",
     siteName: "Tesurai",
     type: "website",
   },
@@ -24,7 +24,7 @@ export const metadata = {
     card: "summary_large_image",
     title: "Tesurai | The intelligence layer for consumer products",
     description:
-      "Tessa watches every customer, predicts where they are heading, and sends the next move that wins. Live in Abbelo today. Built into your product next.",
+      "Tessa watches every user, predicts where they are heading, and sends the next move that wins. Live in Abbelo today. Built into your product next.",
   },
 };
 
@@ -74,7 +74,7 @@ export default function Page() {
           The intelligence layer for consumer products
         </h1>
         <p className="mt-10 text-[clamp(1rem,1.55vw,1.2rem)] font-light leading-relaxed text-white/65 max-w-[640px]">
-          Tessa tracks every customer's metric, predicts where they are heading based on their
+          Tessa tracks every user's metric, predicts where they are heading based on their
           past, and keeps them on the line to the outcome they came for.
         </p>
       </section>
@@ -85,12 +85,12 @@ export default function Page() {
           [ What we believe ]
         </p>
         <h2 className="text-[clamp(1.7rem,3.2vw,2.6rem)] font-light leading-[1.15] tracking-[-0.02em] text-white max-w-[22ch]">
-          Customer outcomes are not chance. They are patterns.
+          User outcomes are not chance. They are patterns.
         </h2>
         <p className="mt-8 text-[clamp(1rem,1.55vw,1.2rem)] font-light leading-relaxed text-white/65 max-w-[720px]">
-          Every customer who uses your product leaves a trail. Inside the trail are patterns.
+          Every user who uses your product leaves a trail. Inside the trail are patterns.
           The patterns predict the next outcome. Read them and you can change what happens,
-          before it happens. Customers stay on the line. They get what they came for. The
+          before it happens. Users stay on the line. They get what they came for. The
           business compounds.
         </p>
       </section>
@@ -101,10 +101,10 @@ export default function Page() {
           [ The journey ]
         </p>
         <h2 className="text-[clamp(1.7rem,3.2vw,2.6rem)] font-light leading-[1.15] tracking-[-0.02em] text-white max-w-[22ch]">
-          Two paths for every customer.
+          Two paths for every user.
         </h2>
         <p className="mt-8 text-[clamp(1rem,1.55vw,1.2rem)] font-light leading-relaxed text-white/65 max-w-[720px]">
-          Every customer takes some path through your product. Without Tessa, most walk away.
+          Every user takes some path through your product. Without Tessa, most walk away.
           With Tessa, most get to what they came for.
         </p>
 
@@ -121,7 +121,7 @@ export default function Page() {
                 "Gets stuck.",
                 "Does not know what to do next.",
                 "Walks away.",
-                "One more lost customer.",
+                "One more lost user.",
               ].map((step, i) => (
                 <li
                   key={i}
@@ -136,7 +136,7 @@ export default function Page() {
             </ol>
             <div className="mt-8 pt-6 border-t border-white/[0.08]">
               <p className="text-[11px] font-mono tracking-[0.16em] uppercase text-white/35">
-                Outcome: customer quits
+                Outcome: user quits
               </p>
             </div>
           </div>
@@ -152,8 +152,8 @@ export default function Page() {
                 "Tessa watches what they do.",
                 "Tessa predicts where they are heading.",
                 "Tessa sends the next move.",
-                "Customer stays on the path.",
-                "Customer gets the result.",
+                "User stays on the path.",
+                "User gets the result.",
               ].map((step, i) => (
                 <li
                   key={i}
@@ -168,7 +168,7 @@ export default function Page() {
             </ol>
             <div className="mt-8 pt-6 border-t border-white/[0.20]">
               <p className="text-[11px] font-mono tracking-[0.16em] uppercase text-white/85">
-                Outcome: customer wins
+                Outcome: user wins
               </p>
             </div>
           </div>
@@ -181,30 +181,80 @@ export default function Page() {
           [ Tessa ]
         </p>
         <h2 className="text-[clamp(1.7rem,3.2vw,2.6rem)] font-light leading-[1.15] tracking-[-0.02em] text-white max-w-[22ch]">
-          Tessa sees each customer's future.
+          Tessa sees each user's future.
         </h2>
         <p className="mt-8 text-[clamp(1rem,1.55vw,1.2rem)] font-light leading-relaxed text-white/65 max-w-[720px]">
-          Tessa is not chance. It reads each customer's past, predicts where they are heading
-          next, and sends the move that keeps them on the line to the outcome they came for.
-          The funnel rolls up so you see every customer at once.
+          Tessa is not based off chance or luck. It comes down to a science. A metric you can
+          track. Tessa reads each user's past, predicts where they are heading next, and sends
+          the move that keeps them on the line to the outcome they came for. The funnel rolls
+          up so you see every user at once.
         </p>
+
+        <div className="mt-16 max-w-[900px]">
+          <p className="text-[12px] font-mono tracking-[0.16em] uppercase text-white/45 mb-6">
+            [ Example ]
+          </p>
+          <div className="space-y-5">
+            {[
+              {
+                ifClause: "A user skips two days in a row",
+                thenClause: "Tessa predicts they are heading off the line",
+                soClause: "Tessa sends the move that brings them back",
+              },
+              {
+                ifClause: "A user hits their first win",
+                thenClause: "Tessa predicts they are ready for the next step",
+                soClause: "Tessa sends the move that keeps the momentum",
+              },
+              {
+                ifClause: "A user falls behind their pace",
+                thenClause: "Tessa predicts where they will land in thirty days",
+                soClause: "Tessa sends the move that changes their path",
+              },
+            ].map((ex, i) => (
+              <div
+                key={i}
+                className="border border-white/[0.10] rounded-lg p-5 sm:p-6 grid gap-y-3 gap-x-5 sm:gap-x-6 sm:grid-cols-[auto_1fr] items-baseline"
+              >
+                <span className="text-[11px] font-mono tracking-[0.18em] uppercase text-white/40 tabular-nums">
+                  IF
+                </span>
+                <p className="text-[14.5px] font-light leading-relaxed text-white/80">
+                  {ex.ifClause}
+                </p>
+                <span className="text-[11px] font-mono tracking-[0.18em] uppercase text-white/40 tabular-nums">
+                  THEN
+                </span>
+                <p className="text-[14.5px] font-light leading-relaxed text-white/80">
+                  {ex.thenClause}
+                </p>
+                <span className="text-[11px] font-mono tracking-[0.18em] uppercase text-white/40 tabular-nums">
+                  SO
+                </span>
+                <p className="text-[14.5px] font-light leading-relaxed text-white/80">
+                  {ex.soClause}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
 
         <div className="mt-16 grid gap-5 sm:gap-6 sm:grid-cols-3 max-w-[1100px]">
           {[
             {
               n: "01",
               t: "Figure out your business",
-              d: "We learn your product, your customers, and the one outcome you want every customer to reach. That outcome becomes the target Tessa steers toward.",
+              d: "We learn your product, your users, and the one outcome you want every user to reach. That outcome becomes the target Tessa steers toward.",
             },
             {
               n: "02",
               t: "Build the formula",
-              d: "We build the version of Tessa that fits your product. The patterns it watches. The predictions it makes. The feedback it loops. The formula that turns your customer data into outcomes.",
+              d: "We build the version of Tessa that fits your product. The patterns it watches. The predictions it makes. The feedback it loops. The formula that turns your user data into outcomes.",
             },
             {
               n: "03",
               t: "Put it in your product",
-              d: "We put Tessa inside your product. Live in three weeks. From there, Tessa runs every day, predicting and looping feedback to every customer.",
+              d: "We put Tessa inside your product. Live in one week. From there, Tessa runs every day, predicting and looping feedback to every user.",
             },
           ].map((s) => (
             <div
@@ -270,7 +320,7 @@ export default function Page() {
           Start with Tessa.
         </h2>
         <p className="mt-8 text-[clamp(1rem,1.55vw,1.2rem)] font-light leading-relaxed text-white/65 max-w-[720px]">
-          $2,500 one time. Three weeks to live in your product. Here is what happens once you
+          $2,500 one time. One week to live in your product. Here is what happens once you
           start.
         </p>
 
@@ -284,12 +334,12 @@ export default function Page() {
             {
               n: "02",
               t: "Kickoff",
-              d: "We meet within two business days. We learn your product and pick the outcome every customer should reach.",
+              d: "We meet within two business days. We learn your product and pick the outcome every user should reach.",
             },
             {
               n: "03",
               t: "Build",
-              d: "Three weeks of work. We figure out your business, build the formula, and put Tessa inside your product.",
+              d: "One week of work. We figure out your business, build the formula, and put Tessa inside your product.",
             },
             {
               n: "04",

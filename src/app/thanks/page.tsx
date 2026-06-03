@@ -40,10 +40,10 @@ export default function ThanksPage() {
             <p>
               Within two business days, we will email you to schedule your kickoff call. On
               that call we will learn your product and pick the one result you want every
-              customer to reach.
+              user to reach.
             </p>
             <p>
-              About three weeks from the kickoff, Tessa goes live inside your product.
+              About one week from the kickoff, Tessa goes live inside your product.
             </p>
           </div>
           <div className="mt-12 flex flex-wrap items-center gap-4">

@@ -15,7 +15,7 @@ export const dynamic = "force-dynamic";
 const PRICE_USD_CENTS = 250000;
 const PRODUCT_NAME = "Tessa Founding Customer";
 const PRODUCT_DESCRIPTION =
-  "One time fee. Three weeks to live in your consumer product.";
+  "One time fee. One week to live in your consumer product.";
 
 export async function POST(req: Request) {
   const apiKey = process.env.STRIPE_SECRET_KEY;
