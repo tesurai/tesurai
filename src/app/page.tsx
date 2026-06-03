@@ -9,11 +9,11 @@ const CAL_LINK = "https://cal.com/tesurai";
 export const metadata = {
   title: "Tesurai | We put Tessa in your business",
   description:
-    "We figure out your business, build the formula for Tessa, and put her into your product. You stay solo. Your customers get the experience of a real growth team.",
+    "We figure out your business, build the formula for Tessa, and put it into your product. You stay solo. Your customers get better results without you having to hire.",
   openGraph: {
     title: "Tesurai | We put Tessa in your business",
     description:
-      "We figure out your business, build the formula for Tessa, and put her into your product. You stay solo. Your customers get the experience of a real growth team.",
+      "We figure out your business, build the formula for Tessa, and put it into your product. You stay solo. Your customers get better results without you having to hire.",
     siteName: "Tesurai",
     type: "website",
   },
@@ -21,7 +21,7 @@ export const metadata = {
     card: "summary_large_image",
     title: "Tesurai | We put Tessa in your business",
     description:
-      "We figure out your business, build the formula for Tessa, and put her into your product. You stay solo. Your customers get the experience of a real growth team.",
+      "We figure out your business, build the formula for Tessa, and put it into your product. You stay solo. Your customers get better results without you having to hire.",
   },
 };
 
@@ -73,8 +73,9 @@ export default function Page() {
           We put Tessa in your business.
         </h1>
         <p className="mt-10 text-[clamp(1.05rem,2vw,1.4rem)] font-light leading-relaxed text-white/55 max-w-[700px]">
-          Tessa is an AI that watches every customer in your product and tells them the next
-          thing to do. You stay solo. We bring her in and set her up end to end.
+          Tessa is an AI system that watches every customer in your product and tells them the
+          next thing to do. It is the same Tessa that runs inside Abbelo today. We put it in
+          your business next, end to end. You stay solo.
         </p>
         <div className="mt-12">
           <a
@@ -99,9 +100,9 @@ export default function Page() {
         </h2>
         <p className="mt-8 text-[clamp(1rem,1.6vw,1.2rem)] font-light leading-relaxed text-white/55 max-w-[720px]">
           The best tools used to belong to big companies with big teams. That is changing fast.
-          One founder with the right AI in their corner can do the work of many people. We are
-          here for the next wave of solo founders building billion dollar businesses. We bring
-          you the tools, and we set them up for you.
+          One founder with the right AI can do the work of many people. We are here for the
+          next wave of solo founders building billion dollar businesses. We bring you the
+          tools, and we set them up for you.
         </p>
       </section>
 
@@ -111,12 +112,12 @@ export default function Page() {
           [ Tessa ]
         </p>
         <h2 className="text-[clamp(1.8rem,3.5vw,3rem)] font-light leading-[1.1] tracking-[-0.025em] text-white/90 max-w-[22ch]">
-          The team you do not have to hire.
+          Built to do the work of a team.
         </h2>
         <p className="mt-8 text-[clamp(1rem,1.6vw,1.2rem)] font-light leading-relaxed text-white/55 max-w-[720px]">
           Tessa scores every customer in your product from 0 to 100, tells each one the next
           thing to do, and shows you the big picture of who is doing well and who is stuck. We
-          put her in your business in three steps.
+          put Tessa in your business in three steps.
         </p>
 
         <div className="mt-16 grid gap-12 sm:grid-cols-3 max-w-[1100px]">
@@ -129,12 +130,12 @@ export default function Page() {
             {
               n: "Step 2",
               t: "Build the formula",
-              d: "We build the version of Tessa that fits your business. What she watches, how she scores, and the next move she gives each customer.",
+              d: "We build the version of Tessa that fits your business. What it watches, how it scores, and the next move it gives each customer.",
             },
             {
               n: "Step 3",
               t: "Put it in your business",
-              d: "We wire Tessa into your product and the tools you already use. You stay solo. She goes to work.",
+              d: "We wire Tessa into your product and the tools you already use. You stay solo. Tessa runs.",
             },
           ].map((s) => (
             <div key={s.n}>
@@ -161,17 +162,17 @@ export default function Page() {
         <div className="mt-8 grid gap-6 md:grid-cols-2 max-w-[920px]">
           <p className="text-[clamp(1rem,1.6vw,1.2rem)] font-light leading-relaxed text-white/55">
             Abbelo is an app that helps people grow. People use it to work on themselves. They
-            talk through their goals out loud, like a voice call. Behind every one of those
-            sessions sits Tessa.
+            talk through their goals out loud, like a voice call. Tessa runs behind every one of
+            those sessions.
           </p>
           <p className="text-[clamp(1rem,1.6vw,1.2rem)] font-light leading-relaxed text-white/55">
-            Tessa listens to each session. She watches the habits people keep and the promises
-            they make. She gives each person a score from 0 to 100, and she gives them the next
-            small step to take.
+            Tessa reads each session. It tracks the habits people keep and the promises they
+            make. It gives each user a score from 0 to 100, and it gives them the next small
+            step to take.
           </p>
         </div>
         <p className="mt-10 text-[clamp(1.05rem,1.7vw,1.3rem)] font-light leading-relaxed text-white/70 max-w-[760px]">
-          Abbelo is live today. Tessa is at work inside it, scoring real people. The same system
+          Abbelo is live today. Tessa is running inside it, scoring real users. The same system
           we set up for you is the one that runs there.
         </p>
       </section>
