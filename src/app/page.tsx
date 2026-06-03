@@ -8,6 +8,8 @@
 // Copy rules: fifth grade reading level, clear not concise, no dashes
 // anywhere. No language that frames Tessa as a team replacement.
 
+import PayButton from "./pay-button";
+
 const CAL_LINK = "https://cal.com/tesurai";
 
 export const metadata = {
@@ -276,6 +278,92 @@ export default function Page() {
           same Tessa we set up for you is the one running there. You can see how it works in a
           real product before we ever touch yours.
         </p>
+      </section>
+
+      {/* Founding customer */}
+      <section className="px-6 sm:px-10 py-24 sm:py-32 max-w-[1100px] mx-auto border-t border-white/[0.10]">
+        <div className="flex flex-wrap items-baseline gap-x-5 gap-y-2 mb-6">
+          <p className="text-[12px] font-mono tracking-[0.18em] uppercase text-white/35">
+            [ Founding customer ]
+          </p>
+          <span className="text-[11px] font-mono tracking-[0.16em] uppercase text-white/25 tabular-nums">
+            First 5 founders only
+          </span>
+        </div>
+        <h2 className="text-[clamp(1.7rem,3.2vw,2.6rem)] font-light leading-[1.15] tracking-[-0.02em] text-white max-w-[24ch]">
+          Be one of the first five founders.
+        </h2>
+        <p className="mt-8 text-[clamp(1rem,1.55vw,1.2rem)] font-light leading-relaxed text-white/65 max-w-[720px]">
+          We are bringing Tessa to the first five consumer founders at founding founder
+          pricing. One time fee. After that, the price goes up. Here is what happens once you
+          pay.
+        </p>
+
+        <div className="mt-16 grid gap-5 sm:gap-6 sm:grid-cols-2 lg:grid-cols-4 max-w-[1100px]">
+          {[
+            {
+              n: "01",
+              t: "Pay the fee",
+              d: "$2,500 one time. Card or bank. You see a receipt right away in your email from Stripe.",
+            },
+            {
+              n: "02",
+              t: "Kickoff call",
+              d: "We meet within two business days. We learn your product and pick the one result you want every customer to reach.",
+            },
+            {
+              n: "03",
+              t: "Three weeks of work",
+              d: "We figure out your business, build the formula, and put Tessa inside your product. You stay out of the build.",
+            },
+            {
+              n: "04",
+              t: "Tessa goes live",
+              d: "Tessa runs every day inside your product. We meet monthly after that to keep Tessa aimed at the right outcome.",
+            },
+          ].map((s) => (
+            <div
+              key={s.n}
+              className="bg-white/[0.02] border border-white/[0.10] rounded-lg p-6 sm:p-7 flex flex-col"
+            >
+              <p className="text-[clamp(2rem,3.5vw,2.75rem)] font-mono font-light leading-none tracking-[-0.02em] text-white/35 mb-8 tabular-nums">
+                {s.n}
+              </p>
+              <h3 className="text-[clamp(1.05rem,1.4vw,1.25rem)] font-light tracking-[-0.01em] text-white mb-3">
+                {s.t}
+              </h3>
+              <p className="text-[14.5px] font-light leading-relaxed text-white/60">{s.d}</p>
+            </div>
+          ))}
+        </div>
+
+        <div className="mt-16 flex flex-col gap-8 sm:flex-row sm:items-end sm:justify-between">
+          <div>
+            <p className="text-[12px] font-mono tracking-[0.16em] uppercase text-white/55 mb-3">
+              Price
+            </p>
+            <p className="text-[clamp(2.4rem,5vw,3.5rem)] font-extralight leading-none text-white tabular-nums tracking-[-0.02em]">
+              $2,500
+            </p>
+            <p className="text-[13px] font-light text-white/45 mt-3">
+              One time fee. Founding founder price. Goes up after the first five.
+            </p>
+          </div>
+          <div className="flex flex-col items-start sm:items-end gap-3">
+            <PayButton />
+            <p className="text-[13px] font-light text-white/40">
+              Not ready?{" "}
+              <a
+                href={CAL_LINK}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-white/60 hover:text-white transition-colors"
+              >
+                Book a call first.
+              </a>
+            </p>
+          </div>
+        </div>
       </section>
 
       {/* Closing CTA */}
