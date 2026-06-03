@@ -112,20 +112,103 @@ export default function Page() {
         </p>
       </section>
 
+      {/* The journey */}
+      <section className="px-6 sm:px-10 py-24 sm:py-32 max-w-[1100px] mx-auto border-t border-white/[0.10]">
+        <p className="text-[12px] font-mono tracking-[0.18em] uppercase text-white/35 mb-6">
+          [ The journey ]
+        </p>
+        <h2 className="text-[clamp(1.7rem,3.2vw,2.6rem)] font-light leading-[1.15] tracking-[-0.02em] text-white max-w-[22ch]">
+          Two paths for every customer.
+        </h2>
+        <p className="mt-8 text-[clamp(1rem,1.55vw,1.2rem)] font-light leading-relaxed text-white/65 max-w-[720px]">
+          Every customer takes some path through your product. Without Tessa, most of them
+          get stuck and walk away. With Tessa watching and looping back the next move, most
+          of them get to the result they came for.
+        </p>
+
+        <div className="mt-16 grid gap-5 sm:gap-6 sm:grid-cols-2 max-w-[1100px]">
+          {/* Without Tessa */}
+          <div className="bg-white/[0.02] border border-white/[0.10] rounded-lg p-6 sm:p-8 flex flex-col">
+            <p className="text-[12px] font-mono tracking-[0.16em] uppercase text-white/45 mb-8">
+              Without Tessa
+            </p>
+            <ol className="space-y-4 flex-1">
+              {[
+                "Signs up wanting a result.",
+                "Tries the product on their own.",
+                "Gets stuck somewhere in the middle.",
+                "Does not know what to do next.",
+                "Walks away before the result.",
+                "Becomes one more lost customer.",
+              ].map((step, i) => (
+                <li
+                  key={i}
+                  className="text-[14.5px] font-light leading-relaxed text-white/45 flex gap-4"
+                >
+                  <span className="text-[11px] font-mono text-white/30 tabular-nums shrink-0 pt-1">
+                    {String(i + 1).padStart(2, "0")}
+                  </span>
+                  <span>{step}</span>
+                </li>
+              ))}
+            </ol>
+            <div className="mt-8 pt-6 border-t border-white/[0.08]">
+              <p className="text-[11px] font-mono tracking-[0.16em] uppercase text-white/35">
+                Outcome: customer quits
+              </p>
+            </div>
+          </div>
+
+          {/* With Tessa */}
+          <div className="bg-white/[0.04] border border-white/[0.20] rounded-lg p-6 sm:p-8 flex flex-col">
+            <p className="text-[12px] font-mono tracking-[0.16em] uppercase text-white/70 mb-8">
+              With Tessa
+            </p>
+            <ol className="space-y-4 flex-1">
+              {[
+                "Signs up wanting a result.",
+                "Tessa watches what they do.",
+                "Tessa predicts where they are heading.",
+                "Tessa loops back the next move.",
+                "They stay on the path.",
+                "They get to the result they came for.",
+              ].map((step, i) => (
+                <li
+                  key={i}
+                  className="text-[14.5px] font-light leading-relaxed text-white/80 flex gap-4"
+                >
+                  <span className="text-[11px] font-mono text-white/55 tabular-nums shrink-0 pt-1">
+                    {String(i + 1).padStart(2, "0")}
+                  </span>
+                  <span>{step}</span>
+                </li>
+              ))}
+            </ol>
+            <div className="mt-8 pt-6 border-t border-white/[0.20]">
+              <p className="text-[11px] font-mono tracking-[0.16em] uppercase text-white/85">
+                Outcome: customer wins
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Tessa */}
       <section className="px-6 sm:px-10 py-24 sm:py-32 max-w-[1100px] mx-auto border-t border-white/[0.10]">
         <p className="text-[12px] font-mono tracking-[0.18em] uppercase text-white/35 mb-6">
           [ Tessa ]
         </p>
         <h2 className="text-[clamp(1.7rem,3.2vw,2.6rem)] font-light leading-[1.15] tracking-[-0.02em] text-white max-w-[22ch]">
-          How Tessa helps each customer succeed.
+          Tessa sees each customer's future.
         </h2>
         <p className="mt-8 text-[clamp(1rem,1.55vw,1.2rem)] font-light leading-relaxed text-white/65 max-w-[720px]">
-          Tessa watches every one of your customers as they use your product. It gives each
-          customer a score from 0 to 100, showing how close they are to the result they came
-          for. Then it tells them the next thing to do, the one small step that will move their
-          score up the most. And it shows you the big picture, so you can see which customers
-          are doing well and which ones need help. We put Tessa in your product in three steps.
+          Tessa watches what each customer has done in the past and what they are doing right
+          now. It finds the patterns that actually matter, then predicts where that customer
+          is heading. Tessa shows them the outcome they will get if they stay on this path. As
+          each customer responds, Tessa loops the new information back into their picture and
+          gives them fresh feedback. Over time you see the whole funnel, who is winning, who
+          is stuck, and what to change for each one. We help you build the formula and put it
+          in your product in three steps.
         </p>
 
         <div className="mt-16 grid gap-5 sm:gap-6 sm:grid-cols-3 max-w-[1100px]">
@@ -133,17 +216,17 @@ export default function Page() {
             {
               n: "01",
               t: "Figure out your business",
-              d: "We sit down with you and learn your product. We learn who your customers are and what they came to do. Together we pick the one result you want every customer to reach. That is the thing Tessa will measure them against.",
+              d: "We sit down with you and learn your product. We learn who your customers are and what they came to do. Together we pick the one outcome you want every customer to reach. That is the target Tessa will predict and steer them toward.",
             },
             {
               n: "02",
               t: "Build the formula",
-              d: "We build the version of Tessa that fits your product. We pick what it watches, how it scores each customer, and the kind of next move it gives them. This is the formula that turns your customer data into one clear number from 0 to 100.",
+              d: "We build the version of Tessa that fits your product. We pick what patterns it watches in your customer data, how it predicts where each customer is heading, and the kind of feedback loops it sends back. This is the formula that turns your customer data into a clear forecast and a fresh next move for each user.",
             },
             {
               n: "03",
               t: "Put it in your product",
-              d: "We connect Tessa to your product and to the tools you already use. We get it live in about three weeks. From then on, Tessa runs every day. It scores every customer and gives each one the next move that gets them closer to the result they came for.",
+              d: "We put Tessa inside your product and connect it to the tools you already use. About three weeks from start to live. From then on, Tessa runs every day. It shows each customer where they are heading, and as they respond, it loops fresh feedback to keep them on the path to winning.",
             },
           ].map((s) => (
             <div
