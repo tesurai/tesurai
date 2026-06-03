@@ -1,19 +1,20 @@
 // Tesurai company landing page.
-// Positioning: Tesurai builds AI that measures who you're becoming.
-// Tessa is the engine. Today she scores people (B2C, live). Next:
-// she scores the teams those people work in (B2B beachhead).
-// Page is black/white/grey only, no pricing on the page (intentional).
+// Positioning: Tessa is the leverage that lets a solo founder serve thousands
+// of customers like a real growth team. Tessa scores every customer, finds
+// the patterns across the funnel, and ships the next move — for each user
+// and for the founder. Today she also lives in a separate B2C product
+// (becoming-score for individuals), which is the live proof of the engine.
 
 const CAL_LINK = "https://cal.com/tesurai";
 
 export const metadata = {
   title: "Tesurai | AI that measures who you’re becoming",
   description:
-    "Tesurai builds AI that measures who you’re becoming. Tessa turns the signals you already have into one score, a 90-day forecast, and the next move to move it — for people, and for the teams they work in.",
+    "Tessa scores every customer in your product — what’s working, what’s not, and the next move to lift them. The customer success team, growth analyst, and data engineer you don’t have to hire.",
   openGraph: {
     title: "Tesurai | AI that measures who you’re becoming",
     description:
-      "Tesurai builds AI that measures who you’re becoming. Tessa turns the signals you already have into one score, a 90-day forecast, and the next move to move it — for people, and for the teams they work in.",
+      "Tessa scores every customer in your product — what’s working, what’s not, and the next move to lift them. The customer success team, growth analyst, and data engineer you don’t have to hire.",
     siteName: "Tesurai",
     type: "website",
   },
@@ -21,7 +22,7 @@ export const metadata = {
     card: "summary_large_image",
     title: "Tesurai | AI that measures who you’re becoming",
     description:
-      "Tesurai builds AI that measures who you’re becoming. Tessa turns the signals you already have into one score, a 90-day forecast, and the next move to move it — for people, and for the teams they work in.",
+      "Tessa scores every customer in your product — what’s working, what’s not, and the next move to lift them. The customer success team, growth analyst, and data engineer you don’t have to hire.",
   },
 };
 
@@ -72,10 +73,10 @@ export default function Page() {
         <h1 className="text-[clamp(2.4rem,6vw,5.5rem)] font-light leading-[1.04] tracking-[-0.035em] text-white max-w-[16ch]">
           We build AI that measures who you’re becoming.
         </h1>
-        <p className="mt-10 text-[clamp(1.05rem,2vw,1.4rem)] font-light leading-relaxed text-white/55 max-w-[680px]">
-          One score that predicts the outcome you actually care about, a 90-day forecast you can
-          trust, and the single next move to move the score. For people, and for the teams they
-          work in.
+        <p className="mt-10 text-[clamp(1.05rem,2vw,1.4rem)] font-light leading-relaxed text-white/55 max-w-[700px]">
+          Tessa scores who each of your customers is becoming inside your product — what’s
+          working, what’s not, and the single move that lifts them next. So one founder can
+          serve thousands like a real growth team.
         </p>
         <div className="mt-12 flex flex-wrap items-center gap-4">
           <a
@@ -102,10 +103,25 @@ export default function Page() {
           [ Live today ]
         </p>
         <p className="text-[clamp(1.1rem,1.8vw,1.35rem)] font-light leading-relaxed text-white/70 max-w-[760px]">
-          Tessa already scores who a person is becoming on her first product. Now we bring the
-          same engine to the teams those people work in — so every manager has one number that
-          tracks who each employee is becoming inside your company, and one move to make this
-          week.
+          Tessa already scores who a person is becoming on her first product. Now we point the
+          same engine at your customers — so every founder can see, for every user, what’s
+          working and what to do next.
+        </p>
+      </section>
+
+      {/* Belief / manifesto */}
+      <section className="px-6 sm:px-10 py-24 sm:py-32 max-w-[1100px] mx-auto border-t border-white/[0.06]">
+        <p className="text-[12px] font-mono tracking-[0.18em] uppercase text-white/35 mb-6">
+          [ The belief ]
+        </p>
+        <h2 className="text-[clamp(1.8rem,3.5vw,3rem)] font-light leading-[1.1] tracking-[-0.025em] text-white/90 max-w-[22ch]">
+          You don’t need a big team to build a massive business.
+        </h2>
+        <p className="mt-8 text-[clamp(1rem,1.6vw,1.2rem)] font-light leading-relaxed text-white/55 max-w-[720px]">
+          Tesurai is built for the next wave of solo founders building billion-dollar
+          businesses. Tessa is the leverage — the customer success team, growth analyst, and
+          data engineer you don’t have to hire. One number per customer. One pattern across the
+          funnel. One move per week.
         </p>
       </section>
 
@@ -117,24 +133,25 @@ export default function Page() {
         <h2 className="text-[clamp(1.8rem,3.5vw,3rem)] font-light leading-[1.1] tracking-[-0.025em] text-white/90 max-w-[20ch]">
           Moneyball for what actually matters.
         </h2>
-        <p className="mt-8 text-[clamp(1rem,1.6vw,1.2rem)] font-light leading-relaxed text-white/50 max-w-[680px]">
-          Most tools give you forty metrics. Tessa picks the three that actually predict your
-          outcome this quarter — and tells you which one to move first.
+        <p className="mt-8 text-[clamp(1rem,1.6vw,1.2rem)] font-light leading-relaxed text-white/50 max-w-[700px]">
+          Most tools give you forty metrics on a dashboard you have to staff. Tessa picks the
+          three signals that actually predict your customers’ outcome — and tells you which one
+          to move first, for each user and for the funnel as a whole.
         </p>
 
         <div className="mt-16 grid gap-12 sm:grid-cols-3 max-w-[1000px]">
           {[
             {
               n: "Signals in",
-              d: "We wire the data that already exists in your stack — HRIS, Slack, calendar, perf reviews, surveys, whatever real.",
+              d: "We wire Tessa to every user signal in your product — events, conversions, drop-offs, billing, support. Whatever you already emit.",
             },
             {
               n: "Score out",
-              d: "One 0–100 score per subject, fit to the outcome you actually care about. Re-fit weekly as your business changes.",
+              d: "One 0–100 becoming-score per customer, fit to the outcome they came for. Re-fit weekly as your product changes.",
             },
             {
               n: "Move next",
-              d: "The single next move that lifts the score most — delivered to the human who needs it, every week.",
+              d: "The single next move that lifts each customer toward their outcome — surfaced to you, or delivered straight to them.",
             },
           ].map((row) => (
             <div key={row.n}>
@@ -158,10 +175,10 @@ export default function Page() {
         <h2 className="text-[clamp(1.8rem,3.5vw,3rem)] font-light leading-[1.1] tracking-[-0.025em] text-white/90 max-w-[22ch]">
           From gut to score in three weeks.
         </h2>
-        <p className="mt-8 text-[clamp(1rem,1.6vw,1.2rem)] font-light leading-relaxed text-white/50 max-w-[680px]">
-          White glove, end to end. You don’t build anything — we wire Tessa into the systems you
-          already run on, score the outcome you already care about, and ship the next move into
-          the inbox of the human who needs it.
+        <p className="mt-8 text-[clamp(1rem,1.6vw,1.2rem)] font-light leading-relaxed text-white/50 max-w-[700px]">
+          White glove, end to end. You don’t build anything new — we wire Tessa to your
+          product, score every customer against the outcome you actually care about, and ship
+          the next move into the inbox of the human who needs it.
         </p>
 
         <div className="mt-16 grid gap-10 sm:gap-12 sm:grid-cols-2 lg:grid-cols-4 max-w-[1100px]">
@@ -169,22 +186,22 @@ export default function Page() {
             {
               n: "Week 1",
               t: "Outcome",
-              d: "We sit with you to name the one outcome you’d bet the quarter on, and the subjects whose scores we’ll move — employees, teams, customers.",
+              d: "We sit with you to name the outcome your customers came for, and the success signal we’ll score against.",
             },
             {
               n: "Week 2",
               t: "Wire",
-              d: "We connect Tessa to the data that already exists in your stack — HRIS, Slack, calendar, perf tools, CRM. OAuth in, no code from you.",
+              d: "We wire Tessa to your event stream — Mixpanel, Amplitude, Segment, PostHog, Stripe, your own DB — in an afternoon. You write nothing new.",
             },
             {
               n: "Week 3",
               t: "Score",
-              d: "The first scores and 90-day forecast land. Each manager gets their first weekly move. Real numbers, not a survey.",
+              d: "Every customer gets their first score. You see the funnel — top producers, low potential, the patterns between them — and the first move per cohort.",
             },
             {
               n: "Ongoing",
               t: "Re-fit",
-              d: "Tessa re-fits the model every week as your business changes. The score updates, the next move ships into Slack every Monday.",
+              d: "Tessa re-fits weekly as your product changes. Each customer’s next move ships into your dashboard, or straight to them.",
             },
           ].map((s) => (
             <div key={s.n}>
@@ -200,7 +217,7 @@ export default function Page() {
         </div>
       </section>
 
-      {/* Where Tessa scores — focused two-card */}
+      {/* Where Tessa scores — two cards (People live + Founders) */}
       <section className="px-6 sm:px-10 py-24 sm:py-32 max-w-[1100px] mx-auto border-t border-white/[0.06]">
         <p className="text-[12px] font-mono tracking-[0.18em] uppercase text-white/35 mb-6">
           [ Where Tessa scores ]
@@ -224,29 +241,29 @@ export default function Page() {
             </h3>
             <p className="text-[15px] font-light leading-relaxed text-white/50">
               Tessa reads every check-in, commitment, and habit, and turns it into a
-              becoming-score from 0 to 100 — the first number that tracks the person you’re
+              becoming-score from 0 to 100 — the first number that tracks the person someone is
               turning into. Live today.
             </p>
           </div>
           <div className="bg-black p-8 sm:p-10 flex flex-col">
             <div className="flex items-center gap-3 mb-5">
               <span className="text-[11px] font-mono tracking-[0.14em] uppercase text-white/40">
-                Teams
+                Founders
               </span>
             </div>
             <h3 className="text-[clamp(1.25rem,2vw,1.6rem)] font-light tracking-[-0.02em] text-white/90 mb-4">
-              Your employees, scored
+              Your customers, scored
             </h3>
             <p className="text-[15px] font-light leading-relaxed text-white/50">
-              Point Tessa at the signals you already have — HRIS, Slack, calendar, perf reviews —
-              and she scores who each employee is becoming inside your company. Every manager
-              gets one move per direct report, every week.
+              Tessa scores who each of your customers is becoming inside your product. The
+              funnel rolls up so you see what your top producers do that the bottom don’t — and
+              the next move for every user, every week.
             </p>
           </div>
         </div>
 
         <p className="mt-12 text-[15px] font-light leading-relaxed text-white/40 max-w-[680px]">
-          Beyond people and teams, the same engine measures companies, customers, and audiences.
+          Beyond people and founders, the same engine measures teams, companies, and audiences.
           Tessa is built to measure any system that changes over time.
         </p>
       </section>
@@ -267,9 +284,9 @@ export default function Page() {
             </p>
             <ul className="space-y-4">
               {[
-                "You have one outcome you’d bet the quarter on.",
-                "You already have at least one stream of signal — HRIS, perf tool, Slack, CRM, anything real.",
-                "You’re tired of dashboards that don’t end in a decision.",
+                "You’re a founder building something serious — and you don’t want to hire a customer success or growth team to do it.",
+                "Your product already emits events somewhere — Mixpanel, Amplitude, Segment, PostHog, Stripe, your own DB.",
+                "You believe one number per customer beats a dashboard of forty.",
               ].map((line) => (
                 <li
                   key={line}
@@ -287,9 +304,9 @@ export default function Page() {
             </p>
             <ul className="space-y-4">
               {[
-                "You want a dashboard, not a score.",
-                "You want a chatbot or a coach.",
-                "The outcome you care about isn’t yet named — Tessa works when the target is sharp.",
+                "You don’t have customers in your product yet — Tessa needs real signal to score.",
+                "You want a dashboard, a chatbot, or AI insights without a model behind them.",
+                "The outcome your customers came for isn’t yet named — Tessa works when the target is sharp.",
               ].map((line) => (
                 <li
                   key={line}
@@ -312,20 +329,20 @@ export default function Page() {
         <div className="mt-12 grid gap-12 sm:grid-cols-2 max-w-[1000px]">
           {[
             {
-              q: "How is Tessa different from Lattice, Culture Amp, or Gong?",
-              a: "Those products give you a dashboard or a coach. Tessa picks the few signals that actually predict your outcome, and ships you one score, one forecast, and one next move. Fewer numbers, more conviction.",
+              q: "How is Tessa different from Mixpanel, Amplitude, or PostHog?",
+              a: "Those give you dashboards you have to staff and interpret. Tessa gives you one score per customer and the single next move to lift them — for every user, every week. Fewer numbers, more conviction. The dashboards still exist; you just don’t have to live in them.",
             },
             {
               q: "Who owns the data?",
-              a: "You do. We work in your warehouse when you have one, and host yours when you don’t. Your data never trains anyone else’s model.",
+              a: "You do. Tessa runs in your warehouse when you have one, and hers when you don’t. Your customers’ data never trains anyone else’s model.",
             },
             {
               q: "What if our signals are messy?",
-              a: "They always are. We wire what’s there, score against what matters, and tell you when a signal stream is too noisy to trust. Honesty beats false precision.",
+              a: "They always are. We wire what’s there, score against what matters, and tell you when a stream is too noisy to trust. Honesty beats false precision.",
             },
             {
               q: "What happens after the first three weeks?",
-              a: "Tessa re-fits the model weekly as your business changes, ships the next move to the right human, and the score keeps moving. You meet with us monthly to recalibrate the outcome.",
+              a: "Tessa re-fits the model weekly as your product changes and your customers move. Each week the score updates, the next move ships, the funnel patterns sharpen. You meet with us monthly to recalibrate the outcome.",
             },
           ].map((f) => (
             <div key={f.q}>
@@ -343,11 +360,12 @@ export default function Page() {
         <p className="text-[12px] font-mono tracking-[0.18em] uppercase text-white/35 mb-6">
           [ Next ]
         </p>
-        <h2 className="text-[clamp(1.8rem,4vw,3.4rem)] font-light leading-[1.08] tracking-[-0.03em] text-white/90 max-w-[18ch] mx-auto">
-          Ready to see who your team is becoming?
+        <h2 className="text-[clamp(1.8rem,4vw,3.4rem)] font-light leading-[1.08] tracking-[-0.03em] text-white/90 max-w-[20ch] mx-auto">
+          Ready to see who your customers are becoming?
         </h2>
-        <p className="mt-8 text-[clamp(1rem,1.6vw,1.2rem)] font-light leading-relaxed text-white/50 max-w-[560px] mx-auto">
-          One outcome. One score. One move per week. Book a call to scope the first three weeks.
+        <p className="mt-8 text-[clamp(1rem,1.6vw,1.2rem)] font-light leading-relaxed text-white/50 max-w-[600px] mx-auto">
+          One score per customer. One pattern across the funnel. One move per week. Book a call
+          to scope the first three weeks.
         </p>
         <div className="mt-12 flex flex-wrap items-center justify-center gap-4">
           <a
