@@ -269,32 +269,24 @@ export default function Page() {
           </div>
         </article>
 
-        {/* Impact: closing statement on what Tessa has done for Abbelo */}
-        <article className="mt-14 sm:mt-16 grid gap-2 sm:gap-6 sm:grid-cols-[160px_1fr] sm:items-baseline">
+        {/* Impact: founder-voiced message + attribution */}
+        <div className="mt-16 sm:mt-20 pt-8 border-t border-white/[0.10] grid gap-2 sm:gap-6 sm:grid-cols-[160px_1fr] sm:items-baseline">
           <p className="text-[11px] font-mono tracking-[0.22em] uppercase text-white/55 tabular-nums">
             03 / Impact
           </p>
-          <div>
-            <p className="text-[clamp(1.15rem,1.55vw,1.4rem)] font-normal leading-[1.5] text-white/85 max-w-[640px]">
-              Tessa now runs every Abbelo session. Every user sees what they are becoming and the
-              next move that gets them closer.
-            </p>
-            <p className="mt-4 text-[15px] font-normal leading-[1.6] text-white/55 max-w-[640px]">
-              Abbelo no longer guesses where any user is heading.
-            </p>
-          </div>
-        </article>
-
-        {/* Founder sign-off */}
-        <div className="mt-16 sm:mt-20 pt-8 border-t border-white/[0.10] grid gap-2 sm:gap-6 sm:grid-cols-[160px_1fr] sm:items-baseline">
-          <p className="text-[11px] font-mono tracking-[0.22em] uppercase text-white/40">
-            Founder
-          </p>
-          <p className="text-[11px] font-mono tracking-[0.22em] uppercase leading-[1.6] text-white">
-            Matthew Werner
-            <br />
-            <span className="text-white/45">Abbelo</span>
-          </p>
+          <figure>
+            <blockquote className="text-[clamp(1.15rem,1.55vw,1.4rem)] font-medium leading-[1.5] text-white max-w-[640px]">
+              &ldquo;Men lie, women lie, numbers don&rsquo;t. Tessa is a private model of every
+              Abbelo user. It learns from every session, scores who they are becoming, and shows
+              them the one move to push next. Abbelo no longer guesses where any user is
+              heading.&rdquo;
+            </blockquote>
+            <figcaption className="mt-6 text-[11px] font-mono tracking-[0.22em] uppercase leading-[1.6] text-white">
+              Matthew Werner
+              <br />
+              <span className="text-white/45">Founder, Abbelo</span>
+            </figcaption>
+          </figure>
         </div>
       </section>
 
