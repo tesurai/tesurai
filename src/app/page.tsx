@@ -95,8 +95,8 @@ export default function Page() {
           Two paths
         </h2>
         <p className="mt-10 text-[clamp(1.05rem,1.45vw,1.25rem)] font-normal leading-[1.55] text-white/65 max-w-[640px] mx-auto">
-          Every user takes a path through your product. Without an intelligence layer, most paths
-          end before the result.
+          Every user takes a path through your business. Without an intelligence layer, most
+          users never reach the result.
         </p>
 
         <div className="mt-16 grid gap-5 sm:gap-6 sm:grid-cols-2 text-left">
