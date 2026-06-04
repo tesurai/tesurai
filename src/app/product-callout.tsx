@@ -16,15 +16,15 @@ export default function ProductCallout({ children }: { children: React.ReactNode
         <span
           className="absolute bottom-full left-1/2 -translate-x-1/2 mb-3 inline-flex items-center gap-1.5 bg-black border border-white/[0.20] rounded-full pl-3 pr-1.5 py-1.5 whitespace-nowrap z-10 shadow-lg shadow-black/60"
           role="dialog"
-          aria-label="Tesurai"
+          aria-label="Tessa"
         >
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
-            src="/logo-white.svg"
-            alt="Tesurai"
-            width={105}
-            height={14}
-            className="h-3.5 w-auto"
+            src="/logo-tessa-white.svg"
+            alt="Tessa"
+            width={88}
+            height={16}
+            className="h-4 w-auto"
           />
           <button
             type="button"
