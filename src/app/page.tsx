@@ -210,152 +210,54 @@ export default function Page() {
 
       {/* Case study */}
       <section className="px-6 sm:px-10 py-24 sm:py-32 max-w-[1100px] mx-auto border-t border-white/[0.10]">
-        <div className="flex flex-wrap items-baseline gap-x-5 gap-y-2 mb-6">
+        <div className="flex flex-wrap items-baseline gap-x-5 gap-y-2 mb-10">
           <p className="text-[12px] font-mono tracking-[0.18em] uppercase text-white/35">
             [ Case study ]
           </p>
           <span className="text-[11px] font-mono tracking-[0.16em] uppercase text-white/25 tabular-nums">
-            Case 001 / 2026
+            Abbelo / 2026
           </span>
         </div>
 
-        {/* Customer meta header */}
-        <div className="mb-12 grid gap-6 sm:gap-10 sm:grid-cols-3 max-w-[920px] border-t border-b border-white/[0.10] py-6">
-          <div>
-            <p className="text-[11px] font-mono tracking-[0.2em] uppercase text-white/45 mb-2">
-              Customer
-            </p>
-            <p className="text-[15px] font-light text-white">Abbelo</p>
-          </div>
-          <div>
-            <p className="text-[11px] font-mono tracking-[0.2em] uppercase text-white/45 mb-2">
-              Sector
-            </p>
-            <p className="text-[15px] font-light text-white/85">
-              Personal development. Consumer mobile and web.
-            </p>
-          </div>
-          <div>
-            <p className="text-[11px] font-mono tracking-[0.2em] uppercase text-white/45 mb-2">
-              Intelligence layer
-            </p>
-            <p className="text-[15px] font-light text-white/85">Tessa, built by Tesurai.</p>
-          </div>
-        </div>
-
-        <h2 className="text-[clamp(1.7rem,3.2vw,2.6rem)] font-light leading-[1.15] tracking-[-0.02em] text-white max-w-[20ch]">
+        <h2 className="text-[clamp(2rem,4vw,3.2rem)] font-light leading-[1.08] tracking-[-0.025em] text-white max-w-[20ch]">
           Abbelo runs on Tessa.
         </h2>
 
-        <p className="mt-8 text-[clamp(1rem,1.55vw,1.2rem)] font-light leading-relaxed text-white/75 max-w-[760px]">
+        <p className="mt-8 text-[clamp(1.05rem,1.7vw,1.3rem)] font-light leading-relaxed text-white/75 max-w-[680px]">
           Abbelo is a coaching app for people who want to change. Every session ends with one
-          number that tracks who the user is becoming.
+          number that tracks who they are becoming.
         </p>
 
-        {/* The problem */}
-        <div className="mt-16 max-w-[820px]">
-          <p className="text-[11px] font-mono tracking-[0.2em] uppercase text-white/45 mb-4">
-            The problem
-          </p>
-          <p className="text-[clamp(1rem,1.55vw,1.2rem)] font-light leading-relaxed text-white/75">
-            Every coaching app shows the user a streak, a habit count, or a journal entry. None
-            of them answer the one question the user actually has. Am I becoming who I said I
-            wanted to become, and at what pace.
-          </p>
-          <p className="mt-4 text-[clamp(1rem,1.55vw,1.2rem)] font-light leading-relaxed text-white/65">
-            Abbelo needed an intelligence layer that could read every session, score it
-            honestly, and tell the user the one thing to push next. Not a chatbot. Not a
-            dashboard. A growth analyst. That layer is Tessa.
-          </p>
-        </div>
+        {/* The question — the problem, set as the visual anchor */}
+        <figure className="mt-20 sm:mt-24 max-w-[880px]">
+          <blockquote className="text-[clamp(1.6rem,3vw,2.4rem)] font-extralight leading-[1.25] tracking-[-0.02em] text-white">
+            Am I becoming who I said I wanted to become, and at what pace?
+          </blockquote>
+          <figcaption className="mt-5 text-[12px] font-mono tracking-[0.2em] uppercase text-white/45">
+            The question every Abbelo user has. No coaching app answered it.
+          </figcaption>
+        </figure>
 
-        {/* How Tessa is wired in */}
-        <div className="mt-16 max-w-[820px]">
-          <p className="text-[11px] font-mono tracking-[0.2em] uppercase text-white/45 mb-4">
-            How Tessa is wired in
-          </p>
-          <p className="text-[clamp(1rem,1.55vw,1.2rem)] font-light leading-relaxed text-white/75">
-            Tessa lives inside Abbelo as the intelligence layer. After every session, Tessa
-            reads what happened, scores it, writes a forecast, and shows the one thing to push
-            next.
-          </p>
+        {/* What Tessa does — the solution, one paragraph */}
+        <p className="mt-20 sm:mt-24 text-[clamp(1.05rem,1.7vw,1.3rem)] font-light leading-relaxed text-white/80 max-w-[760px]">
+          Now Tessa does. It reads every session, scores the chain of thoughts, feelings, and
+          actions, forecasts where the user is heading at 30 and 90 days, and surfaces the one
+          move to push next. The picture sharpens after every session.
+        </p>
 
-          <div className="mt-10">
-            <p className="text-[11px] font-mono tracking-[0.2em] uppercase text-white/45 mb-4">
-              Signals Tessa watches
-            </p>
-            <ul className="space-y-3">
-              {[
-                "The voice sessions and the words inside them.",
-                "The dream the user named in their own words.",
-                "The commitments the user made and whether they kept them.",
-                "The recurring blocks that pull on the user across sessions.",
-              ].map((s, i) => (
-                <li
-                  key={i}
-                  className="text-[15px] font-light leading-relaxed text-white/70 flex gap-4"
-                >
-                  <span className="text-[11px] font-mono text-white/40 tabular-nums shrink-0 pt-1">
-                    {String(i + 1).padStart(2, "0")}
-                  </span>
-                  <span>{s}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
-
-        {/* Two perspectives: the user and the founder */}
-        <div className="mt-16 grid gap-5 sm:gap-6 sm:grid-cols-2 max-w-[1000px]">
-          <div className="bg-white/[0.02] border border-white/[0.10] rounded-lg p-6 sm:p-8">
-            <p className="text-[11px] font-mono tracking-[0.2em] uppercase text-white/45 mb-5">
-              What the user sees
-            </p>
-            <ul className="space-y-3 text-[15px] font-light leading-relaxed text-white/75">
-              <li>A becoming score from 0 to 100.</li>
-              <li>Three lever readings for thoughts, feelings, and actions.</li>
-              <li>A forecast at 30 and 90 days.</li>
-              <li>One clear move to push next.</li>
-              <li>A picture that sharpens after every session.</li>
-            </ul>
-          </div>
-          <div className="bg-white/[0.02] border border-white/[0.10] rounded-lg p-6 sm:p-8">
-            <p className="text-[11px] font-mono tracking-[0.2em] uppercase text-white/45 mb-5">
-              What the founder sees
-            </p>
-            <p className="text-[15px] font-light leading-relaxed text-white/75">
-              A leading indicator for the product. When user scores stall, Tessa surfaces where
-              the climb is breaking so the team can fix the right thing.
-            </p>
-          </div>
-        </div>
-
-        {/* Pull quote */}
-        <figure className="mt-20 max-w-[860px]">
-          <blockquote className="text-[clamp(1.3rem,2.2vw,1.8rem)] font-light leading-[1.4] tracking-[-0.015em] text-white/95">
+        {/* Founder quote */}
+        <figure className="mt-20 sm:mt-24 max-w-[880px]">
+          <blockquote className="text-[clamp(1.4rem,2.6vw,2rem)] font-light leading-[1.3] tracking-[-0.015em] text-white/95">
             Abbelo uses Tessa to show every user what they are becoming and what to push next.
           </blockquote>
-          <figcaption className="mt-6 text-[12px] font-mono tracking-[0.2em] uppercase text-white/45">
+          <figcaption className="mt-6 text-[12px] font-mono tracking-[0.2em] uppercase text-white/55">
             Matthew Werner, founder, Abbelo
           </figcaption>
         </figure>
 
-        {/* The build choice */}
-        <div className="mt-20 max-w-[820px]">
-          <p className="text-[11px] font-mono tracking-[0.2em] uppercase text-white/45 mb-4">
-            Why Abbelo did not build this in house
-          </p>
-          <p className="text-[clamp(1rem,1.55vw,1.2rem)] font-light leading-relaxed text-white/75">
-            Tesurai built Tessa as a productized intelligence layer that any digital product can
-            wire in. Abbelo plugged it in, sent the sessions and the dream, and Tessa carried
-            the analyst job from day one. Abbelo kept its team on the product. Tesurai kept the
-            intelligence sharp.
-          </p>
-        </div>
-
-        <p className="mt-16 text-[clamp(1.05rem,1.65vw,1.25rem)] font-light leading-relaxed text-white/75 max-w-[760px]">
-          Live inside Abbelo today. The same Tessa runs there as the one built into your
-          product.
+        {/* Proof line */}
+        <p className="mt-16 sm:mt-20 text-[11px] font-mono tracking-[0.2em] uppercase text-white/55">
+          Live inside Abbelo today
         </p>
       </section>
 
