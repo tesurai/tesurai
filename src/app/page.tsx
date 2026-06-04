@@ -307,15 +307,6 @@ export default function Page() {
           </div>
         </article>
 
-        {/* Sign-off bar */}
-        <div className="mt-20 sm:mt-28 pt-10 sm:pt-14 border-t border-white/[0.15] flex flex-wrap items-baseline justify-between gap-x-6 gap-y-3">
-          <p className="text-[11px] font-mono tracking-[0.22em] uppercase text-white/70">
-            Live inside Abbelo today
-          </p>
-          <p className="text-[11px] font-mono tracking-[0.22em] uppercase text-white/35 tabular-nums">
-            Tessa, by Tesurai
-          </p>
-        </div>
       </section>
 
       {/* Get started: vertical timeline layout, distinct from the How cards */}
