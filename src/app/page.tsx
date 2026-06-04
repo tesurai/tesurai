@@ -65,9 +65,8 @@ export default function Page() {
           Most predictive intelligence layer for digital products
         </h1>
         <p className="mt-10 text-[clamp(1.05rem,1.45vw,1.25rem)] font-normal leading-[1.55] text-white/65 max-w-[640px] mx-auto">
-          Tessa uses each user's past data to find patterns and predict their future, then gives
-          feedback to help them get results. User outcomes are no longer guess work. They follow
-          patterns you can read on every user.
+          Tessa reads each user, predicts where they are heading, and surfaces the next move to
+          keep them on the path.
         </p>
       </section>
 
@@ -94,7 +93,7 @@ export default function Page() {
           [ The journey ]
         </p>
         <h2 className="text-[clamp(2.25rem,5vw,4.5rem)] font-medium leading-[1.05] tracking-[-0.035em] text-white max-w-[18ch] mx-auto">
-          Two paths for every user
+          Two paths
         </h2>
         <p className="mt-10 text-[clamp(1.05rem,1.45vw,1.25rem)] font-normal leading-[1.55] text-white/65 max-w-[640px] mx-auto">
           Every user takes a path through your product. Each step is a signal. Tessa reads the
@@ -173,7 +172,7 @@ export default function Page() {
           [ How ]
         </p>
         <h2 className="text-[clamp(2.25rem,5vw,4.5rem)] font-medium leading-[1.05] tracking-[-0.035em] text-white whitespace-nowrap">
-          Discover Build Deploy
+          Discover. Build. Deploy.
         </h2>
 
         <div className="mt-16 grid gap-5 sm:gap-6 sm:grid-cols-3">
@@ -270,6 +269,17 @@ export default function Page() {
           </div>
         </article>
 
+        {/* Founder sign-off */}
+        <div className="mt-16 sm:mt-20 pt-8 border-t border-white/[0.10] grid gap-2 sm:gap-6 sm:grid-cols-[160px_1fr] sm:items-baseline">
+          <p className="text-[11px] font-mono tracking-[0.22em] uppercase text-white/40">
+            Founder
+          </p>
+          <p className="text-[11px] font-mono tracking-[0.22em] uppercase leading-[1.6] text-white">
+            Matthew Werner
+            <br />
+            <span className="text-white/45">Abbelo</span>
+          </p>
+        </div>
       </section>
 
       {/* Get started: vertical timeline layout, distinct from the How cards */}
@@ -285,11 +295,11 @@ export default function Page() {
         </h2>
         <p className="mt-10 text-[clamp(1.05rem,1.45vw,1.25rem)] font-normal leading-[1.55] text-white/65 max-w-[640px] mx-auto">
           $2,500 one time. We build Tessa for your product, get it live, and keep tuning it for
-          ninety days after.
+          90 days after.
         </p>
 
         {/* Boxed step cards */}
-        <div className="mt-16 grid gap-5 sm:gap-6 grid-cols-1 sm:grid-cols-4 text-left">
+        <div className="mt-16 grid gap-5 sm:gap-6 grid-cols-1 sm:grid-cols-3 text-left">
           {[
             {
               n: "01",
@@ -299,17 +309,12 @@ export default function Page() {
             {
               n: "02",
               t: "Build",
-              d: "We build Tessa for your product. The patterns. The predictions. The feedback.",
+              d: "We build the formula for your product. The patterns. The predictions. The feedback.",
             },
             {
               n: "03",
-              t: "Live",
-              d: "Tessa is up and running inside your product.",
-            },
-            {
-              n: "04",
-              t: "Fine tune",
-              d: "Over the next ninety days we clean up bugs and tune Tessa around your real users.",
+              t: "Live and tuned",
+              d: "Tessa goes live inside your product. We keep tuning it around your real users for 90 days after.",
             },
           ].map((s) => (
             <div
@@ -355,9 +360,16 @@ export default function Page() {
         </div>
       </section>
 
-      {/* Closing CTA: emotional, no buttons, no eyebrow */}
-      <section className="px-6 sm:px-10 py-28 sm:py-40 max-w-[1200px] mx-auto border-t border-white/[0.10] text-center">
-        <h2 className="text-[clamp(2.25rem,5vw,4.5rem)] font-medium leading-[1.05] tracking-[-0.035em] text-white max-w-[26ch] mx-auto">
+      {/* Closing CTA: emotional, fades to nothing on the right like the wordmark */}
+      <section className="px-6 sm:px-10 py-28 sm:py-40 max-w-[1200px] mx-auto border-t border-white/[0.10]">
+        <h2
+          className="bg-clip-text text-transparent text-[clamp(2.25rem,5vw,4.5rem)] font-medium leading-[1.05] tracking-[-0.035em] max-w-[26ch]"
+          style={{
+            backgroundImage:
+              "linear-gradient(to right, rgba(255,255,255,1) 0%, rgba(255,255,255,0.85) 50%, rgba(255,255,255,0.40) 80%, rgba(255,255,255,0.03) 100%)",
+            WebkitTextFillColor: "transparent",
+          }}
+        >
           Every user deserves to get what they came for You built it for them. Tessa is how you
           make sure they get there.
         </h2>
