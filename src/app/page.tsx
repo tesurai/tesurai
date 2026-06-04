@@ -1,48 +1,32 @@
 // Tesurai company landing page.
-// Voice: written as if Tessa is a $100M+ category-defining product. Confident,
-// declarative, short. The category is "the intelligence layer for consumer
-// products." Less first-person, more product-as-protagonist. Proof up front.
-// Copy rules unchanged: fifth grade reading level, no dashes anywhere, no
-// pronouns for Tessa, no language framing Tessa as a team replacement.
+// Voice: written as a category-defining product. Confident, declarative, short.
+// The category is "the intelligence layer for digital products." Less first-person,
+// more product-as-protagonist.
+// Copy rules: fifth grade reading level, no dashes anywhere, no pronouns for Tessa,
+// no language framing Tessa as a team replacement, no made up outcome claims.
 
 import PayButton from "./pay-button";
 
 const CAL_LINK = "https://cal.com/tesurai";
 
 export const metadata = {
-  title: "Tesurai | The intelligence layer for consumer products",
+  title: "Tesurai | The intelligence layer for digital products",
   description:
-    "Tessa watches every user, predicts where they are heading, and sends the next move that wins. Live in Abbelo today. Built into your product next.",
+    "Tessa uses each user's past data to find patterns and predict their future, then gives feedback to help them get results. Live inside Abbelo today. Built into your product next.",
   openGraph: {
-    title: "Tesurai | The intelligence layer for consumer products",
+    title: "Tesurai | The intelligence layer for digital products",
     description:
-      "Tessa watches every user, predicts where they are heading, and sends the next move that wins. Live in Abbelo today. Built into your product next.",
+      "Tessa uses each user's past data to find patterns and predict their future, then gives feedback to help them get results. Live inside Abbelo today. Built into your product next.",
     siteName: "Tesurai",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Tesurai | The intelligence layer for consumer products",
+    title: "Tesurai | The intelligence layer for digital products",
     description:
-      "Tessa watches every user, predicts where they are heading, and sends the next move that wins. Live in Abbelo today. Built into your product next.",
+      "Tessa uses each user's past data to find patterns and predict their future, then gives feedback to help them get results. Live inside Abbelo today. Built into your product next.",
   },
 };
-
-const ArrowRight = () => (
-  <svg
-    width="15"
-    height="15"
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth="1.6"
-    strokeLinecap="round"
-    strokeLinejoin="round"
-    aria-hidden="true"
-  >
-    <path d="M5 12h14M13 5l7 7-7 7" />
-  </svg>
-);
 
 export default function Page() {
   return (
@@ -71,12 +55,12 @@ export default function Page() {
           Tesurai
         </p>
         <h1 className="text-[clamp(2.2rem,5vw,4.5rem)] font-extralight leading-[1.08] tracking-[-0.025em] text-white max-w-[22ch]">
-          Most predictive intelligence layer for consumer products
+          Most predictive intelligence layer for digital products
         </h1>
-        <p className="mt-10 text-[clamp(1rem,1.55vw,1.2rem)] font-light leading-relaxed text-white/65 max-w-[640px]">
-          Tessa uses each user's past data to predict where they are heading, then gives
-          feedback built around them to help them stay on the path to the outcome they came
-          for.
+        <p className="mt-10 text-[clamp(1rem,1.55vw,1.2rem)] font-light leading-relaxed text-white/65 max-w-[680px]">
+          Tessa uses each user's past data to find patterns and predict their future, then gives
+          feedback to help them get results. User outcomes are no longer guess work. They are a
+          science you can run on every user.
         </p>
       </section>
 
@@ -89,10 +73,11 @@ export default function Page() {
           User outcomes are not chance. They are patterns.
         </h2>
         <p className="mt-8 text-[clamp(1rem,1.55vw,1.2rem)] font-light leading-relaxed text-white/65 max-w-[720px]">
-          Every user who uses your product leaves a trail. Inside the trail are patterns.
-          The patterns predict the next outcome. Read them and you can change what happens,
-          before it happens. Users stay on the line. They get what they came for. The
-          business compounds.
+          Every user takes a path through your product. That path leaves a trail of signals
+          about what each user needs next. Most products miss those signals. Tessa reads them
+          and turns them into the next move for each user. There is a better way to help your
+          users get to what they came for, and it starts with the signals they are already
+          giving you.
         </p>
       </section>
 
@@ -105,8 +90,8 @@ export default function Page() {
           Two paths for every user.
         </h2>
         <p className="mt-8 text-[clamp(1rem,1.55vw,1.2rem)] font-light leading-relaxed text-white/65 max-w-[720px]">
-          Every user takes some path through your product. Without Tessa, most walk away.
-          With Tessa, most get to what they came for.
+          Every user takes a path through your product. Each step is a signal. Tessa reads the
+          signals and helps each user get closer to the result they came for.
         </p>
 
         <div className="mt-16 grid gap-5 sm:gap-6 sm:grid-cols-2 max-w-[1100px]">
@@ -119,10 +104,9 @@ export default function Page() {
               {[
                 "Signs up wanting a result.",
                 "Tries the product on their own.",
-                "Gets stuck.",
+                "Gets stuck somewhere.",
                 "Does not know what to do next.",
-                "Walks away.",
-                "One more lost user.",
+                "Drops off the path.",
               ].map((step, i) => (
                 <li
                   key={i}
@@ -137,7 +121,7 @@ export default function Page() {
             </ol>
             <div className="mt-8 pt-6 border-t border-white/[0.08]">
               <p className="text-[11px] font-mono tracking-[0.16em] uppercase text-white/35">
-                Outcome: user quits
+                Outcome: user drops off
               </p>
             </div>
           </div>
@@ -169,93 +153,38 @@ export default function Page() {
             </ol>
             <div className="mt-8 pt-6 border-t border-white/[0.20]">
               <p className="text-[11px] font-mono tracking-[0.16em] uppercase text-white/85">
-                Outcome: user wins
+                Outcome: user gets the result
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Tessa */}
+      {/* How */}
       <section className="px-6 sm:px-10 py-24 sm:py-32 max-w-[1100px] mx-auto border-t border-white/[0.10]">
         <p className="text-[12px] font-mono tracking-[0.18em] uppercase text-white/35 mb-6">
-          [ Tessa ]
+          [ How ]
         </p>
         <h2 className="text-[clamp(1.7rem,3.2vw,2.6rem)] font-light leading-[1.15] tracking-[-0.02em] text-white max-w-[22ch]">
-          Tessa sees each user's future.
+          Discover. Build. Deploy.
         </h2>
-        <p className="mt-8 text-[clamp(1rem,1.55vw,1.2rem)] font-light leading-relaxed text-white/65 max-w-[720px]">
-          Tessa is not based off chance or luck. It comes down to a science. A metric you can
-          track. Tessa reads each user's past, predicts where they are heading next, and sends
-          the move that keeps them on the line to the outcome they came for. The funnel rolls
-          up so you see every user at once.
-        </p>
-
-        <div className="mt-16 max-w-[900px]">
-          <p className="text-[12px] font-mono tracking-[0.16em] uppercase text-white/45 mb-6">
-            [ Example ]
-          </p>
-          <div className="space-y-5">
-            {[
-              {
-                ifClause: "A user skips two days in a row",
-                thenClause: "Tessa predicts they are heading off the line",
-                soClause: "Tessa sends the move that brings them back",
-              },
-              {
-                ifClause: "A user hits their first win",
-                thenClause: "Tessa predicts they are ready for the next step",
-                soClause: "Tessa sends the move that keeps the momentum",
-              },
-              {
-                ifClause: "A user falls behind their pace",
-                thenClause: "Tessa predicts where they will land in thirty days",
-                soClause: "Tessa sends the move that changes their path",
-              },
-            ].map((ex, i) => (
-              <div
-                key={i}
-                className="border border-white/[0.10] rounded-lg p-5 sm:p-6 grid gap-y-3 gap-x-5 sm:gap-x-6 sm:grid-cols-[auto_1fr] items-baseline"
-              >
-                <span className="text-[11px] font-mono tracking-[0.18em] uppercase text-white/40 tabular-nums">
-                  IF
-                </span>
-                <p className="text-[14.5px] font-light leading-relaxed text-white/80">
-                  {ex.ifClause}
-                </p>
-                <span className="text-[11px] font-mono tracking-[0.18em] uppercase text-white/40 tabular-nums">
-                  THEN
-                </span>
-                <p className="text-[14.5px] font-light leading-relaxed text-white/80">
-                  {ex.thenClause}
-                </p>
-                <span className="text-[11px] font-mono tracking-[0.18em] uppercase text-white/40 tabular-nums">
-                  SO
-                </span>
-                <p className="text-[14.5px] font-light leading-relaxed text-white/80">
-                  {ex.soClause}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
 
         <div className="mt-16 grid gap-5 sm:gap-6 sm:grid-cols-3 max-w-[1100px]">
           {[
             {
               n: "01",
-              t: "Figure out your business",
-              d: "We learn your product, your users, and the one outcome you want every user to reach. That outcome becomes the target Tessa steers toward.",
+              t: "Discover",
+              d: "Learn your product, your users, and the one outcome every user should reach.",
             },
             {
               n: "02",
-              t: "Build the formula",
-              d: "We build the version of Tessa that fits your product. The patterns it watches. The predictions it makes. The feedback it loops. The formula that turns your user data into outcomes.",
+              t: "Build",
+              d: "Build the version of Tessa that fits your product. The patterns. The predictions. The feedback.",
             },
             {
               n: "03",
-              t: "Put it in your product",
-              d: "We put Tessa inside your product. Live in one week. From there, Tessa runs every day, predicting and looping feedback to every user.",
+              t: "Deploy",
+              d: "Put Tessa inside your product. Live in one week. It runs every day from there.",
             },
           ].map((s) => (
             <div
@@ -289,7 +218,7 @@ export default function Page() {
         </h2>
         <div className="mt-8 grid gap-6 md:grid-cols-2 max-w-[920px]">
           <p className="text-[clamp(1rem,1.55vw,1.2rem)] font-light leading-relaxed text-white/65">
-            Abbelo is a consumer app for people who want to grow into who they want to be. Users
+            Abbelo is a digital product that helps people grow into who they want to be. Users
             talk through their goals out loud, like a voice call with a coach.
           </p>
           <p className="text-[clamp(1rem,1.55vw,1.2rem)] font-light leading-relaxed text-white/65">
@@ -299,8 +228,8 @@ export default function Page() {
           </p>
         </div>
         <p className="mt-10 text-[clamp(1.05rem,1.65vw,1.25rem)] font-light leading-relaxed text-white/75 max-w-[760px]">
-          Live today. Real users scored every day. The same Tessa runs there as the one built
-          into your product. See it work in a real consumer product before we ever touch yours.
+          Live inside Abbelo today. The same Tessa runs there as the one built into your
+          product.
         </p>
       </section>
 
@@ -321,8 +250,7 @@ export default function Page() {
           Start with Tessa.
         </h2>
         <p className="mt-8 text-[clamp(1rem,1.55vw,1.2rem)] font-light leading-relaxed text-white/65 max-w-[720px]">
-          $2,500 one time. One week to live in your product. Here is what happens once you
-          start.
+          $2,500 one time. One week from kickoff to Tessa live inside your product.
         </p>
 
         <div className="mt-16 grid gap-5 sm:gap-6 sm:grid-cols-2 lg:grid-cols-4 max-w-[1100px]">
@@ -330,22 +258,22 @@ export default function Page() {
             {
               n: "01",
               t: "Pay",
-              d: "$2,500 one time. Card or bank. Receipt in your email right away.",
+              d: "$2,500 one time. Receipt arrives instantly.",
             },
             {
               n: "02",
               t: "Kickoff",
-              d: "We meet within two business days. We learn your product and pick the outcome every user should reach.",
+              d: "We meet within two business days. Lock in the outcome you want for every user.",
             },
             {
               n: "03",
               t: "Build",
-              d: "One week of work. We figure out your business, build the formula, and put Tessa inside your product.",
+              d: "One week. We build Tessa and put it inside your product.",
             },
             {
               n: "04",
               t: "Live",
-              d: "Tessa runs every day inside your product. Monthly check ins to keep Tessa aimed at the right outcome.",
+              d: "Tessa runs every day. Monthly check ins keep it aimed at the right outcome.",
             },
           ].map((s) => (
             <div
@@ -392,36 +320,16 @@ export default function Page() {
         </div>
       </section>
 
-      {/* Closing CTA */}
+      {/* Closing CTA — emotional, no buttons */}
       <section className="px-6 sm:px-10 py-28 sm:py-40 max-w-[1100px] mx-auto border-t border-white/[0.10] text-center">
         <p className="text-[12px] font-mono tracking-[0.18em] uppercase text-white/35 mb-6">
           [ Next ]
         </p>
-        <h2 className="text-[clamp(1.8rem,3.8vw,3rem)] font-light leading-[1.1] tracking-[-0.025em] text-white max-w-[20ch] mx-auto">
-          More wins. More growth.
+        <h2 className="text-[clamp(1.8rem,3.8vw,3rem)] font-light leading-[1.15] tracking-[-0.025em] text-white max-w-[24ch] mx-auto">
+          Every user deserves to get what they came for.
         </h2>
         <p className="mt-8 text-[clamp(1rem,1.55vw,1.2rem)] font-light leading-relaxed text-white/60 max-w-[560px] mx-auto">
-          Book a call. We will look at your product and answer your questions.
-        </p>
-        <div className="mt-12 flex flex-wrap items-center justify-center gap-4">
-          <a
-            href={CAL_LINK}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 bg-white text-black px-8 py-4 text-[14px] font-normal tracking-[0.04em] rounded-full hover:bg-white/90 transition-all duration-300"
-          >
-            Book a call
-            <ArrowRight />
-          </a>
-        </div>
-        <p className="mt-5 text-[13px] font-light text-white/40">
-          Or email{" "}
-          <a
-            href="mailto:hello@tesurai.com"
-            className="text-white/60 hover:text-white transition-colors"
-          >
-            hello@tesurai.com
-          </a>
+          You built it for them. Tessa is how you make sure they get there.
         </p>
       </section>
 
@@ -440,7 +348,7 @@ export default function Page() {
             </a>
           </div>
           <span className="text-white/35 text-[12px] font-mono tracking-[0.12em] uppercase tabular-nums">
-            © 2026 Tesurai
+            © 2026 Tesurai LLC
           </span>
         </div>
       </footer>
