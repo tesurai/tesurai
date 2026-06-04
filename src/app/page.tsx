@@ -6,7 +6,6 @@
 // pronouns for Tessa, no language framing Tessa as a team replacement.
 
 import PayButton from "./pay-button";
-import ProductCallout from "./product-callout";
 
 const CAL_LINK = "https://cal.com/tesurai";
 
@@ -71,9 +70,8 @@ export default function Page() {
         <p className="text-[12px] font-mono tracking-[0.18em] uppercase text-white/35 mb-8">
           Tesurai
         </p>
-        <h1 className="text-[clamp(2.2rem,5vw,4.5rem)] font-extralight leading-[1.15] tracking-[-0.025em] text-white max-w-[22ch]">
-          Most predictive <ProductCallout>intelligence layer</ProductCallout> for consumer
-          products
+        <h1 className="text-[clamp(2.2rem,5vw,4.5rem)] font-extralight leading-[1.08] tracking-[-0.025em] text-white max-w-[22ch]">
+          Most predictive intelligence layer for consumer products
         </h1>
         <p className="mt-10 text-[clamp(1rem,1.55vw,1.2rem)] font-light leading-relaxed text-white/65 max-w-[640px]">
           Tessa uses each user's past data to predict where they are heading, then gives
