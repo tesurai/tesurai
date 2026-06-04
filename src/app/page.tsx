@@ -229,14 +229,12 @@ export default function Page() {
               Sector
             </p>
             <p className="text-[13px] font-normal leading-[1.5] text-white/70">
-              Personal development
-              <br />
-              Consumer mobile and web
+              Self help mobile app and web
             </p>
           </div>
-          <p className="text-[clamp(1.05rem,1.4vw,1.2rem)] font-normal leading-[1.55] text-white/75 max-w-[520px]">
-            A coaching app for people who want to change. Every session ends with one number
-            that tracks who they are becoming.
+          <p className="text-[clamp(1.05rem,1.4vw,1.2rem)] font-normal leading-[1.55] text-white/75 max-w-[560px]">
+            Becoming who you need to be is a skill. We build it with you. And, for the first
+            time, measurable. Abbelo builds the person you need to be to reach your dream life.
           </p>
         </div>
 
@@ -261,7 +259,7 @@ export default function Page() {
             02 / Solution
           </p>
           <div>
-            <p className="text-[clamp(1.05rem,1.4vw,1.2rem)] font-normal leading-[1.6] text-white/85 max-w-[640px]">
+            <p className="text-[clamp(1.15rem,1.55vw,1.4rem)] font-normal leading-[1.5] text-white/85 max-w-[640px]">
               Tessa reads every session. Scores the chain of thoughts, feelings, and actions.
               Forecasts where the user is heading at 30 and 90 days. Surfaces the one move to push
               next.
@@ -272,23 +270,6 @@ export default function Page() {
           </div>
         </article>
 
-        {/* Chapter 03: in their words */}
-        <article className="mt-14 sm:mt-16 grid gap-2 sm:gap-6 sm:grid-cols-[160px_1fr] sm:items-baseline">
-          <p className="text-[11px] font-mono tracking-[0.22em] uppercase text-white/55 tabular-nums">
-            03 / Quote
-          </p>
-          <figure>
-            <blockquote className="text-[clamp(1.15rem,1.55vw,1.4rem)] font-medium leading-[1.45] text-white max-w-[640px]">
-              &ldquo;Abbelo uses Tessa to show every user what they are becoming and what to push
-              next.&rdquo;
-            </blockquote>
-            <figcaption className="mt-4 text-[11px] font-mono tracking-[0.22em] uppercase leading-[1.6] text-white/55">
-              Matthew Werner
-              <br />
-              <span className="text-white/35">Founder, Abbelo</span>
-            </figcaption>
-          </figure>
-        </article>
       </section>
 
       {/* Get started: vertical timeline layout, distinct from the How cards */}
@@ -307,8 +288,8 @@ export default function Page() {
           ninety days after.
         </p>
 
-        {/* Stepped row: 4 columns across, vertical hairlines between cells. */}
-        <div className="mt-16 grid grid-cols-1 sm:grid-cols-4 border-t border-white/[0.10]">
+        {/* Boxed step cards */}
+        <div className="mt-16 grid gap-5 sm:gap-6 grid-cols-1 sm:grid-cols-4 text-left">
           {[
             {
               n: "01",
@@ -330,15 +311,15 @@ export default function Page() {
               t: "Fine tune",
               d: "Over the next ninety days we clean up bugs and tune Tessa around your real users.",
             },
-          ].map((s, i) => (
+          ].map((s) => (
             <div
               key={s.n}
-              className={`py-8 sm:py-10 sm:px-6 ${i === 0 ? "" : "border-t sm:border-t-0 sm:border-l border-white/[0.10]"}`}
+              className="bg-white/[0.02] border border-white/[0.10] rounded-lg p-6 sm:p-7 flex flex-col"
             >
-              <p className="text-[11px] font-mono tracking-[0.2em] uppercase text-white/45 tabular-nums mb-5">
+              <p className="text-[11px] font-mono tracking-[0.2em] uppercase text-white/45 tabular-nums mb-6">
                 {s.n}
               </p>
-              <h3 className="text-[clamp(1.25rem,1.65vw,1.5rem)] font-medium tracking-[-0.02em] text-white mb-3">
+              <h3 className="text-[clamp(1.15rem,1.5vw,1.4rem)] font-medium tracking-[-0.02em] text-white mb-3">
                 {s.t}
               </h3>
               <p className="text-[15px] font-normal leading-[1.55] text-white/60">
@@ -376,12 +357,10 @@ export default function Page() {
 
       {/* Closing CTA: emotional, no buttons, no eyebrow */}
       <section className="px-6 sm:px-10 py-28 sm:py-40 max-w-[1200px] mx-auto border-t border-white/[0.10] text-center">
-        <h2 className="text-[clamp(2.25rem,5vw,4.5rem)] font-medium leading-[1.05] tracking-[-0.035em] text-white max-w-[20ch] mx-auto">
-          Every user deserves to get what they came for
+        <h2 className="text-[clamp(2.25rem,5vw,4.5rem)] font-medium leading-[1.05] tracking-[-0.035em] text-white max-w-[26ch] mx-auto">
+          Every user deserves to get what they came for You built it for them. Tessa is how you
+          make sure they get there.
         </h2>
-        <p className="mt-10 text-[clamp(1.05rem,1.45vw,1.25rem)] font-normal leading-[1.55] text-white/60 max-w-[560px] mx-auto">
-          You built it for them. Tessa is how you make sure they get there.
-        </p>
       </section>
 
       {/* Footer */}
