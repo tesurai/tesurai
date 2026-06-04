@@ -325,9 +325,8 @@ export default function Page() {
           ninety days after.
         </p>
 
-        {/* Stepped row list: numbered, with hairline dividers between rows.
-            Different language than the How cards above. */}
-        <div className="mt-16 max-w-[1000px] divide-y divide-white/[0.10] border-t border-b border-white/[0.10]">
+        {/* Stepped row: 4 columns across, vertical hairlines between cells. */}
+        <div className="mt-16 grid grid-cols-1 sm:grid-cols-4 border-t border-white/[0.10]">
           {[
             {
               n: "01",
@@ -349,22 +348,20 @@ export default function Page() {
               t: "Fine tune",
               d: "Over the next ninety days we clean up bugs and tune Tessa around your real users.",
             },
-          ].map((s) => (
+          ].map((s, i) => (
             <div
               key={s.n}
-              className="py-8 sm:py-9 grid gap-3 sm:gap-10 sm:grid-cols-[80px_1fr]"
+              className={`py-8 sm:py-10 sm:px-6 ${i === 0 ? "" : "border-t sm:border-t-0 sm:border-l border-white/[0.10]"}`}
             >
-              <p className="text-[11px] font-mono tracking-[0.2em] uppercase text-white/45 tabular-nums pt-1">
+              <p className="text-[11px] font-mono tracking-[0.2em] uppercase text-white/45 tabular-nums mb-5">
                 {s.n}
               </p>
-              <div>
-                <h3 className="text-[clamp(1.15rem,1.6vw,1.4rem)] font-light tracking-[-0.01em] text-white mb-2">
-                  {s.t}
-                </h3>
-                <p className="text-[15px] font-light leading-relaxed text-white/60 max-w-[60ch]">
-                  {s.d}
-                </p>
-              </div>
+              <h3 className="text-[clamp(1.15rem,1.5vw,1.35rem)] font-light tracking-[-0.01em] text-white mb-3">
+                {s.t}
+              </h3>
+              <p className="text-[14px] font-light leading-relaxed text-white/60">
+                {s.d}
+              </p>
             </div>
           ))}
         </div>
