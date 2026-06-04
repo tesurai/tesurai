@@ -168,11 +168,11 @@ export default function Page() {
       </section>
 
       {/* How */}
-      <section className="px-6 sm:px-10 py-28 sm:py-40 max-w-[1200px] mx-auto border-t border-white/[0.10] text-center">
+      <section className="px-6 sm:px-10 py-28 sm:py-40 max-w-[1200px] mx-auto border-t border-white/[0.10]">
         <p className="text-[12px] font-mono tracking-[0.18em] uppercase text-white/35 mb-6">
           [ How ]
         </p>
-        <h2 className="text-[clamp(2.25rem,5vw,4.5rem)] font-medium leading-[1.05] tracking-[-0.035em] text-white max-w-[18ch] mx-auto">
+        <h2 className="text-[clamp(2.25rem,5vw,4.5rem)] font-medium leading-[1.05] tracking-[-0.035em] text-white max-w-[18ch]">
           Discover
           <br />
           Build
@@ -180,7 +180,7 @@ export default function Page() {
           Deploy
         </h2>
 
-        <div className="mt-16 grid gap-5 sm:gap-6 sm:grid-cols-3 text-left">
+        <div className="mt-16 grid gap-5 sm:gap-6 sm:grid-cols-3">
           {[
             {
               n: "01",
@@ -215,79 +215,84 @@ export default function Page() {
       </section>
 
       {/* Case study */}
-      <section className="px-6 sm:px-10 py-28 sm:py-40 max-w-[1200px] mx-auto border-t border-white/[0.10] text-center">
-        <p className="text-[12px] font-mono tracking-[0.18em] uppercase text-white/35 mb-6">
+      <section className="px-6 sm:px-10 py-28 sm:py-40 max-w-[1200px] mx-auto border-t border-white/[0.10]">
+        <p className="text-[12px] font-mono tracking-[0.18em] uppercase text-white/35 mb-12">
           [ Case study ]
         </p>
 
-        {/* Identity */}
-        <p className="text-[11px] font-mono tracking-[0.22em] uppercase text-white/55 leading-[1.6]">
-          Personal development
-          <br />
-          Consumer mobile and web
-        </p>
-        <h2 className="mt-10 text-[clamp(3.5rem,10vw,8.5rem)] font-medium leading-[0.95] tracking-[-0.045em] text-white">
-          Abbelo
-        </h2>
-        <p className="mt-10 text-[clamp(1.1rem,1.55vw,1.35rem)] font-normal leading-[1.55] text-white/75 max-w-[600px] mx-auto">
-          A coaching app for people who want to change. Every session ends with one number that
-          tracks who they are becoming.
-        </p>
-
-        <div className="mt-20 sm:mt-28 mx-auto max-w-[820px] border-t border-white/[0.15]"></div>
+        {/* Identity row: label columns + lead */}
+        <div className="grid gap-y-8 gap-x-12 sm:grid-cols-[160px_160px_1fr] items-baseline pb-12 border-b border-white/[0.10]">
+          <div>
+            <p className="text-[11px] font-mono tracking-[0.22em] uppercase text-white/40 mb-2">
+              Customer
+            </p>
+            <p className="text-[15px] font-medium text-white">Abbelo</p>
+          </div>
+          <div>
+            <p className="text-[11px] font-mono tracking-[0.22em] uppercase text-white/40 mb-2">
+              Sector
+            </p>
+            <p className="text-[13px] font-normal leading-[1.5] text-white/70">
+              Personal development
+              <br />
+              Consumer mobile and web
+            </p>
+          </div>
+          <p className="text-[clamp(1.05rem,1.4vw,1.2rem)] font-normal leading-[1.55] text-white/75 max-w-[520px]">
+            A coaching app for people who want to change. Every session ends with one number
+            that tracks who they are becoming.
+          </p>
+        </div>
 
         {/* Chapter 01: the problem */}
-        <article className="mt-20 sm:mt-28">
-          <p className="text-[11px] font-mono tracking-[0.22em] uppercase text-white/40 mb-2 tabular-nums">
-            01
+        <article className="mt-16 sm:mt-20 grid gap-2 sm:gap-6 sm:grid-cols-[160px_1fr] sm:items-baseline">
+          <p className="text-[11px] font-mono tracking-[0.22em] uppercase text-white/55 tabular-nums">
+            01 / Problem
           </p>
-          <p className="text-[11px] font-mono tracking-[0.22em] uppercase text-white/65 mb-10">
-            The problem
-          </p>
-          <blockquote className="text-[clamp(1.9rem,4vw,3.2rem)] font-medium leading-[1.1] tracking-[-0.035em] text-white max-w-[20ch] mx-auto">
-            Am I becoming who I said I wanted to become, and at what pace?
-          </blockquote>
-          <p className="mt-8 text-[12px] font-mono tracking-[0.2em] uppercase text-white/45 max-w-[560px] mx-auto">
-            The question every Abbelo user has. No coaching app answered it.
-          </p>
+          <div>
+            <p className="text-[clamp(1.15rem,1.55vw,1.4rem)] font-medium leading-[1.45] text-white max-w-[640px]">
+              &ldquo;Am I becoming who I said I wanted to become, and at what pace?&rdquo;
+            </p>
+            <p className="mt-4 text-[15px] font-normal leading-[1.6] text-white/55 max-w-[640px]">
+              The question every Abbelo user has. No coaching app answered it.
+            </p>
+          </div>
         </article>
 
         {/* Chapter 02: the solution */}
-        <article className="mt-20 sm:mt-28">
-          <p className="text-[11px] font-mono tracking-[0.22em] uppercase text-white/40 mb-2 tabular-nums">
-            02
+        <article className="mt-14 sm:mt-16 grid gap-2 sm:gap-6 sm:grid-cols-[160px_1fr] sm:items-baseline">
+          <p className="text-[11px] font-mono tracking-[0.22em] uppercase text-white/55 tabular-nums">
+            02 / Solution
           </p>
-          <p className="text-[11px] font-mono tracking-[0.22em] uppercase text-white/65 mb-10">
-            The solution
-          </p>
-          <p className="text-[clamp(1.1rem,1.55vw,1.35rem)] font-normal leading-[1.55] text-white/85 max-w-[640px] mx-auto">
-            Tessa reads every session. Scores the chain of thoughts, feelings, and actions.
-            Forecasts where the user is heading at 30 and 90 days. Surfaces the one move to push
-            next.
-          </p>
-          <p className="mt-6 text-[clamp(1.05rem,1.45vw,1.25rem)] font-normal leading-[1.55] text-white/55 max-w-[640px] mx-auto">
-            The picture sharpens after every session.
-          </p>
+          <div>
+            <p className="text-[clamp(1.05rem,1.4vw,1.2rem)] font-normal leading-[1.6] text-white/85 max-w-[640px]">
+              Tessa reads every session. Scores the chain of thoughts, feelings, and actions.
+              Forecasts where the user is heading at 30 and 90 days. Surfaces the one move to push
+              next.
+            </p>
+            <p className="mt-4 text-[15px] font-normal leading-[1.6] text-white/55 max-w-[640px]">
+              The picture sharpens after every session.
+            </p>
+          </div>
         </article>
 
         {/* Chapter 03: in their words */}
-        <article className="mt-20 sm:mt-28">
-          <p className="text-[11px] font-mono tracking-[0.22em] uppercase text-white/40 mb-2 tabular-nums">
-            03
+        <article className="mt-14 sm:mt-16 grid gap-2 sm:gap-6 sm:grid-cols-[160px_1fr] sm:items-baseline">
+          <p className="text-[11px] font-mono tracking-[0.22em] uppercase text-white/55 tabular-nums">
+            03 / Quote
           </p>
-          <p className="text-[11px] font-mono tracking-[0.22em] uppercase text-white/65 mb-10">
-            In their words
-          </p>
-          <blockquote className="text-[clamp(1.7rem,3.4vw,2.7rem)] font-medium leading-[1.15] tracking-[-0.035em] text-white max-w-[22ch] mx-auto">
-            Abbelo uses Tessa to show every user what they are becoming and what to push next.
-          </blockquote>
-          <figcaption className="mt-10 text-[11px] font-mono tracking-[0.22em] uppercase leading-[1.6] text-white/55">
-            Matthew Werner
-            <br />
-            <span className="text-white/35">Founder, Abbelo</span>
-          </figcaption>
+          <figure>
+            <blockquote className="text-[clamp(1.15rem,1.55vw,1.4rem)] font-medium leading-[1.45] text-white max-w-[640px]">
+              &ldquo;Abbelo uses Tessa to show every user what they are becoming and what to push
+              next.&rdquo;
+            </blockquote>
+            <figcaption className="mt-4 text-[11px] font-mono tracking-[0.22em] uppercase leading-[1.6] text-white/55">
+              Matthew Werner
+              <br />
+              <span className="text-white/35">Founder, Abbelo</span>
+            </figcaption>
+          </figure>
         </article>
-
       </section>
 
       {/* Get started: vertical timeline layout, distinct from the How cards */}
