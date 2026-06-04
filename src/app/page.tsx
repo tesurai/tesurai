@@ -320,7 +320,7 @@ export default function Page() {
         </div>
       </section>
 
-      {/* Closing CTA — emotional, no buttons */}
+      {/* Closing CTA: emotional, no buttons */}
       <section className="px-6 sm:px-10 py-28 sm:py-40 max-w-[1100px] mx-auto border-t border-white/[0.10] text-center">
         <p className="text-[12px] font-mono tracking-[0.18em] uppercase text-white/35 mb-6">
           [ Next ]
