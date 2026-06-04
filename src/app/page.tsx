@@ -58,7 +58,7 @@ export default function Page() {
 
       {/* Hero */}
       <section className="px-6 sm:px-10 pt-44 sm:pt-56 pb-20 sm:pb-28 max-w-[1100px] mx-auto">
-        <p className="text-[12px] font-mono tracking-[0.18em] uppercase text-white/35 mb-8">
+        <p className="text-[11px] font-mono tracking-[0.22em] uppercase text-white/40 mb-8">
           Tesurai
         </p>
         <h1 className="text-[clamp(2.2rem,5vw,4.5rem)] font-extralight leading-[1.08] tracking-[-0.025em] text-white max-w-[22ch]">
@@ -73,11 +73,13 @@ export default function Page() {
 
       {/* What we believe */}
       <section className="px-6 sm:px-10 py-24 sm:py-32 max-w-[1100px] mx-auto border-t border-white/[0.10]">
-        <p className="text-[12px] font-mono tracking-[0.18em] uppercase text-white/35 mb-6">
-          [ What we believe ]
+        <p className="text-[11px] font-mono tracking-[0.22em] uppercase text-white/40 mb-8">
+          What we believe
         </p>
-        <h2 className="text-[clamp(1.7rem,3.2vw,2.6rem)] font-light leading-[1.15] tracking-[-0.02em] text-white max-w-[22ch]">
-          Most products react. The best ones predict.
+        <h2 className="text-[clamp(2rem,3.8vw,3rem)] font-extralight leading-[1.1] tracking-[-0.03em] text-white max-w-[20ch]">
+          Most products react
+          <br />
+          The best ones predict
         </h2>
         <p className="mt-8 text-[clamp(1rem,1.55vw,1.2rem)] font-light leading-relaxed text-white/65 max-w-[720px]">
           By the time you understand why a user left, the user is already gone. Reading the past
@@ -88,11 +90,11 @@ export default function Page() {
 
       {/* The journey */}
       <section className="px-6 sm:px-10 py-24 sm:py-32 max-w-[1100px] mx-auto border-t border-white/[0.10]">
-        <p className="text-[12px] font-mono tracking-[0.18em] uppercase text-white/35 mb-6">
-          [ The journey ]
+        <p className="text-[11px] font-mono tracking-[0.22em] uppercase text-white/40 mb-8">
+          The journey
         </p>
-        <h2 className="text-[clamp(1.7rem,3.2vw,2.6rem)] font-light leading-[1.15] tracking-[-0.02em] text-white max-w-[22ch]">
-          Two paths for every user.
+        <h2 className="text-[clamp(2rem,3.8vw,3rem)] font-extralight leading-[1.1] tracking-[-0.03em] text-white max-w-[20ch]">
+          Two paths for every user
         </h2>
         <p className="mt-8 text-[clamp(1rem,1.55vw,1.2rem)] font-light leading-relaxed text-white/65 max-w-[720px]">
           Every user takes a path through your product. Each step is a signal. Tessa reads the
@@ -167,11 +169,15 @@ export default function Page() {
 
       {/* How */}
       <section className="px-6 sm:px-10 py-24 sm:py-32 max-w-[1100px] mx-auto border-t border-white/[0.10]">
-        <p className="text-[12px] font-mono tracking-[0.18em] uppercase text-white/35 mb-6">
-          [ How ]
+        <p className="text-[11px] font-mono tracking-[0.22em] uppercase text-white/40 mb-8">
+          How
         </p>
-        <h2 className="text-[clamp(1.7rem,3.2vw,2.6rem)] font-light leading-[1.15] tracking-[-0.02em] text-white max-w-[22ch]">
-          Discover. Build. Deploy.
+        <h2 className="text-[clamp(2rem,3.8vw,3rem)] font-extralight leading-[1.1] tracking-[-0.03em] text-white max-w-[20ch]">
+          Discover
+          <br />
+          Build
+          <br />
+          Deploy
         </h2>
 
         <div className="mt-16 grid gap-5 sm:gap-6 sm:grid-cols-3 max-w-[1100px]">
@@ -314,11 +320,11 @@ export default function Page() {
         id="get-started"
         className="px-6 sm:px-10 py-24 sm:py-32 max-w-[1100px] mx-auto border-t border-white/[0.10] scroll-mt-24"
       >
-        <p className="text-[12px] font-mono tracking-[0.18em] uppercase text-white/35 mb-6">
-          [ Get started ]
+        <p className="text-[11px] font-mono tracking-[0.22em] uppercase text-white/40 mb-8">
+          Get started
         </p>
-        <h2 className="text-[clamp(1.7rem,3.2vw,2.6rem)] font-light leading-[1.15] tracking-[-0.02em] text-white max-w-[22ch]">
-          Start with Tessa.
+        <h2 className="text-[clamp(2rem,3.8vw,3rem)] font-extralight leading-[1.1] tracking-[-0.03em] text-white max-w-[20ch]">
+          Start with Tessa
         </h2>
         <p className="mt-8 text-[clamp(1rem,1.55vw,1.2rem)] font-light leading-relaxed text-white/65 max-w-[720px]">
           $2,500 one time. We build Tessa for your product, get it live, and keep tuning it for
@@ -394,8 +400,8 @@ export default function Page() {
 
       {/* Closing CTA: emotional, no buttons, no eyebrow */}
       <section className="px-6 sm:px-10 py-28 sm:py-40 max-w-[1100px] mx-auto border-t border-white/[0.10] text-center">
-        <h2 className="text-[clamp(1.8rem,3.8vw,3rem)] font-light leading-[1.15] tracking-[-0.025em] text-white max-w-[24ch] mx-auto">
-          Every user deserves to get what they came for.
+        <h2 className="text-[clamp(2rem,3.8vw,3rem)] font-extralight leading-[1.1] tracking-[-0.03em] text-white max-w-[24ch] mx-auto">
+          Every user deserves to get what they came for
         </h2>
         <p className="mt-8 text-[clamp(1rem,1.55vw,1.2rem)] font-light leading-relaxed text-white/60 max-w-[560px] mx-auto">
           You built it for them. Tessa is how you make sure they get there.
