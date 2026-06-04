@@ -57,8 +57,8 @@ export default function Page() {
       </header>
 
       {/* Hero */}
-      <section className="px-6 sm:px-10 pt-44 sm:pt-56 pb-20 sm:pb-28 max-w-[1100px] mx-auto">
-        <p className="text-[11px] font-mono tracking-[0.22em] uppercase text-white/40 mb-8">
+      <section className="px-6 sm:px-10 pt-44 sm:pt-56 pb-28 sm:pb-40 max-w-[1200px] mx-auto">
+        <p className="text-[12px] font-mono tracking-[0.18em] uppercase text-white/35 mb-8">
           Tesurai
         </p>
         <h1 className="text-[clamp(2.2rem,5vw,4.5rem)] font-extralight leading-[1.08] tracking-[-0.025em] text-white max-w-[22ch]">
@@ -72,11 +72,11 @@ export default function Page() {
       </section>
 
       {/* What we believe */}
-      <section className="px-6 sm:px-10 py-24 sm:py-32 max-w-[1100px] mx-auto border-t border-white/[0.10]">
-        <p className="text-[11px] font-mono tracking-[0.22em] uppercase text-white/40 mb-8">
-          What we believe
+      <section className="px-6 sm:px-10 py-28 sm:py-40 max-w-[1200px] mx-auto border-t border-white/[0.10]">
+        <p className="text-[12px] font-mono tracking-[0.18em] uppercase text-white/35 mb-6">
+          [ What we believe ]
         </p>
-        <h2 className="text-[clamp(2rem,3.8vw,3rem)] font-extralight leading-[1.1] tracking-[-0.03em] text-white max-w-[20ch]">
+        <h2 className="text-[clamp(1.7rem,3.2vw,2.6rem)] font-light leading-[1.15] tracking-[-0.02em] text-white max-w-[22ch]">
           Most products react
           <br />
           The best ones predict
@@ -89,11 +89,11 @@ export default function Page() {
       </section>
 
       {/* The journey */}
-      <section className="px-6 sm:px-10 py-24 sm:py-32 max-w-[1100px] mx-auto border-t border-white/[0.10]">
-        <p className="text-[11px] font-mono tracking-[0.22em] uppercase text-white/40 mb-8">
-          The journey
+      <section className="px-6 sm:px-10 py-28 sm:py-40 max-w-[1200px] mx-auto border-t border-white/[0.10]">
+        <p className="text-[12px] font-mono tracking-[0.18em] uppercase text-white/35 mb-6">
+          [ The journey ]
         </p>
-        <h2 className="text-[clamp(2rem,3.8vw,3rem)] font-extralight leading-[1.1] tracking-[-0.03em] text-white max-w-[20ch]">
+        <h2 className="text-[clamp(1.7rem,3.2vw,2.6rem)] font-light leading-[1.15] tracking-[-0.02em] text-white max-w-[22ch]">
           Two paths for every user
         </h2>
         <p className="mt-8 text-[clamp(1rem,1.55vw,1.2rem)] font-light leading-relaxed text-white/65 max-w-[720px]">
@@ -101,7 +101,7 @@ export default function Page() {
           signals and helps each user get closer to the result they came for.
         </p>
 
-        <div className="mt-16 grid gap-5 sm:gap-6 sm:grid-cols-2 max-w-[1100px]">
+        <div className="mt-16 grid gap-5 sm:gap-6 sm:grid-cols-2">
           {/* Without Tessa */}
           <div className="bg-white/[0.02] border border-white/[0.10] rounded-lg p-6 sm:p-8 flex flex-col">
             <p className="text-[12px] font-mono tracking-[0.16em] uppercase text-white/45 mb-8">
@@ -168,11 +168,11 @@ export default function Page() {
       </section>
 
       {/* How */}
-      <section className="px-6 sm:px-10 py-24 sm:py-32 max-w-[1100px] mx-auto border-t border-white/[0.10]">
-        <p className="text-[11px] font-mono tracking-[0.22em] uppercase text-white/40 mb-8">
-          How
+      <section className="px-6 sm:px-10 py-28 sm:py-40 max-w-[1200px] mx-auto border-t border-white/[0.10]">
+        <p className="text-[12px] font-mono tracking-[0.18em] uppercase text-white/35 mb-6">
+          [ How ]
         </p>
-        <h2 className="text-[clamp(2rem,3.8vw,3rem)] font-extralight leading-[1.1] tracking-[-0.03em] text-white max-w-[20ch]">
+        <h2 className="text-[clamp(1.7rem,3.2vw,2.6rem)] font-light leading-[1.15] tracking-[-0.02em] text-white max-w-[22ch]">
           Discover
           <br />
           Build
@@ -180,7 +180,7 @@ export default function Page() {
           Deploy
         </h2>
 
-        <div className="mt-16 grid gap-5 sm:gap-6 sm:grid-cols-3 max-w-[1100px]">
+        <div className="mt-16 grid gap-5 sm:gap-6 sm:grid-cols-3">
           {[
             {
               n: "01",
@@ -318,12 +318,12 @@ export default function Page() {
       {/* Get started: vertical timeline layout, distinct from the How cards */}
       <section
         id="get-started"
-        className="px-6 sm:px-10 py-24 sm:py-32 max-w-[1100px] mx-auto border-t border-white/[0.10] scroll-mt-24"
+        className="px-6 sm:px-10 py-28 sm:py-40 max-w-[1200px] mx-auto border-t border-white/[0.10] scroll-mt-24"
       >
-        <p className="text-[11px] font-mono tracking-[0.22em] uppercase text-white/40 mb-8">
-          Get started
+        <p className="text-[12px] font-mono tracking-[0.18em] uppercase text-white/35 mb-6">
+          [ Get started ]
         </p>
-        <h2 className="text-[clamp(2rem,3.8vw,3rem)] font-extralight leading-[1.1] tracking-[-0.03em] text-white max-w-[20ch]">
+        <h2 className="text-[clamp(1.7rem,3.2vw,2.6rem)] font-light leading-[1.15] tracking-[-0.02em] text-white max-w-[22ch]">
           Start with Tessa
         </h2>
         <p className="mt-8 text-[clamp(1rem,1.55vw,1.2rem)] font-light leading-relaxed text-white/65 max-w-[720px]">
@@ -399,8 +399,8 @@ export default function Page() {
       </section>
 
       {/* Closing CTA: emotional, no buttons, no eyebrow */}
-      <section className="px-6 sm:px-10 py-28 sm:py-40 max-w-[1100px] mx-auto border-t border-white/[0.10] text-center">
-        <h2 className="text-[clamp(2rem,3.8vw,3rem)] font-extralight leading-[1.1] tracking-[-0.03em] text-white max-w-[24ch] mx-auto">
+      <section className="px-6 sm:px-10 py-28 sm:py-40 max-w-[1200px] mx-auto border-t border-white/[0.10] text-center">
+        <h2 className="text-[clamp(1.7rem,3.2vw,2.6rem)] font-light leading-[1.15] tracking-[-0.025em] text-white max-w-[24ch] mx-auto">
           Every user deserves to get what they came for
         </h2>
         <p className="mt-8 text-[clamp(1rem,1.55vw,1.2rem)] font-light leading-relaxed text-white/60 max-w-[560px] mx-auto">
@@ -410,7 +410,7 @@ export default function Page() {
 
       {/* Footer */}
       <footer className="px-6 sm:px-10 py-14 border-t border-white/[0.10]">
-        <div className="max-w-[1100px] mx-auto flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
+        <div className="max-w-[1200px] mx-auto flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
           <Wordmark className="h-3 w-auto" />
           <div className="flex items-center gap-8">
             <a
