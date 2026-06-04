@@ -25,7 +25,7 @@ export default function PayButton() {
   }
 
   return (
-    <div className="flex flex-col items-start sm:items-end gap-3 w-full sm:w-auto">
+    <div className="flex flex-col items-center gap-3">
       <button
         type="button"
         onClick={handlePay}
