@@ -172,12 +172,8 @@ export default function Page() {
         <p className="text-[12px] font-mono tracking-[0.18em] uppercase text-white/35 mb-6">
           [ How ]
         </p>
-        <h2 className="text-[clamp(2.25rem,5vw,4.5rem)] font-medium leading-[1.05] tracking-[-0.035em] text-white max-w-[18ch]">
-          Discover
-          <br />
-          Build
-          <br />
-          Deploy
+        <h2 className="text-[clamp(2.25rem,5vw,4.5rem)] font-medium leading-[1.05] tracking-[-0.035em] text-white whitespace-nowrap">
+          Discover Build Deploy
         </h2>
 
         <div className="mt-16 grid gap-5 sm:gap-6 sm:grid-cols-3">
