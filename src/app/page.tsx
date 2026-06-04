@@ -243,7 +243,7 @@ export default function Page() {
           </div>
         </div>
 
-        {/* Chapter 01 — the problem */}
+        {/* Chapter 01: the problem */}
         <article className="mt-20 sm:mt-28 grid gap-8 sm:gap-12 sm:grid-cols-12">
           <header className="sm:col-span-3">
             <p className="text-[11px] font-mono tracking-[0.22em] uppercase text-white/40 mb-2 tabular-nums">
@@ -263,7 +263,7 @@ export default function Page() {
           </div>
         </article>
 
-        {/* Chapter 02 — the solution */}
+        {/* Chapter 02: the solution */}
         <article className="mt-20 sm:mt-28 grid gap-8 sm:gap-12 sm:grid-cols-12">
           <header className="sm:col-span-3">
             <p className="text-[11px] font-mono tracking-[0.22em] uppercase text-white/40 mb-2 tabular-nums">
@@ -285,7 +285,7 @@ export default function Page() {
           </div>
         </article>
 
-        {/* Chapter 03 — in their words */}
+        {/* Chapter 03: in their words */}
         <article className="mt-20 sm:mt-28 grid gap-8 sm:gap-12 sm:grid-cols-12">
           <header className="sm:col-span-3">
             <p className="text-[11px] font-mono tracking-[0.22em] uppercase text-white/40 mb-2 tabular-nums">
