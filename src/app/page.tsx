@@ -28,6 +28,15 @@ export const metadata = {
   },
 };
 
+// Small wordmark used in the nav and footer. Loaded from the brand SVG with
+// the alpha-fade gradient so the trailing letters dissolve to almost nothing.
+function Wordmark({ className = "h-4 w-auto" }: { className?: string }) {
+  return (
+    // eslint-disable-next-line @next/next/no-img-element
+    <img src="/logo-white.svg" alt="Tesurai" className={className} />
+  );
+}
+
 export default function Page() {
   return (
     <div
@@ -36,9 +45,7 @@ export default function Page() {
     >
       {/* Nav */}
       <header className="fixed top-0 left-0 right-0 z-50 h-[72px] flex items-center justify-between px-6 sm:px-10 bg-black/60 backdrop-blur-md border-b border-white/[0.10]">
-        <span className="text-white font-extralight text-[14px] tracking-[0.32em] uppercase">
-          Tesurai
-        </span>
+        <Wordmark className="h-3 w-auto" />
         <nav className="flex items-center gap-5 sm:gap-7">
           <a
             href="#get-started"
@@ -59,8 +66,8 @@ export default function Page() {
         </h1>
         <p className="mt-10 text-[clamp(1rem,1.55vw,1.2rem)] font-light leading-relaxed text-white/65 max-w-[680px]">
           Tessa uses each user's past data to find patterns and predict their future, then gives
-          feedback to help them get results. User outcomes are no longer guess work. They are a
-          science you can run on every user.
+          feedback to help them get results. User outcomes are no longer guess work. They follow
+          patterns you can read on every user.
         </p>
       </section>
 
@@ -70,14 +77,12 @@ export default function Page() {
           [ What we believe ]
         </p>
         <h2 className="text-[clamp(1.7rem,3.2vw,2.6rem)] font-light leading-[1.15] tracking-[-0.02em] text-white max-w-[22ch]">
-          User outcomes are not chance. They are patterns.
+          Most products react. The best ones predict.
         </h2>
         <p className="mt-8 text-[clamp(1rem,1.55vw,1.2rem)] font-light leading-relaxed text-white/65 max-w-[720px]">
-          Every user takes a path through your product. That path leaves a trail of signals
-          about what each user needs next. Most products miss those signals. Tessa reads them
-          and turns them into the next move for each user. There is a better way to help your
-          users get to what they came for, and it starts with the signals they are already
-          giving you.
+          By the time you understand why a user left, the user is already gone. Reading the past
+          is not enough. The best digital products see what is coming and act before the user
+          slips. That is the layer Tessa adds to your product.
         </p>
       </section>
 
@@ -233,62 +238,83 @@ export default function Page() {
         </p>
       </section>
 
-      {/* Get started */}
+      {/* Get started — vertical timeline layout, distinct from the How cards */}
       <section
         id="get-started"
         className="px-6 sm:px-10 py-24 sm:py-32 max-w-[1100px] mx-auto border-t border-white/[0.10] scroll-mt-24"
       >
-        <div className="flex flex-wrap items-baseline gap-x-5 gap-y-2 mb-6">
-          <p className="text-[12px] font-mono tracking-[0.18em] uppercase text-white/35">
-            [ Get started ]
-          </p>
-          <span className="text-[11px] font-mono tracking-[0.16em] uppercase text-white/25 tabular-nums">
-            Founding cohort pricing
-          </span>
-        </div>
+        <p className="text-[12px] font-mono tracking-[0.18em] uppercase text-white/35 mb-6">
+          [ Get started ]
+        </p>
         <h2 className="text-[clamp(1.7rem,3.2vw,2.6rem)] font-light leading-[1.15] tracking-[-0.02em] text-white max-w-[22ch]">
           Start with Tessa.
         </h2>
         <p className="mt-8 text-[clamp(1rem,1.55vw,1.2rem)] font-light leading-relaxed text-white/65 max-w-[720px]">
-          $2,500 one time. One week from kickoff to Tessa live inside your product.
+          $2,500 one time. One week from kickoff to Tessa live inside your product. Then ninety
+          days where we fine tune it for you.
         </p>
 
-        <div className="mt-16 grid gap-5 sm:gap-6 sm:grid-cols-2 lg:grid-cols-4 max-w-[1100px]">
-          {[
-            {
-              n: "01",
-              t: "Pay",
-              d: "$2,500 one time. Receipt arrives instantly.",
-            },
-            {
-              n: "02",
-              t: "Kickoff",
-              d: "We meet within two business days. Lock in the outcome you want for every user.",
-            },
-            {
-              n: "03",
-              t: "Build",
-              d: "One week. We build Tessa and put it inside your product.",
-            },
-            {
-              n: "04",
-              t: "Live",
-              d: "Tessa runs every day. Monthly check ins keep it aimed at the right outcome.",
-            },
-          ].map((s) => (
-            <div
-              key={s.n}
-              className="bg-white/[0.02] border border-white/[0.10] rounded-lg p-6 sm:p-7 flex flex-col"
-            >
-              <p className="text-[clamp(2rem,3.5vw,2.75rem)] font-mono font-light leading-none tracking-[-0.02em] text-white/35 mb-8 tabular-nums">
-                {s.n}
-              </p>
-              <h3 className="text-[clamp(1.05rem,1.4vw,1.25rem)] font-light tracking-[-0.01em] text-white mb-3">
-                {s.t}
-              </h3>
-              <p className="text-[14.5px] font-light leading-relaxed text-white/60">{s.d}</p>
-            </div>
-          ))}
+        {/* Vertical timeline */}
+        <div className="mt-16 relative max-w-[820px]">
+          {/* Connecting line */}
+          <div
+            className="absolute left-[27px] top-3 bottom-3 w-px bg-white/[0.10]"
+            aria-hidden="true"
+          />
+
+          <ol className="space-y-12">
+            {[
+              {
+                n: "01",
+                timing: "Day 1",
+                t: "Pay",
+                d: "$2,500 one time. Receipt arrives instantly.",
+              },
+              {
+                n: "02",
+                timing: "Day 2",
+                t: "Discovery call",
+                d: "We hop on a call with you to learn your product, your users, and the outcome you want them to reach.",
+              },
+              {
+                n: "03",
+                timing: "Week 1",
+                t: "Build",
+                d: "We build Tessa for your product. The patterns. The predictions. The feedback.",
+              },
+              {
+                n: "04",
+                timing: "Day 8",
+                t: "Live",
+                d: "Tessa is up and running inside your product.",
+              },
+              {
+                n: "05",
+                timing: "Day 8 to 98",
+                t: "Fine tune",
+                d: "Over the next ninety days we clean up bugs and tune Tessa around your real users.",
+              },
+            ].map((s) => (
+              <li key={s.n} className="relative flex gap-6 sm:gap-8">
+                <div className="relative z-10 w-14 h-14 rounded-full border border-white/[0.15] bg-black flex items-center justify-center shrink-0">
+                  <span className="text-[12px] font-mono tracking-[0.08em] text-white/55 tabular-nums">
+                    {s.n}
+                  </span>
+                </div>
+                <div className="flex-1 pt-2">
+                  <p className="text-[11px] font-mono tracking-[0.18em] uppercase text-white/35 mb-2 tabular-nums">
+                    {s.timing}
+                  </p>
+                  <h3 className="text-[clamp(1.1rem,1.5vw,1.35rem)] font-light tracking-[-0.01em] text-white mb-2">
+                    {s.t}
+                  </h3>
+                  <p className="text-[14.5px] font-light leading-relaxed text-white/60 max-w-[60ch]">
+                    {s.d}
+                  </p>
+                </div>
+              </li>
+            ))}
+          </ol>
         </div>
 
         <div className="mt-16 flex flex-col gap-8 sm:flex-row sm:items-end sm:justify-between">
@@ -298,9 +324,6 @@ export default function Page() {
             </p>
             <p className="text-[clamp(2.4rem,5vw,3.5rem)] font-extralight leading-none text-white tabular-nums tracking-[-0.02em]">
               $2,500
-            </p>
-            <p className="text-[13px] font-light text-white/45 mt-3">
-              One time. Founding cohort pricing.
             </p>
           </div>
           <div className="flex flex-col items-start sm:items-end gap-3">
@@ -320,11 +343,8 @@ export default function Page() {
         </div>
       </section>
 
-      {/* Closing CTA: emotional, no buttons */}
+      {/* Closing CTA: emotional, no buttons, no eyebrow */}
       <section className="px-6 sm:px-10 py-28 sm:py-40 max-w-[1100px] mx-auto border-t border-white/[0.10] text-center">
-        <p className="text-[12px] font-mono tracking-[0.18em] uppercase text-white/35 mb-6">
-          [ Next ]
-        </p>
         <h2 className="text-[clamp(1.8rem,3.8vw,3rem)] font-light leading-[1.15] tracking-[-0.025em] text-white max-w-[24ch] mx-auto">
           Every user deserves to get what they came for.
         </h2>
@@ -336,9 +356,7 @@ export default function Page() {
       {/* Footer */}
       <footer className="px-6 sm:px-10 py-14 border-t border-white/[0.10]">
         <div className="max-w-[1100px] mx-auto flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
-          <span className="text-white font-extralight text-[13px] tracking-[0.32em] uppercase">
-            Tesurai
-          </span>
+          <Wordmark className="h-3 w-auto" />
           <div className="flex items-center gap-8">
             <a
               href="mailto:hello@tesurai.com"

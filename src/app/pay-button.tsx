@@ -32,7 +32,7 @@ export default function PayButton() {
         disabled={loading}
         className="inline-flex items-center gap-2 bg-white text-black px-8 py-4 text-[14px] font-normal tracking-[0.04em] rounded-full hover:bg-white/90 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
       >
-        {loading ? "Starting..." : "Pay $2,500 now"}
+        {loading ? "Starting..." : "Get started"}
         <svg
           width="15"
           height="15"
