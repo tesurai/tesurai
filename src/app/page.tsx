@@ -273,41 +273,41 @@ export default function Page() {
           Start with Tessa.
         </h2>
         <p className="mt-8 text-[clamp(1rem,1.55vw,1.2rem)] font-light leading-relaxed text-white/65 max-w-[720px]">
-          $2,500 one time. One week from kickoff to Tessa live inside your product. Then ninety
-          days where we fine tune it for you.
+          $2,500 one time. We build Tessa for your product, get it live, and keep tuning it for
+          ninety days after.
         </p>
 
-        {/* Stepped row list: timing on the left, content on the right, hairline
-            dividers between rows. Different language than the How cards above. */}
+        {/* Stepped row list: numbered, with hairline dividers between rows.
+            Different language than the How cards above. */}
         <div className="mt-16 max-w-[1000px] divide-y divide-white/[0.10] border-t border-b border-white/[0.10]">
           {[
             {
-              timing: "Day 1",
+              n: "01",
               t: "Discovery call",
               d: "We hop on a call with you to learn your product, your users, and the outcome you want them to reach.",
             },
             {
-              timing: "Week 1",
+              n: "02",
               t: "Build",
               d: "We build Tessa for your product. The patterns. The predictions. The feedback.",
             },
             {
-              timing: "Day 8",
+              n: "03",
               t: "Live",
               d: "Tessa is up and running inside your product.",
             },
             {
-              timing: "Day 8 to 98",
+              n: "04",
               t: "Fine tune",
               d: "Over the next ninety days we clean up bugs and tune Tessa around your real users.",
             },
           ].map((s) => (
             <div
-              key={s.timing}
-              className="py-8 sm:py-9 grid gap-3 sm:gap-10 sm:grid-cols-[140px_1fr]"
+              key={s.n}
+              className="py-8 sm:py-9 grid gap-3 sm:gap-10 sm:grid-cols-[80px_1fr]"
             >
               <p className="text-[11px] font-mono tracking-[0.2em] uppercase text-white/45 tabular-nums pt-1">
-                {s.timing}
+                {s.n}
               </p>
               <div>
                 <h3 className="text-[clamp(1.15rem,1.6vw,1.4rem)] font-light tracking-[-0.01em] text-white mb-2">
