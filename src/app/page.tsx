@@ -49,7 +49,7 @@ export default function Page() {
         <nav className="flex items-center gap-5 sm:gap-7">
           <a
             href="#get-started"
-            className="text-white border border-white/25 px-5 py-2 text-[12px] font-light tracking-[0.1em] uppercase rounded-full hover:bg-white hover:text-black transition-all duration-300"
+            className="text-white border border-white/25 px-5 py-2 text-[12px] font-normal tracking-[0.1em] uppercase rounded-full hover:bg-white hover:text-black transition-all duration-300"
           >
             Get started
           </a>
@@ -61,10 +61,10 @@ export default function Page() {
         <p className="text-[12px] font-mono tracking-[0.18em] uppercase text-white/35 mb-8">
           Tesurai
         </p>
-        <h1 className="text-[clamp(2.2rem,5vw,4.5rem)] font-extralight leading-[1.08] tracking-[-0.025em] text-white max-w-[22ch] mx-auto">
+        <h1 className="text-[clamp(2.75rem,7.5vw,6.5rem)] font-medium leading-[1.02] tracking-[-0.04em] text-white max-w-[18ch] mx-auto">
           Most predictive intelligence layer for digital products
         </h1>
-        <p className="mt-10 text-[clamp(1rem,1.55vw,1.2rem)] font-light leading-relaxed text-white/65 max-w-[680px] mx-auto">
+        <p className="mt-10 text-[clamp(1.05rem,1.45vw,1.25rem)] font-normal leading-[1.55] text-white/65 max-w-[640px] mx-auto">
           Tessa uses each user's past data to find patterns and predict their future, then gives
           feedback to help them get results. User outcomes are no longer guess work. They follow
           patterns you can read on every user.
@@ -76,12 +76,12 @@ export default function Page() {
         <p className="text-[12px] font-mono tracking-[0.18em] uppercase text-white/35 mb-6">
           [ What we believe ]
         </p>
-        <h2 className="text-[clamp(1.7rem,3.2vw,2.6rem)] font-light leading-[1.15] tracking-[-0.02em] text-white max-w-[22ch] mx-auto">
+        <h2 className="text-[clamp(2.25rem,5vw,4.5rem)] font-medium leading-[1.05] tracking-[-0.035em] text-white max-w-[18ch] mx-auto">
           Most products react
           <br />
           The best ones predict
         </h2>
-        <p className="mt-8 text-[clamp(1rem,1.55vw,1.2rem)] font-light leading-relaxed text-white/65 max-w-[720px] mx-auto">
+        <p className="mt-10 text-[clamp(1.05rem,1.45vw,1.25rem)] font-normal leading-[1.55] text-white/65 max-w-[640px] mx-auto">
           By the time you understand why a user left, the user is already gone. Reading the past
           is not enough. The best digital products see what is coming and act before the user
           slips. That is the layer Tessa adds to your product.
@@ -93,10 +93,10 @@ export default function Page() {
         <p className="text-[12px] font-mono tracking-[0.18em] uppercase text-white/35 mb-6">
           [ The journey ]
         </p>
-        <h2 className="text-[clamp(1.7rem,3.2vw,2.6rem)] font-light leading-[1.15] tracking-[-0.02em] text-white max-w-[22ch] mx-auto">
+        <h2 className="text-[clamp(2.25rem,5vw,4.5rem)] font-medium leading-[1.05] tracking-[-0.035em] text-white max-w-[18ch] mx-auto">
           Two paths for every user
         </h2>
-        <p className="mt-8 text-[clamp(1rem,1.55vw,1.2rem)] font-light leading-relaxed text-white/65 max-w-[720px] mx-auto">
+        <p className="mt-10 text-[clamp(1.05rem,1.45vw,1.25rem)] font-normal leading-[1.55] text-white/65 max-w-[640px] mx-auto">
           Every user takes a path through your product. Each step is a signal. Tessa reads the
           signals and helps each user get closer to the result they came for.
         </p>
@@ -117,7 +117,7 @@ export default function Page() {
               ].map((step, i) => (
                 <li
                   key={i}
-                  className="text-[14.5px] font-light leading-relaxed text-white/45 flex gap-4"
+                  className="text-[15px] font-normal leading-[1.55] text-white/45 flex gap-4"
                 >
                   <span className="text-[11px] font-mono text-white/30 tabular-nums shrink-0 pt-1">
                     {String(i + 1).padStart(2, "0")}
@@ -149,7 +149,7 @@ export default function Page() {
               ].map((step, i) => (
                 <li
                   key={i}
-                  className="text-[14.5px] font-light leading-relaxed text-white/80 flex gap-4"
+                  className="text-[15px] font-normal leading-[1.55] text-white/80 flex gap-4"
                 >
                   <span className="text-[11px] font-mono text-white/55 tabular-nums shrink-0 pt-1">
                     {String(i + 1).padStart(2, "0")}
@@ -172,7 +172,7 @@ export default function Page() {
         <p className="text-[12px] font-mono tracking-[0.18em] uppercase text-white/35 mb-6">
           [ How ]
         </p>
-        <h2 className="text-[clamp(1.7rem,3.2vw,2.6rem)] font-light leading-[1.15] tracking-[-0.02em] text-white max-w-[22ch] mx-auto">
+        <h2 className="text-[clamp(2.25rem,5vw,4.5rem)] font-medium leading-[1.05] tracking-[-0.035em] text-white max-w-[18ch] mx-auto">
           Discover
           <br />
           Build
@@ -202,13 +202,13 @@ export default function Page() {
               key={s.n}
               className="bg-white/[0.02] border border-white/[0.10] rounded-lg p-6 sm:p-7 flex flex-col"
             >
-              <p className="text-[clamp(2rem,3.5vw,2.75rem)] font-mono font-light leading-none tracking-[-0.02em] text-white/35 mb-8 tabular-nums">
+              <p className="text-[clamp(2.25rem,3.8vw,3rem)] font-mono font-normal leading-none tracking-[-0.02em] text-white/35 mb-8 tabular-nums">
                 {s.n}
               </p>
-              <h3 className="text-[clamp(1.05rem,1.4vw,1.25rem)] font-light tracking-[-0.01em] text-white mb-3">
+              <h3 className="text-[clamp(1.15rem,1.5vw,1.4rem)] font-medium tracking-[-0.02em] text-white mb-3">
                 {s.t}
               </h3>
-              <p className="text-[14.5px] font-light leading-relaxed text-white/60">{s.d}</p>
+              <p className="text-[15px] font-normal leading-[1.55] text-white/60">{s.d}</p>
             </div>
           ))}
         </div>
@@ -226,10 +226,10 @@ export default function Page() {
           <br />
           Consumer mobile and web
         </p>
-        <h2 className="mt-10 text-[clamp(3.2rem,8vw,7rem)] font-extralight leading-[0.92] tracking-[-0.04em] text-white">
+        <h2 className="mt-10 text-[clamp(3.5rem,10vw,8.5rem)] font-medium leading-[0.95] tracking-[-0.045em] text-white">
           Abbelo
         </h2>
-        <p className="mt-8 text-[clamp(1.1rem,1.8vw,1.4rem)] font-light leading-relaxed text-white/75 max-w-[600px] mx-auto">
+        <p className="mt-10 text-[clamp(1.1rem,1.55vw,1.35rem)] font-normal leading-[1.55] text-white/75 max-w-[600px] mx-auto">
           A coaching app for people who want to change. Every session ends with one number that
           tracks who they are becoming.
         </p>
@@ -244,10 +244,10 @@ export default function Page() {
           <p className="text-[11px] font-mono tracking-[0.22em] uppercase text-white/65 mb-10">
             The problem
           </p>
-          <blockquote className="text-[clamp(1.7rem,3.4vw,2.7rem)] font-extralight leading-[1.2] tracking-[-0.025em] text-white max-w-[760px] mx-auto">
+          <blockquote className="text-[clamp(1.9rem,4vw,3.2rem)] font-medium leading-[1.1] tracking-[-0.035em] text-white max-w-[20ch] mx-auto">
             Am I becoming who I said I wanted to become, and at what pace?
           </blockquote>
-          <p className="mt-7 text-[12px] font-mono tracking-[0.2em] uppercase text-white/45 max-w-[560px] mx-auto">
+          <p className="mt-8 text-[12px] font-mono tracking-[0.2em] uppercase text-white/45 max-w-[560px] mx-auto">
             The question every Abbelo user has. No coaching app answered it.
           </p>
         </article>
@@ -260,12 +260,12 @@ export default function Page() {
           <p className="text-[11px] font-mono tracking-[0.22em] uppercase text-white/65 mb-10">
             The solution
           </p>
-          <p className="text-[clamp(1.1rem,1.8vw,1.4rem)] font-light leading-relaxed text-white/85 max-w-[680px] mx-auto">
+          <p className="text-[clamp(1.1rem,1.55vw,1.35rem)] font-normal leading-[1.55] text-white/85 max-w-[640px] mx-auto">
             Tessa reads every session. Scores the chain of thoughts, feelings, and actions.
             Forecasts where the user is heading at 30 and 90 days. Surfaces the one move to push
             next.
           </p>
-          <p className="mt-6 text-[clamp(1rem,1.55vw,1.2rem)] font-light leading-relaxed text-white/55 max-w-[680px] mx-auto">
+          <p className="mt-6 text-[clamp(1.05rem,1.45vw,1.25rem)] font-normal leading-[1.55] text-white/55 max-w-[640px] mx-auto">
             The picture sharpens after every session.
           </p>
         </article>
@@ -278,15 +278,14 @@ export default function Page() {
           <p className="text-[11px] font-mono tracking-[0.22em] uppercase text-white/65 mb-10">
             In their words
           </p>
-          <blockquote className="text-[clamp(1.5rem,2.8vw,2.2rem)] font-light leading-[1.3] tracking-[-0.02em] text-white max-w-[760px] mx-auto">
+          <blockquote className="text-[clamp(1.7rem,3.4vw,2.7rem)] font-medium leading-[1.15] tracking-[-0.035em] text-white max-w-[22ch] mx-auto">
             Abbelo uses Tessa to show every user what they are becoming and what to push next.
           </blockquote>
-          <figcaption className="mt-8 text-[11px] font-mono tracking-[0.22em] uppercase leading-[1.6] text-white/55">
+          <figcaption className="mt-10 text-[11px] font-mono tracking-[0.22em] uppercase leading-[1.6] text-white/55">
             Matthew Werner
             <br />
             <span className="text-white/35">Founder, Abbelo</span>
           </figcaption>
-          </div>
         </article>
 
       </section>
@@ -299,10 +298,10 @@ export default function Page() {
         <p className="text-[12px] font-mono tracking-[0.18em] uppercase text-white/35 mb-6">
           [ Get started ]
         </p>
-        <h2 className="text-[clamp(1.7rem,3.2vw,2.6rem)] font-light leading-[1.15] tracking-[-0.02em] text-white max-w-[22ch] mx-auto">
+        <h2 className="text-[clamp(2.25rem,5vw,4.5rem)] font-medium leading-[1.05] tracking-[-0.035em] text-white max-w-[18ch] mx-auto">
           Start with Tessa
         </h2>
-        <p className="mt-8 text-[clamp(1rem,1.55vw,1.2rem)] font-light leading-relaxed text-white/65 max-w-[720px] mx-auto">
+        <p className="mt-10 text-[clamp(1.05rem,1.45vw,1.25rem)] font-normal leading-[1.55] text-white/65 max-w-[640px] mx-auto">
           $2,500 one time. We build Tessa for your product, get it live, and keep tuning it for
           ninety days after.
         </p>
@@ -338,10 +337,10 @@ export default function Page() {
               <p className="text-[11px] font-mono tracking-[0.2em] uppercase text-white/45 tabular-nums mb-5">
                 {s.n}
               </p>
-              <h3 className="text-[clamp(1.15rem,1.5vw,1.35rem)] font-light tracking-[-0.01em] text-white mb-3">
+              <h3 className="text-[clamp(1.25rem,1.65vw,1.5rem)] font-medium tracking-[-0.02em] text-white mb-3">
                 {s.t}
               </h3>
-              <p className="text-[14px] font-light leading-relaxed text-white/60">
+              <p className="text-[15px] font-normal leading-[1.55] text-white/60">
                 {s.d}
               </p>
             </div>
@@ -353,13 +352,13 @@ export default function Page() {
             <p className="text-[12px] font-mono tracking-[0.16em] uppercase text-white/55 mb-3">
               Price
             </p>
-            <p className="text-[clamp(2.4rem,5vw,3.5rem)] font-extralight leading-none text-white tabular-nums tracking-[-0.02em]">
+            <p className="text-[clamp(2.75rem,6vw,4.5rem)] font-medium leading-none text-white tabular-nums tracking-[-0.04em]">
               $2,500
             </p>
           </div>
           <div className="flex flex-col items-center gap-3">
             <PayButton />
-            <p className="text-[13px] font-light text-white/40">
+            <p className="text-[13px] font-normal text-white/40">
               Or{" "}
               <a
                 href={CAL_LINK}
@@ -376,10 +375,10 @@ export default function Page() {
 
       {/* Closing CTA: emotional, no buttons, no eyebrow */}
       <section className="px-6 sm:px-10 py-28 sm:py-40 max-w-[1200px] mx-auto border-t border-white/[0.10] text-center">
-        <h2 className="text-[clamp(1.7rem,3.2vw,2.6rem)] font-light leading-[1.15] tracking-[-0.025em] text-white max-w-[24ch] mx-auto">
+        <h2 className="text-[clamp(2.25rem,5vw,4.5rem)] font-medium leading-[1.05] tracking-[-0.035em] text-white max-w-[20ch] mx-auto">
           Every user deserves to get what they came for
         </h2>
-        <p className="mt-8 text-[clamp(1rem,1.55vw,1.2rem)] font-light leading-relaxed text-white/60 max-w-[560px] mx-auto">
+        <p className="mt-10 text-[clamp(1.05rem,1.45vw,1.25rem)] font-normal leading-[1.55] text-white/60 max-w-[560px] mx-auto">
           You built it for them. Tessa is how you make sure they get there.
         </p>
       </section>
@@ -391,7 +390,7 @@ export default function Page() {
           <div className="flex items-center gap-8">
             <a
               href="mailto:hello@tesurai.com"
-              className="text-white/50 hover:text-white text-[14px] font-light transition-colors"
+              className="text-white/50 hover:text-white text-[14px] font-normal transition-colors"
             >
               hello@tesurai.com
             </a>

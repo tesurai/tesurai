@@ -48,7 +48,7 @@ export default function PayButton() {
         </svg>
       </button>
       {error && (
-        <p className="text-[13px] font-light text-white/70 border border-white/15 rounded-lg px-4 py-2 max-w-[320px]">
+        <p className="text-[13px] font-normal text-white/70 border border-white/15 rounded-lg px-4 py-2 max-w-[320px]">
           {error}
         </p>
       )}
