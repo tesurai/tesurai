@@ -238,7 +238,7 @@ export default function Page() {
         </p>
       </section>
 
-      {/* Get started — vertical timeline layout, distinct from the How cards */}
+      {/* Get started: vertical timeline layout, distinct from the How cards */}
       <section
         id="get-started"
         className="px-6 sm:px-10 py-24 sm:py-32 max-w-[1100px] mx-auto border-t border-white/[0.10] scroll-mt-24"
