@@ -81,9 +81,8 @@ export default function Page() {
           The best ones predict
         </h2>
         <p className="mt-10 text-[clamp(1.05rem,1.45vw,1.25rem)] font-normal leading-[1.55] text-white/65 max-w-[640px] mx-auto">
-          By the time you understand why a user left, the user is already gone. Reading the past
-          is not enough. The best digital products see what is coming and act before the user
-          slips. That is the layer Tessa adds to your product.
+          Reading the past is too late. The best products see what is coming and act before the
+          user slips.
         </p>
       </section>
 
@@ -96,8 +95,8 @@ export default function Page() {
           Two paths
         </h2>
         <p className="mt-10 text-[clamp(1.05rem,1.45vw,1.25rem)] font-normal leading-[1.55] text-white/65 max-w-[640px] mx-auto">
-          Every user takes a path through your product. Each step is a signal. Tessa reads the
-          signals and helps each user get closer to the result they came for.
+          Every user takes a path through your product. Without an intelligence layer, most paths
+          end before the result.
         </p>
 
         <div className="mt-16 grid gap-5 sm:gap-6 sm:grid-cols-2 text-left">
@@ -108,11 +107,12 @@ export default function Page() {
             </p>
             <ol className="space-y-4 flex-1">
               {[
-                "Signs up wanting a result.",
-                "Tries the product on their own.",
-                "Gets stuck somewhere.",
-                "Does not know what to do next.",
-                "Drops off the path.",
+                "Signs up for a clear outcome.",
+                "Opens the product and pokes around.",
+                "Tries a few things in the first session.",
+                "Picks up nothing that fits the moment.",
+                "Forgets to come back the next day.",
+                "Closes the account weeks later.",
               ].map((step, i) => (
                 <li
                   key={i}
@@ -127,7 +127,7 @@ export default function Page() {
             </ol>
             <div className="mt-8 pt-6 border-t border-white/[0.08]">
               <p className="text-[11px] font-mono tracking-[0.16em] uppercase text-white/35">
-                Outcome: user drops off
+                Outcome: user churns before the result
               </p>
             </div>
           </div>
@@ -139,12 +139,12 @@ export default function Page() {
             </p>
             <ol className="space-y-4 flex-1">
               {[
-                "Signs up wanting a result.",
-                "Tessa watches what they do.",
-                "Tessa predicts where they are heading.",
-                "Tessa sends the next move.",
-                "User stays on the path.",
-                "User gets the result.",
+                "Signs up for a clear outcome.",
+                "Tessa reads each session as a pattern.",
+                "Tessa scores how close that pattern sits to the outcome.",
+                "Tessa forecasts where the user lands at 30 and 90 days.",
+                "Tessa surfaces the one next move that lifts the score.",
+                "User repeats the loop and reaches the outcome.",
               ].map((step, i) => (
                 <li
                   key={i}
@@ -159,7 +159,7 @@ export default function Page() {
             </ol>
             <div className="mt-8 pt-6 border-t border-white/[0.20]">
               <p className="text-[11px] font-mono tracking-[0.16em] uppercase text-white/85">
-                Outcome: user gets the result
+                Outcome: user reaches the result
               </p>
             </div>
           </div>
@@ -269,6 +269,22 @@ export default function Page() {
           </div>
         </article>
 
+        {/* Impact: closing statement on what Tessa has done for Abbelo */}
+        <article className="mt-14 sm:mt-16 grid gap-2 sm:gap-6 sm:grid-cols-[160px_1fr] sm:items-baseline">
+          <p className="text-[11px] font-mono tracking-[0.22em] uppercase text-white/55 tabular-nums">
+            03 / Impact
+          </p>
+          <div>
+            <p className="text-[clamp(1.15rem,1.55vw,1.4rem)] font-normal leading-[1.5] text-white/85 max-w-[640px]">
+              Tessa now runs every Abbelo session. Every user sees what they are becoming and the
+              next move that gets them closer.
+            </p>
+            <p className="mt-4 text-[15px] font-normal leading-[1.6] text-white/55 max-w-[640px]">
+              Abbelo no longer guesses where any user is heading.
+            </p>
+          </div>
+        </article>
+
         {/* Founder sign-off */}
         <div className="mt-16 sm:mt-20 pt-8 border-t border-white/[0.10] grid gap-2 sm:gap-6 sm:grid-cols-[160px_1fr] sm:items-baseline">
           <p className="text-[11px] font-mono tracking-[0.22em] uppercase text-white/40">
@@ -366,7 +382,7 @@ export default function Page() {
           className="bg-clip-text text-transparent text-[clamp(2.25rem,5vw,4.5rem)] font-medium leading-[1.05] tracking-[-0.035em] max-w-[26ch]"
           style={{
             backgroundImage:
-              "linear-gradient(to right, rgba(255,255,255,1) 0%, rgba(255,255,255,0.85) 50%, rgba(255,255,255,0.40) 80%, rgba(255,255,255,0.03) 100%)",
+              "linear-gradient(to right, rgba(255,255,255,1) 0%, rgba(255,255,255,0.95) 60%, rgba(255,255,255,0.75) 85%, rgba(255,255,255,0.45) 100%)",
             WebkitTextFillColor: "transparent",
           }}
         >
