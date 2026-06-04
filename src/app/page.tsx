@@ -228,7 +228,7 @@ export default function Page() {
           number that tracks who they are becoming.
         </p>
 
-        {/* The question — the problem, set as the visual anchor */}
+        {/* The question: the problem, set as the visual anchor */}
         <figure className="mt-20 sm:mt-24 max-w-[880px]">
           <blockquote className="text-[clamp(1.6rem,3vw,2.4rem)] font-extralight leading-[1.25] tracking-[-0.02em] text-white">
             Am I becoming who I said I wanted to become, and at what pace?
@@ -238,7 +238,7 @@ export default function Page() {
           </figcaption>
         </figure>
 
-        {/* What Tessa does — the solution, one paragraph */}
+        {/* What Tessa does: the solution, one paragraph */}
         <p className="mt-20 sm:mt-24 text-[clamp(1.05rem,1.7vw,1.3rem)] font-light leading-relaxed text-white/80 max-w-[760px]">
           Now Tessa does. It reads every session, scores the chain of thoughts, feelings, and
           actions, forecasts where the user is heading at 30 and 90 days, and surfaces the one
