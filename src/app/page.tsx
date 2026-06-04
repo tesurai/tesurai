@@ -254,67 +254,48 @@ export default function Page() {
           days where we fine tune it for you.
         </p>
 
-        {/* Vertical timeline */}
-        <div className="mt-16 relative max-w-[820px]">
-          {/* Connecting line */}
-          <div
-            className="absolute left-[27px] top-3 bottom-3 w-px bg-white/[0.10]"
-            aria-hidden="true"
-          />
-
-          <ol className="space-y-12">
-            {[
-              {
-                n: "01",
-                timing: "Day 1",
-                t: "Pay",
-                d: "$2,500 one time. Receipt arrives instantly.",
-              },
-              {
-                n: "02",
-                timing: "Day 2",
-                t: "Discovery call",
-                d: "We hop on a call with you to learn your product, your users, and the outcome you want them to reach.",
-              },
-              {
-                n: "03",
-                timing: "Week 1",
-                t: "Build",
-                d: "We build Tessa for your product. The patterns. The predictions. The feedback.",
-              },
-              {
-                n: "04",
-                timing: "Day 8",
-                t: "Live",
-                d: "Tessa is up and running inside your product.",
-              },
-              {
-                n: "05",
-                timing: "Day 8 to 98",
-                t: "Fine tune",
-                d: "Over the next ninety days we clean up bugs and tune Tessa around your real users.",
-              },
-            ].map((s) => (
-              <li key={s.n} className="relative flex gap-6 sm:gap-8">
-                <div className="relative z-10 w-14 h-14 rounded-full border border-white/[0.15] bg-black flex items-center justify-center shrink-0">
-                  <span className="text-[12px] font-mono tracking-[0.08em] text-white/55 tabular-nums">
-                    {s.n}
-                  </span>
-                </div>
-                <div className="flex-1 pt-2">
-                  <p className="text-[11px] font-mono tracking-[0.18em] uppercase text-white/35 mb-2 tabular-nums">
-                    {s.timing}
-                  </p>
-                  <h3 className="text-[clamp(1.1rem,1.5vw,1.35rem)] font-light tracking-[-0.01em] text-white mb-2">
-                    {s.t}
-                  </h3>
-                  <p className="text-[14.5px] font-light leading-relaxed text-white/60 max-w-[60ch]">
-                    {s.d}
-                  </p>
-                </div>
-              </li>
-            ))}
-          </ol>
+        {/* Stepped row list: timing on the left, content on the right, hairline
+            dividers between rows. Different language than the How cards above. */}
+        <div className="mt-16 max-w-[1000px] divide-y divide-white/[0.10] border-t border-b border-white/[0.10]">
+          {[
+            {
+              timing: "Day 1",
+              t: "Discovery call",
+              d: "We hop on a call with you to learn your product, your users, and the outcome you want them to reach.",
+            },
+            {
+              timing: "Week 1",
+              t: "Build",
+              d: "We build Tessa for your product. The patterns. The predictions. The feedback.",
+            },
+            {
+              timing: "Day 8",
+              t: "Live",
+              d: "Tessa is up and running inside your product.",
+            },
+            {
+              timing: "Day 8 to 98",
+              t: "Fine tune",
+              d: "Over the next ninety days we clean up bugs and tune Tessa around your real users.",
+            },
+          ].map((s) => (
+            <div
+              key={s.timing}
+              className="py-8 sm:py-9 grid gap-3 sm:gap-10 sm:grid-cols-[140px_1fr]"
+            >
+              <p className="text-[11px] font-mono tracking-[0.2em] uppercase text-white/45 tabular-nums pt-1">
+                {s.timing}
+              </p>
+              <div>
+                <h3 className="text-[clamp(1.15rem,1.6vw,1.4rem)] font-light tracking-[-0.01em] text-white mb-2">
+                  {s.t}
+                </h3>
+                <p className="text-[15px] font-light leading-relaxed text-white/60 max-w-[60ch]">
+                  {s.d}
+                </p>
+              </div>
+            </div>
+          ))}
         </div>
 
         <div className="mt-16 flex flex-col gap-8 sm:flex-row sm:items-end sm:justify-between">
