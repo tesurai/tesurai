@@ -95,7 +95,7 @@ export default function Page() {
           [ The difference ]
         </p>
         <h2 className="text-[clamp(2.25rem,5vw,4.5rem)] font-medium leading-[1.05] tracking-[-0.035em] text-white max-w-[18ch] mx-auto">
-          Two paths
+          Predict or lose them
         </h2>
         <p className="mt-10 text-[clamp(1.05rem,1.45vw,1.25rem)] font-normal leading-[1.55] text-white/65 max-w-[640px] mx-auto">
           Every user takes a path through your business. Without an intelligence layer, most
