@@ -9,13 +9,14 @@ import PayButton from "./pay-button";
 
 const CAL_LINK = "https://cal.com/tesurai";
 
+const BROWSER_TITLE = "Tesurai | Most products react. The best ones predict.";
 const SHARE_TITLE = "Most products react. The best ones predict.";
 const SHARE_DESCRIPTION =
   "Tessa reads each user, predicts where they are heading, and surfaces the next move to keep them on the path.";
 const SHARE_IMAGE = "/og.png";
 
 export const metadata = {
-  title: "Tesurai | The intelligence layer for digital products",
+  title: BROWSER_TITLE,
   description: SHARE_DESCRIPTION,
   openGraph: {
     title: SHARE_TITLE,
