@@ -86,13 +86,13 @@ export default function Page() {
         </p>
       </section>
 
-      {/* The journey */}
+      {/* The difference: with vs without Tessa */}
       <section
         id="tessa"
         className="px-6 sm:px-10 py-28 sm:py-40 max-w-[1200px] mx-auto border-t border-white/[0.10] text-center scroll-mt-24"
       >
         <p className="text-[12px] font-mono tracking-[0.18em] uppercase text-white/35 mb-6">
-          [ The journey ]
+          [ The difference ]
         </p>
         <h2 className="text-[clamp(2.25rem,5vw,4.5rem)] font-medium leading-[1.05] tracking-[-0.035em] text-white max-w-[18ch] mx-auto">
           Two paths
