@@ -13,9 +13,9 @@ export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
 
 const PRICE_USD_CENTS = 250000;
-const PRODUCT_NAME = "Tessa intelligence layer";
+const PRODUCT_NAME = "Tessa";
 const PRODUCT_DESCRIPTION =
-  "Tessa built for your product, deployed live inside it, and tuned for 90 days.";
+  "Built into your product, live and tuned for 90 days.";
 
 export async function POST(req: Request) {
   const apiKey = process.env.STRIPE_SECRET_KEY;
@@ -57,7 +57,7 @@ export async function POST(req: Request) {
       cancel_url: `${origin}/`,
       billing_address_collection: "auto",
       metadata: {
-        product: "tessa-intelligence-layer",
+        product: "tessa",
         price_usd: "2500",
       },
     });
