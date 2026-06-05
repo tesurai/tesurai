@@ -414,7 +414,7 @@ export default function Page() {
 
             <div>
               <p className="text-[11px] font-mono tracking-[0.22em] uppercase text-white/40 mb-5">
-                Follow
+                Connect
               </p>
               <div className="flex items-center gap-4">
                 <a
@@ -495,7 +495,7 @@ export default function Page() {
             </div>
           </div>
 
-          <div className="mt-14 pt-8 border-t border-white/[0.08]">
+          <div className="mt-14">
             <span className="text-white/35 text-[12px] font-mono tracking-[0.12em] uppercase tabular-nums">
               © 2026 Tesurai LLC
             </span>
