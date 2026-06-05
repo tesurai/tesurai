@@ -1,8 +1,8 @@
-// Stripe Checkout Session for the $2,500 Founding Customer one time fee.
+// Stripe Checkout Session for the $2,500 Tessa install.
 // Uses STRIPE_SECRET_KEY from Vercel environment variables. The key never
 // appears in the client bundle; this route runs server side only.
 //
-// Flow: client clicks "Pay $2,500 now" -> POST to this route -> we create a
+// Flow: client clicks "Get started" -> POST to this route -> we create a
 // Checkout Session with the price baked in -> we return the hosted Stripe
 // URL -> client redirects there. Stripe handles the card form, the receipt,
 // and the success / cancel redirects back to /thanks or /.
@@ -13,9 +13,9 @@ export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
 
 const PRICE_USD_CENTS = 250000;
-const PRODUCT_NAME = "Tessa Founding Customer";
+const PRODUCT_NAME = "Tessa intelligence layer";
 const PRODUCT_DESCRIPTION =
-  "One time fee. One week to live in your consumer product.";
+  "Tessa built for your product, deployed live inside it, and tuned for 90 days.";
 
 export async function POST(req: Request) {
   const apiKey = process.env.STRIPE_SECRET_KEY;
@@ -57,7 +57,7 @@ export async function POST(req: Request) {
       cancel_url: `${origin}/`,
       billing_address_collection: "auto",
       metadata: {
-        product: "tessa-founding-customer",
+        product: "tessa-intelligence-layer",
         price_usd: "2500",
       },
     });
