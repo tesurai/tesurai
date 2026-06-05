@@ -79,7 +79,14 @@ export default function ThanksPage() {
                 Products
               </p>
               <ul className="space-y-2.5">
-                <li className="text-[14px] font-normal text-white/70">Tessa</li>
+                <li>
+                  <a
+                    href="/#tessa"
+                    className="text-[14px] font-normal text-white/70 hover:text-white transition-colors"
+                  >
+                    Tessa
+                  </a>
+                </li>
               </ul>
             </div>
 

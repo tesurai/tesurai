@@ -87,7 +87,10 @@ export default function Page() {
       </section>
 
       {/* The journey */}
-      <section className="px-6 sm:px-10 py-28 sm:py-40 max-w-[1200px] mx-auto border-t border-white/[0.10] text-center">
+      <section
+        id="tessa"
+        className="px-6 sm:px-10 py-28 sm:py-40 max-w-[1200px] mx-auto border-t border-white/[0.10] text-center scroll-mt-24"
+      >
         <p className="text-[12px] font-mono tracking-[0.18em] uppercase text-white/35 mb-6">
           [ The journey ]
         </p>
@@ -396,7 +399,14 @@ export default function Page() {
                 Products
               </p>
               <ul className="space-y-2.5">
-                <li className="text-[14px] font-normal text-white/70">Tessa</li>
+                <li>
+                  <a
+                    href="#tessa"
+                    className="text-[14px] font-normal text-white/70 hover:text-white transition-colors"
+                  >
+                    Tessa
+                  </a>
+                </li>
               </ul>
             </div>
 
