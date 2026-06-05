@@ -221,7 +221,7 @@ export default function Page() {
             <p className="text-[11px] font-mono tracking-[0.22em] uppercase text-white/40 mb-2">
               Customer
             </p>
-            <p className="text-[15px] font-medium text-white">Abbelo</p>
+            <p className="text-[15px] font-normal text-white">Abbelo</p>
           </div>
           <div>
             <p className="text-[11px] font-mono tracking-[0.22em] uppercase text-white/40 mb-2">
@@ -243,7 +243,7 @@ export default function Page() {
             01 / Problem
           </p>
           <div>
-            <p className="text-[clamp(1.15rem,1.55vw,1.4rem)] font-medium leading-[1.45] text-white max-w-[640px]">
+            <p className="text-[clamp(1.15rem,1.55vw,1.4rem)] font-normal leading-[1.45] text-white max-w-[640px]">
               &ldquo;Am I becoming who I said I wanted to become, and at what pace?&rdquo;
             </p>
             <p className="mt-4 text-[15px] font-normal leading-[1.6] text-white/55 max-w-[640px]">
@@ -275,7 +275,7 @@ export default function Page() {
             03 / Impact
           </p>
           <figure>
-            <blockquote className="text-[clamp(1.15rem,1.55vw,1.4rem)] font-medium leading-[1.5] text-white max-w-[640px]">
+            <blockquote className="text-[clamp(1.15rem,1.55vw,1.4rem)] font-normal leading-[1.5] text-white max-w-[640px]">
               &ldquo;Men lie, women lie, numbers don&rsquo;t. Tessa is a private model of every
               Abbelo user. It learns from every session, scores who they are becoming, and shows
               them the one move to push next. Abbelo no longer guesses where any user is
