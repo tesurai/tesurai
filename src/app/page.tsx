@@ -69,30 +69,30 @@ export default function Page() {
       </header>
 
       {/* Hero */}
-      <section className="px-6 sm:px-10 pt-44 sm:pt-56 pb-28 sm:pb-40 max-w-[1200px] mx-auto text-center">
+      <section className="px-6 sm:px-10 pt-44 sm:pt-56 pb-28 sm:pb-40 max-w-[1200px] mx-auto sm:text-center">
         <p className="text-[12px] font-mono tracking-[0.18em] uppercase text-white/35 mb-8">
           Tesurai
         </p>
-        <h1 className="text-[clamp(2.75rem,7.5vw,6.5rem)] font-medium leading-[1.02] tracking-[-0.04em] text-white max-w-[18ch] mx-auto">
+        <h1 className="text-[clamp(2.25rem,7vw,6rem)] font-medium leading-[1.05] tracking-[-0.035em] text-white max-w-[18ch] sm:mx-auto">
           Most predictive intelligence layer for digital products
         </h1>
-        <p className="mt-10 text-[clamp(1.05rem,1.45vw,1.25rem)] font-normal leading-[1.55] text-white/65 max-w-[640px] mx-auto">
+        <p className="mt-10 text-[clamp(1.05rem,1.45vw,1.25rem)] font-normal leading-[1.55] text-white/65 max-w-[640px] sm:mx-auto">
           Tessa reads each user, predicts where they are heading, and surfaces the next move to
           keep them on the path.
         </p>
       </section>
 
       {/* What we believe */}
-      <section className="px-6 sm:px-10 py-28 sm:py-40 max-w-[1200px] mx-auto border-t border-white/[0.10] text-center">
+      <section className="px-6 sm:px-10 py-28 sm:py-40 max-w-[1200px] mx-auto border-t border-white/[0.10] sm:text-center">
         <p className="text-[12px] font-mono tracking-[0.18em] uppercase text-white/35 mb-6">
           [ What we believe ]
         </p>
-        <h2 className="text-[clamp(2.25rem,5vw,4.5rem)] font-medium leading-[1.05] tracking-[-0.035em] text-white max-w-[18ch] mx-auto">
+        <h2 className="text-[clamp(2rem,5vw,4.5rem)] font-medium leading-[1.05] tracking-[-0.035em] text-white max-w-[18ch] sm:mx-auto">
           Most products react
           <br />
           The best ones predict
         </h2>
-        <p className="mt-10 text-[clamp(1.05rem,1.45vw,1.25rem)] font-normal leading-[1.55] text-white/65 max-w-[640px] mx-auto">
+        <p className="mt-10 text-[clamp(1.05rem,1.45vw,1.25rem)] font-normal leading-[1.55] text-white/65 max-w-[640px] sm:mx-auto">
           Reading the past is too late. The best products see what is coming and act before the
           user slips.
         </p>
@@ -101,15 +101,15 @@ export default function Page() {
       {/* The difference: with vs without Tessa */}
       <section
         id="tessa"
-        className="px-6 sm:px-10 py-28 sm:py-40 max-w-[1200px] mx-auto border-t border-white/[0.10] text-center scroll-mt-24"
+        className="px-6 sm:px-10 py-28 sm:py-40 max-w-[1200px] mx-auto border-t border-white/[0.10] sm:text-center scroll-mt-24"
       >
         <p className="text-[12px] font-mono tracking-[0.18em] uppercase text-white/35 mb-6">
           [ The difference ]
         </p>
-        <h2 className="text-[clamp(2.25rem,5vw,4.5rem)] font-medium leading-[1.05] tracking-[-0.035em] text-white max-w-[18ch] mx-auto">
+        <h2 className="text-[clamp(2rem,5vw,4.5rem)] font-medium leading-[1.05] tracking-[-0.035em] text-white max-w-[18ch] sm:mx-auto">
           Predict or lose them
         </h2>
-        <p className="mt-10 text-[clamp(1.05rem,1.45vw,1.25rem)] font-normal leading-[1.55] text-white/65 max-w-[640px] mx-auto">
+        <p className="mt-10 text-[clamp(1.05rem,1.45vw,1.25rem)] font-normal leading-[1.55] text-white/65 max-w-[640px] sm:mx-auto">
           Every user takes a path through your business. Without an intelligence layer, most
           users never reach the result.
         </p>
@@ -308,15 +308,15 @@ export default function Page() {
       {/* Get started: vertical timeline layout, distinct from the How cards */}
       <section
         id="get-started"
-        className="px-6 sm:px-10 py-28 sm:py-40 max-w-[1200px] mx-auto border-t border-white/[0.10] scroll-mt-24 text-center"
+        className="px-6 sm:px-10 py-28 sm:py-40 max-w-[1200px] mx-auto border-t border-white/[0.10] scroll-mt-24 sm:text-center"
       >
         <p className="text-[12px] font-mono tracking-[0.18em] uppercase text-white/35 mb-6">
           [ Get started ]
         </p>
-        <h2 className="text-[clamp(2.25rem,5vw,4.5rem)] font-medium leading-[1.05] tracking-[-0.035em] text-white max-w-[18ch] mx-auto">
+        <h2 className="text-[clamp(2rem,5vw,4.5rem)] font-medium leading-[1.05] tracking-[-0.035em] text-white max-w-[18ch] sm:mx-auto">
           Start with Tessa
         </h2>
-        <p className="mt-10 text-[clamp(1.05rem,1.45vw,1.25rem)] font-normal leading-[1.55] text-white/65 max-w-[640px] mx-auto">
+        <p className="mt-10 text-[clamp(1.05rem,1.45vw,1.25rem)] font-normal leading-[1.55] text-white/65 max-w-[640px] sm:mx-auto">
           $2,500 one time. We build Tessa for your product, get it live, and keep tuning it for
           90 days after.
         </p>
@@ -357,7 +357,7 @@ export default function Page() {
           ))}
         </div>
 
-        <div className="mt-16 flex flex-col items-center gap-8">
+        <div className="mt-16 flex flex-col items-start sm:items-center gap-8">
           <div>
             <p className="text-[12px] font-mono tracking-[0.16em] uppercase text-white/55 mb-3">
               Price
@@ -366,7 +366,7 @@ export default function Page() {
               $2,500
             </p>
           </div>
-          <div className="flex flex-col items-center gap-3">
+          <div className="flex flex-col items-start sm:items-center gap-3">
             <PayButton />
             <p className="text-[13px] font-normal text-white/40">
               Or{" "}
