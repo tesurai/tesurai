@@ -73,7 +73,7 @@ export default function Page() {
         <p className="text-[12px] font-mono tracking-[0.18em] uppercase text-white/35 mb-8">
           Tesurai
         </p>
-        <h1 className="text-[clamp(2.5rem,7vw,6rem)] font-medium leading-[1.05] tracking-[-0.035em] text-white max-w-[18ch] sm:mx-auto">
+        <h1 className="text-[clamp(2.875rem,7vw,6rem)] font-medium leading-[1.05] tracking-[-0.035em] text-white max-w-[18ch] sm:mx-auto">
           Most predictive intelligence layer for digital products
         </h1>
         <p className="mt-10 text-[clamp(1.05rem,1.45vw,1.25rem)] font-normal leading-[1.55] text-white/65 max-w-[640px] sm:mx-auto">
@@ -186,7 +186,7 @@ export default function Page() {
         <p className="text-[12px] font-mono tracking-[0.18em] uppercase text-white/35 mb-6">
           [ How ]
         </p>
-        <h2 className="text-[clamp(2.25rem,5vw,4.5rem)] font-medium leading-[1.05] tracking-[-0.035em] text-white whitespace-nowrap">
+        <h2 className="text-[clamp(2rem,5vw,4.5rem)] font-medium leading-[1.05] tracking-[-0.035em] text-white sm:whitespace-nowrap">
           Discover. Build. Deploy.
         </h2>
 
@@ -401,8 +401,8 @@ export default function Page() {
       {/* Footer */}
       <footer className="px-6 sm:px-10 py-16 border-t border-white/[0.10]">
         <div className="max-w-[1200px] mx-auto">
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-y-10 gap-x-8 sm:gap-12">
-            <div className="col-span-2 sm:col-span-1">
+          <div className="grid grid-cols-1 sm:grid-cols-4 gap-y-12 sm:gap-y-10 gap-x-12">
+            <div>
               <Wordmark className="h-3 w-auto" />
             </div>
 

@@ -69,8 +69,8 @@ export default function ThanksPage() {
 
       <footer className="px-6 sm:px-10 py-16 border-t border-white/[0.10]">
         <div className="max-w-[1200px] mx-auto">
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-y-10 gap-x-8 sm:gap-12">
-            <div className="col-span-2 sm:col-span-1">
+          <div className="grid grid-cols-1 sm:grid-cols-4 gap-y-12 sm:gap-y-10 gap-x-12">
+            <div>
               <Wordmark className="h-3 w-auto" />
             </div>
 
