@@ -82,7 +82,7 @@ export default async function Page({
               Payment received
             </p>
             <p className="text-[14px] sm:text-[15px] font-normal leading-[1.55] text-white/70">
-              Our team will reach out within 24 hours to hop on a call.
+              Our team will reach out within 24 hours to find a time to hop on a call.
             </p>
           </div>
         )}
