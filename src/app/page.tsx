@@ -292,8 +292,10 @@ export default async function Page({
 
         <div className="mt-16 sm:mt-20 space-y-12 sm:space-y-14">
           <article className="grid gap-3 sm:gap-6 sm:grid-cols-[200px_1fr] sm:items-baseline">
-            <p className="text-[11px] font-mono tracking-[0.22em] uppercase text-white/55 tabular-nums">
-              01 / Franklin
+            <p className="text-[11px] font-mono tracking-[0.22em] uppercase text-white/55 leading-[1.7]">
+              <span className="text-white/40 tabular-nums">01</span>
+              <br />
+              Benjamin Franklin
             </p>
             <p className="text-[clamp(1.05rem,1.4vw,1.2rem)] font-normal leading-[1.6] text-white/85 max-w-[640px]">
               Tracked his daily behavior every night. Looked at his actions, saw where he fell
@@ -303,8 +305,10 @@ export default async function Page({
           </article>
 
           <article className="grid gap-3 sm:gap-6 sm:grid-cols-[200px_1fr] sm:items-baseline">
-            <p className="text-[11px] font-mono tracking-[0.22em] uppercase text-white/55 tabular-nums">
-              02 / Jordan
+            <p className="text-[11px] font-mono tracking-[0.22em] uppercase text-white/55 leading-[1.7]">
+              <span className="text-white/40 tabular-nums">02</span>
+              <br />
+              Michael Jordan
             </p>
             <p className="text-[clamp(1.05rem,1.4vw,1.2rem)] font-normal leading-[1.6] text-white/85 max-w-[640px]">
               Watched film of his own games to find patterns in how he played. What he did when
@@ -313,8 +317,10 @@ export default async function Page({
           </article>
 
           <article className="grid gap-3 sm:gap-6 sm:grid-cols-[200px_1fr] sm:items-baseline">
-            <p className="text-[11px] font-mono tracking-[0.22em] uppercase text-white/55 tabular-nums">
-              03 / Buffett
+            <p className="text-[11px] font-mono tracking-[0.22em] uppercase text-white/55 leading-[1.7]">
+              <span className="text-white/40 tabular-nums">03</span>
+              <br />
+              Warren Buffett
             </p>
             <p className="text-[clamp(1.05rem,1.4vw,1.2rem)] font-normal leading-[1.6] text-white/85 max-w-[640px]">
               Looks back at his investment decisions constantly to understand what actually leads
@@ -324,8 +330,10 @@ export default async function Page({
           </article>
 
           <article className="grid gap-3 sm:gap-6 sm:grid-cols-[200px_1fr] sm:items-baseline">
-            <p className="text-[11px] font-mono tracking-[0.22em] uppercase text-white/55 tabular-nums">
-              04 / Beane
+            <p className="text-[11px] font-mono tracking-[0.22em] uppercase text-white/55 leading-[1.7]">
+              <span className="text-white/40 tabular-nums">04</span>
+              <br />
+              Billy Beane
             </p>
             <p className="text-[clamp(1.05rem,1.4vw,1.2rem)] font-normal leading-[1.6] text-white/85 max-w-[640px]">
               In Moneyball, he did not try to feel his way to better baseball decisions. He used
