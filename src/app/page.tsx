@@ -231,7 +231,7 @@ export default async function Page({
           TikTok, Instagram, and YouTube built this engine to win your attention. Tessa is built
           on the same engine. The difference is what it is pointed at. Social media uses it to
           keep your users staring at a screen. Tessa uses it to help the users inside your
-          business get the outcome they came for.
+          business get the result they signed up for.
         </p>
       </section>
 
