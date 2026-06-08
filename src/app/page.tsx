@@ -371,10 +371,11 @@ export default async function Page({
         {/* Testimonial: founder voice, centerpiece */}
         <figure className="mt-16 sm:mt-20 max-w-[860px]">
           <blockquote className="text-[clamp(1.5rem,2.6vw,2.4rem)] font-normal leading-[1.35] tracking-[-0.02em] text-white">
-            &ldquo;Men lie, women lie, numbers don&rsquo;t. Tessa is a private model of every
-            Abbelo user. It learns from every session, scores who they are becoming, and shows
-            them the one move to push next. Abbelo no longer guesses where any user is
-            heading.&rdquo;
+            &ldquo;I was guessing. Every user told me who they wanted to become, and I had no way
+            to know if any of them were getting there. Tessa changed that. A private model of
+            every user, scoring who they are becoming, showing them the one move to push next.
+            Men lie, women lie, numbers don&rsquo;t. For the first time I can see every user
+            become who they came to Abbelo to become.&rdquo;
           </blockquote>
           <figcaption className="mt-10 text-[11px] font-mono tracking-[0.22em] uppercase leading-[1.6] text-white/55">
             Founder, Abbelo
