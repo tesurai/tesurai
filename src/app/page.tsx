@@ -122,10 +122,10 @@ export default async function Page({
               {[
                 "Signs up wanting a clear result.",
                 "Opens the product and pokes around.",
-                "Tries a few things on the first visit.",
-                "Nothing they try feels useful right now.",
+                "Tries a few things on the first session.",
+                "Nothing they try fits the moment.",
                 "Forgets to come back the next day.",
-                "Quits the account weeks later.",
+                "Cancels the account weeks later.",
               ].map((step, i) => (
                 <li
                   key={i}
@@ -153,11 +153,11 @@ export default async function Page({
             <ol className="space-y-4 flex-1">
               {[
                 "Signs up wanting a clear result.",
-                "Tessa watches what they do in each session.",
-                "Tessa gives them a score showing how close they are to that result.",
-                "Tessa predicts where they will be in 30 days and in 90 days.",
-                "Tessa shows them the one next step that raises their score.",
-                "They keep going, step by step, until they reach what they came for.",
+                "Tessa watches every move they make.",
+                "Tessa learns the patterns in their behavior.",
+                "Tessa predicts where they will be in 30 days and 90 days.",
+                "Tessa surfaces the next move that gets them closer.",
+                "Step by step, they reach what they came for.",
               ].map((step, i) => (
                 <li
                   key={i}
@@ -355,14 +355,14 @@ export default async function Page({
           <div className="flex flex-col items-start sm:items-center gap-3">
             <PayButton />
             <p className="text-[13px] font-normal text-white/40">
-              Or{" "}
+              More info?{" "}
               <a
                 href={CAL_LINK}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-white/60 hover:text-white transition-colors"
               >
-                book a call first.
+                Book a call.
               </a>
             </p>
           </div>
