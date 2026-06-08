@@ -82,7 +82,8 @@ export default async function Page({
           Stop guessing. Start knowing.
         </h1>
         <p className="mt-10 text-[clamp(1.05rem,1.45vw,1.25rem)] font-normal leading-[1.55] text-white/65 max-w-[640px] sm:mx-auto">
-          Tessa learns each user and shows them what to do next. Built right into your product.
+          Tessa learns each user, finds the patterns, and gives them the feedback to get
+          results. Built right into your product.
         </p>
       </section>
 
@@ -169,7 +170,7 @@ export default async function Page({
       </section>
 
       {/* Same engine: single-column narrative. One bold headline, two stacked paragraphs
-          (attention version muted, outcome version full white) separated by a hairline, big
+          (attention version muted, results version full white) separated by a hairline, big
           centered terminal. No top brand label (the body names them), no 2-column split. */}
       <section className="px-6 sm:px-10 py-32 sm:py-44 max-w-[1200px] mx-auto border-t border-white/[0.10] sm:text-center">
         <h2 className="text-[clamp(2.5rem,7vw,6rem)] font-medium leading-[0.95] tracking-[-0.04em] text-white max-w-[14ch] sm:mx-auto">
@@ -186,7 +187,7 @@ export default async function Page({
           <div className="my-12 sm:my-14 border-t border-white/[0.10]" />
 
           <p className="text-[clamp(1.1rem,1.5vw,1.3rem)] font-normal leading-[1.65] text-white">
-            Tessa is built on the same engine, pointed at the outcome your users actually want.
+            Tessa is built on the same engine, pointed at the results your users actually want.
             Tessa finds the patterns in each user&rsquo;s behavior and gives them feedback that
             helps them reach the result they came for. Every pattern feeds back to you, so you
             see what is working and what to improve next.
@@ -213,12 +214,12 @@ export default async function Page({
             {
               n: "01",
               t: "Discover",
-              d: "We hop on a call with you to understand your business, your users, and the outcome you want them to achieve.",
+              d: "We hop on a call with you to understand your business, your users, and the results you want them to achieve.",
             },
             {
               n: "02",
               t: "Build",
-              d: "We build the Tessa formula around your business so users get the right patterns and feedback to reach the outcome.",
+              d: "We build the Tessa formula around your business so users get the right patterns and feedback to reach the results.",
             },
             {
               n: "03",
