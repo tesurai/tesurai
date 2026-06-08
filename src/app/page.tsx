@@ -362,15 +362,16 @@ export default async function Page({
       {/* Closing CTA: emotional, fades to nothing on the right like the wordmark */}
       <section className="px-6 sm:px-10 py-28 sm:py-40 max-w-[1200px] mx-auto border-t border-white/[0.10]">
         <h2
-          className="bg-clip-text text-transparent text-[clamp(1.75rem,3.5vw,3rem)] font-medium leading-[1.15] tracking-[-0.025em] max-w-[900px] break-words"
+          className="bg-clip-text text-transparent text-[clamp(1.75rem,3.5vw,3rem)] font-medium leading-[1.15] tracking-[-0.025em] max-w-[1100px] break-words"
           style={{
             backgroundImage:
               "linear-gradient(to right, rgba(255,255,255,1) 0%, rgba(255,255,255,0.95) 60%, rgba(255,255,255,0.75) 85%, rgba(255,255,255,0.45) 100%)",
             WebkitTextFillColor: "transparent",
           }}
         >
-          Every user deserves to get what they came for. You built it for them. Tessa is how you
-          make sure they get there.
+          Every user deserves to get what they came for. You built the product for them. You
+          promised them a real result. Tessa is how you make sure they actually get one. Every
+          session. Every user. Every time.
         </h2>
       </section>
 
