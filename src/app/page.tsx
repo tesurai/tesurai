@@ -168,59 +168,32 @@ export default async function Page({
         </div>
       </section>
 
-      {/* Same engine: x.ai-style editorial. Naked mono context label, oversized left-aligned
-          headline, asymmetric two-column comparison, right-aligned terminal. No card
-          backgrounds, hairlines do all the structural work. */}
-      <section className="px-6 sm:px-10 py-32 sm:py-44 max-w-[1200px] mx-auto border-t border-white/[0.10]">
-        {/* Context label: source brands as discrete inline tags, slashes muted so they read
-            as separators, not characters. Flex gap handles spacing instead of nbsp. */}
-        <div className="flex flex-wrap items-center gap-x-5 sm:gap-x-7 gap-y-2 mb-16 sm:mb-20 text-[12px] font-mono tracking-[0.22em] uppercase text-white/40">
-          <span>TikTok</span>
-          <span aria-hidden="true" className="text-white/15">/</span>
-          <span>Instagram</span>
-          <span aria-hidden="true" className="text-white/15">/</span>
-          <span>YouTube</span>
-        </div>
-
-        {/* Oversized editorial headline */}
-        <h2 className="text-[clamp(2.5rem,7vw,6rem)] font-medium leading-[0.95] tracking-[-0.04em] text-white max-w-[14ch]">
+      {/* Same engine: single-column narrative. One bold headline, two stacked paragraphs
+          (attention version muted, outcome version full white) separated by a hairline, big
+          centered terminal. No top brand label (the body names them), no 2-column split. */}
+      <section className="px-6 sm:px-10 py-32 sm:py-44 max-w-[1200px] mx-auto border-t border-white/[0.10] sm:text-center">
+        <h2 className="text-[clamp(2.5rem,7vw,6rem)] font-medium leading-[0.95] tracking-[-0.04em] text-white max-w-[14ch] sm:mx-auto">
           Same engine. Opposite aim.
         </h2>
 
-        <p className="mt-10 sm:mt-12 text-[clamp(1.05rem,1.45vw,1.25rem)] font-normal leading-[1.55] text-white/65 max-w-[620px]">
-          TikTok, Instagram, and YouTube built this engine to win your attention. Tessa is built
-          on the same engine, pointed at the outcome the user actually wants.
-        </p>
+        <div className="mt-20 sm:mt-28 max-w-[680px] sm:mx-auto text-left">
+          <p className="text-[clamp(1.1rem,1.5vw,1.3rem)] font-normal leading-[1.65] text-white/60">
+            TikTok, Instagram, and YouTube built this engine to win your attention. They watch
+            every move you make. They learn what keeps your eyes on the screen. They pick the
+            next video to keep you scrolling.
+          </p>
 
-        {/* Asymmetric two-column comparison. Right column carries more weight. */}
-        <div className="mt-20 sm:mt-28 pt-12 sm:pt-16 border-t border-white/[0.10] grid gap-12 sm:gap-16 sm:grid-cols-2">
-          <div>
-            <p className="text-[11px] font-mono tracking-[0.22em] uppercase text-white/40 mb-6">
-              Attention
-            </p>
-            <p className="text-[clamp(1.05rem,1.4vw,1.2rem)] font-normal leading-[1.6] text-white/85 max-w-[420px]">
-              They watch every move you make. They learn what keeps your eyes on the screen. They
-              pick the next video to keep you scrolling.
-            </p>
-          </div>
-          <div>
-            <p className="text-[11px] font-mono tracking-[0.22em] uppercase text-white/85 mb-6">
-              Outcome
-            </p>
-            <p className="text-[clamp(1.05rem,1.4vw,1.2rem)] font-normal leading-[1.6] text-white/85 max-w-[460px]">
-              Tessa finds the patterns in each user&rsquo;s behavior and gives them feedback that
-              helps them reach the result they came for.
-            </p>
-            <p className="mt-6 text-[clamp(1.05rem,1.4vw,1.2rem)] font-normal leading-[1.6] text-white/60 max-w-[460px]">
-              Every pattern feeds back to you, so you see what is working and what to improve
-              next.
-            </p>
-          </div>
+          <div className="my-12 sm:my-14 border-t border-white/[0.10]" />
+
+          <p className="text-[clamp(1.1rem,1.5vw,1.3rem)] font-normal leading-[1.65] text-white">
+            Tessa is built on the same engine, pointed at the outcome your users actually want.
+            Tessa finds the patterns in each user&rsquo;s behavior and gives them feedback that
+            helps them reach the result they came for. Every pattern feeds back to you, so you
+            see what is working and what to improve next.
+          </p>
         </div>
 
-        {/* Right-aligned terminal, plain white so it does not compete with the closing
-            CTA's faded treatment further down the page. */}
-        <p className="mt-20 sm:mt-32 text-[clamp(1.75rem,4.5vw,3.5rem)] font-medium leading-[1.05] tracking-[-0.035em] text-white max-w-[18ch] ml-auto text-right">
+        <p className="mt-20 sm:mt-28 text-[clamp(1.75rem,4.5vw,3.5rem)] font-medium leading-[1.05] tracking-[-0.035em] text-white max-w-[18ch] sm:mx-auto">
           If your users win, you win.
         </p>
       </section>
