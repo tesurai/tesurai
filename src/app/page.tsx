@@ -348,7 +348,7 @@ export default async function Page({
         </p>
       </section>
 
-      {/* Case study */}
+      {/* Case study: founder testimonial from Abbelo */}
       <section className="px-6 sm:px-10 py-28 sm:py-40 max-w-[1200px] mx-auto border-t border-white/[0.10]">
         <p className="text-[12px] font-mono tracking-[0.18em] uppercase text-white/35 mb-12">
           [ Case study ]
@@ -368,55 +368,18 @@ export default async function Page({
           </p>
         </div>
 
-        {/* Chapter 01: the problem */}
-        <article className="mt-16 sm:mt-20 grid gap-2 sm:gap-6 sm:grid-cols-[160px_1fr] sm:items-baseline">
-          <p className="text-[11px] font-mono tracking-[0.22em] uppercase text-white/55 tabular-nums">
-            01 / Problem
-          </p>
-          <div>
-            <p className="text-[clamp(1.15rem,1.55vw,1.4rem)] font-normal leading-[1.45] text-white max-w-[640px]">
-              &ldquo;Am I becoming who I said I wanted to become, and at what pace?&rdquo;
-            </p>
-            <p className="mt-4 text-[15px] font-normal leading-[1.6] text-white/55 max-w-[640px]">
-              The question every Abbelo user has. No coaching app answered it.
-            </p>
-          </div>
-        </article>
-
-        {/* Chapter 02: the solution */}
-        <article className="mt-14 sm:mt-16 grid gap-2 sm:gap-6 sm:grid-cols-[160px_1fr] sm:items-baseline">
-          <p className="text-[11px] font-mono tracking-[0.22em] uppercase text-white/55 tabular-nums">
-            02 / Solution
-          </p>
-          <div>
-            <p className="text-[clamp(1.15rem,1.55vw,1.4rem)] font-normal leading-[1.5] text-white/85 max-w-[640px]">
-              Tessa reads every session. Scores the chain of thoughts, feelings, and actions.
-              Forecasts where the user is heading at 30 and 90 days. Surfaces the one move to push
-              next.
-            </p>
-            <p className="mt-4 text-[15px] font-normal leading-[1.6] text-white/55 max-w-[640px]">
-              The picture sharpens after every session.
-            </p>
-          </div>
-        </article>
-
-        {/* Impact: founder-voiced message + attribution */}
-        <div className="mt-16 sm:mt-20 pt-8 border-t border-white/[0.10] grid gap-2 sm:gap-6 sm:grid-cols-[160px_1fr] sm:items-baseline">
-          <p className="text-[11px] font-mono tracking-[0.22em] uppercase text-white/55 tabular-nums">
-            03 / Impact
-          </p>
-          <figure>
-            <blockquote className="text-[clamp(1.15rem,1.55vw,1.4rem)] font-normal leading-[1.5] text-white max-w-[640px]">
-              &ldquo;Men lie, women lie, numbers don&rsquo;t. Tessa is a private model of every
-              Abbelo user. It learns from every session, scores who they are becoming, and shows
-              them the one move to push next. Abbelo no longer guesses where any user is
-              heading.&rdquo;
-            </blockquote>
-            <figcaption className="mt-6 text-[11px] font-mono tracking-[0.22em] uppercase leading-[1.6] text-white/55">
-              Founder, Abbelo
-            </figcaption>
-          </figure>
-        </div>
+        {/* Testimonial: founder voice, centerpiece */}
+        <figure className="mt-16 sm:mt-20 max-w-[860px]">
+          <blockquote className="text-[clamp(1.5rem,2.6vw,2.4rem)] font-normal leading-[1.35] tracking-[-0.02em] text-white">
+            &ldquo;Men lie, women lie, numbers don&rsquo;t. Tessa is a private model of every
+            Abbelo user. It learns from every session, scores who they are becoming, and shows
+            them the one move to push next. Abbelo no longer guesses where any user is
+            heading.&rdquo;
+          </blockquote>
+          <figcaption className="mt-10 text-[11px] font-mono tracking-[0.22em] uppercase leading-[1.6] text-white/55">
+            Founder, Abbelo
+          </figcaption>
+        </figure>
       </section>
 
       {/* Get started: vertical timeline layout, distinct from the How cards */}
