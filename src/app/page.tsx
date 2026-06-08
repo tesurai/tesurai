@@ -295,9 +295,8 @@ export default async function Page({
               How we wire it
             </p>
             <p className="text-[clamp(1.05rem,1.4vw,1.2rem)] font-normal leading-[1.55] text-white/85">
-              We wire Tessa into your codebase using Vercel and GitHub, with Claude Code doing
-              the integration work. Tessa ships in your repo and runs on the same infrastructure
-              your product already runs on.
+              We wire Tessa into your codebase using Vercel and GitHub. Tessa ships in your repo
+              and runs on the same infrastructure your product already runs on.
             </p>
           </div>
           <div className="bg-white/[0.02] border border-white/[0.10] rounded-lg p-6 sm:p-8 flex flex-col">
