@@ -223,8 +223,8 @@ export default async function Page({
               For you
             </p>
             <p className="text-[clamp(1.05rem,1.4vw,1.2rem)] font-normal leading-[1.55] text-white/85">
-              Every user&rsquo;s Tessa feeds back to yours. You see patterns across every user
-              and ship product decisions with signal, not guesses.
+              Every user&rsquo;s Tessa reports back to yours. You see what helps each user win,
+              what stops them, and what to build next.
             </p>
           </div>
         </div>
