@@ -106,7 +106,7 @@ export default async function Page({
           Predict or lose them
         </h2>
         <p className="mt-10 text-[clamp(1.05rem,1.45vw,1.25rem)] font-normal leading-[1.55] text-white/65 max-w-[640px] sm:mx-auto">
-          Every user takes a path through your product. Most quit before they reach the end.
+          Every user takes a path through your business. Most quit before they reach the end.
         </p>
 
         <div className="mt-16 grid gap-5 sm:gap-6 sm:grid-cols-2 text-left">
