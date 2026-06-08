@@ -100,7 +100,7 @@ export default async function Page({
       {/* What we believe */}
       <section className="px-6 sm:px-10 py-28 sm:py-40 max-w-[1200px] mx-auto border-t border-white/[0.10] sm:text-center">
         <p className="text-[12px] font-mono tracking-[0.18em] uppercase text-white/35 mb-6">
-          [ What we believe ]
+          [ Belief ]
         </p>
         <h2 className="text-[clamp(2rem,5vw,4.5rem)] font-medium leading-[1.05] tracking-[-0.035em] text-white max-w-[18ch] sm:mx-auto">
           Most products react
@@ -119,7 +119,7 @@ export default async function Page({
         className="px-6 sm:px-10 py-28 sm:py-40 max-w-[1200px] mx-auto border-t border-white/[0.10] sm:text-center scroll-mt-24"
       >
         <p className="text-[12px] font-mono tracking-[0.18em] uppercase text-white/35 mb-6">
-          [ The difference ]
+          [ Difference ]
         </p>
         <h2 className="text-[clamp(2rem,5vw,4.5rem)] font-medium leading-[1.05] tracking-[-0.035em] text-white max-w-[18ch] sm:mx-auto">
           Predict or lose them
@@ -199,7 +199,7 @@ export default async function Page({
       {/* Why this is powerful: Tessa wires both ways, founders and users aim at the same outcome */}
       <section className="px-6 sm:px-10 py-28 sm:py-40 max-w-[1200px] mx-auto border-t border-white/[0.10] sm:text-center">
         <p className="text-[12px] font-mono tracking-[0.18em] uppercase text-white/35 mb-6">
-          [ Why this is powerful ]
+          [ Power ]
         </p>
         <h2 className="text-[clamp(2rem,5vw,4.5rem)] font-medium leading-[1.05] tracking-[-0.035em] text-white max-w-[18ch] sm:mx-auto">
           Wired to your users
@@ -280,7 +280,7 @@ export default async function Page({
       {/* Same framework: people and companies that operate the way Tessa does */}
       <section className="px-6 sm:px-10 py-28 sm:py-40 max-w-[1200px] mx-auto border-t border-white/[0.10]">
         <p className="text-[12px] font-mono tracking-[0.18em] uppercase text-white/35 mb-6">
-          [ Same framework ]
+          [ Framework ]
         </p>
         <h2 className="text-[clamp(2rem,5vw,4.5rem)] font-medium leading-[1.05] tracking-[-0.035em] text-white max-w-[22ch]">
           The framework that always wins
@@ -386,30 +386,25 @@ export default async function Page({
               <br />
               Abbelo
             </p>
-            <p className="text-[clamp(1.05rem,1.4vw,1.2rem)] font-normal leading-[1.6] text-white/85 max-w-[640px]">
-              Built Tessa into the product. Every user has a private model of who they are
-              becoming. Each user sees the next move that gets them closer to the person they
-              want to be.
-            </p>
+            <div className="max-w-[640px]">
+              <p className="text-[clamp(1.05rem,1.4vw,1.2rem)] font-normal leading-[1.6] text-white/85">
+                Built Tessa into the product. Every user has a private model of who they are
+                becoming. Each user sees the next move that gets them closer to the person they
+                want to be.
+              </p>
+              <blockquote className="mt-8 text-[clamp(1.05rem,1.4vw,1.2rem)] font-normal leading-[1.6] text-white/85">
+                &ldquo;I was guessing. Every user told me who they wanted to become, and I had
+                no way to know if any of them were getting there. Tessa changed that. A private
+                model of every user, scoring who they are becoming, showing them the one move to
+                push next. Men lie, women lie, numbers don&rsquo;t. For the first time I can see
+                every user become who they came to Abbelo to become.&rdquo;
+              </blockquote>
+              <p className="mt-6 text-[clamp(1.05rem,1.4vw,1.2rem)] font-normal leading-[1.6] text-white/85">
+                Founder, Abbelo
+              </p>
+            </div>
           </article>
         </div>
-      </section>
-
-      {/* Case study: founder testimonial from Abbelo */}
-      <section className="px-6 sm:px-10 py-28 sm:py-40 max-w-[1200px] mx-auto border-t border-white/[0.10]">
-        {/* Testimonial: founder voice, centerpiece */}
-        <figure className="max-w-[860px]">
-          <blockquote className="text-[clamp(1.5rem,2.6vw,2.4rem)] font-normal leading-[1.35] tracking-[-0.02em] text-white">
-            &ldquo;I was guessing. Every user told me who they wanted to become, and I had no way
-            to know if any of them were getting there. Tessa changed that. A private model of
-            every user, scoring who they are becoming, showing them the one move to push next.
-            Men lie, women lie, numbers don&rsquo;t. For the first time I can see every user
-            become who they came to Abbelo to become.&rdquo;
-          </blockquote>
-          <figcaption className="mt-10 text-[11px] font-mono tracking-[0.22em] uppercase leading-[1.6] text-white/55">
-            Founder, Abbelo
-          </figcaption>
-        </figure>
       </section>
 
       {/* Get started: vertical timeline layout, distinct from the How cards */}
@@ -423,9 +418,11 @@ export default async function Page({
         <h2 className="text-[clamp(2rem,5vw,4.5rem)] font-medium leading-[1.05] tracking-[-0.035em] text-white max-w-[18ch] sm:mx-auto">
           Start with Tessa
         </h2>
-        <p className="mt-10 text-[clamp(1.05rem,1.45vw,1.25rem)] font-normal leading-[1.55] text-white/65 max-w-[640px] sm:mx-auto">
-          $2,500 one time. We build Tessa for your product, get it live, and keep tuning it for
-          90 days after.
+        <p className="mt-10 text-[clamp(1.05rem,1.45vw,1.25rem)] font-normal leading-[1.55] text-white/65 max-w-[680px] sm:mx-auto">
+          $2,500 covers everything. We hop on a call to learn your product and your users. We
+          build a custom Tessa formula. We wire it into your stack on Vercel and GitHub using
+          Claude Code. Tessa goes live inside your product. For 90 days after, we keep tuning
+          it around your real users.
         </p>
 
         {/* Boxed step cards */}
