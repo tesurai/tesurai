@@ -92,10 +92,7 @@ export default async function Page({
         <h1 className="text-[clamp(2.25rem,4.5vw,4rem)] font-medium leading-[1.05] tracking-[-0.03em] text-white max-w-[18ch] sm:mx-auto">
           Stop guessing. Start knowing.
         </h1>
-        <p className="mt-6 text-[12px] font-mono tracking-[0.22em] uppercase text-white/40">
-          Patterns compound. Hunches die.
-        </p>
-        <p className="mt-6 text-[clamp(1.05rem,1.45vw,1.25rem)] font-normal leading-[1.55] text-white/65 max-w-[640px] sm:mx-auto">
+        <p className="mt-8 text-[clamp(1.05rem,1.45vw,1.25rem)] font-normal leading-[1.55] text-white/65 max-w-[640px] sm:mx-auto">
           Tessa learns each user and shows them what to do next. Built right into your product.
         </p>
       </section>
