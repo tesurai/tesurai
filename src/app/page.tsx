@@ -388,7 +388,7 @@ export default async function Page({
                 every user become who they came to Abbelo to become.&rdquo;
               </blockquote>
               <p className="mt-6 text-[clamp(1.05rem,1.4vw,1.2rem)] font-normal leading-[1.6] text-white/85">
-                Founder, Abbelo
+                Matthew Werner, Founder, Abbelo
               </p>
             </div>
           </article>
