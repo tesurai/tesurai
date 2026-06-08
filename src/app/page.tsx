@@ -190,86 +190,53 @@ export default async function Page({
         </div>
       </section>
 
-      {/* Same engine: TikTok-style behavior prediction, pointed at outcomes instead of attention */}
-      <section className="px-6 sm:px-10 py-28 sm:py-40 max-w-[1200px] mx-auto border-t border-white/[0.10] sm:text-center">
+      {/* Same engine: Tessa is the same behavior engine social media uses, pointed at outcomes,
+          wired to both the customer and the owner. Left-aligned editorial layout to differ
+          visually from the Difference section's 2-card grid. */}
+      <section className="px-6 sm:px-10 py-28 sm:py-40 max-w-[1200px] mx-auto border-t border-white/[0.10]">
         <p className="text-[12px] font-mono tracking-[0.18em] uppercase text-white/35 mb-6">
           [ Same engine ]
         </p>
-        <h2 className="text-[clamp(1.75rem,4vw,3.5rem)] font-medium leading-[1.05] tracking-[-0.035em] text-white max-w-[18ch] sm:mx-auto">
+        <h2 className="text-[clamp(1.75rem,4vw,3.5rem)] font-medium leading-[1.05] tracking-[-0.035em] text-white max-w-[20ch]">
           Same engine. Opposite aim.
         </h2>
-        <p className="mt-10 text-[clamp(1.05rem,1.45vw,1.25rem)] font-normal leading-[1.55] text-white/65 max-w-[680px] sm:mx-auto">
-          TikTok, Instagram, and YouTube built the smartest behavior watchers ever made. They see
-          every move you make. They learn what keeps your eyes on the screen. They pick the next
-          video before you even know you want it. The engine is real. They just point it at the
-          wrong thing.
-        </p>
-
-        <div className="mt-16 grid gap-5 sm:gap-6 sm:grid-cols-2 text-left">
-          <div className="bg-white/[0.02] border border-white/[0.10] rounded-lg p-6 sm:p-8 flex flex-col">
-            <p className="text-[11px] font-mono tracking-[0.22em] uppercase text-white/55 mb-6">
-              Social media
-            </p>
-            <p className="text-[clamp(1.05rem,1.4vw,1.2rem)] font-normal leading-[1.55] text-white/85">
-              Watches every scroll and tap. Learns what keeps your eyes on the screen. Picks the
-              next video to hold you there. Wins when you keep scrolling.
-            </p>
-          </div>
-          <div className="bg-white/[0.04] border border-white/[0.20] rounded-lg p-6 sm:p-8 flex flex-col">
-            <p className="text-[11px] font-mono tracking-[0.22em] uppercase text-white/85 mb-6">
-              Tessa
-            </p>
-            <p className="text-[clamp(1.05rem,1.4vw,1.2rem)] font-normal leading-[1.55] text-white/85">
-              Watches every session in your product. Learns what each user really needs. Shows
-              the next move to get them closer to their goal. Wins when they get what they came
-              for.
-            </p>
-          </div>
-        </div>
-
-        <p className="mt-16 text-[clamp(1.15rem,1.55vw,1.4rem)] font-normal leading-[1.4] text-white max-w-[760px] sm:mx-auto">
+        <p className="mt-10 text-[clamp(1.05rem,1.45vw,1.25rem)] font-normal leading-[1.55] text-white/65 max-w-[720px]">
           TikTok, Instagram, and YouTube built this engine to win your attention. Tessa is built
-          on the same engine. The difference is what it is pointed at. Social media uses it to
-          keep your users staring at a screen. Tessa uses it to find patterns and give your
-          users feedback. If your users win, you win.
-        </p>
-      </section>
-
-      {/* Why this is powerful: Tessa wires both ways, founders and users aim at the same outcome */}
-      <section className="px-6 sm:px-10 py-28 sm:py-40 max-w-[1200px] mx-auto border-t border-white/[0.10] sm:text-center">
-        <p className="text-[12px] font-mono tracking-[0.18em] uppercase text-white/35 mb-6">
-          [ Power ]
-        </p>
-        <h2 className="text-[clamp(1.75rem,4vw,3.5rem)] font-medium leading-[1.05] tracking-[-0.035em] text-white max-w-[18ch] sm:mx-auto">
-          Wired to your users
-        </h2>
-        <p className="mt-10 text-[clamp(1.05rem,1.45vw,1.25rem)] font-normal leading-[1.55] text-white/65 max-w-[640px] sm:mx-auto">
-          Each user gets their own Tessa. Every Tessa talks back to yours.
+          on the same engine, pointed at the outcome the user actually wants. And it works both
+          ways.
         </p>
 
-        <div className="mt-16 grid gap-5 sm:gap-6 sm:grid-cols-2 text-left">
-          <div className="bg-white/[0.02] border border-white/[0.10] rounded-lg p-6 sm:p-8 flex flex-col">
-            <p className="text-[11px] font-mono tracking-[0.22em] uppercase text-white/55 mb-6">
+        {/* Two-sided rows: customer + owner. Framework-style row layout to differentiate
+            from the card grids elsewhere on the page. */}
+        <div className="mt-16 sm:mt-20 space-y-12 sm:space-y-14">
+          <article className="grid gap-3 sm:gap-6 sm:grid-cols-[220px_1fr] sm:items-baseline">
+            <p className="text-[11px] font-mono tracking-[0.22em] uppercase text-white/55">
               For customers
             </p>
-            <p className="text-[clamp(1.05rem,1.4vw,1.2rem)] font-normal leading-[1.55] text-white/85">
-              Tessa shows each user the patterns from their past and gives feedback that helps
-              them get the outcome they came for.
+            <p className="text-[clamp(1.05rem,1.4vw,1.2rem)] font-normal leading-[1.6] text-white/85 max-w-[640px]">
+              Tessa finds the patterns in each user&rsquo;s behavior and gives them feedback that
+              helps them reach the result they came for.
             </p>
-          </div>
-          <div className="bg-white/[0.04] border border-white/[0.20] rounded-lg p-6 sm:p-8 flex flex-col">
-            <p className="text-[11px] font-mono tracking-[0.22em] uppercase text-white/85 mb-6">
+          </article>
+
+          <article className="grid gap-3 sm:gap-6 sm:grid-cols-[220px_1fr] sm:items-baseline">
+            <p className="text-[11px] font-mono tracking-[0.22em] uppercase text-white/55">
               For the owner
             </p>
-            <p className="text-[clamp(1.05rem,1.4vw,1.2rem)] font-normal leading-[1.55] text-white/85">
-              Every pattern and every piece of feedback from every user flows back into your
-              Tessa, so you see exactly what to improve next.
+            <p className="text-[clamp(1.05rem,1.4vw,1.2rem)] font-normal leading-[1.6] text-white/85 max-w-[640px]">
+              Every pattern and every piece of feedback flows back into your Tessa, so you see
+              exactly what is working and what to improve next.
             </p>
-          </div>
+          </article>
         </div>
+
+        <p className="mt-16 sm:mt-20 text-[clamp(1.15rem,1.55vw,1.4rem)] font-normal leading-[1.4] text-white max-w-[680px]">
+          If your users win, you win.
+        </p>
       </section>
 
-      {/* How */}
+      {/* How: open horizontal sequence (no card backgrounds) so it visually differs from the
+          Get Started boxed cards below. */}
       <section className="px-6 sm:px-10 py-28 sm:py-40 max-w-[1200px] mx-auto border-t border-white/[0.10]">
         <p className="text-[12px] font-mono tracking-[0.18em] uppercase text-white/35 mb-6">
           [ How ]
@@ -278,7 +245,7 @@ export default async function Page({
           Discover. Build. Launch.
         </h2>
 
-        <div className="mt-16 grid gap-5 sm:gap-6 sm:grid-cols-3">
+        <div className="mt-16 sm:mt-20 grid gap-12 sm:gap-10 sm:grid-cols-3 border-t border-white/[0.10]">
           {[
             {
               n: "01",
@@ -296,17 +263,16 @@ export default async function Page({
               d: "We wire Tessa up to your business, run test flights to clean up bugs, and then go live.",
             },
           ].map((s) => (
-            <div
-              key={s.n}
-              className="bg-white/[0.02] border border-white/[0.10] rounded-lg p-6 sm:p-7 flex flex-col"
-            >
-              <p className="text-[clamp(2.25rem,3.8vw,3rem)] font-mono font-normal leading-none tracking-[-0.02em] text-white/35 mb-8 tabular-nums">
+            <div key={s.n} className="pt-10 sm:pt-12 flex flex-col">
+              <p className="text-[clamp(2.75rem,4.5vw,3.75rem)] font-mono font-normal leading-none tracking-[-0.02em] text-white/30 mb-8 tabular-nums">
                 {s.n}
               </p>
               <h3 className="text-[clamp(1.15rem,1.5vw,1.4rem)] font-medium tracking-[-0.02em] text-white mb-3">
                 {s.t}
               </h3>
-              <p className="text-[15px] font-normal leading-[1.55] text-white/60">{s.d}</p>
+              <p className="text-[15px] font-normal leading-[1.55] text-white/60 max-w-[36ch]">
+                {s.d}
+              </p>
             </div>
           ))}
         </div>
@@ -419,23 +385,11 @@ export default async function Page({
               <br />
               Abbelo
             </p>
-            <div className="max-w-[640px]">
-              <p className="text-[clamp(1.05rem,1.4vw,1.2rem)] font-normal leading-[1.6] text-white/85">
-                Built Tessa into the product to help users design their dream life and become the
-                person they need to be to live it. Tessa tracks each user&rsquo;s patterns and
-                gives feedback to help them close the gap.
-              </p>
-              <blockquote className="mt-8 text-[clamp(1.05rem,1.4vw,1.2rem)] font-normal leading-[1.6] text-white/85">
-                &ldquo;I was guessing. Every user told me who they wanted to become, and I had
-                no way to know if any of them were getting there. Tessa changed that. A private
-                model of every user, scoring who they are becoming, showing them the one move to
-                push next. Men lie, women lie, numbers don&rsquo;t. For the first time I can see
-                every user become who they came to Abbelo to become.&rdquo;
-              </blockquote>
-              <p className="mt-6 text-[clamp(1.05rem,1.4vw,1.2rem)] font-normal leading-[1.6] text-white/85">
-                Matthew Werner, Founder, Abbelo
-              </p>
-            </div>
+            <p className="text-[clamp(1.05rem,1.4vw,1.2rem)] font-normal leading-[1.6] text-white/85 max-w-[640px]">
+              Built Tessa into the product to help users design their dream life and become the
+              person they need to be to live it. Tessa tracks each user&rsquo;s patterns and
+              gives feedback to help them close the gap.
+            </p>
           </article>
         </div>
       </section>
