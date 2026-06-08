@@ -277,40 +277,6 @@ export default async function Page({
         </div>
       </section>
 
-      {/* Stack: how we wire Tessa in, and what products fit */}
-      <section className="px-6 sm:px-10 py-28 sm:py-40 max-w-[1200px] mx-auto border-t border-white/[0.10] sm:text-center">
-        <p className="text-[12px] font-mono tracking-[0.18em] uppercase text-white/35 mb-6">
-          [ Stack ]
-        </p>
-        <h2 className="text-[clamp(2rem,5vw,4.5rem)] font-medium leading-[1.05] tracking-[-0.035em] text-white max-w-[18ch] sm:mx-auto">
-          We use what you use
-        </h2>
-        <p className="mt-10 text-[clamp(1.05rem,1.45vw,1.25rem)] font-normal leading-[1.55] text-white/65 max-w-[640px] sm:mx-auto">
-          Tessa lives in your codebase, not a new dashboard. No new tools for your team to learn.
-        </p>
-
-        <div className="mt-16 grid gap-5 sm:gap-6 sm:grid-cols-2 text-left">
-          <div className="bg-white/[0.02] border border-white/[0.10] rounded-lg p-6 sm:p-8 flex flex-col">
-            <p className="text-[11px] font-mono tracking-[0.22em] uppercase text-white/55 mb-6">
-              How we wire it
-            </p>
-            <p className="text-[clamp(1.05rem,1.4vw,1.2rem)] font-normal leading-[1.55] text-white/85">
-              We wire Tessa into your codebase using Vercel and GitHub. Tessa ships in your repo
-              and runs on the same infrastructure your product already runs on.
-            </p>
-          </div>
-          <div className="bg-white/[0.02] border border-white/[0.10] rounded-lg p-6 sm:p-8 flex flex-col">
-            <p className="text-[11px] font-mono tracking-[0.22em] uppercase text-white/55 mb-6">
-              Who we wire for
-            </p>
-            <p className="text-[clamp(1.05rem,1.4vw,1.2rem)] font-normal leading-[1.55] text-white/85">
-              Any product on a modern web stack. Next.js, React, anything on Vercel. Mobile
-              products via API. If your product ships code, Tessa fits.
-            </p>
-          </div>
-        </div>
-      </section>
-
       {/* Same framework: people and companies that operate the way Tessa does */}
       <section className="px-6 sm:px-10 py-28 sm:py-40 max-w-[1200px] mx-auto border-t border-white/[0.10]">
         <p className="text-[12px] font-mono tracking-[0.18em] uppercase text-white/35 mb-6">
