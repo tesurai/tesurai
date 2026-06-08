@@ -246,9 +246,7 @@ export default async function Page({
 
         <div className="mt-16 sm:mt-20 space-y-12 sm:space-y-14">
           <article className="grid gap-3 sm:gap-6 sm:grid-cols-[200px_1fr] sm:items-baseline">
-            <p className="text-[11px] font-mono tracking-[0.22em] uppercase text-white/55 leading-[1.7]">
-              <span className="text-white/40 tabular-nums">01</span>
-              <br />
+            <p className="text-[11px] font-mono tracking-[0.22em] uppercase text-white/55">
               Benjamin Franklin
             </p>
             <p className="text-[clamp(1.05rem,1.4vw,1.2rem)] font-normal leading-[1.6] text-white/85 max-w-[640px]">
@@ -259,9 +257,7 @@ export default async function Page({
           </article>
 
           <article className="grid gap-3 sm:gap-6 sm:grid-cols-[200px_1fr] sm:items-baseline">
-            <p className="text-[11px] font-mono tracking-[0.22em] uppercase text-white/55 leading-[1.7]">
-              <span className="text-white/40 tabular-nums">02</span>
-              <br />
+            <p className="text-[11px] font-mono tracking-[0.22em] uppercase text-white/55">
               Michael Jordan
             </p>
             <p className="text-[clamp(1.05rem,1.4vw,1.2rem)] font-normal leading-[1.6] text-white/85 max-w-[640px]">
@@ -271,9 +267,7 @@ export default async function Page({
           </article>
 
           <article className="grid gap-3 sm:gap-6 sm:grid-cols-[200px_1fr] sm:items-baseline">
-            <p className="text-[11px] font-mono tracking-[0.22em] uppercase text-white/55 leading-[1.7]">
-              <span className="text-white/40 tabular-nums">03</span>
-              <br />
+            <p className="text-[11px] font-mono tracking-[0.22em] uppercase text-white/55">
               Warren Buffett
             </p>
             <p className="text-[clamp(1.05rem,1.4vw,1.2rem)] font-normal leading-[1.6] text-white/85 max-w-[640px]">
@@ -284,9 +278,7 @@ export default async function Page({
           </article>
 
           <article className="grid gap-3 sm:gap-6 sm:grid-cols-[200px_1fr] sm:items-baseline">
-            <p className="text-[11px] font-mono tracking-[0.22em] uppercase text-white/55 leading-[1.7]">
-              <span className="text-white/40 tabular-nums">04</span>
-              <br />
+            <p className="text-[11px] font-mono tracking-[0.22em] uppercase text-white/55">
               Billy Beane
             </p>
             <p className="text-[clamp(1.05rem,1.4vw,1.2rem)] font-normal leading-[1.6] text-white/85 max-w-[640px]">
@@ -297,9 +289,7 @@ export default async function Page({
           </article>
 
           <article className="grid gap-3 sm:gap-6 sm:grid-cols-[200px_1fr] sm:items-baseline">
-            <p className="text-[11px] font-mono tracking-[0.22em] uppercase text-white/55 leading-[1.7]">
-              <span className="text-white/40 tabular-nums">05</span>
-              <br />
+            <p className="text-[11px] font-mono tracking-[0.22em] uppercase text-white/55">
               Netflix
             </p>
             <p className="text-[clamp(1.05rem,1.4vw,1.2rem)] font-normal leading-[1.6] text-white/85 max-w-[640px]">
@@ -309,9 +299,7 @@ export default async function Page({
           </article>
 
           <article className="grid gap-3 sm:gap-6 sm:grid-cols-[200px_1fr] sm:items-baseline">
-            <p className="text-[11px] font-mono tracking-[0.22em] uppercase text-white/55 leading-[1.7]">
-              <span className="text-white/40 tabular-nums">06</span>
-              <br />
+            <p className="text-[11px] font-mono tracking-[0.22em] uppercase text-white/55">
               Spotify
             </p>
             <p className="text-[clamp(1.05rem,1.4vw,1.2rem)] font-normal leading-[1.6] text-white/85 max-w-[640px]">
@@ -321,9 +309,7 @@ export default async function Page({
           </article>
 
           <article className="grid gap-3 sm:gap-6 sm:grid-cols-[200px_1fr] sm:items-baseline">
-            <p className="text-[11px] font-mono tracking-[0.22em] uppercase text-white/55 leading-[1.7]">
-              <span className="text-white/40 tabular-nums">07</span>
-              <br />
+            <p className="text-[11px] font-mono tracking-[0.22em] uppercase text-white/55">
               TikTok
             </p>
             <p className="text-[clamp(1.05rem,1.4vw,1.2rem)] font-normal leading-[1.6] text-white/85 max-w-[640px]">
