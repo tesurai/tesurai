@@ -92,19 +92,12 @@ export default async function Page({
         <h1 className="text-[clamp(2.25rem,4.5vw,4rem)] font-medium leading-[1.05] tracking-[-0.03em] text-white max-w-[18ch] sm:mx-auto">
           Stop guessing. Start knowing.
         </h1>
-        <p className="mt-8 text-[clamp(1.05rem,1.45vw,1.25rem)] font-normal leading-[1.55] text-white/65 max-w-[640px] sm:mx-auto">
+        <p className="mt-6 text-[12px] font-mono tracking-[0.22em] uppercase text-white/40">
+          Patterns compound. Hunches die.
+        </p>
+        <p className="mt-6 text-[clamp(1.05rem,1.45vw,1.25rem)] font-normal leading-[1.55] text-white/65 max-w-[640px] sm:mx-auto">
           Tessa learns each user and shows them what to do next. Built right into your product.
         </p>
-      </section>
-
-      {/* Belief: thesis statement, manifesto-style so it does not echo the hero */}
-      <section className="px-6 sm:px-10 py-28 sm:py-40 max-w-[1200px] mx-auto border-t border-white/[0.10] sm:text-center">
-        <p className="text-[12px] font-mono tracking-[0.18em] uppercase text-white/35 mb-6">
-          [ Belief ]
-        </p>
-        <h2 className="text-[clamp(1.75rem,4vw,3.5rem)] font-medium leading-[1.05] tracking-[-0.035em] text-white max-w-[26ch] sm:mx-auto">
-          Patterns compound. Hunches die. The best products know which one they are built on.
-        </h2>
       </section>
 
       {/* The difference: with vs without Tessa */}
@@ -119,8 +112,7 @@ export default async function Page({
           Predict or lose them
         </h2>
         <p className="mt-10 text-[clamp(1.05rem,1.45vw,1.25rem)] font-normal leading-[1.55] text-white/65 max-w-[640px] sm:mx-auto">
-          Every user takes a path through your product. Without a smart helper guiding them, most
-          users quit before they get what they came for.
+          Every user takes a path through your product. Most quit before they reach the end.
         </p>
 
         <div className="mt-16 grid gap-5 sm:gap-6 sm:grid-cols-2 text-left">
@@ -190,92 +182,46 @@ export default async function Page({
         </div>
       </section>
 
-      {/* Same engine: Tessa is the same behavior engine social media uses, pointed at outcomes,
-          wired to both the customer and the owner. Left-aligned editorial layout to differ
-          visually from the Difference section's 2-card grid. */}
-      <section className="px-6 sm:px-10 py-28 sm:py-40 max-w-[1200px] mx-auto border-t border-white/[0.10]">
+      {/* Same engine: the social media behavior engine, pointed at outcomes. Centered with a
+          two-sided split and a big payoff line so it differs from the Difference cards above
+          and the Framework list below. */}
+      <section className="px-6 sm:px-10 py-28 sm:py-40 max-w-[1200px] mx-auto border-t border-white/[0.10] sm:text-center">
         <p className="text-[12px] font-mono tracking-[0.18em] uppercase text-white/35 mb-6">
           [ Same engine ]
         </p>
-        <h2 className="text-[clamp(1.75rem,4vw,3.5rem)] font-medium leading-[1.05] tracking-[-0.035em] text-white max-w-[20ch]">
+        <h2 className="text-[clamp(1.75rem,4vw,3.5rem)] font-medium leading-[1.05] tracking-[-0.035em] text-white max-w-[20ch] sm:mx-auto">
           Same engine. Opposite aim.
         </h2>
-        <p className="mt-10 text-[clamp(1.05rem,1.45vw,1.25rem)] font-normal leading-[1.55] text-white/65 max-w-[720px]">
+        <p className="mt-10 text-[clamp(1.05rem,1.45vw,1.25rem)] font-normal leading-[1.55] text-white/65 max-w-[720px] sm:mx-auto">
           TikTok, Instagram, and YouTube built this engine to win your attention. Tessa is built
-          on the same engine, pointed at the outcome the user actually wants. And it works both
-          ways.
+          on the same engine, pointed at the outcome the user actually wants.
         </p>
 
-        {/* Two-sided rows: customer + owner. Framework-style row layout to differentiate
-            from the card grids elsewhere on the page. */}
-        <div className="mt-16 sm:mt-20 space-y-12 sm:space-y-14">
-          <article className="grid gap-3 sm:gap-6 sm:grid-cols-[220px_1fr] sm:items-baseline">
-            <p className="text-[11px] font-mono tracking-[0.22em] uppercase text-white/55">
+        {/* Two-sided split: customer + owner, divided by a hairline. */}
+        <div className="mt-16 sm:mt-20 grid gap-10 sm:gap-0 sm:grid-cols-2 text-left max-w-[920px] sm:mx-auto">
+          <div className="sm:pr-12">
+            <p className="text-[11px] font-mono tracking-[0.22em] uppercase text-white/55 mb-4">
               For customers
             </p>
-            <p className="text-[clamp(1.05rem,1.4vw,1.2rem)] font-normal leading-[1.6] text-white/85 max-w-[640px]">
+            <p className="text-[clamp(1.05rem,1.4vw,1.2rem)] font-normal leading-[1.6] text-white/85">
               Tessa finds the patterns in each user&rsquo;s behavior and gives them feedback that
               helps them reach the result they came for.
             </p>
-          </article>
-
-          <article className="grid gap-3 sm:gap-6 sm:grid-cols-[220px_1fr] sm:items-baseline">
-            <p className="text-[11px] font-mono tracking-[0.22em] uppercase text-white/55">
+          </div>
+          <div className="sm:pl-12 sm:border-l border-white/[0.10]">
+            <p className="text-[11px] font-mono tracking-[0.22em] uppercase text-white/55 mb-4">
               For the owner
             </p>
-            <p className="text-[clamp(1.05rem,1.4vw,1.2rem)] font-normal leading-[1.6] text-white/85 max-w-[640px]">
+            <p className="text-[clamp(1.05rem,1.4vw,1.2rem)] font-normal leading-[1.6] text-white/85">
               Every pattern and every piece of feedback flows back into your Tessa, so you see
               exactly what is working and what to improve next.
             </p>
-          </article>
+          </div>
         </div>
 
-        <p className="mt-16 sm:mt-20 text-[clamp(1.15rem,1.55vw,1.4rem)] font-normal leading-[1.4] text-white max-w-[680px]">
+        <p className="mt-16 sm:mt-20 text-[clamp(1.5rem,3vw,2.5rem)] font-medium leading-[1.1] tracking-[-0.03em] text-white max-w-[20ch] sm:mx-auto">
           If your users win, you win.
         </p>
-      </section>
-
-      {/* How: open horizontal sequence (no card backgrounds) so it visually differs from the
-          Get Started boxed cards below. */}
-      <section className="px-6 sm:px-10 py-28 sm:py-40 max-w-[1200px] mx-auto border-t border-white/[0.10]">
-        <p className="text-[12px] font-mono tracking-[0.18em] uppercase text-white/35 mb-6">
-          [ How ]
-        </p>
-        <h2 className="text-[clamp(1.75rem,4vw,3.5rem)] font-medium leading-[1.05] tracking-[-0.035em] text-white sm:whitespace-nowrap">
-          Discover. Build. Launch.
-        </h2>
-
-        <div className="mt-16 sm:mt-20 grid gap-12 sm:gap-10 sm:grid-cols-3 border-t border-white/[0.10]">
-          {[
-            {
-              n: "01",
-              t: "Discover",
-              d: "We learn your product, your users, and the one result every user should reach.",
-            },
-            {
-              n: "02",
-              t: "Build",
-              d: "We build a custom formula around your business so Tessa tracks the right patterns and gives users the right feedback.",
-            },
-            {
-              n: "03",
-              t: "Launch",
-              d: "We wire Tessa up to your business, run test flights to clean up bugs, and then go live.",
-            },
-          ].map((s) => (
-            <div key={s.n} className="pt-10 sm:pt-12 flex flex-col">
-              <p className="text-[clamp(2.75rem,4.5vw,3.75rem)] font-mono font-normal leading-none tracking-[-0.02em] text-white/30 mb-8 tabular-nums">
-                {s.n}
-              </p>
-              <h3 className="text-[clamp(1.15rem,1.5vw,1.4rem)] font-medium tracking-[-0.02em] text-white mb-3">
-                {s.t}
-              </h3>
-              <p className="text-[15px] font-normal leading-[1.55] text-white/60 max-w-[36ch]">
-                {s.d}
-              </p>
-            </div>
-          ))}
-        </div>
       </section>
 
       {/* Same framework: people and companies that operate the way Tessa does */}
@@ -287,65 +233,15 @@ export default async function Page({
           The framework that proves itself over and over again
         </h2>
         <p className="mt-10 text-[clamp(1.05rem,1.45vw,1.25rem)] font-normal leading-[1.55] text-white/65 max-w-[640px]">
-          Tessa is not a new idea. The best people and the best companies have always studied
-          their own patterns to predict their future.
+          Tessa is not a new idea. From Franklin&rsquo;s notebook to Netflix&rsquo;s home screen,
+          the best people and the best companies have always studied their patterns to predict
+          their future.
         </p>
 
         <div className="mt-16 sm:mt-20 space-y-12 sm:space-y-14">
           <article className="grid gap-3 sm:gap-6 sm:grid-cols-[200px_1fr] sm:items-baseline">
             <p className="text-[11px] font-mono tracking-[0.22em] uppercase text-white/55 leading-[1.7]">
               <span className="text-white/40 tabular-nums">01</span>
-              <br />
-              Benjamin Franklin
-            </p>
-            <p className="text-[clamp(1.05rem,1.4vw,1.2rem)] font-normal leading-[1.6] text-white/85 max-w-[640px]">
-              Tracked his daily behavior every night. Looked at his actions, saw where he fell
-              short, and over time shaped the kind of person he was becoming. He was not guessing.
-              He was measuring.
-            </p>
-          </article>
-
-          <article className="grid gap-3 sm:gap-6 sm:grid-cols-[200px_1fr] sm:items-baseline">
-            <p className="text-[11px] font-mono tracking-[0.22em] uppercase text-white/55 leading-[1.7]">
-              <span className="text-white/40 tabular-nums">02</span>
-              <br />
-              Michael Jordan
-            </p>
-            <p className="text-[clamp(1.05rem,1.4vw,1.2rem)] font-normal leading-[1.6] text-white/85 max-w-[640px]">
-              Watched film of his own games to find patterns in how he played. What he did when
-              he was tired. Where he missed shots. What situations caused mistakes.
-            </p>
-          </article>
-
-          <article className="grid gap-3 sm:gap-6 sm:grid-cols-[200px_1fr] sm:items-baseline">
-            <p className="text-[11px] font-mono tracking-[0.22em] uppercase text-white/55 leading-[1.7]">
-              <span className="text-white/40 tabular-nums">03</span>
-              <br />
-              Warren Buffett
-            </p>
-            <p className="text-[clamp(1.05rem,1.4vw,1.2rem)] font-normal leading-[1.6] text-white/85 max-w-[640px]">
-              Looks back at his old money decisions all the time to see what actually works and
-              what does not. Every new decision is shaped by what he learned from the last
-              hundred.
-            </p>
-          </article>
-
-          <article className="grid gap-3 sm:gap-6 sm:grid-cols-[200px_1fr] sm:items-baseline">
-            <p className="text-[11px] font-mono tracking-[0.22em] uppercase text-white/55 leading-[1.7]">
-              <span className="text-white/40 tabular-nums">04</span>
-              <br />
-              Billy Beane
-            </p>
-            <p className="text-[clamp(1.05rem,1.4vw,1.2rem)] font-normal leading-[1.6] text-white/85 max-w-[640px]">
-              In Moneyball, he did not try to feel his way to better baseball decisions. He used
-              patterns in past performance to predict future outcomes. A losing team became a
-              winner.
-            </p>
-          </article>
-
-          <article className="grid gap-3 sm:gap-6 sm:grid-cols-[200px_1fr] sm:items-baseline">
-            <p className="text-[11px] font-mono tracking-[0.22em] uppercase text-white/55 leading-[1.7]">
-              <span className="text-white/40 tabular-nums">05</span>
               <br />
               Netflix
             </p>
@@ -357,7 +253,7 @@ export default async function Page({
 
           <article className="grid gap-3 sm:gap-6 sm:grid-cols-[200px_1fr] sm:items-baseline">
             <p className="text-[11px] font-mono tracking-[0.22em] uppercase text-white/55 leading-[1.7]">
-              <span className="text-white/40 tabular-nums">06</span>
+              <span className="text-white/40 tabular-nums">02</span>
               <br />
               Spotify
             </p>
@@ -369,7 +265,7 @@ export default async function Page({
 
           <article className="grid gap-3 sm:gap-6 sm:grid-cols-[200px_1fr] sm:items-baseline">
             <p className="text-[11px] font-mono tracking-[0.22em] uppercase text-white/55 leading-[1.7]">
-              <span className="text-white/40 tabular-nums">07</span>
+              <span className="text-white/40 tabular-nums">03</span>
               <br />
               TikTok
             </p>
@@ -381,7 +277,7 @@ export default async function Page({
 
           <article className="grid gap-3 sm:gap-6 sm:grid-cols-[200px_1fr] sm:items-baseline">
             <p className="text-[11px] font-mono tracking-[0.22em] uppercase text-white/55 leading-[1.7]">
-              <span className="text-white/40 tabular-nums">08</span>
+              <span className="text-white/40 tabular-nums">04</span>
               <br />
               Abbelo
             </p>
@@ -399,11 +295,8 @@ export default async function Page({
         id="get-started"
         className="px-6 sm:px-10 py-28 sm:py-40 max-w-[1200px] mx-auto border-t border-white/[0.10] scroll-mt-24 sm:text-center"
       >
-        <p className="text-[12px] font-mono tracking-[0.18em] uppercase text-white/35 mb-6">
-          [ Get started ]
-        </p>
-        <h2 className="text-[clamp(1.75rem,4vw,3.5rem)] font-medium leading-[1.05] tracking-[-0.035em] text-white max-w-[18ch] sm:mx-auto">
-          Start with Tessa
+        <h2 className="text-[clamp(1.75rem,4vw,3.5rem)] font-medium leading-[1.05] tracking-[-0.035em] text-white sm:mx-auto sm:whitespace-nowrap">
+          Discover. Build. Launch.
         </h2>
 
         {/* Boxed step cards */}
@@ -411,12 +304,12 @@ export default async function Page({
           {[
             {
               n: "01",
-              t: "Onboarding call",
+              t: "Discover",
               d: "We hop on a call with you to understand your business, your users, and the outcome you want them to achieve.",
             },
             {
               n: "02",
-              t: "Build Tessa",
+              t: "Build",
               d: "We build the Tessa formula around your business so users get the right patterns and feedback to reach the outcome.",
             },
             {
@@ -468,10 +361,10 @@ export default async function Page({
         </div>
       </section>
 
-      {/* Closing CTA: emotional, takes up the whole page, fades to nothing on the right like the wordmark */}
-      <section className="px-6 sm:px-10 py-40 sm:py-72 max-w-[1200px] mx-auto border-t border-white/[0.10] min-h-[80vh] flex items-center">
+      {/* Closing CTA: emotional, fades to nothing on the right like the wordmark */}
+      <section className="px-6 sm:px-10 py-28 sm:py-40 max-w-[1200px] mx-auto border-t border-white/[0.10]">
         <h2
-          className="bg-clip-text text-transparent text-[clamp(1.5rem,3vw,2.75rem)] font-medium leading-[1.15] tracking-[-0.025em] max-w-[820px] break-words"
+          className="bg-clip-text text-transparent text-[clamp(1.75rem,3.5vw,3rem)] font-medium leading-[1.15] tracking-[-0.025em] max-w-[900px] break-words"
           style={{
             backgroundImage:
               "linear-gradient(to right, rgba(255,255,255,1) 0%, rgba(255,255,255,0.95) 60%, rgba(255,255,255,0.75) 85%, rgba(255,255,255,0.45) 100%)",
