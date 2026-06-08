@@ -250,9 +250,9 @@ export default async function Page({
           ].map((entry) => (
             <article
               key={entry.name}
-              className="grid gap-3 sm:gap-12 sm:grid-cols-[1fr_2fr] sm:items-baseline py-10 sm:py-14 border-b border-white/[0.10]"
+              className="grid gap-3 sm:gap-12 sm:grid-cols-[200px_1fr] sm:items-baseline py-10 sm:py-14 border-b border-white/[0.10]"
             >
-              <h3 className="text-[clamp(1.5rem,2.5vw,2.25rem)] font-medium tracking-[-0.025em] text-white">
+              <h3 className="text-[11px] font-mono tracking-[0.22em] uppercase text-white/55">
                 {entry.name}
               </h3>
               <p className="text-[clamp(1.05rem,1.4vw,1.2rem)] font-normal leading-[1.6] text-white/65 max-w-[640px]">
