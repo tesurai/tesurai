@@ -12,7 +12,7 @@ const CAL_LINK = "https://cal.com/tesurai";
 const BROWSER_TITLE = "Tesurai | Most products react. The best ones predict.";
 const SHARE_TITLE = "Most products react. The best ones predict.";
 const SHARE_DESCRIPTION =
-  "A private model of every user. Built into your product.";
+  "Every user gets their own Tessa. Built right into your product.";
 const SHARE_IMAGE = "/og.png";
 
 export const metadata = {
@@ -90,10 +90,10 @@ export default async function Page({
           Tesurai
         </p>
         <h1 className="text-[clamp(2.875rem,7vw,6rem)] font-medium leading-[1.05] tracking-[-0.035em] text-white max-w-[18ch] sm:mx-auto">
-          Most predictive intelligence layer for digital products
+          Every user gets their own Tessa
         </h1>
         <p className="mt-10 text-[clamp(1.05rem,1.45vw,1.25rem)] font-normal leading-[1.55] text-white/65 max-w-[640px] sm:mx-auto">
-          A private model of every user. Built into your product.
+          Tessa learns each user and shows them what to do next. Built right into your product.
         </p>
       </section>
 
@@ -108,8 +108,8 @@ export default async function Page({
           The best ones predict
         </h2>
         <p className="mt-10 text-[clamp(1.05rem,1.45vw,1.25rem)] font-normal leading-[1.55] text-white/65 max-w-[640px] sm:mx-auto">
-          Reading the past is too late. The best products see what is coming and act before the
-          user slips.
+          Looking at what already happened is too late. The best products see what is coming next
+          and help users before they quit.
         </p>
       </section>
 
@@ -125,8 +125,8 @@ export default async function Page({
           Predict or lose them
         </h2>
         <p className="mt-10 text-[clamp(1.05rem,1.45vw,1.25rem)] font-normal leading-[1.55] text-white/65 max-w-[640px] sm:mx-auto">
-          Every user takes a path through your business. Without an intelligence layer, most
-          users never reach the result.
+          Every user takes a path through your product. Without a smart helper guiding them, most
+          users quit before they get what they came for.
         </p>
 
         <div className="mt-16 grid gap-5 sm:gap-6 sm:grid-cols-2 text-left">
@@ -137,12 +137,12 @@ export default async function Page({
             </p>
             <ol className="space-y-4 flex-1">
               {[
-                "Signs up for a clear outcome.",
+                "Signs up wanting a clear result.",
                 "Opens the product and pokes around.",
-                "Tries a few things in the first session.",
-                "Picks up nothing that fits the moment.",
+                "Tries a few things on the first visit.",
+                "Nothing they try feels useful right now.",
                 "Forgets to come back the next day.",
-                "Closes the account weeks later.",
+                "Quits the account weeks later.",
               ].map((step, i) => (
                 <li
                   key={i}
@@ -157,7 +157,7 @@ export default async function Page({
             </ol>
             <div className="mt-8 pt-6 border-t border-white/[0.08]">
               <p className="text-[11px] font-mono tracking-[0.16em] uppercase text-white/35">
-                Outcome: user churns before the result
+                Result: the user quits before they get what they wanted
               </p>
             </div>
           </div>
@@ -169,12 +169,12 @@ export default async function Page({
             </p>
             <ol className="space-y-4 flex-1">
               {[
-                "Signs up for a clear outcome.",
-                "Tessa reads each session as a pattern.",
-                "Tessa scores how close that pattern sits to the outcome.",
-                "Tessa forecasts where the user lands at 30 and 90 days.",
-                "Tessa surfaces the one next move that lifts the score.",
-                "User repeats the loop and reaches the outcome.",
+                "Signs up wanting a clear result.",
+                "Tessa watches what they do in each session.",
+                "Tessa gives them a score showing how close they are to that result.",
+                "Tessa predicts where they will be in 30 days and in 90 days.",
+                "Tessa shows them the one next step that raises their score.",
+                "They keep going, step by step, until they reach what they came for.",
               ].map((step, i) => (
                 <li
                   key={i}
@@ -189,7 +189,7 @@ export default async function Page({
             </ol>
             <div className="mt-8 pt-6 border-t border-white/[0.20]">
               <p className="text-[11px] font-mono tracking-[0.16em] uppercase text-white/85">
-                Outcome: user reaches the result
+                Result: the user gets what they came for
               </p>
             </div>
           </div>
@@ -205,7 +205,7 @@ export default async function Page({
           Wired to your users
         </h2>
         <p className="mt-10 text-[clamp(1.05rem,1.45vw,1.25rem)] font-normal leading-[1.55] text-white/65 max-w-[640px] sm:mx-auto">
-          Each user gets their own Tessa. Every Tessa wires back to yours.
+          Each user gets their own Tessa. Every Tessa talks back to yours.
         </p>
 
         <div className="mt-16 grid gap-5 sm:gap-6 sm:grid-cols-2 text-left">
@@ -214,8 +214,8 @@ export default async function Page({
               For every user
             </p>
             <p className="text-[clamp(1.05rem,1.4vw,1.2rem)] font-normal leading-[1.55] text-white/85">
-              A private model of who they are becoming. The next move that gets them closer to
-              the outcome they came for.
+              Tessa learns who they are becoming and shows them the next move that gets them
+              closer to what they came for.
             </p>
           </div>
           <div className="bg-white/[0.04] border border-white/[0.20] rounded-lg p-6 sm:p-8 flex flex-col">
@@ -223,14 +223,15 @@ export default async function Page({
               For you
             </p>
             <p className="text-[clamp(1.05rem,1.4vw,1.2rem)] font-normal leading-[1.55] text-white/85">
-              Every user&rsquo;s Tessa reports back to yours. You see what helps each user win,
-              what stops them, and what to build next.
+              Every user&rsquo;s Tessa talks back to yours. You see what helps each user win,
+              what slows them down, and what to build next.
             </p>
           </div>
         </div>
 
         <p className="mt-16 text-[clamp(1.15rem,1.55vw,1.4rem)] font-normal leading-[1.4] text-white max-w-[640px] sm:mx-auto">
-          Users want their outcome. You want successful users. Tessa is how both sides get there.
+          Users want to reach what they came for. You want users who reach it. Tessa is how both
+          sides win.
         </p>
       </section>
 
@@ -240,7 +241,7 @@ export default async function Page({
           [ How ]
         </p>
         <h2 className="text-[clamp(2rem,5vw,4.5rem)] font-medium leading-[1.05] tracking-[-0.035em] text-white sm:whitespace-nowrap">
-          Discover. Build. Deploy.
+          Discover. Build. Launch.
         </h2>
 
         <div className="mt-16 grid gap-5 sm:gap-6 sm:grid-cols-3">
@@ -248,17 +249,17 @@ export default async function Page({
             {
               n: "01",
               t: "Discover",
-              d: "Learn your product, your users, and the one outcome every user should reach.",
+              d: "We learn your product, your users, and the one result every user should reach.",
             },
             {
               n: "02",
               t: "Build",
-              d: "Build the version of Tessa that fits your product. The patterns. The predictions. The feedback.",
+              d: "We build the version of Tessa that fits your product. The patterns it watches. The predictions it makes. The feedback it gives.",
             },
             {
               n: "03",
-              t: "Deploy",
-              d: "Put Tessa inside your product. Live in one week. It runs every day from there.",
+              t: "Launch",
+              d: "We put Tessa inside your product. Live in one week. After that, Tessa runs every day.",
             },
           ].map((s) => (
             <div
@@ -286,8 +287,8 @@ export default async function Page({
           The framework that always wins
         </h2>
         <p className="mt-10 text-[clamp(1.05rem,1.45vw,1.25rem)] font-normal leading-[1.55] text-white/65 max-w-[640px]">
-          Tessa is not a new idea. The best people and the best companies have always tracked
-          their patterns to decide what to do next.
+          Tessa is not a new idea. The best people and the best companies have always watched
+          their own patterns to figure out what to do next.
         </p>
 
         <div className="mt-16 sm:mt-20 space-y-12 sm:space-y-14">
@@ -323,9 +324,9 @@ export default async function Page({
               Warren Buffett
             </p>
             <p className="text-[clamp(1.05rem,1.4vw,1.2rem)] font-normal leading-[1.6] text-white/85 max-w-[640px]">
-              Looks back at his investment decisions constantly to understand what actually leads
-              to success and what does not. The next decision is shaped by the patterns in the
-              last hundred.
+              Looks back at his old money decisions all the time to see what actually works and
+              what does not. Every new decision is shaped by what he learned from the last
+              hundred.
             </p>
           </article>
 
@@ -349,9 +350,8 @@ export default async function Page({
               Netflix
             </p>
             <p className="text-[clamp(1.05rem,1.4vw,1.2rem)] font-normal leading-[1.6] text-white/85 max-w-[640px]">
-              Reads what every viewer watches and how long. Builds a private model of every user.
-              Predicts what each one will sit through to the end and surfaces it on the home
-              screen.
+              Watches what every viewer plays and how long. Learns every user. Guesses what each
+              one will actually sit through to the end, and puts it on the home screen.
             </p>
           </article>
 
@@ -362,9 +362,8 @@ export default async function Page({
               Spotify
             </p>
             <p className="text-[clamp(1.05rem,1.4vw,1.2rem)] font-normal leading-[1.6] text-white/85 max-w-[640px]">
-              Tracks every song, every skip, every save. Builds a private model of every listener.
-              Ships a personalized playlist every Monday that predicts what each one wants to hear
-              next.
+              Tracks every song, every skip, every save. Learns every listener. Drops a playlist
+              every Monday made just for them, full of songs it thinks they will love next.
             </p>
           </article>
 
@@ -375,8 +374,8 @@ export default async function Page({
               TikTok
             </p>
             <p className="text-[clamp(1.05rem,1.4vw,1.2rem)] font-normal leading-[1.6] text-white/85 max-w-[640px]">
-              Every swipe is a signal. The For You Page is a private model of every viewer that
-              predicts the next video before the viewer knows they want it.
+              Every swipe is a clue. The For You Page learns every viewer and picks the next
+              video before the viewer even knows they want it.
             </p>
           </article>
 
@@ -388,9 +387,8 @@ export default async function Page({
             </p>
             <div className="max-w-[640px]">
               <p className="text-[clamp(1.05rem,1.4vw,1.2rem)] font-normal leading-[1.6] text-white/85">
-                Built Tessa into the product. Every user has a private model of who they are
-                becoming. Each user sees the next move that gets them closer to the person they
-                want to be.
+                Built Tessa into the product. Every user has their own Tessa learning who they are
+                becoming. Each user sees the next move to get closer to the person they want to be.
               </p>
               <blockquote className="mt-8 text-[clamp(1.05rem,1.4vw,1.2rem)] font-normal leading-[1.6] text-white/85">
                 &ldquo;I was guessing. Every user told me who they wanted to become, and I had
@@ -420,8 +418,8 @@ export default async function Page({
         </h2>
         <p className="mt-10 text-[clamp(1.05rem,1.45vw,1.25rem)] font-normal leading-[1.55] text-white/65 max-w-[680px] sm:mx-auto">
           $2,500 covers everything. We hop on a call to learn your product and your users. We
-          build a custom Tessa formula. We wire it into your stack. Tessa goes live inside your
-          product. For the next 90 days, we keep tuning Tessa around your real users.
+          build a custom Tessa just for you. We put Tessa inside your product. Tessa goes live.
+          For the next 90 days, we keep making Tessa smarter around your real users.
         </p>
 
         {/* Boxed step cards */}
@@ -430,22 +428,22 @@ export default async function Page({
             {
               n: "01",
               t: "Discovery call",
-              d: "We hop on a call with you to learn your product, your users, and the outcome you want them to reach.",
+              d: "We hop on a call with you to learn your product, your users, and the one result you want every user to reach.",
             },
             {
               n: "02",
-              t: "Build the formula",
-              d: "We build Tessa for your product. The patterns. The predictions. The feedback.",
+              t: "Build Tessa",
+              d: "We build a custom Tessa just for your product. The patterns it watches. The predictions it makes. The feedback it gives.",
             },
             {
               n: "03",
-              t: "Wire it in",
-              d: "We wire Tessa into your existing stack. No new tools for your team to learn.",
+              t: "Plug it in",
+              d: "We put Tessa inside your product. No new tools for your team to learn.",
             },
             {
               n: "04",
-              t: "Live and tuned",
-              d: "Tessa goes live inside your product. We keep tuning Tessa around your real users for the next 90 days.",
+              t: "Live and learning",
+              d: "Tessa goes live inside your product. For the next 90 days, we keep making Tessa smarter around your real users.",
             },
           ].map((s) => (
             <div
