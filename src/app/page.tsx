@@ -172,10 +172,15 @@ export default async function Page({
           headline, asymmetric two-column comparison, right-aligned terminal. No card
           backgrounds, hairlines do all the structural work. */}
       <section className="px-6 sm:px-10 py-32 sm:py-44 max-w-[1200px] mx-auto border-t border-white/[0.10]">
-        {/* Context label: name the source, no brackets */}
-        <p className="text-[12px] font-mono tracking-[0.22em] uppercase text-white/40 mb-16 sm:mb-20">
-          TikTok &nbsp;/&nbsp; Instagram &nbsp;/&nbsp; YouTube
-        </p>
+        {/* Context label: source brands as discrete inline tags, slashes muted so they read
+            as separators, not characters. Flex gap handles spacing instead of nbsp. */}
+        <div className="flex flex-wrap items-center gap-x-5 sm:gap-x-7 gap-y-2 mb-16 sm:mb-20 text-[12px] font-mono tracking-[0.22em] uppercase text-white/40">
+          <span>TikTok</span>
+          <span aria-hidden="true" className="text-white/15">/</span>
+          <span>Instagram</span>
+          <span aria-hidden="true" className="text-white/15">/</span>
+          <span>YouTube</span>
+        </div>
 
         {/* Oversized editorial headline */}
         <h2 className="text-[clamp(2.5rem,7vw,6rem)] font-medium leading-[0.95] tracking-[-0.04em] text-white max-w-[14ch]">
