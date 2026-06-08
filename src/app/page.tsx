@@ -226,11 +226,9 @@ export default async function Page({
 
         {/* Right-aligned terminal, plain white so it does not compete with the closing
             CTA's faded treatment further down the page. */}
-        <div className="mt-20 sm:mt-32 pt-12 sm:pt-16 border-t border-white/[0.10]">
-          <p className="text-[clamp(1.75rem,4.5vw,3.5rem)] font-medium leading-[1.05] tracking-[-0.035em] text-white max-w-[18ch] ml-auto text-right">
-            If your users win, you win.
-          </p>
-        </div>
+        <p className="mt-20 sm:mt-32 text-[clamp(1.75rem,4.5vw,3.5rem)] font-medium leading-[1.05] tracking-[-0.035em] text-white max-w-[18ch] ml-auto text-right">
+          If your users win, you win.
+        </p>
       </section>
 
       {/* Same framework: people and companies that operate the way Tessa does */}
