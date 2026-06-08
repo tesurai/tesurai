@@ -49,7 +49,13 @@ function Wordmark({ className = "h-4 w-auto" }: { className?: string }) {
   );
 }
 
-export default function Page() {
+export default async function Page({
+  searchParams,
+}: {
+  searchParams: Promise<{ paid?: string }>;
+}) {
+  const params = await searchParams;
+  const paid = params?.paid === "1";
   return (
     <div
       className="min-h-screen bg-black text-white antialiased"
@@ -70,6 +76,16 @@ export default function Page() {
 
       {/* Hero */}
       <section className="px-6 sm:px-10 pt-44 sm:pt-56 pb-28 sm:pb-40 max-w-[1200px] mx-auto sm:text-center">
+        {paid && (
+          <div className="mb-12 border border-white/[0.15] bg-white/[0.04] rounded-lg p-5 sm:p-6 max-w-[560px] sm:mx-auto text-left sm:text-center">
+            <p className="text-[11px] font-mono tracking-[0.22em] uppercase text-white mb-2">
+              Payment received
+            </p>
+            <p className="text-[14px] sm:text-[15px] font-normal leading-[1.55] text-white/70">
+              Our team will reach out within 24 hours to hop on a call.
+            </p>
+          </div>
+        )}
         <p className="text-[12px] font-mono tracking-[0.18em] uppercase text-white/35 mb-8">
           Tesurai
         </p>
