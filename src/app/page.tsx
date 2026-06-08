@@ -277,17 +277,17 @@ export default async function Page({
         </div>
       </section>
 
-      {/* Throughout history: pattern recognition case studies */}
+      {/* Same framework: people and companies that operate the way Tessa does */}
       <section className="px-6 sm:px-10 py-28 sm:py-40 max-w-[1200px] mx-auto border-t border-white/[0.10]">
         <p className="text-[12px] font-mono tracking-[0.18em] uppercase text-white/35 mb-6">
-          [ Throughout history ]
+          [ Same framework ]
         </p>
         <h2 className="text-[clamp(2rem,5vw,4.5rem)] font-medium leading-[1.05] tracking-[-0.035em] text-white max-w-[22ch]">
-          The pattern that always wins
+          The framework that always wins
         </h2>
         <p className="mt-10 text-[clamp(1.05rem,1.45vw,1.25rem)] font-normal leading-[1.55] text-white/65 max-w-[640px]">
-          Tessa is not a new idea. The best in every field have always tracked their own patterns
-          to decide what to do next.
+          Tessa is not a new idea. The best people and the best companies have always tracked
+          their patterns to decide what to do next.
         </p>
 
         <div className="mt-16 sm:mt-20 space-y-12 sm:space-y-14">
@@ -341,11 +341,58 @@ export default async function Page({
               winner.
             </p>
           </article>
-        </div>
 
-        <p className="mt-20 text-[clamp(1.15rem,1.55vw,1.4rem)] font-normal leading-[1.5] text-white max-w-[640px]">
-          Tessa is the first product to ship this pattern as software, built into every user.
-        </p>
+          <article className="grid gap-3 sm:gap-6 sm:grid-cols-[200px_1fr] sm:items-baseline">
+            <p className="text-[11px] font-mono tracking-[0.22em] uppercase text-white/55 leading-[1.7]">
+              <span className="text-white/40 tabular-nums">05</span>
+              <br />
+              Netflix
+            </p>
+            <p className="text-[clamp(1.05rem,1.4vw,1.2rem)] font-normal leading-[1.6] text-white/85 max-w-[640px]">
+              Reads what every viewer watches and how long. Builds a private model of every user.
+              Predicts what each one will sit through to the end and surfaces it on the home
+              screen.
+            </p>
+          </article>
+
+          <article className="grid gap-3 sm:gap-6 sm:grid-cols-[200px_1fr] sm:items-baseline">
+            <p className="text-[11px] font-mono tracking-[0.22em] uppercase text-white/55 leading-[1.7]">
+              <span className="text-white/40 tabular-nums">06</span>
+              <br />
+              Spotify
+            </p>
+            <p className="text-[clamp(1.05rem,1.4vw,1.2rem)] font-normal leading-[1.6] text-white/85 max-w-[640px]">
+              Tracks every song, every skip, every save. Builds a private model of every listener.
+              Ships a personalized playlist every Monday that predicts what each one wants to hear
+              next.
+            </p>
+          </article>
+
+          <article className="grid gap-3 sm:gap-6 sm:grid-cols-[200px_1fr] sm:items-baseline">
+            <p className="text-[11px] font-mono tracking-[0.22em] uppercase text-white/55 leading-[1.7]">
+              <span className="text-white/40 tabular-nums">07</span>
+              <br />
+              TikTok
+            </p>
+            <p className="text-[clamp(1.05rem,1.4vw,1.2rem)] font-normal leading-[1.6] text-white/85 max-w-[640px]">
+              Every swipe is a signal. The For You Page is a private model of every viewer that
+              predicts the next video before the viewer knows they want it.
+            </p>
+          </article>
+
+          <article className="grid gap-3 sm:gap-6 sm:grid-cols-[200px_1fr] sm:items-baseline">
+            <p className="text-[11px] font-mono tracking-[0.22em] uppercase text-white/55 leading-[1.7]">
+              <span className="text-white/40 tabular-nums">08</span>
+              <br />
+              Abbelo
+            </p>
+            <p className="text-[clamp(1.05rem,1.4vw,1.2rem)] font-normal leading-[1.6] text-white/85 max-w-[640px]">
+              Built Tessa into the product. Every user has a private model of who they are
+              becoming. Each user sees the next move that gets them closer to the person they
+              want to be.
+            </p>
+          </article>
+        </div>
       </section>
 
       {/* Case study: founder testimonial from Abbelo */}
