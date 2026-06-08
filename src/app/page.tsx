@@ -463,12 +463,12 @@ export default async function Page({
             {
               n: "02",
               t: "Build Tessa",
-              d: "We build the Tessa formula around your business to help your users see the patterns and get the feedback that leads to the outcome they came for.",
+              d: "We build the Tessa formula around your business so users get the right patterns and feedback to reach the outcome.",
             },
             {
               n: "03",
               t: "Launch",
-              d: "We wire Tessa up to your business, clean up bugs with test flights, and go live inside your product.",
+              d: "We wire Tessa up to your business, clean up bugs with test flights, and then push it to live.",
             },
           ].map((s) => (
             <div
@@ -517,7 +517,7 @@ export default async function Page({
       {/* Closing CTA: emotional, takes up the whole page, fades to nothing on the right like the wordmark */}
       <section className="px-6 sm:px-10 py-40 sm:py-72 max-w-[1200px] mx-auto border-t border-white/[0.10] min-h-[80vh] flex items-center">
         <h2
-          className="bg-clip-text text-transparent text-[clamp(2.25rem,6vw,5.5rem)] font-medium leading-[1.05] tracking-[-0.035em] max-w-[1080px] break-words"
+          className="bg-clip-text text-transparent text-[clamp(1.5rem,3vw,2.75rem)] font-medium leading-[1.15] tracking-[-0.025em] max-w-[820px] break-words"
           style={{
             backgroundImage:
               "linear-gradient(to right, rgba(255,255,255,1) 0%, rgba(255,255,255,0.95) 60%, rgba(255,255,255,0.75) 85%, rgba(255,255,255,0.45) 100%)",
