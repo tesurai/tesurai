@@ -286,7 +286,7 @@ export default async function Page({
         </div>
       </section>
 
-      {/* Get started: vertical timeline layout, distinct from the How cards */}
+      {/* Get started: centered headline + editorial step rows + centered price/CTA bookend */}
       <section
         id="get-started"
         className="px-6 sm:px-10 py-28 sm:py-40 max-w-[1200px] mx-auto border-t border-white/[0.10] scroll-mt-24 sm:text-center"
@@ -295,8 +295,10 @@ export default async function Page({
           Discover. Build. Launch.
         </h2>
 
-        {/* Boxed step cards */}
-        <div className="mt-16 grid gap-5 sm:gap-6 grid-cols-1 sm:grid-cols-3 text-left">
+        {/* Editorial step rows: big mono numerals on the left, content on the right, hairlines
+            between each step. No card backgrounds — matches the x.ai restraint of the Same
+            engine section above. */}
+        <div className="mt-20 sm:mt-24 text-left max-w-[960px] sm:mx-auto border-t border-white/[0.10]">
           {[
             {
               n: "01",
@@ -314,20 +316,22 @@ export default async function Page({
               d: "We wire Tessa up to your business, clean up bugs with test flights, and then push it to live.",
             },
           ].map((s) => (
-            <div
+            <article
               key={s.n}
-              className="bg-white/[0.02] border border-white/[0.10] rounded-lg p-6 sm:p-7 flex flex-col"
+              className="grid gap-5 sm:gap-12 sm:grid-cols-[140px_1fr] sm:items-start py-10 sm:py-14 border-b border-white/[0.10]"
             >
-              <p className="text-[11px] font-mono tracking-[0.2em] uppercase text-white/45 tabular-nums mb-6">
+              <p className="text-[clamp(2.5rem,4.5vw,4rem)] font-mono font-normal leading-none tracking-[-0.03em] text-white/30 tabular-nums">
                 {s.n}
               </p>
-              <h3 className="text-[clamp(1.15rem,1.5vw,1.4rem)] font-medium tracking-[-0.02em] text-white mb-3">
-                {s.t}
-              </h3>
-              <p className="text-[15px] font-normal leading-[1.55] text-white/60">
-                {s.d}
-              </p>
-            </div>
+              <div>
+                <h3 className="text-[clamp(1.25rem,1.6vw,1.5rem)] font-medium tracking-[-0.02em] text-white mb-3">
+                  {s.t}
+                </h3>
+                <p className="text-[clamp(1rem,1.4vw,1.15rem)] font-normal leading-[1.6] text-white/65 max-w-[560px]">
+                  {s.d}
+                </p>
+              </div>
+            </article>
           ))}
         </div>
 
