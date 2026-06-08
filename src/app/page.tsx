@@ -227,9 +227,11 @@ export default async function Page({
           </div>
         </div>
 
-        <p className="mt-16 text-[clamp(1.15rem,1.55vw,1.4rem)] font-normal leading-[1.4] text-white max-w-[680px] sm:mx-auto">
-          Same engine the biggest apps on Earth run on. Pointed at the life your users actually
-          want, not at their attention.
+        <p className="mt-16 text-[clamp(1.15rem,1.55vw,1.4rem)] font-normal leading-[1.4] text-white max-w-[760px] sm:mx-auto">
+          TikTok, Instagram, and YouTube built this engine to win your attention. Tessa is built
+          on the same engine. The difference is what it is pointed at. Social media uses it to
+          keep your users staring at a screen. Tessa uses it to help your users actually reach
+          what they came to your product for.
         </p>
       </section>
 
