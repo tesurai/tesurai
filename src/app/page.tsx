@@ -416,11 +416,6 @@ export default async function Page({
         <h2 className="text-[clamp(2rem,5vw,4.5rem)] font-medium leading-[1.05] tracking-[-0.035em] text-white max-w-[18ch] sm:mx-auto">
           Start with Tessa
         </h2>
-        <p className="mt-10 text-[clamp(1.05rem,1.45vw,1.25rem)] font-normal leading-[1.55] text-white/65 max-w-[680px] sm:mx-auto">
-          $2,500 covers everything. We hop on a call to learn your product and your users. We
-          build a custom Tessa just for you. We put Tessa inside your product. Tessa goes live.
-          For the next 90 days, we keep making Tessa smarter around your real users.
-        </p>
 
         {/* Boxed step cards */}
         <div className="mt-16 grid gap-5 sm:gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 text-left">
