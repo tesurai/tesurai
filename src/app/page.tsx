@@ -421,7 +421,7 @@ export default async function Page({
         <p className="mt-10 text-[clamp(1.05rem,1.45vw,1.25rem)] font-normal leading-[1.55] text-white/65 max-w-[680px] sm:mx-auto">
           $2,500 covers everything. We hop on a call to learn your product and your users. We
           build a custom Tessa formula. We wire it into your stack. Tessa goes live inside your
-          product. For 90 days after, we keep tuning it around your real users.
+          product. For the next 90 days, we keep tuning Tessa around your real users.
         </p>
 
         {/* Boxed step cards */}
@@ -445,7 +445,7 @@ export default async function Page({
             {
               n: "04",
               t: "Live and tuned",
-              d: "Tessa goes live inside your product. We keep tuning it around your real users for 90 days after.",
+              d: "Tessa goes live inside your product. We keep tuning Tessa around your real users for the next 90 days.",
             },
           ].map((s) => (
             <div
