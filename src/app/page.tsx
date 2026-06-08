@@ -181,6 +181,44 @@ export default function Page() {
         </div>
       </section>
 
+      {/* Why this is powerful: Tessa wires both ways, founders and users aim at the same outcome */}
+      <section className="px-6 sm:px-10 py-28 sm:py-40 max-w-[1200px] mx-auto border-t border-white/[0.10] sm:text-center">
+        <p className="text-[12px] font-mono tracking-[0.18em] uppercase text-white/35 mb-6">
+          [ Why this is powerful ]
+        </p>
+        <h2 className="text-[clamp(2rem,5vw,4.5rem)] font-medium leading-[1.05] tracking-[-0.035em] text-white max-w-[18ch] sm:mx-auto">
+          Wired to your users
+        </h2>
+        <p className="mt-10 text-[clamp(1.05rem,1.45vw,1.25rem)] font-normal leading-[1.55] text-white/65 max-w-[640px] sm:mx-auto">
+          Each user gets their own Tessa. Every Tessa wires back to yours.
+        </p>
+
+        <div className="mt-16 grid gap-5 sm:gap-6 sm:grid-cols-2 text-left">
+          <div className="bg-white/[0.02] border border-white/[0.10] rounded-lg p-6 sm:p-8 flex flex-col">
+            <p className="text-[11px] font-mono tracking-[0.22em] uppercase text-white/55 mb-6">
+              For every user
+            </p>
+            <p className="text-[clamp(1.05rem,1.4vw,1.2rem)] font-normal leading-[1.55] text-white/85">
+              A private model of who they are becoming. The next move that gets them closer to
+              the outcome they came for.
+            </p>
+          </div>
+          <div className="bg-white/[0.04] border border-white/[0.20] rounded-lg p-6 sm:p-8 flex flex-col">
+            <p className="text-[11px] font-mono tracking-[0.22em] uppercase text-white/85 mb-6">
+              For you
+            </p>
+            <p className="text-[clamp(1.05rem,1.4vw,1.2rem)] font-normal leading-[1.55] text-white/85">
+              Every user&rsquo;s Tessa feeds back to yours. You see patterns across every user
+              and ship product decisions with signal, not guesses.
+            </p>
+          </div>
+        </div>
+
+        <p className="mt-16 text-[clamp(1.15rem,1.55vw,1.4rem)] font-normal leading-[1.4] text-white max-w-[640px] sm:mx-auto">
+          Users want their outcome. You want successful users. Tessa is how both sides get there.
+        </p>
+      </section>
+
       {/* How */}
       <section className="px-6 sm:px-10 py-28 sm:py-40 max-w-[1200px] mx-auto border-t border-white/[0.10]">
         <p className="text-[12px] font-mono tracking-[0.18em] uppercase text-white/35 mb-6">
@@ -222,6 +260,69 @@ export default function Page() {
             </div>
           ))}
         </div>
+      </section>
+
+      {/* Throughout history: pattern recognition case studies */}
+      <section className="px-6 sm:px-10 py-28 sm:py-40 max-w-[1200px] mx-auto border-t border-white/[0.10]">
+        <p className="text-[12px] font-mono tracking-[0.18em] uppercase text-white/35 mb-6">
+          [ Throughout history ]
+        </p>
+        <h2 className="text-[clamp(2rem,5vw,4.5rem)] font-medium leading-[1.05] tracking-[-0.035em] text-white max-w-[22ch]">
+          The pattern that always wins
+        </h2>
+        <p className="mt-10 text-[clamp(1.05rem,1.45vw,1.25rem)] font-normal leading-[1.55] text-white/65 max-w-[640px]">
+          Tessa is not a new idea. The best in every field have always tracked their own patterns
+          to decide what to do next.
+        </p>
+
+        <div className="mt-16 sm:mt-20 space-y-12 sm:space-y-14">
+          <article className="grid gap-3 sm:gap-6 sm:grid-cols-[200px_1fr] sm:items-baseline">
+            <p className="text-[11px] font-mono tracking-[0.22em] uppercase text-white/55 tabular-nums">
+              01 / Franklin
+            </p>
+            <p className="text-[clamp(1.05rem,1.4vw,1.2rem)] font-normal leading-[1.6] text-white/85 max-w-[640px]">
+              Tracked his daily behavior every night. Looked at his actions, saw where he fell
+              short, and over time shaped the kind of person he was becoming. He was not guessing.
+              He was measuring.
+            </p>
+          </article>
+
+          <article className="grid gap-3 sm:gap-6 sm:grid-cols-[200px_1fr] sm:items-baseline">
+            <p className="text-[11px] font-mono tracking-[0.22em] uppercase text-white/55 tabular-nums">
+              02 / Jordan
+            </p>
+            <p className="text-[clamp(1.05rem,1.4vw,1.2rem)] font-normal leading-[1.6] text-white/85 max-w-[640px]">
+              Watched film of his own games to find patterns in how he played. What he did when
+              he was tired. Where he missed shots. What situations caused mistakes.
+            </p>
+          </article>
+
+          <article className="grid gap-3 sm:gap-6 sm:grid-cols-[200px_1fr] sm:items-baseline">
+            <p className="text-[11px] font-mono tracking-[0.22em] uppercase text-white/55 tabular-nums">
+              03 / Buffett
+            </p>
+            <p className="text-[clamp(1.05rem,1.4vw,1.2rem)] font-normal leading-[1.6] text-white/85 max-w-[640px]">
+              Looks back at his investment decisions constantly to understand what actually leads
+              to success and what does not. The next decision is shaped by the patterns in the
+              last hundred.
+            </p>
+          </article>
+
+          <article className="grid gap-3 sm:gap-6 sm:grid-cols-[200px_1fr] sm:items-baseline">
+            <p className="text-[11px] font-mono tracking-[0.22em] uppercase text-white/55 tabular-nums">
+              04 / Beane
+            </p>
+            <p className="text-[clamp(1.05rem,1.4vw,1.2rem)] font-normal leading-[1.6] text-white/85 max-w-[640px]">
+              In Moneyball, he did not try to feel his way to better baseball decisions. He used
+              patterns in past performance to predict future outcomes. A losing team became a
+              winner.
+            </p>
+          </article>
+        </div>
+
+        <p className="mt-20 text-[clamp(1.15rem,1.55vw,1.4rem)] font-normal leading-[1.5] text-white max-w-[640px]">
+          Tessa is the first product to ship this pattern as software, built into every user.
+        </p>
       </section>
 
       {/* Case study */}
@@ -296,10 +397,8 @@ export default function Page() {
               them the one move to push next. Abbelo no longer guesses where any user is
               heading.&rdquo;
             </blockquote>
-            <figcaption className="mt-6 text-[11px] font-mono tracking-[0.22em] uppercase leading-[1.6] text-white">
-              Matthew Werner
-              <br />
-              <span className="text-white/45">Founder, Abbelo</span>
+            <figcaption className="mt-6 text-[11px] font-mono tracking-[0.22em] uppercase leading-[1.6] text-white/55">
+              Founder, Abbelo
             </figcaption>
           </figure>
         </div>
@@ -322,7 +421,7 @@ export default function Page() {
         </p>
 
         {/* Boxed step cards */}
-        <div className="mt-16 grid gap-5 sm:gap-6 grid-cols-1 sm:grid-cols-3 text-left">
+        <div className="mt-16 grid gap-5 sm:gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 text-left">
           {[
             {
               n: "01",
@@ -331,11 +430,16 @@ export default function Page() {
             },
             {
               n: "02",
-              t: "Build",
-              d: "We build the formula for your product. The patterns. The predictions. The feedback.",
+              t: "Build the formula",
+              d: "We build Tessa for your product. The patterns. The predictions. The feedback.",
             },
             {
               n: "03",
+              t: "Wire it in",
+              d: "We wire Tessa into your stack on Vercel and GitHub using Claude Code. No new tools for your team to learn.",
+            },
+            {
+              n: "04",
               t: "Live and tuned",
               d: "Tessa goes live inside your product. We keep tuning it around your real users for 90 days after.",
             },
@@ -393,7 +497,7 @@ export default function Page() {
             WebkitTextFillColor: "transparent",
           }}
         >
-          Every user deserves to get what they came for You built it for them. Tessa is how you
+          Every user deserves to get what they came for. You built it for them. Tessa is how you
           make sure they get there.
         </h2>
       </section>
@@ -497,7 +601,7 @@ export default function Page() {
                   </svg>
                 </a>
                 <a
-                  href="https://www.youtube.com/@gettesurai"
+                  href="https://www.youtube.com/@tessurai"
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="YouTube"
