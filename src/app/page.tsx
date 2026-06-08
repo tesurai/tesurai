@@ -202,7 +202,7 @@ export default async function Page({
         <div className="mt-20 sm:mt-28 pt-12 sm:pt-16 border-t border-white/[0.10] grid gap-12 sm:gap-16 sm:grid-cols-2">
           <div>
             <p className="text-[11px] font-mono tracking-[0.22em] uppercase text-white/40 mb-6">
-              01 &nbsp;/&nbsp; Attention
+              Attention
             </p>
             <p className="text-[clamp(1.05rem,1.4vw,1.2rem)] font-normal leading-[1.6] text-white/85 max-w-[420px]">
               They watch every move you make. They learn what keeps your eyes on the screen. They
@@ -211,7 +211,7 @@ export default async function Page({
           </div>
           <div>
             <p className="text-[11px] font-mono tracking-[0.22em] uppercase text-white/85 mb-6">
-              02 &nbsp;/&nbsp; Outcome
+              Outcome
             </p>
             <p className="text-[clamp(1.05rem,1.4vw,1.2rem)] font-normal leading-[1.6] text-white/85 max-w-[460px]">
               Tessa finds the patterns in each user&rsquo;s behavior and gives them feedback that
