@@ -198,93 +198,68 @@ export default async function Page({
         </p>
       </section>
 
-      {/* Same framework: people and companies that operate the way Tessa does */}
-      <section className="px-6 sm:px-10 py-28 sm:py-40 max-w-[1200px] mx-auto border-t border-white/[0.10]">
-        <p className="text-[12px] font-mono tracking-[0.18em] uppercase text-white/35 mb-6">
-          [ Framework ]
-        </p>
-        <h2 className="text-[clamp(1.75rem,4vw,3.5rem)] font-medium leading-[1.05] tracking-[-0.035em] text-white max-w-[22ch]">
-          The framework that proves itself over and over again
+      {/* Framework: each entry is an editorial profile. Big name on left, description on
+          right, hairlines between rows. Matches the cleaner narrative of the Same engine
+          section above. No eyebrow, no mono uppercase name labels. */}
+      <section className="px-6 sm:px-10 py-32 sm:py-44 max-w-[1200px] mx-auto border-t border-white/[0.10]">
+        <h2 className="text-[clamp(2.25rem,5.5vw,4.5rem)] font-medium leading-[1] tracking-[-0.035em] text-white max-w-[16ch]">
+          The framework that proves itself over and over again.
         </h2>
-        <p className="mt-10 text-[clamp(1.05rem,1.45vw,1.25rem)] font-normal leading-[1.55] text-white/65 max-w-[640px]">
+        <p className="mt-10 sm:mt-12 text-[clamp(1.05rem,1.45vw,1.25rem)] font-normal leading-[1.55] text-white/65 max-w-[640px]">
           Tessa is not a new idea. The most influential people and the top companies have always
           studied patterns to predict their future.
         </p>
 
-        <div className="mt-16 sm:mt-20 space-y-12 sm:space-y-14">
-          <article className="grid gap-3 sm:gap-6 sm:grid-cols-[200px_1fr] sm:items-baseline">
-            <p className="text-[11px] font-mono tracking-[0.22em] uppercase text-white/55">
-              Benjamin Franklin
-            </p>
-            <p className="text-[clamp(1.05rem,1.4vw,1.2rem)] font-normal leading-[1.6] text-white/85 max-w-[640px]">
-              Tracked his daily behavior every night. Looked at his actions, saw where he fell
-              short, and over time shaped the kind of person he was becoming. He was not
-              guessing. He was measuring.
-            </p>
-          </article>
-
-          <article className="grid gap-3 sm:gap-6 sm:grid-cols-[200px_1fr] sm:items-baseline">
-            <p className="text-[11px] font-mono tracking-[0.22em] uppercase text-white/55">
-              Michael Jordan
-            </p>
-            <p className="text-[clamp(1.05rem,1.4vw,1.2rem)] font-normal leading-[1.6] text-white/85 max-w-[640px]">
-              Watched film of his own games to find patterns in how he played. What he did when
-              he was tired. Where he missed shots. What situations caused mistakes.
-            </p>
-          </article>
-
-          <article className="grid gap-3 sm:gap-6 sm:grid-cols-[200px_1fr] sm:items-baseline">
-            <p className="text-[11px] font-mono tracking-[0.22em] uppercase text-white/55">
-              Warren Buffett
-            </p>
-            <p className="text-[clamp(1.05rem,1.4vw,1.2rem)] font-normal leading-[1.6] text-white/85 max-w-[640px]">
-              Looks back at his old money decisions all the time to see what actually works and
-              what does not. Every new decision is shaped by what he learned from the last
-              hundred.
-            </p>
-          </article>
-
-          <article className="grid gap-3 sm:gap-6 sm:grid-cols-[200px_1fr] sm:items-baseline">
-            <p className="text-[11px] font-mono tracking-[0.22em] uppercase text-white/55">
-              Billy Beane
-            </p>
-            <p className="text-[clamp(1.05rem,1.4vw,1.2rem)] font-normal leading-[1.6] text-white/85 max-w-[640px]">
-              In Moneyball, he did not try to feel his way to better baseball decisions. He used
-              patterns in past performance to predict future outcomes. A losing team became a
-              winner.
-            </p>
-          </article>
-
-          <article className="grid gap-3 sm:gap-6 sm:grid-cols-[200px_1fr] sm:items-baseline">
-            <p className="text-[11px] font-mono tracking-[0.22em] uppercase text-white/55">
-              Netflix
-            </p>
-            <p className="text-[clamp(1.05rem,1.4vw,1.2rem)] font-normal leading-[1.6] text-white/85 max-w-[640px]">
-              Watches what every viewer plays and how long. Learns every user. Guesses what each
-              one will actually sit through to the end, and puts it on the home screen.
-            </p>
-          </article>
-
-          <article className="grid gap-3 sm:gap-6 sm:grid-cols-[200px_1fr] sm:items-baseline">
-            <p className="text-[11px] font-mono tracking-[0.22em] uppercase text-white/55">
-              Spotify
-            </p>
-            <p className="text-[clamp(1.05rem,1.4vw,1.2rem)] font-normal leading-[1.6] text-white/85 max-w-[640px]">
-              Tracks every song, every skip, every save. Learns every listener. Drops a playlist
-              every Monday made just for them, full of songs it thinks they will love next.
-            </p>
-          </article>
-
-          <article className="grid gap-3 sm:gap-6 sm:grid-cols-[200px_1fr] sm:items-baseline">
-            <p className="text-[11px] font-mono tracking-[0.22em] uppercase text-white/55">
-              TikTok
-            </p>
-            <p className="text-[clamp(1.05rem,1.4vw,1.2rem)] font-normal leading-[1.6] text-white/85 max-w-[640px]">
-              Every swipe is a clue. The For You Page learns every viewer and picks the next
-              video before the viewer even knows they want it.
-            </p>
-          </article>
-
+        <div className="mt-20 sm:mt-28 border-t border-white/[0.10]">
+          {[
+            {
+              name: "Benjamin Franklin",
+              description:
+                "Tracked his daily behavior every night. Looked at his actions, saw where he fell short, and over time shaped the kind of person he was becoming. He was not guessing. He was measuring.",
+            },
+            {
+              name: "Michael Jordan",
+              description:
+                "Watched film of his own games to find patterns in how he played. What he did when he was tired. Where he missed shots. What situations caused mistakes.",
+            },
+            {
+              name: "Warren Buffett",
+              description:
+                "Looks back at his old money decisions all the time to see what actually works and what does not. Every new decision is shaped by what he learned from the last hundred.",
+            },
+            {
+              name: "Billy Beane",
+              description:
+                "In Moneyball, he did not try to feel his way to better baseball decisions. He used patterns in past performance to predict future outcomes. A losing team became a winner.",
+            },
+            {
+              name: "Netflix",
+              description:
+                "Watches what every viewer plays and how long. Learns every user. Guesses what each one will actually sit through to the end, and puts it on the home screen.",
+            },
+            {
+              name: "Spotify",
+              description:
+                "Tracks every song, every skip, every save. Learns every listener. Drops a playlist every Monday made just for them, full of songs it thinks they will love next.",
+            },
+            {
+              name: "TikTok",
+              description:
+                "Every swipe is a clue. The For You Page learns every viewer and picks the next video before the viewer even knows they want it.",
+            },
+          ].map((entry) => (
+            <article
+              key={entry.name}
+              className="grid gap-3 sm:gap-12 sm:grid-cols-[1fr_2fr] sm:items-baseline py-10 sm:py-14 border-b border-white/[0.10]"
+            >
+              <h3 className="text-[clamp(1.5rem,2.5vw,2.25rem)] font-medium tracking-[-0.025em] text-white">
+                {entry.name}
+              </h3>
+              <p className="text-[clamp(1.05rem,1.4vw,1.2rem)] font-normal leading-[1.6] text-white/65 max-w-[640px]">
+                {entry.description}
+              </p>
+            </article>
+          ))}
         </div>
       </section>
 
