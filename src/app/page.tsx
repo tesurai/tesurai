@@ -249,6 +249,57 @@ export default async function Page({
             <p className="text-[11px] font-mono tracking-[0.22em] uppercase text-white/55 leading-[1.7]">
               <span className="text-white/40 tabular-nums">01</span>
               <br />
+              Benjamin Franklin
+            </p>
+            <p className="text-[clamp(1.05rem,1.4vw,1.2rem)] font-normal leading-[1.6] text-white/85 max-w-[640px]">
+              Tracked his daily behavior every night. Looked at his actions, saw where he fell
+              short, and over time shaped the kind of person he was becoming. He was not
+              guessing. He was measuring.
+            </p>
+          </article>
+
+          <article className="grid gap-3 sm:gap-6 sm:grid-cols-[200px_1fr] sm:items-baseline">
+            <p className="text-[11px] font-mono tracking-[0.22em] uppercase text-white/55 leading-[1.7]">
+              <span className="text-white/40 tabular-nums">02</span>
+              <br />
+              Michael Jordan
+            </p>
+            <p className="text-[clamp(1.05rem,1.4vw,1.2rem)] font-normal leading-[1.6] text-white/85 max-w-[640px]">
+              Watched film of his own games to find patterns in how he played. What he did when
+              he was tired. Where he missed shots. What situations caused mistakes.
+            </p>
+          </article>
+
+          <article className="grid gap-3 sm:gap-6 sm:grid-cols-[200px_1fr] sm:items-baseline">
+            <p className="text-[11px] font-mono tracking-[0.22em] uppercase text-white/55 leading-[1.7]">
+              <span className="text-white/40 tabular-nums">03</span>
+              <br />
+              Warren Buffett
+            </p>
+            <p className="text-[clamp(1.05rem,1.4vw,1.2rem)] font-normal leading-[1.6] text-white/85 max-w-[640px]">
+              Looks back at his old money decisions all the time to see what actually works and
+              what does not. Every new decision is shaped by what he learned from the last
+              hundred.
+            </p>
+          </article>
+
+          <article className="grid gap-3 sm:gap-6 sm:grid-cols-[200px_1fr] sm:items-baseline">
+            <p className="text-[11px] font-mono tracking-[0.22em] uppercase text-white/55 leading-[1.7]">
+              <span className="text-white/40 tabular-nums">04</span>
+              <br />
+              Billy Beane
+            </p>
+            <p className="text-[clamp(1.05rem,1.4vw,1.2rem)] font-normal leading-[1.6] text-white/85 max-w-[640px]">
+              In Moneyball, he did not try to feel his way to better baseball decisions. He used
+              patterns in past performance to predict future outcomes. A losing team became a
+              winner.
+            </p>
+          </article>
+
+          <article className="grid gap-3 sm:gap-6 sm:grid-cols-[200px_1fr] sm:items-baseline">
+            <p className="text-[11px] font-mono tracking-[0.22em] uppercase text-white/55 leading-[1.7]">
+              <span className="text-white/40 tabular-nums">05</span>
+              <br />
               Netflix
             </p>
             <p className="text-[clamp(1.05rem,1.4vw,1.2rem)] font-normal leading-[1.6] text-white/85 max-w-[640px]">
@@ -259,7 +310,7 @@ export default async function Page({
 
           <article className="grid gap-3 sm:gap-6 sm:grid-cols-[200px_1fr] sm:items-baseline">
             <p className="text-[11px] font-mono tracking-[0.22em] uppercase text-white/55 leading-[1.7]">
-              <span className="text-white/40 tabular-nums">02</span>
+              <span className="text-white/40 tabular-nums">06</span>
               <br />
               Spotify
             </p>
@@ -271,7 +322,7 @@ export default async function Page({
 
           <article className="grid gap-3 sm:gap-6 sm:grid-cols-[200px_1fr] sm:items-baseline">
             <p className="text-[11px] font-mono tracking-[0.22em] uppercase text-white/55 leading-[1.7]">
-              <span className="text-white/40 tabular-nums">03</span>
+              <span className="text-white/40 tabular-nums">07</span>
               <br />
               TikTok
             </p>
@@ -362,7 +413,7 @@ export default async function Page({
       {/* Closing CTA: emotional, fades to nothing on the right like the wordmark */}
       <section className="px-6 sm:px-10 py-28 sm:py-40 max-w-[1200px] mx-auto border-t border-white/[0.10]">
         <h2
-          className="bg-clip-text text-transparent text-[clamp(1.75rem,3.5vw,3rem)] font-medium leading-[1.15] tracking-[-0.025em] max-w-[1100px] break-words"
+          className="bg-clip-text text-transparent text-[clamp(1.25rem,2.5vw,2.25rem)] font-medium leading-[1.2] tracking-[-0.02em] max-w-[1080px] break-words"
           style={{
             backgroundImage:
               "linear-gradient(to right, rgba(255,255,255,1) 0%, rgba(255,255,255,0.95) 60%, rgba(255,255,255,0.75) 85%, rgba(255,255,255,0.45) 100%)",
