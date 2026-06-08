@@ -62,16 +62,8 @@ export default async function Page({
       style={{ fontFamily: "var(--font-inter), -apple-system, system-ui, sans-serif" }}
     >
       {/* Nav */}
-      <header className="fixed top-0 left-0 right-0 z-50 h-[72px] flex items-center justify-between px-6 sm:px-10 bg-black/60 backdrop-blur-md border-b border-white/[0.10]">
+      <header className="fixed top-0 left-0 right-0 z-50 h-[72px] flex items-center px-6 sm:px-10 bg-black/60 backdrop-blur-md border-b border-white/[0.10]">
         <Wordmark className="h-3 w-auto" />
-        <nav className="flex items-center gap-5 sm:gap-7">
-          <a
-            href="#get-started"
-            className="text-white border border-white/25 px-5 py-2 text-[12px] font-normal tracking-[0.1em] uppercase rounded-full hover:bg-white hover:text-black transition-all duration-300"
-          >
-            Get started
-          </a>
-        </nav>
       </header>
 
       {/* Hero */}
@@ -319,10 +311,7 @@ export default async function Page({
       </section>
 
       {/* Get started: centered headline + editorial step rows + centered price/CTA bookend */}
-      <section
-        id="get-started"
-        className="px-6 sm:px-10 py-28 sm:py-40 max-w-[1200px] mx-auto border-t border-white/[0.10] scroll-mt-24 sm:text-center"
-      >
+      <section className="px-6 sm:px-10 py-28 sm:py-40 max-w-[1200px] mx-auto border-t border-white/[0.10] sm:text-center">
         <h2 className="text-[clamp(1.75rem,4vw,3.5rem)] font-medium leading-[1.05] tracking-[-0.035em] text-white sm:mx-auto sm:whitespace-nowrap">
           Discover. Build. Launch.
         </h2>
