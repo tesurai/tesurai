@@ -190,6 +190,49 @@ export default async function Page({
         </div>
       </section>
 
+      {/* Same engine: TikTok-style behavior prediction, pointed at outcomes instead of attention */}
+      <section className="px-6 sm:px-10 py-28 sm:py-40 max-w-[1200px] mx-auto border-t border-white/[0.10] sm:text-center">
+        <p className="text-[12px] font-mono tracking-[0.18em] uppercase text-white/35 mb-6">
+          [ Same engine ]
+        </p>
+        <h2 className="text-[clamp(1.75rem,4vw,3.5rem)] font-medium leading-[1.05] tracking-[-0.035em] text-white max-w-[18ch] sm:mx-auto">
+          Same engine. Opposite aim.
+        </h2>
+        <p className="mt-10 text-[clamp(1.05rem,1.45vw,1.25rem)] font-normal leading-[1.55] text-white/65 max-w-[680px] sm:mx-auto">
+          TikTok, Instagram, and YouTube built the smartest behavior watchers ever made. They see
+          every move you make. They learn what keeps your eyes on the screen. They pick the next
+          video before you even know you want it. The engine is real. They just point it at the
+          wrong thing.
+        </p>
+
+        <div className="mt-16 grid gap-5 sm:gap-6 sm:grid-cols-2 text-left">
+          <div className="bg-white/[0.02] border border-white/[0.10] rounded-lg p-6 sm:p-8 flex flex-col">
+            <p className="text-[11px] font-mono tracking-[0.22em] uppercase text-white/55 mb-6">
+              Social media
+            </p>
+            <p className="text-[clamp(1.05rem,1.4vw,1.2rem)] font-normal leading-[1.55] text-white/85">
+              Watches every scroll and tap. Learns what keeps your eyes on the screen. Picks the
+              next video to hold you there. Wins when you keep scrolling.
+            </p>
+          </div>
+          <div className="bg-white/[0.04] border border-white/[0.20] rounded-lg p-6 sm:p-8 flex flex-col">
+            <p className="text-[11px] font-mono tracking-[0.22em] uppercase text-white/85 mb-6">
+              Tessa
+            </p>
+            <p className="text-[clamp(1.05rem,1.4vw,1.2rem)] font-normal leading-[1.55] text-white/85">
+              Watches every session in your product. Learns what each user really needs. Shows
+              the next move to get them closer to their goal. Wins when they get what they came
+              for.
+            </p>
+          </div>
+        </div>
+
+        <p className="mt-16 text-[clamp(1.15rem,1.55vw,1.4rem)] font-normal leading-[1.4] text-white max-w-[680px] sm:mx-auto">
+          Same engine the biggest apps on Earth run on. Pointed at the life your users actually
+          want, not at their attention.
+        </p>
+      </section>
+
       {/* Why this is powerful: Tessa wires both ways, founders and users aim at the same outcome */}
       <section className="px-6 sm:px-10 py-28 sm:py-40 max-w-[1200px] mx-auto border-t border-white/[0.10] sm:text-center">
         <p className="text-[12px] font-mono tracking-[0.18em] uppercase text-white/35 mb-6">
