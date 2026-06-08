@@ -4,8 +4,9 @@
 //
 // Flow: client clicks "Get started" -> POST to this route -> we create a
 // Checkout Session with the price baked in -> we return the hosted Stripe
-// URL -> client redirects there. Stripe handles the card form, the receipt,
-// and the success / cancel redirects back to /thanks or /.
+// URL -> client redirects there. Stripe handles the card form and the
+// receipt, collects the customer email and phone, then redirects back to
+// the homepage. We reach out to the customer directly from there.
 
 import Stripe from "stripe";
 
@@ -53,9 +54,10 @@ export async function POST(req: Request) {
           quantity: 1,
         },
       ],
-      success_url: `${origin}/thanks?session_id={CHECKOUT_SESSION_ID}`,
+      success_url: `${origin}/?paid=1`,
       cancel_url: `${origin}/`,
       billing_address_collection: "auto",
+      phone_number_collection: { enabled: true },
       metadata: {
         product: "tessa",
         price_usd: "2500",
