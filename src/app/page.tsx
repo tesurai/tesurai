@@ -283,18 +283,6 @@ export default async function Page({
             </p>
           </article>
 
-          <article className="grid gap-3 sm:gap-6 sm:grid-cols-[200px_1fr] sm:items-baseline">
-            <p className="text-[11px] font-mono tracking-[0.22em] uppercase text-white/55 leading-[1.7]">
-              <span className="text-white/40 tabular-nums">04</span>
-              <br />
-              Abbelo
-            </p>
-            <p className="text-[clamp(1.05rem,1.4vw,1.2rem)] font-normal leading-[1.6] text-white/85 max-w-[640px]">
-              Built Tessa into the product to help users design their dream life and become the
-              person they need to be to live it. Tessa tracks each user&rsquo;s patterns and
-              gives feedback to help them close the gap.
-            </p>
-          </article>
         </div>
       </section>
 
