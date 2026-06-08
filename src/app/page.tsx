@@ -12,7 +12,7 @@ const CAL_LINK = "https://cal.com/tesurai";
 const BROWSER_TITLE = "Tesurai | Most products react. The best ones predict.";
 const SHARE_TITLE = "Most products react. The best ones predict.";
 const SHARE_DESCRIPTION =
-  "Tessa reads each user, predicts where they are heading, and surfaces the next move to keep them on the path.";
+  "Tessa reads each user and predicts where they're heading.";
 const SHARE_IMAGE = "/og.png";
 
 export const metadata = {
@@ -93,8 +93,7 @@ export default async function Page({
           Most predictive intelligence layer for digital products
         </h1>
         <p className="mt-10 text-[clamp(1.05rem,1.45vw,1.25rem)] font-normal leading-[1.55] text-white/65 max-w-[640px] sm:mx-auto">
-          Tessa reads each user, predicts where they are heading, and surfaces the next move to
-          keep them on the path.
+          Tessa reads each user and predicts where they&rsquo;re heading.
         </p>
       </section>
 
