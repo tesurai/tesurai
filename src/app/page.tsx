@@ -354,25 +354,17 @@ export default async function Page({
           [ Case study ]
         </p>
 
-        {/* Identity row: label columns + lead */}
-        <div className="grid gap-y-8 gap-x-12 sm:grid-cols-[160px_160px_1fr] items-baseline pb-12 border-b border-white/[0.10]">
+        {/* Identity row: label column + lead */}
+        <div className="grid gap-y-8 gap-x-12 sm:grid-cols-[160px_1fr] items-baseline pb-12 border-b border-white/[0.10]">
           <div>
             <p className="text-[11px] font-mono tracking-[0.22em] uppercase text-white/40 mb-2">
               Customer
             </p>
             <p className="text-[15px] font-normal text-white">Abbelo</p>
           </div>
-          <div>
-            <p className="text-[11px] font-mono tracking-[0.22em] uppercase text-white/40 mb-2">
-              Sector
-            </p>
-            <p className="text-[13px] font-normal leading-[1.5] text-white/70">
-              Self help mobile app and web
-            </p>
-          </div>
           <p className="text-[clamp(1.05rem,1.4vw,1.2rem)] font-normal leading-[1.55] text-white/75 max-w-[560px]">
-            Becoming who you need to be is a skill. We build it with you. And, for the first
-            time, measurable. Abbelo builds the person you need to be to reach your dream life.
+            Helps users design their dream life and builds them into the person they need to be
+            to turn that dream life into reality.
           </p>
         </div>
 
