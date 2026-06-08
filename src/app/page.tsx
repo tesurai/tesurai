@@ -97,20 +97,14 @@ export default async function Page({
         </p>
       </section>
 
-      {/* What we believe */}
+      {/* Belief: thesis statement, manifesto-style so it does not echo the hero */}
       <section className="px-6 sm:px-10 py-28 sm:py-40 max-w-[1200px] mx-auto border-t border-white/[0.10] sm:text-center">
         <p className="text-[12px] font-mono tracking-[0.18em] uppercase text-white/35 mb-6">
           [ Belief ]
         </p>
-        <h2 className="text-[clamp(1.75rem,4vw,3.5rem)] font-medium leading-[1.05] tracking-[-0.035em] text-white max-w-[18ch] sm:mx-auto">
-          Most products react
-          <br />
-          The best ones predict
+        <h2 className="text-[clamp(1.75rem,4vw,3.5rem)] font-medium leading-[1.05] tracking-[-0.035em] text-white max-w-[26ch] sm:mx-auto">
+          Patterns compound. Hunches die. The best products know which one they are built on.
         </h2>
-        <p className="mt-10 text-[clamp(1.05rem,1.45vw,1.25rem)] font-normal leading-[1.55] text-white/65 max-w-[640px] sm:mx-auto">
-          Looking at what already happened is too late. The best products see what is coming next
-          and help users before they quit.
-        </p>
       </section>
 
       {/* The difference: with vs without Tessa */}
@@ -211,28 +205,23 @@ export default async function Page({
         <div className="mt-16 grid gap-5 sm:gap-6 sm:grid-cols-2 text-left">
           <div className="bg-white/[0.02] border border-white/[0.10] rounded-lg p-6 sm:p-8 flex flex-col">
             <p className="text-[11px] font-mono tracking-[0.22em] uppercase text-white/55 mb-6">
-              For every user
+              For customers
             </p>
             <p className="text-[clamp(1.05rem,1.4vw,1.2rem)] font-normal leading-[1.55] text-white/85">
-              Tessa learns who they are becoming and shows them the next move that gets them
-              closer to what they came for.
+              Tessa shows each user the patterns from their past and gives feedback that helps
+              them get the outcome they came for.
             </p>
           </div>
           <div className="bg-white/[0.04] border border-white/[0.20] rounded-lg p-6 sm:p-8 flex flex-col">
             <p className="text-[11px] font-mono tracking-[0.22em] uppercase text-white/85 mb-6">
-              For you
+              For the owner
             </p>
             <p className="text-[clamp(1.05rem,1.4vw,1.2rem)] font-normal leading-[1.55] text-white/85">
-              Every user&rsquo;s Tessa talks back to yours. You see what helps each user win,
-              what slows them down, and what to build next.
+              Every pattern and every piece of feedback from every user flows back into your
+              Tessa, so you see exactly what to improve next.
             </p>
           </div>
         </div>
-
-        <p className="mt-16 text-[clamp(1.15rem,1.55vw,1.4rem)] font-normal leading-[1.4] text-white max-w-[640px] sm:mx-auto">
-          Users want to reach what they came for. You want users who reach it. Tessa is how both
-          sides win.
-        </p>
       </section>
 
       {/* How */}
@@ -254,12 +243,12 @@ export default async function Page({
             {
               n: "02",
               t: "Build",
-              d: "We build the version of Tessa that fits your product. The patterns it watches. The predictions it makes. The feedback it gives.",
+              d: "We build a custom formula around your business so Tessa tracks the right patterns and gives users the right feedback.",
             },
             {
               n: "03",
               t: "Launch",
-              d: "We put Tessa inside your product. Live in one week. After that, Tessa runs every day.",
+              d: "We wire Tessa up to your business, run test flights to clean up bugs, and then go live.",
             },
           ].map((s) => (
             <div
@@ -284,11 +273,11 @@ export default async function Page({
           [ Framework ]
         </p>
         <h2 className="text-[clamp(1.75rem,4vw,3.5rem)] font-medium leading-[1.05] tracking-[-0.035em] text-white max-w-[22ch]">
-          The framework that always wins
+          The framework that proves itself over and over again
         </h2>
         <p className="mt-10 text-[clamp(1.05rem,1.45vw,1.25rem)] font-normal leading-[1.55] text-white/65 max-w-[640px]">
-          Tessa is not a new idea. The best people and the best companies have always watched
-          their own patterns to figure out what to do next.
+          Tessa is not a new idea. The best people and the best companies have always studied
+          their own patterns to predict their future.
         </p>
 
         <div className="mt-16 sm:mt-20 space-y-12 sm:space-y-14">
@@ -387,8 +376,9 @@ export default async function Page({
             </p>
             <div className="max-w-[640px]">
               <p className="text-[clamp(1.05rem,1.4vw,1.2rem)] font-normal leading-[1.6] text-white/85">
-                Built Tessa into the product. Every user has their own Tessa learning who they are
-                becoming. Each user sees the next move to get closer to the person they want to be.
+                Built Tessa into the product to help users design their dream life and become the
+                person they need to be to live it. Tessa tracks each user&rsquo;s patterns and
+                gives feedback to help them close the gap.
               </p>
               <blockquote className="mt-8 text-[clamp(1.05rem,1.4vw,1.2rem)] font-normal leading-[1.6] text-white/85">
                 &ldquo;I was guessing. Every user told me who they wanted to become, and I had
@@ -418,27 +408,22 @@ export default async function Page({
         </h2>
 
         {/* Boxed step cards */}
-        <div className="mt-16 grid gap-5 sm:gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 text-left">
+        <div className="mt-16 grid gap-5 sm:gap-6 grid-cols-1 sm:grid-cols-3 text-left">
           {[
             {
               n: "01",
-              t: "Discovery call",
-              d: "We hop on a call with you to learn your product, your users, and the one result you want every user to reach.",
+              t: "Onboarding call",
+              d: "We hop on a call with you to understand your business, your users, and the outcome you want them to achieve.",
             },
             {
               n: "02",
               t: "Build Tessa",
-              d: "We build a custom Tessa just for your product. The patterns it watches. The predictions it makes. The feedback it gives.",
+              d: "We build the Tessa formula around your business to help your users see the patterns and get the feedback that leads to the outcome they came for.",
             },
             {
               n: "03",
-              t: "Plug it in",
-              d: "We put Tessa inside your product. No new tools for your team to learn.",
-            },
-            {
-              n: "04",
-              t: "Live and learning",
-              d: "Tessa goes live inside your product. For the next 90 days, we keep making Tessa smarter around your real users.",
+              t: "Launch",
+              d: "We wire Tessa up to your business, clean up bugs with test flights, and go live inside your product.",
             },
           ].map((s) => (
             <div
@@ -484,10 +469,10 @@ export default async function Page({
         </div>
       </section>
 
-      {/* Closing CTA: emotional, fades to nothing on the right like the wordmark */}
-      <section className="px-6 sm:px-10 py-28 sm:py-40 max-w-[1200px] mx-auto border-t border-white/[0.10]">
+      {/* Closing CTA: emotional, takes up the whole page, fades to nothing on the right like the wordmark */}
+      <section className="px-6 sm:px-10 py-40 sm:py-72 max-w-[1200px] mx-auto border-t border-white/[0.10] min-h-[80vh] flex items-center">
         <h2
-          className="bg-clip-text text-transparent text-[clamp(1.75rem,4vw,3.5rem)] font-medium leading-[1.08] tracking-[-0.03em] max-w-[820px] break-words"
+          className="bg-clip-text text-transparent text-[clamp(2.25rem,6vw,5.5rem)] font-medium leading-[1.05] tracking-[-0.035em] max-w-[1080px] break-words"
           style={{
             backgroundImage:
               "linear-gradient(to right, rgba(255,255,255,1) 0%, rgba(255,255,255,0.95) 60%, rgba(255,255,255,0.75) 85%, rgba(255,255,255,0.45) 100%)",
