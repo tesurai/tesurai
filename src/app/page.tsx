@@ -397,26 +397,8 @@ export default async function Page({
 
       {/* Case study: founder testimonial from Abbelo */}
       <section className="px-6 sm:px-10 py-28 sm:py-40 max-w-[1200px] mx-auto border-t border-white/[0.10]">
-        <p className="text-[12px] font-mono tracking-[0.18em] uppercase text-white/35 mb-12">
-          [ Case study ]
-        </p>
-
-        {/* Identity row: label column + lead */}
-        <div className="grid gap-y-8 gap-x-12 sm:grid-cols-[160px_1fr] items-baseline pb-12 border-b border-white/[0.10]">
-          <div>
-            <p className="text-[11px] font-mono tracking-[0.22em] uppercase text-white/40 mb-2">
-              Customer
-            </p>
-            <p className="text-[15px] font-normal text-white">Abbelo</p>
-          </div>
-          <p className="text-[clamp(1.05rem,1.4vw,1.2rem)] font-normal leading-[1.55] text-white/75 max-w-[560px]">
-            Helps users design their dream life and builds them into the person they need to be
-            to turn that dream life into reality.
-          </p>
-        </div>
-
         {/* Testimonial: founder voice, centerpiece */}
-        <figure className="mt-16 sm:mt-20 max-w-[860px]">
+        <figure className="max-w-[860px]">
           <blockquote className="text-[clamp(1.5rem,2.6vw,2.4rem)] font-normal leading-[1.35] tracking-[-0.02em] text-white">
             &ldquo;I was guessing. Every user told me who they wanted to become, and I had no way
             to know if any of them were getting there. Tessa changed that. A private model of
