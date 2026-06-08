@@ -99,9 +99,6 @@ export default async function Page({
 
       {/* Belief: thesis statement, manifesto-style so it does not echo the hero */}
       <section className="px-6 sm:px-10 py-28 sm:py-40 max-w-[1200px] mx-auto border-t border-white/[0.10] sm:text-center">
-        <p className="text-[12px] font-mono tracking-[0.18em] uppercase text-white/35 mb-6">
-          [ Belief ]
-        </p>
         <h2 className="text-[clamp(1.75rem,4vw,3.5rem)] font-medium leading-[1.05] tracking-[-0.035em] text-white max-w-[26ch] sm:mx-auto">
           Patterns compound. Hunches die. The best products know which one they are built on.
         </h2>
