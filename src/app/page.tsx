@@ -492,11 +492,8 @@ export default async function Page({
               WebkitTextFillColor: "transparent",
             }}
           >
-            Stop losing the users you could have kept. Every user comes for a result, and
-            most quit before they reach it. You only find out when they cancel. Tessa learns
-            each user, sees where they are headed, and gives them the next move to get there.
-            When your users win, you win. You can keep guessing why they leave, or build
-            Tessa in and know.
+            Stop losing the users you could have kept. Tessa gets each user to the result
+            they came for. When your users win, you win.
           </h2>
         </div>
       </section>
