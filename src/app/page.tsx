@@ -288,53 +288,35 @@ export default async function Page({
         </h2>
       </section>
 
-      {/* Footer */}
-      <footer className="px-6 sm:px-10 py-16 border-t border-white/[0.10]">
+      {/* Footer: flat row on desktop, tight stack on mobile. No mono category labels above
+          single items. Touch targets padded for mobile thumbs. */}
+      <footer className="px-6 sm:px-10 py-12 sm:py-14 border-t border-white/[0.10]">
         <div className="max-w-[1200px] mx-auto">
-          <div className="grid grid-cols-1 sm:grid-cols-4 gap-y-12 sm:gap-y-10 gap-x-12">
-            <div>
-              <Wordmark className="h-3 w-auto" />
-            </div>
+          {/* Top row: wordmark + links/socials. Stacks on mobile, single row on desktop. */}
+          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-8 sm:gap-6">
+            <Wordmark className="h-3 w-auto" />
 
-            <div>
-              <p className="text-[11px] font-mono tracking-[0.22em] uppercase text-white/40 mb-5">
-                Products
-              </p>
-              <ul className="space-y-2.5">
-                <li>
-                  <a
-                    href="#tessa"
-                    className="text-[14px] font-normal text-white/70 hover:text-white transition-colors"
-                  >
-                    Tessa
-                  </a>
-                </li>
-              </ul>
-            </div>
-
-            <div>
-              <p className="text-[11px] font-mono tracking-[0.22em] uppercase text-white/40 mb-5">
-                Contact
-              </p>
+            <div className="flex flex-col sm:flex-row sm:items-center gap-5 sm:gap-8">
+              <a
+                href="#tessa"
+                className="text-[14px] font-normal text-white/65 hover:text-white transition-colors"
+              >
+                Tessa
+              </a>
               <a
                 href="mailto:hello@tesurai.com"
-                className="text-[14px] font-normal text-white/70 hover:text-white transition-colors"
+                className="text-[14px] font-normal text-white/65 hover:text-white transition-colors"
               >
                 hello@tesurai.com
               </a>
-            </div>
 
-            <div>
-              <p className="text-[11px] font-mono tracking-[0.22em] uppercase text-white/40 mb-5">
-                Connect
-              </p>
-              <div className="flex items-center gap-4">
+              <div className="flex items-center gap-1 sm:gap-2 sm:ml-2">
                 <a
                   href="https://www.instagram.com/gettesurai"
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Instagram"
-                  className="text-white/55 hover:text-white transition-colors"
+                  className="p-2 text-white/55 hover:text-white transition-colors"
                 >
                   <svg
                     width="18"
@@ -357,7 +339,7 @@ export default async function Page({
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="X"
-                  className="text-white/55 hover:text-white transition-colors"
+                  className="p-2 text-white/55 hover:text-white transition-colors"
                 >
                   <svg
                     width="16"
@@ -374,7 +356,7 @@ export default async function Page({
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="TikTok"
-                  className="text-white/55 hover:text-white transition-colors"
+                  className="p-2 text-white/55 hover:text-white transition-colors"
                 >
                   <svg
                     width="18"
@@ -391,7 +373,7 @@ export default async function Page({
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="YouTube"
-                  className="text-white/55 hover:text-white transition-colors"
+                  className="p-2 text-white/55 hover:text-white transition-colors"
                 >
                   <svg
                     width="20"
@@ -407,8 +389,9 @@ export default async function Page({
             </div>
           </div>
 
-          <div className="mt-14">
-            <span className="text-white/35 text-[12px] font-mono tracking-[0.12em] uppercase tabular-nums">
+          {/* Copyright row */}
+          <div className="mt-10 sm:mt-12 pt-6 sm:pt-8 border-t border-white/[0.06]">
+            <span className="text-white/35 text-[11px] sm:text-[12px] font-mono tracking-[0.12em] uppercase tabular-nums">
               © 2026 Tesurai LLC
             </span>
           </div>
