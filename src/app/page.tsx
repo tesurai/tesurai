@@ -322,8 +322,8 @@ export default async function Page({
                   d: "One clear next step after every session. Not a list of twenty things.",
                 },
                 {
-                  t: "Sharper every session",
-                  d: "Tessa learns more about each user with every session. The picture keeps getting sharper.",
+                  t: "Sharper over time",
+                  d: "The more each user does, the more Tessa learns. The picture keeps getting sharper.",
                 },
                 {
                   t: "Real data only",
