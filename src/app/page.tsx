@@ -5,10 +5,11 @@
 // Copy rules: fifth grade reading level, no dashes anywhere, no pronouns for Tessa,
 // no language framing Tessa as a team replacement, no made up outcome claims.
 // Design system: modern dark SaaS, kept plain on purpose. Near-black canvas, glassy
-// sticky nav with anchor links, editorial sections on a narrow 680px column with
-// hairline-divided rows (the Mission layout everywhere), pill buttons (one white-filled
-// primary), sharp boxed mono eyebrows, medium-weight display type in solid white.
-// No cards, no gradient text, no glows, no icons, no shadows, no accent color.
+// sticky nav with anchor links, editorial sections on a narrow 680px column that share
+// the same generous side spacing but each get their own device: contrast rows (Mission),
+// a forked path (Difference), an indexed list (Product), a timeline (Process). Pill
+// buttons (one white-filled primary), sharp boxed mono eyebrows, medium-weight display
+// type in solid white. No cards, no gradient text, no glows, no shadows, no accent color.
 
 import PayButton from "./pay-button";
 
@@ -222,7 +223,8 @@ export default async function Page({
         </div>
       </section>
 
-      {/* The difference: without vs with as paired hairline rows, Mission style */}
+      {/* The difference: one shared first step, then the path forks around a center
+          spine. The dim path fades out on the left, the Tessa path lands on the right. */}
       <section id="tessa" className="px-6 sm:px-10 py-24 sm:py-32 scroll-mt-24">
         <div className="max-w-[1100px] mx-auto">
           <div className="text-center">
@@ -236,57 +238,61 @@ export default async function Page({
             </p>
           </div>
 
-          <div className="mt-12 sm:mt-16 max-w-[680px] mx-auto text-left">
-            <div className="hidden sm:grid sm:grid-cols-2 gap-8 pb-4">
-              <p className="text-[12px] font-mono tracking-[0.16em] uppercase text-white/45">
-                Without Tessa
-              </p>
-              <p className="text-[12px] font-mono tracking-[0.16em] uppercase text-white/70">
-                With Tessa
-              </p>
-            </div>
-            <div className="divide-y divide-white/[0.10] border-y border-white/[0.10]">
-              {[
-                ["Signs up wanting a clear result.", "Signs up wanting a clear result."],
-                ["Opens the product and pokes around.", "Tessa watches every move they make."],
-                [
-                  "Tries a few things on the first session.",
-                  "Tessa learns the patterns in their behavior.",
-                ],
-                [
-                  "Nothing they try fits the moment.",
-                  "Tessa predicts where they will be in 30 days and 90 days.",
-                ],
-                [
-                  "Forgets to come back the next day.",
-                  "Tessa surfaces the next move that gets them closer.",
-                ],
-                [
-                  "Cancels the account weeks later.",
-                  "Step by step, they reach what they came for.",
-                ],
-              ].map(([before, after], i) => (
-                <div key={i} className="grid sm:grid-cols-2 gap-2 sm:gap-8 py-5">
-                  <p className="text-[15px] font-normal leading-[1.55] text-white/45">
-                    {before}
-                  </p>
-                  <p className="text-[15px] font-normal leading-[1.55] text-white">{after}</p>
-                </div>
-              ))}
-            </div>
-            <div className="grid sm:grid-cols-2 gap-2 sm:gap-8 pt-4">
-              <p className="text-[11px] font-mono tracking-[0.16em] uppercase text-white/35">
-                Result: the user quits
-              </p>
-              <p className="text-[11px] font-mono tracking-[0.16em] uppercase text-white/85">
-                Result: the user gets what they came for
-              </p>
+          <div className="mt-12 sm:mt-16 max-w-[680px] mx-auto">
+            <p className="text-[15px] font-normal leading-[1.55] text-white text-center">
+              Signs up wanting a clear result.
+            </p>
+            <div aria-hidden className="mx-auto mt-4 h-6 w-px bg-white/[0.15]" />
+            <div className="grid grid-cols-2 text-left">
+              <div className="pr-4 sm:pr-8 pt-6 border-r border-white/[0.15]">
+                <p className="text-[11px] sm:text-[12px] font-mono tracking-[0.16em] uppercase text-white/45">
+                  Without Tessa
+                </p>
+                <ol className="mt-5 space-y-5">
+                  {[
+                    "Opens the product and pokes around.",
+                    "Tries a few things on the first session.",
+                    "Nothing they try fits the moment.",
+                    "Forgets to come back the next day.",
+                    "Cancels the account weeks later.",
+                  ].map((step) => (
+                    <li
+                      key={step}
+                      className="text-[13.5px] sm:text-[15px] font-normal leading-[1.55] text-white/40"
+                    >
+                      {step}
+                    </li>
+                  ))}
+                </ol>
+              </div>
+              <div className="pl-4 sm:pl-8 pt-6">
+                <p className="text-[11px] sm:text-[12px] font-mono tracking-[0.16em] uppercase text-white/70">
+                  With Tessa
+                </p>
+                <ol className="mt-5 space-y-5">
+                  {[
+                    "Tessa watches every move they make.",
+                    "Tessa learns the patterns in their behavior.",
+                    "Tessa predicts where they will be in 30 days and 90 days.",
+                    "Tessa surfaces the next move that gets them closer.",
+                    "They reach what they came for.",
+                  ].map((step) => (
+                    <li
+                      key={step}
+                      className="text-[13.5px] sm:text-[15px] font-normal leading-[1.55] text-white"
+                    >
+                      {step}
+                    </li>
+                  ))}
+                </ol>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Product: what every user gets, as hairline rows, Mission style */}
+      {/* Product: an editorial index. Mono numerals in the margin, large titles,
+          generous hairline rows. */}
       <section id="product" className="px-6 sm:px-10 py-24 sm:py-32 scroll-mt-24">
         <div className="max-w-[1100px] mx-auto">
           <div className="text-center">
@@ -327,17 +333,22 @@ export default async function Page({
                   t: "Private by default",
                   d: "Each user's Tessa is theirs alone. Never shared.",
                 },
-              ].map((f) => (
+              ].map((f, i) => (
                 <div
                   key={f.t}
-                  className="grid sm:grid-cols-[200px_1fr] gap-2 sm:gap-8 py-5"
+                  className="grid grid-cols-[48px_1fr] sm:grid-cols-[64px_1fr] gap-4 sm:gap-6 py-7 sm:py-8"
                 >
-                  <h3 className="text-[15px] font-medium tracking-[-0.01em] text-white">
-                    {f.t}
-                  </h3>
-                  <p className="text-[15px] font-normal leading-[1.55] text-white/55">
-                    {f.d}
+                  <p className="text-[12px] font-mono text-white/30 tabular-nums pt-[7px]">
+                    {String(i + 1).padStart(2, "0")}
                   </p>
+                  <div>
+                    <h3 className="text-[clamp(1.125rem,1.6vw,1.375rem)] font-medium tracking-[-0.02em] text-white">
+                      {f.t}
+                    </h3>
+                    <p className="mt-2 text-[14.5px] font-normal leading-[1.6] text-white/50 max-w-[480px]">
+                      {f.d}
+                    </p>
+                  </div>
                 </div>
               ))}
             </div>
@@ -375,7 +386,8 @@ export default async function Page({
         </div>
       </section>
 
-      {/* Process: three numbered steps as hairline rows, Mission style */}
+      {/* Process: a vertical timeline. Square nodes on a left rail echo the sharp
+          boxed eyebrows. */}
       <section id="process" className="px-6 sm:px-10 py-24 sm:py-32 scroll-mt-24">
         <div className="max-w-[1100px] mx-auto">
           <div className="text-center">
@@ -386,7 +398,7 @@ export default async function Page({
           </div>
 
           <div className="mt-12 sm:mt-16 max-w-[680px] mx-auto text-left">
-            <div className="divide-y divide-white/[0.10] border-y border-white/[0.10]">
+            <div className="relative ml-1 border-l border-white/[0.15]">
               {[
                 {
                   n: "01",
@@ -404,19 +416,18 @@ export default async function Page({
                   d: "We wire Tessa up to your business, clean up bugs with test flights, and then push it to live.",
                 },
               ].map((s) => (
-                <div
-                  key={s.n}
-                  className="grid sm:grid-cols-[200px_1fr] gap-2 sm:gap-8 py-5"
-                >
-                  <div className="flex items-baseline gap-3">
-                    <span className="text-[12px] font-mono text-white/35 tabular-nums">
-                      {s.n}
-                    </span>
-                    <h3 className="text-[15px] font-medium tracking-[-0.01em] text-white">
-                      {s.t}
-                    </h3>
-                  </div>
-                  <p className="text-[15px] font-normal leading-[1.55] text-white/55">
+                <div key={s.n} className="relative pl-8 sm:pl-12 pb-12 last:pb-0">
+                  <span
+                    aria-hidden
+                    className="absolute -left-[4.5px] top-[5px] h-2 w-2 bg-white"
+                  />
+                  <p className="text-[11px] font-mono tracking-[0.16em] uppercase text-white/40">
+                    Step {s.n}
+                  </p>
+                  <h3 className="mt-2 text-[clamp(1.125rem,1.6vw,1.375rem)] font-medium tracking-[-0.02em] text-white">
+                    {s.t}
+                  </h3>
+                  <p className="mt-2 text-[14.5px] font-normal leading-[1.6] text-white/50 max-w-[480px]">
                     {s.d}
                   </p>
                 </div>
@@ -451,7 +462,7 @@ export default async function Page({
         </div>
       </section>
 
-      {/* Closing CTA */}
+      {/* Closing: the mission as the final word, fading right like the wordmark */}
       <section className="px-6 sm:px-10 py-24 sm:py-36">
         <div className="max-w-[860px] mx-auto text-left">
           <h2
@@ -462,9 +473,8 @@ export default async function Page({
               WebkitTextFillColor: "transparent",
             }}
           >
-            Every user deserves to get what they came for. You built the product for them.
-            You promised them a real result. Tessa is how you make sure they actually get
-            one.
+            Their AI is built to capture your attention. Ours is built to build the best
+            you. We are not joining their game. We are the counterforce.
           </h2>
         </div>
       </section>
