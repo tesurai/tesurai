@@ -88,7 +88,7 @@ export default async function Page({
                 href="#product"
                 className="text-[13.5px] font-normal text-white/60 hover:text-white transition-colors"
               >
-                Product
+                Tessa
               </a>
               <a
                 href="#process"
@@ -145,8 +145,8 @@ export default async function Page({
             Most products react. The best ones predict.
           </h1>
           <p className="mt-7 text-[clamp(1.05rem,1.45vw,1.2rem)] font-normal leading-[1.6] text-white/60 max-w-[600px] mx-auto">
-            Tessa is built into your product. Tessa learns each user, spots their patterns,
-            and shows them the next move to reach the result they came for.
+            Tessa lives inside your product. Tessa uses each user&rsquo;s past to predict
+            their future, and guides them step by step to the result they came for.
           </p>
           <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-3">
             <a
@@ -233,8 +233,8 @@ export default async function Page({
               Predict or lose them
             </h2>
             <p className="mt-5 text-[clamp(1rem,1.3vw,1.15rem)] font-normal leading-[1.6] text-white/60 max-w-[560px] mx-auto">
-              Every user signs up wanting a result. Most quit before they get it. You see it
-              as churn.
+              Churn does not happen at the cancel button. It happens weeks earlier, in a
+              moment your product cannot see.
             </p>
           </div>
 
@@ -250,11 +250,11 @@ export default async function Page({
                 </p>
                 <ol className="mt-5 space-y-5">
                   {[
-                    "Opens the product and pokes around.",
-                    "Tries a few things on the first session.",
-                    "Nothing they try fits the moment.",
-                    "Forgets to come back the next day.",
-                    "Cancels the account weeks later.",
+                    "Your product treats them like every other user.",
+                    "They hit a wall your product cannot see.",
+                    "They stall, and nothing steps in.",
+                    "They go quiet and blame themselves.",
+                    "You find out at the cancel. Too late.",
                   ].map((step) => (
                     <li
                       key={step}
@@ -271,10 +271,10 @@ export default async function Page({
                 </p>
                 <ol className="mt-5 space-y-5">
                   {[
-                    "Tessa watches every move they make.",
-                    "Tessa learns the patterns in their behavior.",
-                    "Tessa predicts where they will be in 30 days and 90 days.",
-                    "Tessa surfaces the next move that gets them closer.",
+                    "Tessa learns this user, not the average user.",
+                    "Tessa catches the stall the moment it starts.",
+                    "Tessa gives them the next move that fits where they are.",
+                    "You see who is winning and who is slipping, early.",
                     "They reach what they came for.",
                   ].map((step) => (
                     <li
@@ -296,13 +296,13 @@ export default async function Page({
       <section id="product" className="px-6 sm:px-10 py-24 sm:py-32 scroll-mt-24">
         <div className="max-w-[1100px] mx-auto">
           <div className="text-center">
-            <Eyebrow>Product</Eyebrow>
+            <Eyebrow>Tessa</Eyebrow>
             <h2 className="text-[clamp(1.875rem,3.5vw,2.75rem)] font-medium leading-[1.1] tracking-[-0.03em] text-white">
               Every user gets their own Tessa
             </h2>
             <p className="mt-5 text-[clamp(1rem,1.3vw,1.15rem)] font-normal leading-[1.6] text-white/60 max-w-[560px] mx-auto">
-              After every session, Tessa reads the data, finds the patterns, and shows each
-              user the next move.
+              Tessa gets every user clear on where they are, where they want to go, and the
+              next move to close the gap.
             </p>
           </div>
 
@@ -310,32 +310,24 @@ export default async function Page({
             <div className="divide-y divide-white/[0.10] border-y border-white/[0.10]">
               {[
                 {
-                  t: "Patterns",
-                  d: "Tessa spots the habits that shape each user's results and shows how often they come up.",
+                  t: "Where they are",
+                  d: "Tessa reads each user's real data to get clear on where they stand today. The picture gets sharper with everything they do.",
                 },
                 {
-                  t: "Forecast",
-                  d: "Two paths in plain words. Where the user is headed at their current pace, and where the thing holding them back takes them instead.",
+                  t: "Patterns",
+                  d: "Tessa spots the habits that shape their results and shows how often they come up. Tessa never guesses and never makes things up.",
                 },
                 {
                   t: "Feedback",
-                  d: "One clear next step after every session. Not a list of twenty things.",
+                  d: "One clear next move, not a list of twenty things. Every pattern also feeds back to you, so you see what is working.",
                 },
                 {
-                  t: "Sharper over time",
-                  d: "The more each user does, the more Tessa learns. The picture keeps getting sharper.",
+                  t: "Forecast",
+                  d: "Two paths in plain words. Where they land if they follow the feedback, and where they land if they keep doing what they are doing.",
                 },
                 {
-                  t: "Real data only",
-                  d: "Tessa works only from real session data. Tessa never guesses and never makes things up.",
-                },
-                {
-                  t: "Private by default",
-                  d: "Each user's Tessa is theirs alone. Never shared.",
-                },
-                {
-                  t: "Feeds back to you",
-                  d: "Every pattern Tessa finds feeds back to you, so you see what is working and what to improve next.",
+                  t: "Where they want to go",
+                  d: "Tessa learns the result each user came for and keeps them pointed at it. Each user's Tessa is theirs alone. Never shared.",
                 },
               ].map((f, i) => (
                 <div
@@ -425,13 +417,13 @@ export default async function Page({
           <div className="mt-14 max-w-[880px] mx-auto rounded-2xl border border-white/[0.12] bg-white/[0.03] md:grid md:grid-cols-2 text-left">
             <div className="p-7 sm:p-10 border-b md:border-b-0 md:border-r border-white/[0.10] flex flex-col">
               <p className="text-[12px] font-mono tracking-[0.16em] uppercase text-white/55">
-                Tessa, built for your business
+                The build
               </p>
               <p className="mt-6 text-[clamp(2.75rem,5vw,3.75rem)] font-medium leading-none text-white tabular-nums tracking-[-0.03em]">
                 $2,500
               </p>
               <p className="mt-4 text-[14px] font-normal leading-[1.6] text-white/55">
-                We build Tessa into your product and take it live.
+                From the first call to launch day, we handle all of it.
               </p>
               <div className="mt-8 md:mt-auto md:pt-10 flex flex-col sm:flex-row sm:items-center gap-3">
                 <PayButton />
@@ -451,18 +443,38 @@ export default async function Page({
               </p>
               <ul className="mt-3 divide-y divide-white/[0.08]">
                 {[
-                  "A call to map your business, your users, and the results they want",
-                  "A Tessa formula built around your business",
-                  "Tessa built into your product, ready for every user",
-                  "Patterns, a forecast, and one next step for each user",
-                  "Feedback that loops back to you, so you see what to improve",
-                  "Test flights and a clean launch to live",
+                  {
+                    t: "Onboarding",
+                    d: "A call to map your business, your users, and the results they want.",
+                  },
+                  {
+                    t: "Formula",
+                    d: "A Tessa formula built around your business.",
+                  },
+                  {
+                    t: "Integration",
+                    d: "Tessa built into your product, ready for every user.",
+                  },
+                  {
+                    t: "Patterns",
+                    d: "The habits that shape each user's results.",
+                  },
+                  {
+                    t: "Feedback",
+                    d: "One clear next move for every user, and it feeds back to you.",
+                  },
+                  {
+                    t: "Forecast",
+                    d: "Two paths in plain words, based on if they follow the feedback.",
+                  },
+                  {
+                    t: "Launch",
+                    d: "Test flights, then live.",
+                  },
                 ].map((item) => (
-                  <li
-                    key={item}
-                    className="py-3.5 text-[14px] font-normal leading-[1.5] text-white/70"
-                  >
-                    {item}
+                  <li key={item.t} className="py-3.5 text-[14px] font-normal leading-[1.5]">
+                    <span className="font-medium text-white">{item.t}.</span>{" "}
+                    <span className="text-white/60">{item.d}</span>
                   </li>
                 ))}
               </ul>
@@ -482,8 +494,8 @@ export default async function Page({
               WebkitTextFillColor: "transparent",
             }}
           >
-            Their AI is built to capture your users&rsquo; attention. Tessa is built into
-            your business to get your users real results. We are not joining their game. We
+            Their AI is built to steal your users&rsquo; attention. Tessa is built to turn
+            it into results. They win when people scroll. You win when your users win. We
             are the counterforce.
           </h2>
         </div>
@@ -502,7 +514,7 @@ export default async function Page({
                 href="#product"
                 className="text-[14px] font-normal text-white/65 hover:text-white transition-colors"
               >
-                Product
+                Tessa
               </a>
               <a
                 href="#process"
