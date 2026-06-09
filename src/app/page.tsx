@@ -333,6 +333,10 @@ export default async function Page({
                   t: "Private by default",
                   d: "Each user's Tessa is theirs alone. Never shared.",
                 },
+                {
+                  t: "Feeds back to you",
+                  d: "Every pattern Tessa finds feeds back to you, so you see what is working and what to improve next.",
+                },
               ].map((f, i) => (
                 <div
                   key={f.t}
@@ -353,36 +357,6 @@ export default async function Page({
               ))}
             </div>
           </div>
-        </div>
-      </section>
-
-      {/* Same engine: the narrative statement section, kept card-less on purpose */}
-      <section className="px-6 sm:px-10 py-24 sm:py-36">
-        <div className="max-w-[1100px] mx-auto text-center">
-          <h2 className="text-[clamp(2.25rem,5.5vw,4.5rem)] font-medium leading-[1.0] tracking-[-0.035em] text-white max-w-[14ch] mx-auto">
-            Same engine. Opposite aim.
-          </h2>
-
-          <div className="mt-16 sm:mt-20 max-w-[680px] mx-auto text-left">
-            <p className="text-[clamp(1.05rem,1.4vw,1.25rem)] font-normal leading-[1.65] text-white/60">
-              TikTok, Instagram, and YouTube built this engine to win your attention. They
-              watch every move you make. They learn what keeps your eyes on the screen. They
-              pick the next video to keep you scrolling.
-            </p>
-
-            <div className="my-10 sm:my-12 border-t border-white/[0.10]" />
-
-            <p className="text-[clamp(1.05rem,1.4vw,1.25rem)] font-normal leading-[1.65] text-white">
-              Tessa is built on the same engine, pointed at the results your users actually
-              want. Tessa finds the patterns in each user&rsquo;s behavior and gives them
-              feedback that helps them reach the result they came for. Every pattern feeds
-              back to you, so you see what is working and what to improve next.
-            </p>
-          </div>
-
-          <p className="mt-16 sm:mt-20 text-[clamp(1.5rem,3.5vw,2.75rem)] font-medium leading-[1.1] tracking-[-0.03em] text-white">
-            If your users win, you win.
-          </p>
         </div>
       </section>
 
