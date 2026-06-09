@@ -4,6 +4,10 @@
 // more product-as-protagonist.
 // Copy rules: fifth grade reading level, no dashes anywhere, no pronouns for Tessa,
 // no language framing Tessa as a team replacement, no made up outcome claims.
+// Design system (x.ai inspired): near-black #0a0a0a canvas, weight 400 display type
+// with tight negative tracking (never bold), boxed mono uppercase eyebrows, 1px
+// hairlines for all depth (no shadows), outline pill CTAs with exactly one
+// white-filled pill on the page (the pay button).
 
 import PayButton from "./pay-button";
 
@@ -58,12 +62,21 @@ export default async function Page({
   const paid = params?.paid === "1";
   return (
     <div
-      className="min-h-screen bg-black text-white antialiased"
+      className="min-h-screen bg-[#0a0a0a] text-white antialiased"
       style={{ fontFamily: "var(--font-inter), -apple-system, system-ui, sans-serif" }}
     >
-      {/* Nav */}
-      <header className="fixed top-0 left-0 right-0 z-50 h-[72px] flex items-center px-6 sm:px-10 bg-black/60 backdrop-blur-md border-b border-white/[0.10]">
+      {/* Nav: wordmark left, one outline pill right. The pill is the x.ai interactive
+          vocabulary; the white-filled pill is reserved for the pay button below. */}
+      <header className="fixed top-0 left-0 right-0 z-50 h-[72px] flex items-center justify-between px-6 sm:px-10 bg-[#0a0a0a]/70 backdrop-blur-md border-b border-white/[0.10]">
         <Wordmark className="h-3 w-auto" />
+        <a
+          href={CAL_LINK}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-[13px] font-normal text-white border border-white/25 rounded-full px-4 py-1.5 hover:bg-white/[0.06] transition-colors"
+        >
+          Book a call
+        </a>
       </header>
 
       {/* Hero */}
@@ -78,7 +91,7 @@ export default async function Page({
             </p>
           </div>
         )}
-        <h1 className="text-[clamp(2.75rem,7vw,5.5rem)] font-medium leading-[1.02] tracking-[-0.035em] text-white max-w-[18ch] sm:mx-auto">
+        <h1 className="text-[clamp(2.75rem,7vw,6rem)] font-normal leading-[1.0] tracking-[-0.035em] text-white max-w-[18ch] sm:mx-auto">
           Stop guessing. Start knowing.
         </h1>
         <p className="mt-10 text-[clamp(1.05rem,1.45vw,1.25rem)] font-normal leading-[1.55] text-white/65 max-w-[640px] sm:mx-auto">
@@ -98,7 +111,7 @@ export default async function Page({
             Difference
           </span>
         </p>
-        <h2 className="text-[clamp(1.75rem,4vw,3.5rem)] font-medium leading-[1.05] tracking-[-0.035em] text-white max-w-[18ch] sm:mx-auto">
+        <h2 className="text-[clamp(1.75rem,4vw,3.5rem)] font-normal leading-[1.05] tracking-[-0.035em] text-white max-w-[18ch] sm:mx-auto">
           Predict or lose them
         </h2>
         <p className="mt-10 text-[clamp(1.05rem,1.45vw,1.25rem)] font-normal leading-[1.55] text-white/65 max-w-[640px] sm:mx-auto">
@@ -170,7 +183,7 @@ export default async function Page({
           (attention version muted, results version full white) separated by a hairline, big
           centered terminal. No top brand label (the body names them), no 2-column split. */}
       <section className="px-6 sm:px-10 py-32 sm:py-44 max-w-[1200px] mx-auto border-t border-white/[0.10] sm:text-center">
-        <h2 className="text-[clamp(2.5rem,7vw,6rem)] font-medium leading-[0.95] tracking-[-0.04em] text-white max-w-[14ch] sm:mx-auto">
+        <h2 className="text-[clamp(2.5rem,7vw,6rem)] font-normal leading-[0.95] tracking-[-0.04em] text-white max-w-[14ch] sm:mx-auto">
           Same engine. Opposite aim.
         </h2>
 
@@ -191,14 +204,19 @@ export default async function Page({
           </p>
         </div>
 
-        <p className="mt-20 sm:mt-28 text-[clamp(1.75rem,4.5vw,3.5rem)] font-medium leading-[1.05] tracking-[-0.035em] text-white max-w-[18ch] sm:mx-auto">
+        <p className="mt-20 sm:mt-28 text-[clamp(1.75rem,4.5vw,3.5rem)] font-normal leading-[1.05] tracking-[-0.035em] text-white max-w-[18ch] sm:mx-auto">
           If your users win, you win.
         </p>
       </section>
 
       {/* Get started: centered headline + editorial step rows + centered price/CTA bookend */}
       <section className="px-6 sm:px-10 py-28 sm:py-40 max-w-[1200px] mx-auto border-t border-white/[0.10] sm:text-center">
-        <h2 className="text-[clamp(1.75rem,4vw,3.5rem)] font-medium leading-[1.05] tracking-[-0.035em] text-white sm:mx-auto sm:whitespace-nowrap">
+        <p className="mb-6">
+          <span className="inline-block border border-white/20 px-3 py-1.5 text-[11px] font-mono tracking-[0.18em] uppercase text-white/55">
+            Process
+          </span>
+        </p>
+        <h2 className="text-[clamp(1.75rem,4vw,3.5rem)] font-normal leading-[1.05] tracking-[-0.035em] text-white sm:mx-auto sm:whitespace-nowrap">
           Discover. Build. Launch.
         </h2>
 
@@ -230,7 +248,7 @@ export default async function Page({
                 {s.n}
               </p>
               <div>
-                <h3 className="text-[clamp(1.25rem,1.6vw,1.5rem)] font-medium tracking-[-0.02em] text-white mb-3">
+                <h3 className="text-[clamp(1.25rem,1.6vw,1.5rem)] font-normal tracking-[-0.02em] text-white mb-3">
                   {s.t}
                 </h3>
                 <p className="text-[clamp(1rem,1.4vw,1.15rem)] font-normal leading-[1.6] text-white/65">
@@ -246,23 +264,20 @@ export default async function Page({
             <p className="text-[12px] font-mono tracking-[0.16em] uppercase text-white/55 mb-3">
               Price
             </p>
-            <p className="text-[clamp(2.75rem,6vw,4.5rem)] font-medium leading-none text-white tabular-nums tracking-[-0.04em]">
+            <p className="text-[clamp(2.75rem,6vw,4.5rem)] font-normal leading-none text-white tabular-nums tracking-[-0.04em]">
               $2,500
             </p>
           </div>
-          <div className="flex flex-col items-start sm:items-center gap-3">
+          <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3">
             <PayButton />
-            <p className="text-[13px] font-normal text-white/40">
-              More info?{" "}
-              <a
-                href={CAL_LINK}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-white/60 hover:text-white transition-colors"
-              >
-                Book a call.
-              </a>
-            </p>
+            <a
+              href={CAL_LINK}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center px-8 py-4 text-[14px] font-normal tracking-[0.04em] text-white border border-white/25 rounded-full hover:bg-white/[0.06] transition-colors"
+            >
+              Book a call
+            </a>
           </div>
         </div>
       </section>
@@ -270,7 +285,7 @@ export default async function Page({
       {/* Closing CTA: emotional, fades to nothing on the right like the wordmark */}
       <section className="px-6 sm:px-10 py-28 sm:py-40 max-w-[1200px] mx-auto border-t border-white/[0.10]">
         <h2
-          className="bg-clip-text text-transparent text-[clamp(1.25rem,2.5vw,2.25rem)] font-medium leading-[1.2] tracking-[-0.02em] max-w-[1080px] break-words"
+          className="bg-clip-text text-transparent text-[clamp(1.25rem,2.5vw,2.25rem)] font-normal leading-[1.2] tracking-[-0.02em] max-w-[1080px] break-words"
           style={{
             backgroundImage:
               "linear-gradient(to right, rgba(255,255,255,1) 0%, rgba(255,255,255,0.95) 60%, rgba(255,255,255,0.75) 85%, rgba(255,255,255,0.45) 100%)",
