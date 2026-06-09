@@ -5,10 +5,10 @@
 // Copy rules: fifth grade reading level, no dashes anywhere, no pronouns for Tessa,
 // no language framing Tessa as a team replacement, no made up outcome claims.
 // Design system: modern dark SaaS, kept plain on purpose. Near-black canvas, glassy
-// sticky nav with anchor links, rounded-2xl cards on white/[0.02..0.05] fills with
-// hairline borders, pill buttons (one white-filled primary), sharp boxed mono eyebrows,
-// medium-weight display type in solid white. No gradient text, no glow backdrops, no
-// decorative icons, no hover effects on static cards, no shadows, no accent color.
+// sticky nav with anchor links, editorial sections on a narrow 680px column with
+// hairline-divided rows (the Mission layout everywhere), pill buttons (one white-filled
+// primary), sharp boxed mono eyebrows, medium-weight display type in solid white.
+// No cards, no gradient text, no glows, no icons, no shadows, no accent color.
 
 import PayButton from "./pay-button";
 
@@ -123,7 +123,7 @@ export default async function Page({
       </header>
 
       {/* Hero: badge, gradient headline, subhead, dual CTAs, soft glow */}
-      <section className="px-6 pt-40 sm:pt-52 pb-24 sm:pb-32">
+      <section className="px-6 sm:px-10 pt-40 sm:pt-52 pb-24 sm:pb-32">
         <div className="max-w-[860px] mx-auto text-center">
           {paid && (
             <div className="mb-10 rounded-xl border border-white/[0.15] bg-white/[0.04] p-5 sm:p-6 max-w-[560px] mx-auto">
@@ -181,7 +181,7 @@ export default async function Page({
 
       {/* Mission: the counterforce manifesto, right under the hero. The threat in muted
           text, three Theirs/Ours contrast rows, then the stance in full white. */}
-      <section className="px-6 py-24 sm:py-32">
+      <section className="px-6 sm:px-10 py-24 sm:py-32">
         <div className="max-w-[1100px] mx-auto">
           <div className="text-center">
             <Eyebrow>Mission</Eyebrow>
@@ -222,8 +222,8 @@ export default async function Page({
         </div>
       </section>
 
-      {/* The difference: comparison cards, the SaaS problem/solution block */}
-      <section id="tessa" className="px-6 py-24 sm:py-32 scroll-mt-24">
+      {/* The difference: without vs with as paired hairline rows, Mission style */}
+      <section id="tessa" className="px-6 sm:px-10 py-24 sm:py-32 scroll-mt-24">
         <div className="max-w-[1100px] mx-auto">
           <div className="text-center">
             <Eyebrow>The difference</Eyebrow>
@@ -236,76 +236,58 @@ export default async function Page({
             </p>
           </div>
 
-          <div className="mt-14 grid gap-4 sm:gap-5 md:grid-cols-2 text-left">
-            {/* Without Tessa */}
-            <div className="rounded-2xl border border-white/[0.10] bg-white/[0.02] p-6 sm:p-8 flex flex-col">
-              <p className="text-[12px] font-mono tracking-[0.16em] uppercase text-white/45 mb-7">
+          <div className="mt-12 sm:mt-16 max-w-[680px] mx-auto text-left">
+            <div className="hidden sm:grid sm:grid-cols-2 gap-8 pb-4">
+              <p className="text-[12px] font-mono tracking-[0.16em] uppercase text-white/45">
                 Without Tessa
               </p>
-              <ol className="space-y-4 flex-1">
-                {[
-                  "Signs up wanting a clear result.",
-                  "Opens the product and pokes around.",
-                  "Tries a few things on the first session.",
-                  "Nothing they try fits the moment.",
-                  "Forgets to come back the next day.",
-                  "Cancels the account weeks later.",
-                ].map((step, i) => (
-                  <li
-                    key={i}
-                    className="text-[14.5px] font-normal leading-[1.55] text-white/45 flex gap-4"
-                  >
-                    <span className="text-[11px] font-mono text-white/30 tabular-nums shrink-0 pt-1">
-                      {String(i + 1).padStart(2, "0")}
-                    </span>
-                    <span>{step}</span>
-                  </li>
-                ))}
-              </ol>
-              <div className="mt-7 pt-6 border-t border-white/[0.08]">
-                <p className="text-[11px] font-mono tracking-[0.16em] uppercase text-white/35">
-                  Result: the user quits before they get what they wanted
-                </p>
-              </div>
-            </div>
-
-            {/* With Tessa */}
-            <div className="rounded-2xl border border-white/[0.18] bg-white/[0.05] p-6 sm:p-8 flex flex-col">
-              <p className="text-[12px] font-mono tracking-[0.16em] uppercase text-white/70 mb-7">
+              <p className="text-[12px] font-mono tracking-[0.16em] uppercase text-white/70">
                 With Tessa
               </p>
-              <ol className="space-y-4 flex-1">
-                {[
-                  "Signs up wanting a clear result.",
-                  "Tessa watches every move they make.",
+            </div>
+            <div className="divide-y divide-white/[0.10] border-y border-white/[0.10]">
+              {[
+                ["Signs up wanting a clear result.", "Signs up wanting a clear result."],
+                ["Opens the product and pokes around.", "Tessa watches every move they make."],
+                [
+                  "Tries a few things on the first session.",
                   "Tessa learns the patterns in their behavior.",
+                ],
+                [
+                  "Nothing they try fits the moment.",
                   "Tessa predicts where they will be in 30 days and 90 days.",
+                ],
+                [
+                  "Forgets to come back the next day.",
                   "Tessa surfaces the next move that gets them closer.",
+                ],
+                [
+                  "Cancels the account weeks later.",
                   "Step by step, they reach what they came for.",
-                ].map((step, i) => (
-                  <li
-                    key={i}
-                    className="text-[14.5px] font-normal leading-[1.55] text-white/80 flex gap-4"
-                  >
-                    <span className="text-[11px] font-mono text-white/55 tabular-nums shrink-0 pt-1">
-                      {String(i + 1).padStart(2, "0")}
-                    </span>
-                    <span>{step}</span>
-                  </li>
-                ))}
-              </ol>
-              <div className="mt-7 pt-6 border-t border-white/[0.15]">
-                <p className="text-[11px] font-mono tracking-[0.16em] uppercase text-white/85">
-                  Result: the user gets what they came for
-                </p>
-              </div>
+                ],
+              ].map(([before, after], i) => (
+                <div key={i} className="grid sm:grid-cols-2 gap-2 sm:gap-8 py-5">
+                  <p className="text-[15px] font-normal leading-[1.55] text-white/45">
+                    {before}
+                  </p>
+                  <p className="text-[15px] font-normal leading-[1.55] text-white">{after}</p>
+                </div>
+              ))}
+            </div>
+            <div className="grid sm:grid-cols-2 gap-2 sm:gap-8 pt-4">
+              <p className="text-[11px] font-mono tracking-[0.16em] uppercase text-white/35">
+                Result: the user quits
+              </p>
+              <p className="text-[11px] font-mono tracking-[0.16em] uppercase text-white/85">
+                Result: the user gets what they came for
+              </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Product: bento feature grid of what every user gets from Tessa */}
-      <section id="product" className="px-6 py-24 sm:py-32 scroll-mt-24">
+      {/* Product: what every user gets, as hairline rows, Mission style */}
+      <section id="product" className="px-6 sm:px-10 py-24 sm:py-32 scroll-mt-24">
         <div className="max-w-[1100px] mx-auto">
           <div className="text-center">
             <Eyebrow>Product</Eyebrow>
@@ -318,51 +300,53 @@ export default async function Page({
             </p>
           </div>
 
-          <div className="mt-14 grid gap-4 sm:gap-5 sm:grid-cols-2 lg:grid-cols-3 text-left">
-            {[
-              {
-                t: "Patterns",
-                d: "Tessa spots the habits that shape each user's results and shows how often they come up.",
-              },
-              {
-                t: "Forecast",
-                d: "Two paths in plain words. Where the user is headed at their current pace, and where the thing holding them back takes them instead.",
-              },
-              {
-                t: "Feedback",
-                d: "One clear next step after every session. Not a list of twenty things.",
-              },
-              {
-                t: "Sharper every session",
-                d: "Tessa learns more about each user with every session. The picture keeps getting sharper.",
-              },
-              {
-                t: "Real data only",
-                d: "Tessa works only from real session data. Tessa never guesses and never makes things up.",
-              },
-              {
-                t: "Private by default",
-                d: "Each user's Tessa is theirs alone. Never shared.",
-              },
-            ].map((f) => (
-              <div
-                key={f.t}
-                className="rounded-2xl border border-white/[0.10] bg-white/[0.02] p-6 sm:p-7"
-              >
-                <h3 className="text-[15.5px] font-medium tracking-[-0.01em] text-white">
-                  {f.t}
-                </h3>
-                <p className="mt-2 text-[14px] font-normal leading-[1.6] text-white/55">
-                  {f.d}
-                </p>
-              </div>
-            ))}
+          <div className="mt-12 sm:mt-16 max-w-[680px] mx-auto text-left">
+            <div className="divide-y divide-white/[0.10] border-y border-white/[0.10]">
+              {[
+                {
+                  t: "Patterns",
+                  d: "Tessa spots the habits that shape each user's results and shows how often they come up.",
+                },
+                {
+                  t: "Forecast",
+                  d: "Two paths in plain words. Where the user is headed at their current pace, and where the thing holding them back takes them instead.",
+                },
+                {
+                  t: "Feedback",
+                  d: "One clear next step after every session. Not a list of twenty things.",
+                },
+                {
+                  t: "Sharper every session",
+                  d: "Tessa learns more about each user with every session. The picture keeps getting sharper.",
+                },
+                {
+                  t: "Real data only",
+                  d: "Tessa works only from real session data. Tessa never guesses and never makes things up.",
+                },
+                {
+                  t: "Private by default",
+                  d: "Each user's Tessa is theirs alone. Never shared.",
+                },
+              ].map((f) => (
+                <div
+                  key={f.t}
+                  className="grid sm:grid-cols-[200px_1fr] gap-2 sm:gap-8 py-5"
+                >
+                  <h3 className="text-[15px] font-medium tracking-[-0.01em] text-white">
+                    {f.t}
+                  </h3>
+                  <p className="text-[15px] font-normal leading-[1.55] text-white/55">
+                    {f.d}
+                  </p>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
 
       {/* Same engine: the narrative statement section, kept card-less on purpose */}
-      <section className="px-6 py-24 sm:py-36">
+      <section className="px-6 sm:px-10 py-24 sm:py-36">
         <div className="max-w-[1100px] mx-auto text-center">
           <h2 className="text-[clamp(2.25rem,5.5vw,4.5rem)] font-medium leading-[1.0] tracking-[-0.035em] text-white max-w-[14ch] mx-auto">
             Same engine. Opposite aim.
@@ -391,8 +375,8 @@ export default async function Page({
         </div>
       </section>
 
-      {/* Process: three numbered step cards */}
-      <section id="process" className="px-6 py-24 sm:py-32 scroll-mt-24">
+      {/* Process: three numbered steps as hairline rows, Mission style */}
+      <section id="process" className="px-6 sm:px-10 py-24 sm:py-32 scroll-mt-24">
         <div className="max-w-[1100px] mx-auto">
           <div className="text-center">
             <Eyebrow>Process</Eyebrow>
@@ -401,104 +385,77 @@ export default async function Page({
             </h2>
           </div>
 
-          <div className="mt-14 grid gap-4 sm:gap-5 md:grid-cols-3 text-left">
-            {[
-              {
-                n: "01",
-                t: "Discover",
-                d: "We hop on a call with you to understand your business, your users, and the results you want them to achieve.",
-              },
-              {
-                n: "02",
-                t: "Build",
-                d: "We build the Tessa formula around your business so users get the right patterns and feedback to reach the results.",
-              },
-              {
-                n: "03",
-                t: "Launch",
-                d: "We wire Tessa up to your business, clean up bugs with test flights, and then push it to live.",
-              },
-            ].map((s) => (
-              <div
-                key={s.n}
-                className="rounded-2xl border border-white/[0.10] bg-white/[0.02] p-6 sm:p-7"
-              >
-                <p className="text-[13px] font-mono text-white/35 tabular-nums">{s.n}</p>
-                <h3 className="mt-4 text-[15.5px] font-medium tracking-[-0.01em] text-white">
-                  {s.t}
-                </h3>
-                <p className="mt-2 text-[14px] font-normal leading-[1.6] text-white/55">
-                  {s.d}
-                </p>
-              </div>
-            ))}
+          <div className="mt-12 sm:mt-16 max-w-[680px] mx-auto text-left">
+            <div className="divide-y divide-white/[0.10] border-y border-white/[0.10]">
+              {[
+                {
+                  n: "01",
+                  t: "Discover",
+                  d: "We hop on a call with you to understand your business, your users, and the results you want them to achieve.",
+                },
+                {
+                  n: "02",
+                  t: "Build",
+                  d: "We build the Tessa formula around your business so users get the right patterns and feedback to reach the results.",
+                },
+                {
+                  n: "03",
+                  t: "Launch",
+                  d: "We wire Tessa up to your business, clean up bugs with test flights, and then push it to live.",
+                },
+              ].map((s) => (
+                <div
+                  key={s.n}
+                  className="grid sm:grid-cols-[200px_1fr] gap-2 sm:gap-8 py-5"
+                >
+                  <div className="flex items-baseline gap-3">
+                    <span className="text-[12px] font-mono text-white/35 tabular-nums">
+                      {s.n}
+                    </span>
+                    <h3 className="text-[15px] font-medium tracking-[-0.01em] text-white">
+                      {s.t}
+                    </h3>
+                  </div>
+                  <p className="text-[15px] font-normal leading-[1.55] text-white/55">
+                    {s.d}
+                  </p>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
 
       {/* Pricing: single centered plan card */}
-      <section id="pricing" className="px-6 py-24 sm:py-32 scroll-mt-24">
-        <div className="max-w-[1100px] mx-auto">
-          <div className="text-center">
-            <Eyebrow>Pricing</Eyebrow>
-            <h2 className="text-[clamp(1.875rem,3.5vw,2.75rem)] font-medium leading-[1.1] tracking-[-0.03em] text-white">
-              One build. One price.
-            </h2>
-          </div>
-
-          <div className="mt-14 max-w-[880px] mx-auto rounded-2xl border border-white/[0.12] bg-white/[0.03] md:grid md:grid-cols-2 text-left">
-            <div className="p-7 sm:p-10 border-b md:border-b-0 md:border-r border-white/[0.10] flex flex-col">
-              <p className="text-[12px] font-mono tracking-[0.16em] uppercase text-white/55">
-                Tessa, built for your business
-              </p>
-              <p className="mt-6 text-[clamp(2.75rem,5vw,3.75rem)] font-medium leading-none text-white tabular-nums tracking-[-0.03em]">
-                $2,500
-              </p>
-              <p className="mt-4 text-[14px] font-normal leading-[1.6] text-white/55">
-                We build Tessa into your product and take it live.
-              </p>
-              <div className="mt-8 md:mt-auto md:pt-10 flex flex-col sm:flex-row sm:items-center gap-3">
-                <PayButton />
-                <a
-                  href={CAL_LINK}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center rounded-full border border-white/[0.15] bg-white/[0.02] px-7 py-3.5 text-[14px] font-normal text-white hover:bg-white/[0.08] transition-colors"
-                >
-                  Book a call
-                </a>
-              </div>
-            </div>
-            <div className="p-7 sm:p-10">
-              <p className="text-[12px] font-mono tracking-[0.16em] uppercase text-white/55">
-                What you get
-              </p>
-              <ul className="mt-3 divide-y divide-white/[0.08]">
-                {[
-                  "A call to understand your business and users",
-                  "The Tessa formula built around your business",
-                  "Wired into your product",
-                  "Test flights to clean up bugs",
-                  "Pushed to live",
-                ].map((item) => (
-                  <li
-                    key={item}
-                    className="py-3.5 text-[14px] font-normal leading-[1.5] text-white/70"
-                  >
-                    {item}
-                  </li>
-                ))}
-              </ul>
-            </div>
+      {/* Pricing: signal only. The price and the two ways to start. */}
+      <section id="pricing" className="px-6 sm:px-10 py-24 sm:py-32 scroll-mt-24">
+        <div className="max-w-[1100px] mx-auto text-center">
+          <Eyebrow>Pricing</Eyebrow>
+          <h2 className="text-[clamp(1.875rem,3.5vw,2.75rem)] font-medium leading-[1.1] tracking-[-0.03em] text-white">
+            One build. One price.
+          </h2>
+          <p className="mt-10 text-[clamp(3rem,6vw,4.5rem)] font-medium leading-none text-white tabular-nums tracking-[-0.03em]">
+            $2,500
+          </p>
+          <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-3">
+            <PayButton />
+            <a
+              href={CAL_LINK}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center rounded-full border border-white/[0.15] bg-white/[0.02] px-7 py-3.5 text-[14px] font-normal text-white hover:bg-white/[0.08] transition-colors"
+            >
+              Book a call
+            </a>
           </div>
         </div>
       </section>
 
       {/* Closing CTA */}
-      <section className="px-6 py-24 sm:py-36">
+      <section className="px-6 sm:px-10 py-24 sm:py-36">
         <div className="max-w-[860px] mx-auto text-left">
           <h2
-            className="bg-clip-text text-transparent text-[clamp(1.35rem,2.5vw,2rem)] font-medium leading-[1.3] tracking-[-0.02em]"
+            className="bg-clip-text text-transparent text-[clamp(1.5rem,3vw,2.5rem)] font-medium leading-[1.3] tracking-[-0.02em]"
             style={{
               backgroundImage:
                 "linear-gradient(to right, rgba(255,255,255,1) 0%, rgba(255,255,255,0.95) 60%, rgba(255,255,255,0.75) 85%, rgba(255,255,255,0.45) 100%)",
@@ -509,35 +466,6 @@ export default async function Page({
             You promised them a real result. Tessa is how you make sure they actually get
             one.
           </h2>
-          <div className="mt-10 flex flex-col sm:flex-row items-start sm:items-center gap-3">
-            <a
-              href="#pricing"
-              className="inline-flex items-center gap-2 rounded-full bg-white text-black px-7 py-3.5 text-[14px] font-medium hover:bg-white/90 transition-colors"
-            >
-              Get started
-              <svg
-                width="14"
-                height="14"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="1.8"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                aria-hidden="true"
-              >
-                <path d="M5 12h14M13 5l7 7-7 7" />
-              </svg>
-            </a>
-            <a
-              href={CAL_LINK}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center rounded-full border border-white/[0.15] bg-white/[0.04] px-7 py-3.5 text-[14px] font-normal text-white hover:bg-white/[0.08] transition-colors"
-            >
-              Book a call
-            </a>
-          </div>
         </div>
       </section>
 
