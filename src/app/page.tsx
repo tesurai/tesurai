@@ -447,8 +447,9 @@ export default async function Page({
               WebkitTextFillColor: "transparent",
             }}
           >
-            Their AI is built to capture your attention. Ours is built to build the best
-            you. We are not joining their game. We are the counterforce.
+            Their AI is built to capture your users&rsquo; attention. Tessa is built into
+            your business to get your users real results. We are not joining their game. We
+            are the counterforce.
           </h2>
         </div>
       </section>
