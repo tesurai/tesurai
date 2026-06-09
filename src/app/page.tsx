@@ -4,10 +4,10 @@
 // more product-as-protagonist.
 // Copy rules: fifth grade reading level, no dashes anywhere, no pronouns for Tessa,
 // no language framing Tessa as a team replacement, no made up outcome claims.
-// Design system (x.ai inspired): near-black #0a0a0a canvas, weight 400 display type
-// with tight negative tracking (never bold), boxed mono uppercase eyebrows, 1px
-// hairlines for all depth (no shadows), outline pill CTAs with exactly one
-// white-filled pill on the page (the pay button).
+// Design system: modern dark SaaS (Linear/Vercel school). Near-black canvas, glassy
+// sticky nav with anchor links, soft radial glows, rounded-2xl cards on white/[0.02..0.05]
+// fills with hairline borders, pill buttons (one white-filled primary), small pill
+// eyebrows, medium-weight display type with tight tracking. No shadows, no accent color.
 
 import PayButton from "./pay-button";
 
@@ -53,6 +53,17 @@ function Wordmark({ className = "h-4 w-auto" }: { className?: string }) {
   );
 }
 
+// Pill eyebrow used above section headlines.
+function Eyebrow({ children }: { children: React.ReactNode }) {
+  return (
+    <p className="mb-5 flex justify-center">
+      <span className="inline-flex items-center rounded-full border border-white/[0.12] bg-white/[0.04] px-3.5 py-1.5 text-[11px] font-mono tracking-[0.16em] uppercase text-white/60">
+        {children}
+      </span>
+    </p>
+  );
+}
+
 export default async function Page({
   searchParams,
 }: {
@@ -65,216 +76,106 @@ export default async function Page({
       className="min-h-screen bg-[#0a0a0a] text-white antialiased"
       style={{ fontFamily: "var(--font-inter), -apple-system, system-ui, sans-serif" }}
     >
-      {/* Nav: wordmark left, one outline pill right. The pill is the x.ai interactive
-          vocabulary; the white-filled pill is reserved for the pay button below. */}
-      <header className="fixed top-0 left-0 right-0 z-50 h-[72px] flex items-center justify-between px-6 sm:px-10 bg-[#0a0a0a]/70 backdrop-blur-md border-b border-white/[0.10]">
-        <Wordmark className="h-3 w-auto" />
-        <a
-          href={CAL_LINK}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-[13px] font-normal text-white border border-white/25 rounded-full px-4 py-1.5 hover:bg-white/[0.06] transition-colors"
-        >
-          Book a call
-        </a>
-      </header>
-
-      {/* Hero */}
-      <section className="px-6 sm:px-10 pt-44 sm:pt-56 pb-28 sm:pb-40 max-w-[1200px] mx-auto sm:text-center">
-        {paid && (
-          <div className="mb-12 border border-white/[0.15] bg-white/[0.04] rounded-lg p-5 sm:p-6 max-w-[560px] sm:mx-auto text-left sm:text-center">
-            <p className="text-[11px] font-mono tracking-[0.22em] uppercase text-white mb-2">
-              Payment received
-            </p>
-            <p className="text-[14px] sm:text-[15px] font-normal leading-[1.55] text-white/70">
-              Our team will reach out within a few hours to find a time to hop on a call.
-            </p>
-          </div>
-        )}
-        <h1 className="text-[clamp(2.75rem,7vw,6rem)] font-normal leading-[1.0] tracking-[-0.035em] text-white max-w-[18ch] sm:mx-auto">
-          Stop guessing. Start knowing.
-        </h1>
-        <p className="mt-10 text-[clamp(1.05rem,1.45vw,1.25rem)] font-normal leading-[1.55] text-white/65 max-w-[640px] sm:mx-auto">
-          Tessa learns each user, finds the patterns, and gives them the feedback to get
-          results. Built right into your product.
-        </p>
-      </section>
-
-      {/* The difference: single-column narrative like Same engine. Without Tessa dimmed,
-          With Tessa at full white, split by one hairline. No cards. */}
-      <section
-        id="tessa"
-        className="px-6 sm:px-10 py-28 sm:py-40 max-w-[1200px] mx-auto border-t border-white/[0.10] sm:text-center scroll-mt-24"
-      >
-        <p className="mb-6">
-          <span className="inline-block border border-white/20 px-3 py-1.5 text-[11px] font-mono tracking-[0.18em] uppercase text-white/55">
-            Difference
-          </span>
-        </p>
-        <h2 className="text-[clamp(1.75rem,4vw,3.5rem)] font-normal leading-[1.05] tracking-[-0.035em] text-white max-w-[18ch] sm:mx-auto">
-          Predict or lose them
-        </h2>
-        <p className="mt-10 text-[clamp(1.05rem,1.45vw,1.25rem)] font-normal leading-[1.55] text-white/65 max-w-[640px] sm:mx-auto">
-          Every user takes a path through your business. Most quit before they reach the end.
-        </p>
-
-        <div className="mt-20 sm:mt-28 max-w-[680px] sm:mx-auto text-left">
-          {/* Without Tessa: the path dimmed, like the attention paragraph in Same engine */}
-          <p className="text-[12px] font-mono tracking-[0.16em] uppercase text-white/45 mb-8">
-            Without Tessa
-          </p>
-          <ol className="space-y-4">
-            {[
-              "Signs up wanting a clear result.",
-              "Opens the product and pokes around.",
-              "Tries a few things on the first session.",
-              "Nothing they try fits the moment.",
-              "Forgets to come back the next day.",
-              "Cancels the account weeks later.",
-            ].map((step, i) => (
-              <li
-                key={i}
-                className="text-[15px] font-normal leading-[1.55] text-white/45 flex gap-4"
+      {/* Nav: glassy sticky bar with anchor links and a small filled CTA */}
+      <header className="fixed top-0 inset-x-0 z-50 border-b border-white/[0.08] bg-[#0a0a0a]/70 backdrop-blur-xl">
+        <div className="max-w-[1200px] mx-auto h-16 px-6 flex items-center justify-between">
+          <div className="flex items-center gap-10">
+            <Wordmark className="h-3 w-auto" />
+            <nav className="hidden md:flex items-center gap-7">
+              <a
+                href="#product"
+                className="text-[13.5px] font-normal text-white/60 hover:text-white transition-colors"
               >
-                <span className="text-[11px] font-mono text-white/30 tabular-nums shrink-0 pt-1">
-                  {String(i + 1).padStart(2, "0")}
-                </span>
-                <span>{step}</span>
-              </li>
-            ))}
-          </ol>
-          <p className="mt-8 text-[11px] font-mono tracking-[0.16em] uppercase text-white/35">
-            Result: the user quits before they get what they wanted
-          </p>
-
-          <div className="my-12 sm:my-14 border-t border-white/[0.10]" />
-
-          {/* With Tessa: the same path brought to full white */}
-          <p className="text-[12px] font-mono tracking-[0.16em] uppercase text-white/70 mb-8">
-            With Tessa
-          </p>
-          <ol className="space-y-4">
-            {[
-              "Signs up wanting a clear result.",
-              "Tessa watches every move they make.",
-              "Tessa learns the patterns in their behavior.",
-              "Tessa predicts where they will be in 30 days and 90 days.",
-              "Tessa surfaces the next move that gets them closer.",
-              "Step by step, they reach what they came for.",
-            ].map((step, i) => (
-              <li
-                key={i}
-                className="text-[15px] font-normal leading-[1.55] text-white/80 flex gap-4"
+                Product
+              </a>
+              <a
+                href="#process"
+                className="text-[13.5px] font-normal text-white/60 hover:text-white transition-colors"
               >
-                <span className="text-[11px] font-mono text-white/55 tabular-nums shrink-0 pt-1">
-                  {String(i + 1).padStart(2, "0")}
-                </span>
-                <span>{step}</span>
-              </li>
-            ))}
-          </ol>
-          <p className="mt-8 text-[11px] font-mono tracking-[0.16em] uppercase text-white/85">
-            Result: the user gets what they came for
-          </p>
-        </div>
-      </section>
-
-      {/* Same engine: single-column narrative. One bold headline, two stacked paragraphs
-          (attention version muted, results version full white) separated by a hairline, big
-          centered terminal. No top brand label (the body names them), no 2-column split. */}
-      <section className="px-6 sm:px-10 py-32 sm:py-44 max-w-[1200px] mx-auto border-t border-white/[0.10] sm:text-center">
-        <h2 className="text-[clamp(2.5rem,7vw,6rem)] font-normal leading-[0.95] tracking-[-0.04em] text-white max-w-[14ch] sm:mx-auto">
-          Same engine. Opposite aim.
-        </h2>
-
-        <div className="mt-20 sm:mt-28 max-w-[680px] sm:mx-auto text-left">
-          <p className="text-[clamp(1.1rem,1.5vw,1.3rem)] font-normal leading-[1.65] text-white/60">
-            TikTok, Instagram, and YouTube built this engine to win your attention. They watch
-            every move you make. They learn what keeps your eyes on the screen. They pick the
-            next video to keep you scrolling.
-          </p>
-
-          <div className="my-12 sm:my-14 border-t border-white/[0.10]" />
-
-          <p className="text-[clamp(1.1rem,1.5vw,1.3rem)] font-normal leading-[1.65] text-white">
-            Tessa is built on the same engine, pointed at the results your users actually want.
-            Tessa finds the patterns in each user&rsquo;s behavior and gives them feedback that
-            helps them reach the result they came for. Every pattern feeds back to you, so you
-            see what is working and what to improve next.
-          </p>
-        </div>
-
-        <p className="mt-20 sm:mt-28 text-[clamp(1.75rem,4.5vw,3.5rem)] font-normal leading-[1.05] tracking-[-0.035em] text-white max-w-[18ch] sm:mx-auto">
-          If your users win, you win.
-        </p>
-      </section>
-
-      {/* Get started: centered headline + editorial step rows + centered price/CTA bookend */}
-      <section className="px-6 sm:px-10 py-28 sm:py-40 max-w-[1200px] mx-auto border-t border-white/[0.10] sm:text-center">
-        <p className="mb-6">
-          <span className="inline-block border border-white/20 px-3 py-1.5 text-[11px] font-mono tracking-[0.18em] uppercase text-white/55">
-            Process
-          </span>
-        </p>
-        <h2 className="text-[clamp(1.75rem,4vw,3.5rem)] font-normal leading-[1.05] tracking-[-0.035em] text-white sm:mx-auto sm:whitespace-nowrap">
-          Discover. Build. Launch.
-        </h2>
-
-        {/* Editorial step rows in the same skinny column as Same engine: mono numeral on the
-            left, content on the right, one hairline between each. No card backgrounds. */}
-        <div className="mt-20 sm:mt-24 text-left max-w-[680px] sm:mx-auto border-t border-white/[0.10]">
-          {[
-            {
-              n: "01",
-              t: "Discover",
-              d: "We hop on a call with you to understand your business, your users, and the results you want them to achieve.",
-            },
-            {
-              n: "02",
-              t: "Build",
-              d: "We build the Tessa formula around your business so users get the right patterns and feedback to reach the results.",
-            },
-            {
-              n: "03",
-              t: "Launch",
-              d: "We wire Tessa up to your business, clean up bugs with test flights, and then push it to live.",
-            },
-          ].map((s) => (
-            <article
-              key={s.n}
-              className="grid gap-4 sm:gap-8 sm:grid-cols-[88px_1fr] sm:items-start py-10 sm:py-14 border-b border-white/[0.10]"
-            >
-              <p className="text-[clamp(2rem,3.2vw,3rem)] font-mono font-normal leading-none tracking-[-0.03em] text-white/30 tabular-nums">
-                {s.n}
-              </p>
-              <div>
-                <h3 className="text-[clamp(1.25rem,1.6vw,1.5rem)] font-normal tracking-[-0.02em] text-white mb-3">
-                  {s.t}
-                </h3>
-                <p className="text-[clamp(1rem,1.4vw,1.15rem)] font-normal leading-[1.6] text-white/65">
-                  {s.d}
-                </p>
-              </div>
-            </article>
-          ))}
-        </div>
-
-        <div className="mt-16 flex flex-col items-start sm:items-center gap-8">
-          <div>
-            <p className="text-[12px] font-mono tracking-[0.16em] uppercase text-white/55 mb-3">
-              Price
-            </p>
-            <p className="text-[clamp(2.75rem,6vw,4.5rem)] font-normal leading-none text-white tabular-nums tracking-[-0.04em]">
-              $2,500
-            </p>
+                Process
+              </a>
+              <a
+                href="#pricing"
+                className="text-[13.5px] font-normal text-white/60 hover:text-white transition-colors"
+              >
+                Pricing
+              </a>
+            </nav>
           </div>
-          <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3">
-            <PayButton />
+          <div className="flex items-center gap-5">
             <a
               href={CAL_LINK}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center px-8 py-4 text-[14px] font-normal tracking-[0.04em] text-white border border-white/25 rounded-full hover:bg-white/[0.06] transition-colors"
+              className="hidden sm:inline text-[13.5px] font-normal text-white/60 hover:text-white transition-colors"
+            >
+              Book a call
+            </a>
+            <a
+              href="#pricing"
+              className="inline-flex items-center rounded-full bg-white text-black px-4 py-2 text-[13px] font-medium hover:bg-white/90 transition-colors"
+            >
+              Get started
+            </a>
+          </div>
+        </div>
+      </header>
+
+      {/* Hero: badge, gradient headline, subhead, dual CTAs, soft glow */}
+      <section className="relative overflow-hidden px-6 pt-40 sm:pt-52 pb-24 sm:pb-32">
+        <div
+          aria-hidden
+          className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_60%_50%_at_50%_0%,rgba(255,255,255,0.09),transparent_70%)]"
+        />
+        <div className="relative max-w-[860px] mx-auto text-center">
+          {paid && (
+            <div className="mb-10 rounded-xl border border-white/[0.15] bg-white/[0.04] p-5 sm:p-6 max-w-[560px] mx-auto">
+              <p className="text-[11px] font-mono tracking-[0.22em] uppercase text-white mb-2">
+                Payment received
+              </p>
+              <p className="text-[14px] sm:text-[15px] font-normal leading-[1.55] text-white/70">
+                Our team will reach out within a few hours to find a time to hop on a call.
+              </p>
+            </div>
+          )}
+          <p className="mb-7 flex justify-center">
+            <span className="inline-flex items-center gap-2 rounded-full border border-white/[0.12] bg-white/[0.04] px-4 py-1.5 text-[12px] font-normal text-white/70">
+              <span className="h-1.5 w-1.5 rounded-full bg-white/80" aria-hidden />
+              The intelligence layer for digital products
+            </span>
+          </p>
+          <h1 className="text-[clamp(2.75rem,6.5vw,4.75rem)] font-medium leading-[1.05] tracking-[-0.03em] bg-gradient-to-b from-white to-white/60 bg-clip-text text-transparent">
+            Stop guessing. Start knowing.
+          </h1>
+          <p className="mt-7 text-[clamp(1.05rem,1.45vw,1.2rem)] font-normal leading-[1.6] text-white/60 max-w-[600px] mx-auto">
+            Tessa learns each user, finds the patterns, and gives them the feedback to get
+            results. Built right into your product.
+          </p>
+          <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-3">
+            <a
+              href="#pricing"
+              className="inline-flex items-center gap-2 rounded-full bg-white text-black px-7 py-3.5 text-[14px] font-medium hover:bg-white/90 transition-colors"
+            >
+              Get started
+              <svg
+                width="14"
+                height="14"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="1.8"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                aria-hidden="true"
+              >
+                <path d="M5 12h14M13 5l7 7-7 7" />
+              </svg>
+            </a>
+            <a
+              href={CAL_LINK}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center rounded-full border border-white/[0.15] bg-white/[0.04] px-7 py-3.5 text-[14px] font-normal text-white hover:bg-white/[0.08] transition-colors"
             >
               Book a call
             </a>
@@ -282,24 +183,384 @@ export default async function Page({
         </div>
       </section>
 
-      {/* Closing CTA: emotional, fades to nothing on the right like the wordmark */}
-      <section className="px-6 sm:px-10 py-28 sm:py-40 max-w-[1200px] mx-auto border-t border-white/[0.10]">
-        <h2
-          className="bg-clip-text text-transparent text-[clamp(1.25rem,2.5vw,2.25rem)] font-normal leading-[1.2] tracking-[-0.02em] max-w-[1080px] break-words"
-          style={{
-            backgroundImage:
-              "linear-gradient(to right, rgba(255,255,255,1) 0%, rgba(255,255,255,0.95) 60%, rgba(255,255,255,0.75) 85%, rgba(255,255,255,0.45) 100%)",
-            WebkitTextFillColor: "transparent",
-          }}
-        >
-          Every user deserves to get what they came for. You built the product for them. You
-          promised them a real result. Tessa is how you make sure they actually get one.
-        </h2>
+      {/* The difference: comparison cards, the SaaS problem/solution block */}
+      <section id="tessa" className="px-6 py-24 sm:py-32 scroll-mt-24">
+        <div className="max-w-[1100px] mx-auto">
+          <div className="text-center">
+            <Eyebrow>The difference</Eyebrow>
+            <h2 className="text-[clamp(1.875rem,3.5vw,2.75rem)] font-medium leading-[1.1] tracking-[-0.03em] text-white">
+              Predict or lose them
+            </h2>
+            <p className="mt-5 text-[clamp(1rem,1.3vw,1.15rem)] font-normal leading-[1.6] text-white/60 max-w-[560px] mx-auto">
+              Every user takes a path through your business. Most quit before they reach the
+              end.
+            </p>
+          </div>
+
+          <div className="mt-14 grid gap-4 sm:gap-5 md:grid-cols-2 text-left">
+            {/* Without Tessa */}
+            <div className="rounded-2xl border border-white/[0.10] bg-white/[0.02] p-6 sm:p-8 flex flex-col">
+              <p className="text-[12px] font-mono tracking-[0.16em] uppercase text-white/45 mb-7">
+                Without Tessa
+              </p>
+              <ol className="space-y-4 flex-1">
+                {[
+                  "Signs up wanting a clear result.",
+                  "Opens the product and pokes around.",
+                  "Tries a few things on the first session.",
+                  "Nothing they try fits the moment.",
+                  "Forgets to come back the next day.",
+                  "Cancels the account weeks later.",
+                ].map((step, i) => (
+                  <li
+                    key={i}
+                    className="text-[14.5px] font-normal leading-[1.55] text-white/45 flex gap-4"
+                  >
+                    <span className="text-[11px] font-mono text-white/30 tabular-nums shrink-0 pt-1">
+                      {String(i + 1).padStart(2, "0")}
+                    </span>
+                    <span>{step}</span>
+                  </li>
+                ))}
+              </ol>
+              <div className="mt-7 pt-6 border-t border-white/[0.08]">
+                <p className="text-[11px] font-mono tracking-[0.16em] uppercase text-white/35">
+                  Result: the user quits before they get what they wanted
+                </p>
+              </div>
+            </div>
+
+            {/* With Tessa */}
+            <div className="rounded-2xl border border-white/[0.18] bg-white/[0.05] p-6 sm:p-8 flex flex-col">
+              <p className="text-[12px] font-mono tracking-[0.16em] uppercase text-white/70 mb-7">
+                With Tessa
+              </p>
+              <ol className="space-y-4 flex-1">
+                {[
+                  "Signs up wanting a clear result.",
+                  "Tessa watches every move they make.",
+                  "Tessa learns the patterns in their behavior.",
+                  "Tessa predicts where they will be in 30 days and 90 days.",
+                  "Tessa surfaces the next move that gets them closer.",
+                  "Step by step, they reach what they came for.",
+                ].map((step, i) => (
+                  <li
+                    key={i}
+                    className="text-[14.5px] font-normal leading-[1.55] text-white/80 flex gap-4"
+                  >
+                    <span className="text-[11px] font-mono text-white/55 tabular-nums shrink-0 pt-1">
+                      {String(i + 1).padStart(2, "0")}
+                    </span>
+                    <span>{step}</span>
+                  </li>
+                ))}
+              </ol>
+              <div className="mt-7 pt-6 border-t border-white/[0.15]">
+                <p className="text-[11px] font-mono tracking-[0.16em] uppercase text-white/85">
+                  Result: the user gets what they came for
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Product: bento feature grid of what every user gets from Tessa */}
+      <section id="product" className="px-6 py-24 sm:py-32 scroll-mt-24">
+        <div className="max-w-[1100px] mx-auto">
+          <div className="text-center">
+            <Eyebrow>Product</Eyebrow>
+            <h2 className="text-[clamp(1.875rem,3.5vw,2.75rem)] font-medium leading-[1.1] tracking-[-0.03em] text-white">
+              Every user gets their own Tessa
+            </h2>
+            <p className="mt-5 text-[clamp(1rem,1.3vw,1.15rem)] font-normal leading-[1.6] text-white/60 max-w-[560px] mx-auto">
+              After every session, Tessa reads the data, finds the patterns, and shows each
+              user the next move.
+            </p>
+          </div>
+
+          <div className="mt-14 grid gap-4 sm:gap-5 sm:grid-cols-2 lg:grid-cols-3 text-left">
+            {[
+              {
+                t: "Patterns",
+                d: "Tessa names the patterns in each user's behavior and shows how many times each one comes up.",
+                icon: <path d="M3 17l5-6 4 4 6-8" />,
+              },
+              {
+                t: "Forecast",
+                d: "Two paths in plain words. Where the current pace leads, and where the thing holding them back leads instead.",
+                icon: (
+                  <>
+                    <path d="M4 12h7" />
+                    <path d="M11 12c4 0 4.5-4 9-4" />
+                    <path d="M11 12c4 0 4.5 4 9 4" />
+                  </>
+                ),
+              },
+              {
+                t: "Feedback",
+                d: "One clear action to take next. Not a list of twenty things.",
+                icon: (
+                  <>
+                    <circle cx="12" cy="12" r="9" />
+                    <path d="M8 12h6" />
+                    <path d="M12 9.5l2.5 2.5-2.5 2.5" />
+                  </>
+                ),
+              },
+              {
+                t: "Sharper every session",
+                d: "Every session teaches Tessa more. The picture of each user gets sharper over time.",
+                icon: (
+                  <>
+                    <path d="M21 12a9 9 0 1 1-3-6.7" />
+                    <path d="M21 3v6h-6" />
+                  </>
+                ),
+              },
+              {
+                t: "Real data only",
+                d: "Tessa works from real session data only. Tessa never guesses and never makes things up.",
+                icon: (
+                  <>
+                    <ellipse cx="12" cy="5" rx="8" ry="3" />
+                    <path d="M4 5v14c0 1.7 3.6 3 8 3s8-1.3 8-3V5" />
+                    <path d="M4 12c0 1.7 3.6 3 8 3s8-1.3 8-3" />
+                  </>
+                ),
+              },
+              {
+                t: "Private by default",
+                d: "Each user's Tessa belongs to them and is never shared.",
+                icon: (
+                  <>
+                    <rect x="5" y="11" width="14" height="9" rx="2" />
+                    <path d="M8 11V7a4 4 0 0 1 8 0v4" />
+                  </>
+                ),
+              },
+            ].map((f) => (
+              <div
+                key={f.t}
+                className="rounded-2xl border border-white/[0.10] bg-white/[0.02] p-6 sm:p-7 hover:border-white/[0.18] transition-colors"
+              >
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="1.5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  aria-hidden="true"
+                  className="text-white/50"
+                >
+                  {f.icon}
+                </svg>
+                <h3 className="mt-5 text-[15.5px] font-medium tracking-[-0.01em] text-white">
+                  {f.t}
+                </h3>
+                <p className="mt-2 text-[14px] font-normal leading-[1.6] text-white/55">
+                  {f.d}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Same engine: the narrative statement section, kept card-less on purpose */}
+      <section className="px-6 py-24 sm:py-36">
+        <div className="max-w-[1100px] mx-auto text-center">
+          <h2 className="text-[clamp(2.25rem,5.5vw,4.5rem)] font-medium leading-[1.0] tracking-[-0.035em] text-white max-w-[14ch] mx-auto">
+            Same engine. Opposite aim.
+          </h2>
+
+          <div className="mt-16 sm:mt-20 max-w-[680px] mx-auto text-left">
+            <p className="text-[clamp(1.05rem,1.4vw,1.25rem)] font-normal leading-[1.65] text-white/60">
+              TikTok, Instagram, and YouTube built this engine to win your attention. They
+              watch every move you make. They learn what keeps your eyes on the screen. They
+              pick the next video to keep you scrolling.
+            </p>
+
+            <div className="my-10 sm:my-12 border-t border-white/[0.10]" />
+
+            <p className="text-[clamp(1.05rem,1.4vw,1.25rem)] font-normal leading-[1.65] text-white">
+              Tessa is built on the same engine, pointed at the results your users actually
+              want. Tessa finds the patterns in each user&rsquo;s behavior and gives them
+              feedback that helps them reach the result they came for. Every pattern feeds
+              back to you, so you see what is working and what to improve next.
+            </p>
+          </div>
+
+          <p className="mt-16 sm:mt-20 text-[clamp(1.5rem,3.5vw,2.75rem)] font-medium leading-[1.1] tracking-[-0.03em] text-white">
+            If your users win, you win.
+          </p>
+        </div>
+      </section>
+
+      {/* Process: three numbered step cards */}
+      <section id="process" className="px-6 py-24 sm:py-32 scroll-mt-24">
+        <div className="max-w-[1100px] mx-auto">
+          <div className="text-center">
+            <Eyebrow>Process</Eyebrow>
+            <h2 className="text-[clamp(1.875rem,3.5vw,2.75rem)] font-medium leading-[1.1] tracking-[-0.03em] text-white">
+              Discover. Build. Launch.
+            </h2>
+          </div>
+
+          <div className="mt-14 grid gap-4 sm:gap-5 md:grid-cols-3 text-left">
+            {[
+              {
+                n: "01",
+                t: "Discover",
+                d: "We hop on a call with you to understand your business, your users, and the results you want them to achieve.",
+              },
+              {
+                n: "02",
+                t: "Build",
+                d: "We build the Tessa formula around your business so users get the right patterns and feedback to reach the results.",
+              },
+              {
+                n: "03",
+                t: "Launch",
+                d: "We wire Tessa up to your business, clean up bugs with test flights, and then push it to live.",
+              },
+            ].map((s) => (
+              <div
+                key={s.n}
+                className="rounded-2xl border border-white/[0.10] bg-white/[0.02] p-6 sm:p-7 hover:border-white/[0.18] transition-colors"
+              >
+                <p className="text-[13px] font-mono text-white/35 tabular-nums">{s.n}</p>
+                <h3 className="mt-4 text-[15.5px] font-medium tracking-[-0.01em] text-white">
+                  {s.t}
+                </h3>
+                <p className="mt-2 text-[14px] font-normal leading-[1.6] text-white/55">
+                  {s.d}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Pricing: single centered plan card */}
+      <section id="pricing" className="relative overflow-hidden px-6 py-24 sm:py-32 scroll-mt-24">
+        <div
+          aria-hidden
+          className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_50%_40%_at_50%_100%,rgba(255,255,255,0.06),transparent_70%)]"
+        />
+        <div className="relative max-w-[1100px] mx-auto">
+          <div className="text-center">
+            <Eyebrow>Pricing</Eyebrow>
+            <h2 className="text-[clamp(1.875rem,3.5vw,2.75rem)] font-medium leading-[1.1] tracking-[-0.03em] text-white">
+              One build. One price.
+            </h2>
+          </div>
+
+          <div className="mt-14 max-w-[440px] mx-auto rounded-2xl border border-white/[0.14] bg-white/[0.04] p-7 sm:p-9 text-left">
+            <p className="text-[12px] font-mono tracking-[0.16em] uppercase text-white/55">
+              Tessa, built for your business
+            </p>
+            <p className="mt-5 text-[clamp(2.5rem,5vw,3.5rem)] font-medium leading-none text-white tabular-nums tracking-[-0.03em]">
+              $2,500
+            </p>
+            <ul className="mt-8 space-y-3.5">
+              {[
+                "A call to understand your business and users",
+                "The Tessa formula built around your business",
+                "Wired into your product",
+                "Test flights to clean up bugs",
+                "Pushed to live",
+              ].map((item) => (
+                <li
+                  key={item}
+                  className="flex items-start gap-3 text-[14px] font-normal leading-[1.5] text-white/70"
+                >
+                  <svg
+                    width="15"
+                    height="15"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    aria-hidden="true"
+                    className="text-white/60 shrink-0 mt-[3px]"
+                  >
+                    <path d="M20 6L9 17l-5-5" />
+                  </svg>
+                  {item}
+                </li>
+              ))}
+            </ul>
+            <div className="mt-9 flex flex-col gap-3">
+              <PayButton />
+              <a
+                href={CAL_LINK}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center rounded-full border border-white/[0.15] bg-white/[0.02] px-7 py-3.5 text-[14px] font-normal text-white hover:bg-white/[0.08] transition-colors"
+              >
+                Book a call
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Closing CTA */}
+      <section className="relative overflow-hidden px-6 py-24 sm:py-36">
+        <div className="relative max-w-[860px] mx-auto text-center">
+          <h2
+            className="bg-clip-text text-transparent text-[clamp(1.35rem,2.5vw,2rem)] font-medium leading-[1.3] tracking-[-0.02em]"
+            style={{
+              backgroundImage:
+                "linear-gradient(to right, rgba(255,255,255,1) 0%, rgba(255,255,255,0.95) 60%, rgba(255,255,255,0.75) 85%, rgba(255,255,255,0.45) 100%)",
+              WebkitTextFillColor: "transparent",
+            }}
+          >
+            Every user deserves to get what they came for. You built the product for them.
+            You promised them a real result. Tessa is how you make sure they actually get
+            one.
+          </h2>
+          <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-3">
+            <a
+              href="#pricing"
+              className="inline-flex items-center gap-2 rounded-full bg-white text-black px-7 py-3.5 text-[14px] font-medium hover:bg-white/90 transition-colors"
+            >
+              Get started
+              <svg
+                width="14"
+                height="14"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="1.8"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                aria-hidden="true"
+              >
+                <path d="M5 12h14M13 5l7 7-7 7" />
+              </svg>
+            </a>
+            <a
+              href={CAL_LINK}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center rounded-full border border-white/[0.15] bg-white/[0.04] px-7 py-3.5 text-[14px] font-normal text-white hover:bg-white/[0.08] transition-colors"
+            >
+              Book a call
+            </a>
+          </div>
+        </div>
       </section>
 
       {/* Footer: flat row on desktop, tight stack on mobile. No mono category labels above
           single items. Touch targets padded for mobile thumbs. */}
-      <footer className="px-6 sm:px-10 py-12 sm:py-14 border-t border-white/[0.10]">
+      <footer className="px-6 sm:px-10 py-12 sm:py-14 border-t border-white/[0.08]">
         <div className="max-w-[1200px] mx-auto">
           {/* Top row: wordmark + links/socials. Stacks on mobile, single row on desktop. */}
           <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-8 sm:gap-6">
@@ -307,10 +568,22 @@ export default async function Page({
 
             <div className="flex flex-col sm:flex-row sm:items-center gap-5 sm:gap-8">
               <a
-                href="#tessa"
+                href="#product"
                 className="text-[14px] font-normal text-white/65 hover:text-white transition-colors"
               >
-                Tessa
+                Product
+              </a>
+              <a
+                href="#process"
+                className="text-[14px] font-normal text-white/65 hover:text-white transition-colors"
+              >
+                Process
+              </a>
+              <a
+                href="#pricing"
+                className="text-[14px] font-normal text-white/65 hover:text-white transition-colors"
+              >
+                Pricing
               </a>
               <a
                 href="mailto:hello@tesurai.com"
