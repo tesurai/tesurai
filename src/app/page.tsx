@@ -348,6 +348,49 @@ export default async function Page({
         </div>
       </section>
 
+      {/* Mission: the counterforce manifesto. Editorial like Same engine. The threat in
+          muted text, three Theirs/Ours contrast rows, then the stance in full white. */}
+      <section className="px-6 py-24 sm:py-32">
+        <div className="max-w-[1100px] mx-auto">
+          <div className="text-center">
+            <Eyebrow>Mission</Eyebrow>
+            <h2 className="text-[clamp(1.875rem,3.5vw,2.75rem)] font-medium leading-[1.1] tracking-[-0.03em] text-white">
+              We are building the counterforce
+            </h2>
+          </div>
+
+          <div className="mt-12 sm:mt-16 max-w-[680px] mx-auto text-left">
+            <p className="text-[clamp(1.05rem,1.4vw,1.25rem)] font-normal leading-[1.65] text-white/60">
+              Big companies use AI to make people weaker, dumber, more distracted, more
+              dependent, and easier to control. Pretending AI will go away does not make it
+              go away. Sitting on the sidelines is how we lose.
+            </p>
+
+            <div className="my-10 sm:my-12 divide-y divide-white/[0.10] border-y border-white/[0.10]">
+              {[
+                ["Their AI captures your attention.", "Ours builds the best you."],
+                ["Their AI makes people dependent.", "Ours makes people independent."],
+                ["They use this technology on you.", "We put it in your hands."],
+              ].map(([theirs, ours]) => (
+                <div key={theirs} className="grid sm:grid-cols-2 gap-2 sm:gap-8 py-5">
+                  <p className="text-[15px] font-normal leading-[1.55] text-white/45">
+                    {theirs}
+                  </p>
+                  <p className="text-[15px] font-normal leading-[1.55] text-white">{ours}</p>
+                </div>
+              ))}
+            </div>
+
+            <p className="text-[clamp(1.05rem,1.4vw,1.25rem)] font-normal leading-[1.65] text-white">
+              We are not joining their game. We take the same system the giants built and
+              flip the script for consumer businesses like yours. Your users get real
+              results and grow into a more capable version of themselves. That is the
+              fight, and that is how we win it.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* Process: three numbered step cards */}
       <section id="process" className="px-6 py-24 sm:py-32 scroll-mt-24">
         <div className="max-w-[1100px] mx-auto">
@@ -403,53 +446,49 @@ export default async function Page({
             </h2>
           </div>
 
-          <div className="mt-14 max-w-[440px] mx-auto rounded-2xl border border-white/[0.14] bg-white/[0.04] p-7 sm:p-9 text-left">
-            <p className="text-[12px] font-mono tracking-[0.16em] uppercase text-white/55">
-              Tessa, built for your business
-            </p>
-            <p className="mt-5 text-[clamp(2.5rem,5vw,3.5rem)] font-medium leading-none text-white tabular-nums tracking-[-0.03em]">
-              $2,500
-            </p>
-            <ul className="mt-8 space-y-3.5">
-              {[
-                "A call to understand your business and users",
-                "The Tessa formula built around your business",
-                "Wired into your product",
-                "Test flights to clean up bugs",
-                "Pushed to live",
-              ].map((item) => (
-                <li
-                  key={item}
-                  className="flex items-start gap-3 text-[14px] font-normal leading-[1.5] text-white/70"
+          <div className="mt-14 max-w-[880px] mx-auto rounded-2xl border border-white/[0.12] bg-white/[0.03] md:grid md:grid-cols-2 text-left">
+            <div className="p-7 sm:p-10 border-b md:border-b-0 md:border-r border-white/[0.10] flex flex-col">
+              <p className="text-[12px] font-mono tracking-[0.16em] uppercase text-white/55">
+                Tessa, built for your business
+              </p>
+              <p className="mt-6 text-[clamp(2.75rem,5vw,3.75rem)] font-medium leading-none text-white tabular-nums tracking-[-0.03em]">
+                $2,500
+              </p>
+              <p className="mt-4 text-[14px] font-normal leading-[1.6] text-white/55">
+                We build Tessa into your product and take it live.
+              </p>
+              <div className="mt-8 md:mt-auto md:pt-10 flex flex-col sm:flex-row sm:items-center gap-3">
+                <PayButton />
+                <a
+                  href={CAL_LINK}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center rounded-full border border-white/[0.15] bg-white/[0.02] px-7 py-3.5 text-[14px] font-normal text-white hover:bg-white/[0.08] transition-colors"
                 >
-                  <svg
-                    width="15"
-                    height="15"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    aria-hidden="true"
-                    className="text-white/60 shrink-0 mt-[3px]"
+                  Book a call
+                </a>
+              </div>
+            </div>
+            <div className="p-7 sm:p-10">
+              <p className="text-[12px] font-mono tracking-[0.16em] uppercase text-white/55">
+                What you get
+              </p>
+              <ul className="mt-3 divide-y divide-white/[0.08]">
+                {[
+                  "A call to understand your business and users",
+                  "The Tessa formula built around your business",
+                  "Wired into your product",
+                  "Test flights to clean up bugs",
+                  "Pushed to live",
+                ].map((item) => (
+                  <li
+                    key={item}
+                    className="py-3.5 text-[14px] font-normal leading-[1.5] text-white/70"
                   >
-                    <path d="M20 6L9 17l-5-5" />
-                  </svg>
-                  {item}
-                </li>
-              ))}
-            </ul>
-            <div className="mt-9 flex flex-col gap-3">
-              <PayButton />
-              <a
-                href={CAL_LINK}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center rounded-full border border-white/[0.15] bg-white/[0.02] px-7 py-3.5 text-[14px] font-normal text-white hover:bg-white/[0.08] transition-colors"
-              >
-                Book a call
-              </a>
+                    {item}
+                  </li>
+                ))}
+              </ul>
             </div>
           </div>
         </div>
@@ -457,7 +496,7 @@ export default async function Page({
 
       {/* Closing CTA */}
       <section className="px-6 py-24 sm:py-36">
-        <div className="max-w-[860px] mx-auto text-center">
+        <div className="max-w-[860px] mx-auto text-left">
           <h2
             className="bg-clip-text text-transparent text-[clamp(1.35rem,2.5vw,2rem)] font-medium leading-[1.3] tracking-[-0.02em]"
             style={{
@@ -470,7 +509,7 @@ export default async function Page({
             You promised them a real result. Tessa is how you make sure they actually get
             one.
           </h2>
-          <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-3">
+          <div className="mt-10 flex flex-col sm:flex-row items-start sm:items-center gap-3">
             <a
               href="#pricing"
               className="inline-flex items-center gap-2 rounded-full bg-white text-black px-7 py-3.5 text-[14px] font-medium hover:bg-white/90 transition-colors"
