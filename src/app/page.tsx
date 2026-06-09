@@ -367,7 +367,7 @@ export default async function Page({
           <div className="text-center">
             <Eyebrow>Process</Eyebrow>
             <h2 className="text-[clamp(1.875rem,3.5vw,2.75rem)] font-medium leading-[1.1] tracking-[-0.03em] text-white">
-              Discover. Build. Launch.
+              Onboard. Build. Launch.
             </h2>
           </div>
 
@@ -376,7 +376,7 @@ export default async function Page({
               {[
                 {
                   n: "01",
-                  t: "Discover",
+                  t: "Onboard",
                   d: "We hop on a call with you to understand your business, your users, and the results you want them to achieve.",
                 },
                 {
