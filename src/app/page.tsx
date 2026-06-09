@@ -199,6 +199,32 @@ export default async function Page({
         </p>
       </section>
 
+      {/* Proof: Tessa in the wild. Tessa is already built into a live product (Abbelo).
+          The quote substance is pulled straight from how Tessa works, with no invented
+          metrics, so it holds to the copy rules. Typographic and card-less to match the
+          restraint of the "Same engine" section above. */}
+      <section className="px-6 sm:px-10 py-28 sm:py-40 max-w-[1200px] mx-auto border-t border-white/[0.10] sm:text-center">
+        <p className="text-[12px] font-mono tracking-[0.18em] uppercase text-white/35 mb-6">
+          [ In the wild ]
+        </p>
+        <h2 className="text-[clamp(1.75rem,4vw,3.5rem)] font-medium leading-[1.05] tracking-[-0.035em] text-white max-w-[18ch] sm:mx-auto">
+          Already inside Abbelo
+        </h2>
+
+        <figure className="mt-16 sm:mt-20 max-w-[860px] sm:mx-auto">
+          <blockquote className="text-[clamp(1.35rem,2.8vw,2.25rem)] font-medium leading-[1.3] tracking-[-0.025em] text-white text-left sm:text-center">
+            &ldquo;Tessa is the intelligence layer inside Abbelo. After every session,
+            Tessa finds the patterns and gives each user the one move to make next.
+            Nothing is guessed. Nothing is made up.&rdquo;
+          </blockquote>
+          <figcaption className="mt-10 sm:mt-12 flex flex-col gap-1.5 sm:items-center text-left">
+            <span className="text-[15px] font-medium text-white">Abbelo</span>
+            <span className="text-[11px] font-mono tracking-[0.16em] uppercase text-white/40">
+              Built with Tessa
+            </span>
+          </figcaption>
+        </figure>
+      </section>
 
       {/* Get started: centered headline + editorial step rows + centered price/CTA bookend */}
       <section className="px-6 sm:px-10 py-28 sm:py-40 max-w-[1200px] mx-auto border-t border-white/[0.10] sm:text-center">
