@@ -4,10 +4,11 @@
 // more product-as-protagonist.
 // Copy rules: fifth grade reading level, no dashes anywhere, no pronouns for Tessa,
 // no language framing Tessa as a team replacement, no made up outcome claims.
-// Design system: modern dark SaaS (Linear/Vercel school). Near-black canvas, glassy
-// sticky nav with anchor links, soft radial glows, rounded-2xl cards on white/[0.02..0.05]
-// fills with hairline borders, pill buttons (one white-filled primary), small pill
-// eyebrows, medium-weight display type with tight tracking. No shadows, no accent color.
+// Design system: modern dark SaaS, kept plain on purpose. Near-black canvas, glassy
+// sticky nav with anchor links, rounded-2xl cards on white/[0.02..0.05] fills with
+// hairline borders, pill buttons (one white-filled primary), sharp boxed mono eyebrows,
+// medium-weight display type in solid white. No gradient text, no glow backdrops, no
+// decorative icons, no hover effects on static cards, no shadows, no accent color.
 
 import PayButton from "./pay-button";
 
@@ -57,7 +58,7 @@ function Wordmark({ className = "h-4 w-auto" }: { className?: string }) {
 function Eyebrow({ children }: { children: React.ReactNode }) {
   return (
     <p className="mb-5 flex justify-center">
-      <span className="inline-flex items-center rounded-full border border-white/[0.12] bg-white/[0.04] px-3.5 py-1.5 text-[11px] font-mono tracking-[0.16em] uppercase text-white/60">
+      <span className="inline-block border border-white/20 px-3 py-1.5 text-[11px] font-mono tracking-[0.18em] uppercase text-white/55">
         {children}
       </span>
     </p>
@@ -122,12 +123,8 @@ export default async function Page({
       </header>
 
       {/* Hero: badge, gradient headline, subhead, dual CTAs, soft glow */}
-      <section className="relative overflow-hidden px-6 pt-40 sm:pt-52 pb-24 sm:pb-32">
-        <div
-          aria-hidden
-          className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_60%_50%_at_50%_0%,rgba(255,255,255,0.09),transparent_70%)]"
-        />
-        <div className="relative max-w-[860px] mx-auto text-center">
+      <section className="px-6 pt-40 sm:pt-52 pb-24 sm:pb-32">
+        <div className="max-w-[860px] mx-auto text-center">
           {paid && (
             <div className="mb-10 rounded-xl border border-white/[0.15] bg-white/[0.04] p-5 sm:p-6 max-w-[560px] mx-auto">
               <p className="text-[11px] font-mono tracking-[0.22em] uppercase text-white mb-2">
@@ -139,17 +136,16 @@ export default async function Page({
             </div>
           )}
           <p className="mb-7 flex justify-center">
-            <span className="inline-flex items-center gap-2 rounded-full border border-white/[0.12] bg-white/[0.04] px-4 py-1.5 text-[12px] font-normal text-white/70">
-              <span className="h-1.5 w-1.5 rounded-full bg-white/80" aria-hidden />
+            <span className="inline-flex items-center rounded-full border border-white/[0.12] bg-white/[0.04] px-4 py-1.5 text-[12px] font-normal text-white/70">
               The intelligence layer for digital products
             </span>
           </p>
-          <h1 className="text-[clamp(2.75rem,6.5vw,4.75rem)] font-medium leading-[1.05] tracking-[-0.03em] bg-gradient-to-b from-white to-white/60 bg-clip-text text-transparent">
-            Stop guessing. Start knowing.
+          <h1 className="text-[clamp(2.75rem,6.5vw,4.75rem)] font-medium leading-[1.05] tracking-[-0.03em] text-white max-w-[18ch] mx-auto">
+            Most products react. The best ones predict.
           </h1>
           <p className="mt-7 text-[clamp(1.05rem,1.45vw,1.2rem)] font-normal leading-[1.6] text-white/60 max-w-[600px] mx-auto">
-            Tessa learns each user, finds the patterns, and gives them the feedback to get
-            results. Built right into your product.
+            Tessa is built into your product. Tessa learns each user, spots their patterns,
+            and shows them the next move to reach the result they came for.
           </p>
           <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-3">
             <a
@@ -192,8 +188,8 @@ export default async function Page({
               Predict or lose them
             </h2>
             <p className="mt-5 text-[clamp(1rem,1.3vw,1.15rem)] font-normal leading-[1.6] text-white/60 max-w-[560px] mx-auto">
-              Every user takes a path through your business. Most quit before they reach the
-              end.
+              Every user signs up wanting a result. Most quit before they get it. You see it
+              as churn.
             </p>
           </div>
 
@@ -283,82 +279,34 @@ export default async function Page({
             {[
               {
                 t: "Patterns",
-                d: "Tessa names the patterns in each user's behavior and shows how many times each one comes up.",
-                icon: <path d="M3 17l5-6 4 4 6-8" />,
+                d: "Tessa spots the habits that shape each user's results and shows how often they come up.",
               },
               {
                 t: "Forecast",
-                d: "Two paths in plain words. Where the current pace leads, and where the thing holding them back leads instead.",
-                icon: (
-                  <>
-                    <path d="M4 12h7" />
-                    <path d="M11 12c4 0 4.5-4 9-4" />
-                    <path d="M11 12c4 0 4.5 4 9 4" />
-                  </>
-                ),
+                d: "Two paths in plain words. Where the user is headed at their current pace, and where the thing holding them back takes them instead.",
               },
               {
                 t: "Feedback",
-                d: "One clear action to take next. Not a list of twenty things.",
-                icon: (
-                  <>
-                    <circle cx="12" cy="12" r="9" />
-                    <path d="M8 12h6" />
-                    <path d="M12 9.5l2.5 2.5-2.5 2.5" />
-                  </>
-                ),
+                d: "One clear next step after every session. Not a list of twenty things.",
               },
               {
                 t: "Sharper every session",
-                d: "Every session teaches Tessa more. The picture of each user gets sharper over time.",
-                icon: (
-                  <>
-                    <path d="M21 12a9 9 0 1 1-3-6.7" />
-                    <path d="M21 3v6h-6" />
-                  </>
-                ),
+                d: "Tessa learns more about each user with every session. The picture keeps getting sharper.",
               },
               {
                 t: "Real data only",
-                d: "Tessa works from real session data only. Tessa never guesses and never makes things up.",
-                icon: (
-                  <>
-                    <ellipse cx="12" cy="5" rx="8" ry="3" />
-                    <path d="M4 5v14c0 1.7 3.6 3 8 3s8-1.3 8-3V5" />
-                    <path d="M4 12c0 1.7 3.6 3 8 3s8-1.3 8-3" />
-                  </>
-                ),
+                d: "Tessa works only from real session data. Tessa never guesses and never makes things up.",
               },
               {
                 t: "Private by default",
-                d: "Each user's Tessa belongs to them and is never shared.",
-                icon: (
-                  <>
-                    <rect x="5" y="11" width="14" height="9" rx="2" />
-                    <path d="M8 11V7a4 4 0 0 1 8 0v4" />
-                  </>
-                ),
+                d: "Each user's Tessa is theirs alone. Never shared.",
               },
             ].map((f) => (
               <div
                 key={f.t}
-                className="rounded-2xl border border-white/[0.10] bg-white/[0.02] p-6 sm:p-7 hover:border-white/[0.18] transition-colors"
+                className="rounded-2xl border border-white/[0.10] bg-white/[0.02] p-6 sm:p-7"
               >
-                <svg
-                  width="20"
-                  height="20"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="1.5"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  aria-hidden="true"
-                  className="text-white/50"
-                >
-                  {f.icon}
-                </svg>
-                <h3 className="mt-5 text-[15.5px] font-medium tracking-[-0.01em] text-white">
+                <h3 className="text-[15.5px] font-medium tracking-[-0.01em] text-white">
                   {f.t}
                 </h3>
                 <p className="mt-2 text-[14px] font-normal leading-[1.6] text-white/55">
@@ -430,7 +378,7 @@ export default async function Page({
             ].map((s) => (
               <div
                 key={s.n}
-                className="rounded-2xl border border-white/[0.10] bg-white/[0.02] p-6 sm:p-7 hover:border-white/[0.18] transition-colors"
+                className="rounded-2xl border border-white/[0.10] bg-white/[0.02] p-6 sm:p-7"
               >
                 <p className="text-[13px] font-mono text-white/35 tabular-nums">{s.n}</p>
                 <h3 className="mt-4 text-[15.5px] font-medium tracking-[-0.01em] text-white">
@@ -446,12 +394,8 @@ export default async function Page({
       </section>
 
       {/* Pricing: single centered plan card */}
-      <section id="pricing" className="relative overflow-hidden px-6 py-24 sm:py-32 scroll-mt-24">
-        <div
-          aria-hidden
-          className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_50%_40%_at_50%_100%,rgba(255,255,255,0.06),transparent_70%)]"
-        />
-        <div className="relative max-w-[1100px] mx-auto">
+      <section id="pricing" className="px-6 py-24 sm:py-32 scroll-mt-24">
+        <div className="max-w-[1100px] mx-auto">
           <div className="text-center">
             <Eyebrow>Pricing</Eyebrow>
             <h2 className="text-[clamp(1.875rem,3.5vw,2.75rem)] font-medium leading-[1.1] tracking-[-0.03em] text-white">
@@ -512,8 +456,8 @@ export default async function Page({
       </section>
 
       {/* Closing CTA */}
-      <section className="relative overflow-hidden px-6 py-24 sm:py-36">
-        <div className="relative max-w-[860px] mx-auto text-center">
+      <section className="px-6 py-24 sm:py-36">
+        <div className="max-w-[860px] mx-auto text-center">
           <h2
             className="bg-clip-text text-transparent text-[clamp(1.35rem,2.5vw,2rem)] font-medium leading-[1.3] tracking-[-0.02em]"
             style={{
