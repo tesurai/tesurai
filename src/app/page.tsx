@@ -283,8 +283,7 @@ export default async function Page({
           }}
         >
           Every user deserves to get what they came for. You built the product for them. You
-          promised them a real result. Tessa is how you make sure they actually get one. Every
-          session. Every user. Every time.
+          promised them a real result. Tessa is how you make sure they actually get one.
         </h2>
       </section>
 
