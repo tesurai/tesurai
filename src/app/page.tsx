@@ -87,7 +87,8 @@ export default async function Page({
         </p>
       </section>
 
-      {/* The difference: with vs without Tessa */}
+      {/* The difference: single-column narrative like Same engine. Without Tessa dimmed,
+          With Tessa at full white, split by one hairline. No cards. */}
       <section
         id="tessa"
         className="px-6 sm:px-10 py-28 sm:py-40 max-w-[1200px] mx-auto border-t border-white/[0.10] sm:text-center scroll-mt-24"
@@ -102,70 +103,64 @@ export default async function Page({
           Every user takes a path through your business. Most quit before they reach the end.
         </p>
 
-        <div className="mt-16 grid gap-5 sm:gap-6 sm:grid-cols-2 text-left">
-          {/* Without Tessa */}
-          <div className="bg-white/[0.02] border border-white/[0.10] rounded-lg p-6 sm:p-8 flex flex-col">
-            <p className="text-[12px] font-mono tracking-[0.16em] uppercase text-white/45 mb-8">
-              Without Tessa
-            </p>
-            <ol className="space-y-4 flex-1">
-              {[
-                "Signs up wanting a clear result.",
-                "Opens the product and pokes around.",
-                "Tries a few things on the first session.",
-                "Nothing they try fits the moment.",
-                "Forgets to come back the next day.",
-                "Cancels the account weeks later.",
-              ].map((step, i) => (
-                <li
-                  key={i}
-                  className="text-[15px] font-normal leading-[1.55] text-white/45 flex gap-4"
-                >
-                  <span className="text-[11px] font-mono text-white/30 tabular-nums shrink-0 pt-1">
-                    {String(i + 1).padStart(2, "0")}
-                  </span>
-                  <span>{step}</span>
-                </li>
-              ))}
-            </ol>
-            <div className="mt-8 pt-6 border-t border-white/[0.08]">
-              <p className="text-[11px] font-mono tracking-[0.16em] uppercase text-white/35">
-                Result: the user quits before they get what they wanted
-              </p>
-            </div>
-          </div>
+        <div className="mt-20 sm:mt-28 max-w-[680px] sm:mx-auto text-left">
+          {/* Without Tessa: the path dimmed, like the attention paragraph in Same engine */}
+          <p className="text-[12px] font-mono tracking-[0.16em] uppercase text-white/45 mb-8">
+            Without Tessa
+          </p>
+          <ol className="space-y-4">
+            {[
+              "Signs up wanting a clear result.",
+              "Opens the product and pokes around.",
+              "Tries a few things on the first session.",
+              "Nothing they try fits the moment.",
+              "Forgets to come back the next day.",
+              "Cancels the account weeks later.",
+            ].map((step, i) => (
+              <li
+                key={i}
+                className="text-[15px] font-normal leading-[1.55] text-white/45 flex gap-4"
+              >
+                <span className="text-[11px] font-mono text-white/30 tabular-nums shrink-0 pt-1">
+                  {String(i + 1).padStart(2, "0")}
+                </span>
+                <span>{step}</span>
+              </li>
+            ))}
+          </ol>
+          <p className="mt-8 text-[11px] font-mono tracking-[0.16em] uppercase text-white/35">
+            Result: the user quits before they get what they wanted
+          </p>
 
-          {/* With Tessa */}
-          <div className="bg-white/[0.04] border border-white/[0.20] rounded-lg p-6 sm:p-8 flex flex-col">
-            <p className="text-[12px] font-mono tracking-[0.16em] uppercase text-white/70 mb-8">
-              With Tessa
-            </p>
-            <ol className="space-y-4 flex-1">
-              {[
-                "Signs up wanting a clear result.",
-                "Tessa watches every move they make.",
-                "Tessa learns the patterns in their behavior.",
-                "Tessa predicts where they will be in 30 days and 90 days.",
-                "Tessa surfaces the next move that gets them closer.",
-                "Step by step, they reach what they came for.",
-              ].map((step, i) => (
-                <li
-                  key={i}
-                  className="text-[15px] font-normal leading-[1.55] text-white/80 flex gap-4"
-                >
-                  <span className="text-[11px] font-mono text-white/55 tabular-nums shrink-0 pt-1">
-                    {String(i + 1).padStart(2, "0")}
-                  </span>
-                  <span>{step}</span>
-                </li>
-              ))}
-            </ol>
-            <div className="mt-8 pt-6 border-t border-white/[0.20]">
-              <p className="text-[11px] font-mono tracking-[0.16em] uppercase text-white/85">
-                Result: the user gets what they came for
-              </p>
-            </div>
-          </div>
+          <div className="my-12 sm:my-14 border-t border-white/[0.10]" />
+
+          {/* With Tessa: the same path brought to full white */}
+          <p className="text-[12px] font-mono tracking-[0.16em] uppercase text-white/70 mb-8">
+            With Tessa
+          </p>
+          <ol className="space-y-4">
+            {[
+              "Signs up wanting a clear result.",
+              "Tessa watches every move they make.",
+              "Tessa learns the patterns in their behavior.",
+              "Tessa predicts where they will be in 30 days and 90 days.",
+              "Tessa surfaces the next move that gets them closer.",
+              "Step by step, they reach what they came for.",
+            ].map((step, i) => (
+              <li
+                key={i}
+                className="text-[15px] font-normal leading-[1.55] text-white/80 flex gap-4"
+              >
+                <span className="text-[11px] font-mono text-white/55 tabular-nums shrink-0 pt-1">
+                  {String(i + 1).padStart(2, "0")}
+                </span>
+                <span>{step}</span>
+              </li>
+            ))}
+          </ol>
+          <p className="mt-8 text-[11px] font-mono tracking-[0.16em] uppercase text-white/85">
+            Result: the user gets what they came for
+          </p>
         </div>
       </section>
 
@@ -211,7 +206,7 @@ export default async function Page({
           Already inside Abbelo
         </h2>
 
-        <figure className="mt-16 sm:mt-20 max-w-[860px] sm:mx-auto">
+        <figure className="mt-16 sm:mt-20 max-w-[720px] sm:mx-auto">
           <blockquote className="text-[clamp(1.35rem,2.8vw,2.25rem)] font-medium leading-[1.3] tracking-[-0.025em] text-white text-left sm:text-center">
             &ldquo;Tessa is the intelligence layer inside Abbelo. After every session,
             Tessa finds the patterns and gives each user the one move to make next.
@@ -232,10 +227,9 @@ export default async function Page({
           Discover. Build. Launch.
         </h2>
 
-        {/* Editorial step rows: big mono numerals on the left, content on the right, hairlines
-            between each step. No card backgrounds — matches the x.ai restraint of the Same
-            engine section above. */}
-        <div className="mt-20 sm:mt-24 text-left max-w-[960px] sm:mx-auto border-t border-white/[0.10]">
+        {/* Editorial step rows in the same skinny column as Same engine: mono numeral on the
+            left, content on the right, one hairline between each. No card backgrounds. */}
+        <div className="mt-20 sm:mt-24 text-left max-w-[680px] sm:mx-auto border-t border-white/[0.10]">
           {[
             {
               n: "01",
@@ -255,16 +249,16 @@ export default async function Page({
           ].map((s) => (
             <article
               key={s.n}
-              className="grid gap-5 sm:gap-12 sm:grid-cols-[140px_1fr] sm:items-start py-10 sm:py-14 border-b border-white/[0.10]"
+              className="grid gap-4 sm:gap-8 sm:grid-cols-[88px_1fr] sm:items-start py-10 sm:py-14 border-b border-white/[0.10]"
             >
-              <p className="text-[clamp(2.5rem,4.5vw,4rem)] font-mono font-normal leading-none tracking-[-0.03em] text-white/30 tabular-nums">
+              <p className="text-[clamp(2rem,3.2vw,3rem)] font-mono font-normal leading-none tracking-[-0.03em] text-white/30 tabular-nums">
                 {s.n}
               </p>
               <div>
                 <h3 className="text-[clamp(1.25rem,1.6vw,1.5rem)] font-medium tracking-[-0.02em] text-white mb-3">
                   {s.t}
                 </h3>
-                <p className="text-[clamp(1rem,1.4vw,1.15rem)] font-normal leading-[1.6] text-white/65 max-w-[560px]">
+                <p className="text-[clamp(1rem,1.4vw,1.15rem)] font-normal leading-[1.6] text-white/65">
                   {s.d}
                 </p>
               </div>
