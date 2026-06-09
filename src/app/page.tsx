@@ -483,21 +483,50 @@ export default async function Page({
         </div>
       </section>
 
-      {/* Closing: the mission as the final word, fading right like the wordmark */}
+      {/* Closing: recap the whole argument and force the choice, with the same CTA pair
+          as the hero so the decision sits right here. */}
       <section className="px-6 sm:px-10 py-24 sm:py-36">
-        <div className="max-w-[860px] mx-auto text-left">
-          <h2
-            className="bg-clip-text text-transparent text-[clamp(1.5rem,3vw,2.5rem)] font-medium leading-[1.3] tracking-[-0.02em]"
-            style={{
-              backgroundImage:
-                "linear-gradient(to right, rgba(255,255,255,1) 0%, rgba(255,255,255,0.95) 60%, rgba(255,255,255,0.75) 85%, rgba(255,255,255,0.45) 100%)",
-              WebkitTextFillColor: "transparent",
-            }}
-          >
-            Their AI is built to steal your users&rsquo; attention. Tessa is built to turn
-            it into results. They win when people scroll. You win when your users win. We
-            are the counterforce.
+        <div className="max-w-[760px] mx-auto text-center">
+          <h2 className="text-[clamp(2.25rem,5vw,3.75rem)] font-medium leading-[1.05] tracking-[-0.03em] text-white">
+            Stop losing the users you could have kept.
           </h2>
+          <p className="mt-7 text-[clamp(1.05rem,1.4vw,1.25rem)] font-normal leading-[1.6] text-white/60 max-w-[600px] mx-auto">
+            Every user comes for a result. Most quit before they reach it, and you only find
+            out when they cancel. Tessa learns each user, sees where they are headed, and
+            gives them the next move to get there. When your users win, you win.
+          </p>
+          <p className="mt-6 text-[clamp(1.05rem,1.4vw,1.25rem)] font-normal leading-[1.6] text-white">
+            You can keep guessing why they leave, or you can build Tessa in and know.
+          </p>
+          <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-3">
+            <a
+              href="#pricing"
+              className="inline-flex items-center gap-2 rounded-full bg-white text-black px-7 py-3.5 text-[14px] font-medium hover:bg-white/90 transition-colors"
+            >
+              Get started
+              <svg
+                width="14"
+                height="14"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="1.8"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                aria-hidden="true"
+              >
+                <path d="M5 12h14M13 5l7 7-7 7" />
+              </svg>
+            </a>
+            <a
+              href={CAL_LINK}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center rounded-full border border-white/[0.15] bg-white/[0.04] px-7 py-3.5 text-[14px] font-normal text-white hover:bg-white/[0.08] transition-colors"
+            >
+              Book a call
+            </a>
+          </div>
         </div>
       </section>
 
