@@ -13,7 +13,7 @@
 
 import PayButton from "./pay-button";
 
-const CAL_LINK = "https://cal.com/tesurai";
+const CAL_LINK = "https://cal.com/tesurai/call";
 
 const BROWSER_TITLE = "Tesurai | Most products react. The best ones predict.";
 const SHARE_TITLE = "Most products react. The best ones predict.";
