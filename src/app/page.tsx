@@ -411,27 +411,62 @@ export default async function Page({
         </div>
       </section>
 
-      {/* Pricing: single centered plan card */}
-      {/* Pricing: signal only. The price and the two ways to start. */}
+      {/* Pricing: split card. Left holds the price and the two ways to start, right
+          spells out what is included, both the build and what each user gets. */}
       <section id="pricing" className="px-6 sm:px-10 py-24 sm:py-32 scroll-mt-24">
-        <div className="max-w-[1100px] mx-auto text-center">
-          <Eyebrow>Pricing</Eyebrow>
-          <h2 className="text-[clamp(1.875rem,3.5vw,2.75rem)] font-medium leading-[1.1] tracking-[-0.03em] text-white">
-            One build. One price.
-          </h2>
-          <p className="mt-10 text-[clamp(3rem,6vw,4.5rem)] font-medium leading-none text-white tabular-nums tracking-[-0.03em]">
-            $2,500
-          </p>
-          <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-3">
-            <PayButton />
-            <a
-              href={CAL_LINK}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center rounded-full border border-white/[0.15] bg-white/[0.02] px-7 py-3.5 text-[14px] font-normal text-white hover:bg-white/[0.08] transition-colors"
-            >
-              Book a call
-            </a>
+        <div className="max-w-[1100px] mx-auto">
+          <div className="text-center">
+            <Eyebrow>Pricing</Eyebrow>
+            <h2 className="text-[clamp(1.875rem,3.5vw,2.75rem)] font-medium leading-[1.1] tracking-[-0.03em] text-white">
+              One build. One price.
+            </h2>
+          </div>
+
+          <div className="mt-14 max-w-[880px] mx-auto rounded-2xl border border-white/[0.12] bg-white/[0.03] md:grid md:grid-cols-2 text-left">
+            <div className="p-7 sm:p-10 border-b md:border-b-0 md:border-r border-white/[0.10] flex flex-col">
+              <p className="text-[12px] font-mono tracking-[0.16em] uppercase text-white/55">
+                Tessa, built for your business
+              </p>
+              <p className="mt-6 text-[clamp(2.75rem,5vw,3.75rem)] font-medium leading-none text-white tabular-nums tracking-[-0.03em]">
+                $2,500
+              </p>
+              <p className="mt-4 text-[14px] font-normal leading-[1.6] text-white/55">
+                We build Tessa into your product and take it live.
+              </p>
+              <div className="mt-8 md:mt-auto md:pt-10 flex flex-col sm:flex-row sm:items-center gap-3">
+                <PayButton />
+                <a
+                  href={CAL_LINK}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center rounded-full border border-white/[0.15] bg-white/[0.02] px-7 py-3.5 text-[14px] font-normal text-white hover:bg-white/[0.08] transition-colors"
+                >
+                  Book a call
+                </a>
+              </div>
+            </div>
+            <div className="p-7 sm:p-10">
+              <p className="text-[12px] font-mono tracking-[0.16em] uppercase text-white/55">
+                What you get
+              </p>
+              <ul className="mt-3 divide-y divide-white/[0.08]">
+                {[
+                  "A call to map your business, your users, and the results they want",
+                  "A Tessa formula built around your business",
+                  "Tessa built into your product, ready for every user",
+                  "Patterns, a forecast, and one next step for each user",
+                  "Feedback that loops back to you, so you see what to improve",
+                  "Test flights and a clean launch to live",
+                ].map((item) => (
+                  <li
+                    key={item}
+                    className="py-3.5 text-[14px] font-normal leading-[1.5] text-white/70"
+                  >
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
         </div>
       </section>
