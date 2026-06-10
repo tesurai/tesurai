@@ -55,7 +55,7 @@ function Wordmark({ className = "h-4 w-auto" }: { className?: string }) {
   );
 }
 
-// Pill eyebrow used above section headlines.
+// Boxed eyebrow used above section headlines.
 function Eyebrow({ children }: { children: React.ReactNode }) {
   return (
     <p className="mb-5 flex justify-center">
@@ -136,11 +136,7 @@ export default async function Page({
               </p>
             </div>
           )}
-          <p className="mb-7 flex justify-center">
-            <span className="inline-flex items-center rounded-full border border-white/[0.12] bg-white/[0.04] px-4 py-1.5 text-[12px] font-normal text-white/70">
-              The intelligence layer for digital products
-            </span>
-          </p>
+          <Eyebrow>The intelligence layer for digital products</Eyebrow>
           <h1 className="text-[clamp(2.75rem,6.5vw,4.75rem)] font-medium leading-[1.05] tracking-[-0.03em] text-white max-w-[18ch] mx-auto">
             Most products react. The best ones predict.
           </h1>
