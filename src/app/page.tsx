@@ -298,7 +298,7 @@ export default async function Page({
           <div className="text-center">
             <Eyebrow>Tessa</Eyebrow>
             <h2 className="text-[clamp(1.875rem,3.5vw,2.75rem)] font-medium leading-[1.1] tracking-[-0.03em] text-white">
-              Intelligence for every user
+              Intelligence layer
             </h2>
             <p className="mt-5 text-[clamp(1rem,1.3vw,1.15rem)] font-normal leading-[1.6] text-white/60 max-w-[560px] mx-auto">
               Tessa gets every user clear on where they are, where they want to go, and the
