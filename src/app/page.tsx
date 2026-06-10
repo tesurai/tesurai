@@ -124,7 +124,7 @@ export default async function Page({
       </header>
 
       {/* Hero: badge, gradient headline, subhead, dual CTAs, soft glow */}
-      <section className="px-6 sm:px-10 pt-40 sm:pt-52 pb-24 sm:pb-32">
+      <section className="px-6 sm:px-10 pt-28 sm:pt-52 pb-20 sm:pb-32">
         <div className="max-w-[860px] mx-auto text-center">
           {paid && (
             <div className="mb-10 rounded-xl border border-white/[0.15] bg-white/[0.04] p-5 sm:p-6 max-w-[560px] mx-auto">
