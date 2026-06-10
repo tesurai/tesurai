@@ -15,8 +15,18 @@ export const dynamic = "force-dynamic";
 
 const PRICE_USD_CENTS = 250000;
 const PRODUCT_NAME = "Tessa";
-const PRODUCT_DESCRIPTION =
-  "Built into your product, live and tuned for 90 days.";
+const PRODUCT_DESCRIPTION = [
+  "Built into your product, live and tuned for 90 days.",
+  "",
+  "WHAT YOU GET",
+  "• Onboarding. A call to map your business, your users, and the results they want.",
+  "• Formula. A Tessa formula built around your business.",
+  "• Integration. Tessa built into your product, ready for every user.",
+  "• Patterns. The habits that shape each user's results.",
+  "• Feedback. One clear next move for every user, and it feeds back to you.",
+  "• Forecast. Two paths in plain words, based on if they follow the feedback.",
+  "• Launch. Test flights, then live.",
+].join("\n");
 
 export async function POST(req: Request) {
   const apiKey = process.env.STRIPE_SECRET_KEY;
