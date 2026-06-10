@@ -16,8 +16,6 @@ export const dynamic = "force-dynamic";
 const PRICE_USD_CENTS = 250000;
 const PRODUCT_NAME = "Tessa";
 const PRODUCT_DESCRIPTION = [
-  "Built into your product, live and tuned for 90 days.",
-  "",
   "WHAT YOU GET",
   "• Onboarding. A call to map your business, your users, and the results they want.",
   "• Formula. A Tessa formula built around your business.",
