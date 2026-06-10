@@ -148,35 +148,6 @@ export default async function Page({
             Tessa lives inside your product. Tessa uses each user&rsquo;s past to predict
             their future, and guides them step by step to the result they came for.
           </p>
-          <div className="mt-10 flex flex-row items-center justify-center gap-2.5 sm:gap-3">
-            <a
-              href="#pricing"
-              className="inline-flex items-center gap-2 rounded-full bg-white text-black px-5 sm:px-7 py-3.5 text-[14px] font-medium hover:bg-white/90 transition-colors"
-            >
-              Get started
-              <svg
-                width="14"
-                height="14"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="1.8"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                aria-hidden="true"
-              >
-                <path d="M5 12h14M13 5l7 7-7 7" />
-              </svg>
-            </a>
-            <a
-              href={CAL_LINK}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center rounded-full border border-white/[0.15] bg-white/[0.04] px-5 sm:px-7 py-3.5 text-[14px] font-normal text-white hover:bg-white/[0.08] transition-colors"
-            >
-              Book a call
-            </a>
-          </div>
         </div>
       </section>
 
