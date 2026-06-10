@@ -136,7 +136,7 @@ export default async function Page({
               </p>
             </div>
           )}
-          <Eyebrow>The intelligence layer for digital products</Eyebrow>
+          <Eyebrow>The intelligence layer</Eyebrow>
           <h1 className="text-[clamp(2.75rem,6.5vw,4.75rem)] font-medium leading-[1.05] tracking-[-0.03em] text-white max-w-[18ch] mx-auto">
             Most products react. The best ones predict.
           </h1>
