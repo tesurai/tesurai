@@ -172,7 +172,7 @@ export default async function Page({
             <div className="my-10 sm:my-12 divide-y divide-white/[0.10] border-y border-white/[0.10]">
               {[
                 ["Their AI distracts your users.", "Tessa directs your users."],
-                ["Their AI makes your users dependent.", "Tessa makes your users independent."],
+                ["Their AI keeps your users in the dark.", "Tessa makes your users aware."],
                 ["Their AI uses your users.", "Tessa serves your users."],
               ].map(([theirs, ours]) => (
                 <div key={theirs} className="grid sm:grid-cols-2 gap-2 sm:gap-8 py-5">
