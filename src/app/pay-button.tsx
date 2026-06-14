@@ -25,12 +25,12 @@ export default function PayButton() {
   }
 
   return (
-    <div className="flex flex-col items-start sm:items-center gap-3">
+    <div className="flex flex-col gap-2 w-full">
       <button
         type="button"
         onClick={handlePay}
         disabled={loading}
-        className="inline-flex items-center gap-2 bg-white text-black px-8 py-4 text-[14px] font-normal tracking-[0.04em] rounded-full hover:bg-white/90 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
+        className="inline-flex items-center justify-center gap-2 w-full bg-white text-black px-7 py-3.5 text-[14px] font-medium rounded-full hover:bg-white/90 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
       >
         {loading ? "Starting..." : "Get started"}
         <svg

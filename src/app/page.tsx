@@ -58,7 +58,7 @@ function Wordmark({ className = "h-4 w-auto" }: { className?: string }) {
 // Boxed eyebrow used above section headlines.
 function Eyebrow({ children }: { children: React.ReactNode }) {
   return (
-    <p className="mb-5 flex justify-center">
+    <p className="mb-5">
       <span className="inline-block border border-white/20 px-3 py-1.5 text-[11px] font-mono tracking-[0.18em] uppercase text-white/55">
         {children}
       </span>
@@ -124,10 +124,10 @@ export default async function Page({
       </header>
 
       {/* Hero: badge, gradient headline, subhead, dual CTAs, soft glow */}
-      <section className="px-6 sm:px-10 pt-28 sm:pt-52 pb-20 sm:pb-32">
-        <div className="max-w-[860px] mx-auto text-center">
+      <section className="px-6 sm:px-10 flex flex-col justify-center min-h-svh sm:block sm:min-h-0 pt-24 sm:pt-52 pb-20 sm:pb-32">
+        <div className="max-w-[1100px] w-full mx-auto">
           {paid && (
-            <div className="mb-10 rounded-xl border border-white/[0.15] bg-white/[0.04] p-5 sm:p-6 max-w-[560px] mx-auto">
+            <div className="mb-10 rounded-xl border border-white/[0.15] bg-white/[0.04] p-5 sm:p-6 max-w-[560px]">
               <p className="text-[11px] font-mono tracking-[0.22em] uppercase text-white mb-2">
                 Payment received
               </p>
@@ -137,10 +137,10 @@ export default async function Page({
             </div>
           )}
           <Eyebrow>Intelligence layer</Eyebrow>
-          <h1 className="text-[clamp(2.75rem,6.5vw,4.75rem)] font-medium leading-[1.05] tracking-[-0.03em] text-white max-w-[18ch] mx-auto">
+          <h1 className="text-[clamp(3.25rem,7vw,4.75rem)] font-medium leading-[1.03] tracking-[-0.03em] text-white max-w-[18ch]">
             Most products react. The best ones predict.
           </h1>
-          <p className="mt-7 text-[clamp(1.05rem,1.45vw,1.2rem)] font-normal leading-[1.6] text-white/60 max-w-[600px] mx-auto">
+          <p className="mt-7 text-[clamp(1.1rem,1.45vw,1.25rem)] font-normal leading-[1.6] text-white/60 max-w-[600px]">
             Tessa lives inside your product. Tessa uses each user&rsquo;s past to predict
             their future, and guides them step by step to the result they came for.
           </p>
@@ -151,14 +151,14 @@ export default async function Page({
           text, three Theirs/Ours contrast rows, then the stance in full white. */}
       <section className="px-6 sm:px-10 py-24 sm:py-32">
         <div className="max-w-[1100px] mx-auto">
-          <div className="text-center">
+          <div>
             <Eyebrow>Mission</Eyebrow>
             <h2 className="text-[clamp(1.875rem,3.5vw,2.75rem)] font-medium leading-[1.1] tracking-[-0.03em] text-white">
               We are building the counterforce
             </h2>
           </div>
 
-          <div className="mt-12 sm:mt-16 max-w-[680px] mx-auto text-left">
+          <div className="mt-12 sm:mt-16 max-w-[680px] text-left">
             <p className="text-[clamp(1.05rem,1.4vw,1.25rem)] font-normal leading-[1.65] text-white/60">
               Big companies use AI to make people weaker, dumber, more distracted, more
               dependent, and easier to control. Pretending AI will go away does not make it
@@ -194,18 +194,18 @@ export default async function Page({
           spine. The dim path fades out on the left, the Tessa path lands on the right. */}
       <section id="tessa" className="px-6 sm:px-10 py-24 sm:py-32 scroll-mt-24">
         <div className="max-w-[1100px] mx-auto">
-          <div className="text-center">
+          <div>
             <Eyebrow>The difference</Eyebrow>
             <h2 className="text-[clamp(1.875rem,3.5vw,2.75rem)] font-medium leading-[1.1] tracking-[-0.03em] text-white">
               Predict or lose them
             </h2>
-            <p className="mt-5 text-[clamp(1rem,1.3vw,1.15rem)] font-normal leading-[1.6] text-white/60 max-w-[560px] mx-auto">
+            <p className="mt-5 text-[clamp(1rem,1.3vw,1.15rem)] font-normal leading-[1.6] text-white/60 max-w-[560px]">
               Churn does not happen at the cancel button. It happens weeks earlier, in a
               moment your product cannot see.
             </p>
           </div>
 
-          <div className="mt-12 sm:mt-16 max-w-[680px] mx-auto">
+          <div className="mt-12 sm:mt-16 max-w-[680px]">
             <p className="text-[15px] font-normal leading-[1.55] text-white text-center">
               Signs up wanting a clear result.
             </p>
@@ -262,18 +262,18 @@ export default async function Page({
           generous hairline rows. */}
       <section id="product" className="px-6 sm:px-10 py-24 sm:py-32 scroll-mt-24">
         <div className="max-w-[1100px] mx-auto">
-          <div className="text-center">
+          <div>
             <Eyebrow>Tessa</Eyebrow>
             <h2 className="text-[clamp(1.875rem,3.5vw,2.75rem)] font-medium leading-[1.1] tracking-[-0.03em] text-white">
               Intelligence layer
             </h2>
-            <p className="mt-5 text-[clamp(1rem,1.3vw,1.15rem)] font-normal leading-[1.6] text-white/60 max-w-[560px] mx-auto">
+            <p className="mt-5 text-[clamp(1rem,1.3vw,1.15rem)] font-normal leading-[1.6] text-white/60 max-w-[560px]">
               Tessa gets every user clear on where they are, where they want to go, and the
               next move to close the gap.
             </p>
           </div>
 
-          <div className="mt-12 sm:mt-16 max-w-[680px] mx-auto text-left">
+          <div className="mt-12 sm:mt-16 max-w-[680px] text-left">
             <div className="divide-y divide-white/[0.10] border-y border-white/[0.10]">
               {[
                 {
@@ -323,14 +323,14 @@ export default async function Page({
           boxed eyebrows. */}
       <section id="process" className="px-6 sm:px-10 py-24 sm:py-32 scroll-mt-24">
         <div className="max-w-[1100px] mx-auto">
-          <div className="text-center">
+          <div>
             <Eyebrow>Process</Eyebrow>
             <h2 className="text-[clamp(1.875rem,3.5vw,2.75rem)] font-medium leading-[1.1] tracking-[-0.03em] text-white">
               Onboard. Build. Launch.
             </h2>
           </div>
 
-          <div className="mt-12 sm:mt-16 max-w-[680px] mx-auto text-left">
+          <div className="mt-12 sm:mt-16 max-w-[680px] text-left">
             <div className="relative ml-1 border-l border-white/[0.15]">
               {[
                 {
@@ -374,14 +374,14 @@ export default async function Page({
           spells out what is included, both the build and what each user gets. */}
       <section id="pricing" className="px-6 sm:px-10 py-24 sm:py-32 scroll-mt-24">
         <div className="max-w-[1100px] mx-auto">
-          <div className="text-center">
+          <div>
             <Eyebrow>Pricing</Eyebrow>
             <h2 className="text-[clamp(1.875rem,3.5vw,2.75rem)] font-medium leading-[1.1] tracking-[-0.03em] text-white">
               One build. One price.
             </h2>
           </div>
 
-          <div className="mt-14 max-w-[880px] mx-auto rounded-2xl border border-white/[0.12] bg-white/[0.03] md:grid md:grid-cols-2 text-left">
+          <div className="mt-14 max-w-[880px] rounded-2xl border border-white/[0.12] bg-white/[0.03] md:grid md:grid-cols-2 text-left">
             <div className="p-7 sm:p-10 border-b md:border-b-0 md:border-r border-white/[0.10] flex flex-col">
               <p className="text-[12px] font-mono tracking-[0.16em] uppercase text-white/55">
                 Tessa
@@ -389,13 +389,13 @@ export default async function Page({
               <p className="mt-6 text-[clamp(2.75rem,5vw,3.75rem)] font-medium leading-none text-white tabular-nums tracking-[-0.03em]">
                 $2,500
               </p>
-              <div className="mt-8 md:mt-auto md:pt-10 flex flex-col sm:flex-row sm:items-center gap-3">
+              <div className="mt-8 md:mt-auto md:pt-10 flex flex-col gap-3">
                 <PayButton />
                 <a
                   href={CAL_LINK}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center rounded-full border border-white/[0.15] bg-white/[0.02] px-7 py-3.5 text-[14px] font-normal text-white hover:bg-white/[0.08] transition-colors"
+                  className="inline-flex items-center justify-center w-full rounded-full border border-white/[0.15] bg-white/[0.02] px-7 py-3.5 text-[14px] font-normal text-white hover:bg-white/[0.08] transition-colors"
                 >
                   Book a call
                 </a>
@@ -450,9 +450,9 @@ export default async function Page({
       {/* Closing: the page summed up as one fade quote, fading right like the wordmark.
           No buttons. */}
       <section className="px-6 sm:px-10 py-24 sm:py-36">
-        <div className="max-w-[900px] mx-auto text-left">
+        <div className="max-w-[1100px] mx-auto text-left">
           <h2
-            className="bg-clip-text text-transparent text-[clamp(1.5rem,3vw,2.5rem)] font-medium leading-[1.3] tracking-[-0.02em]"
+            className="bg-clip-text text-transparent text-[clamp(1.5rem,3vw,2.5rem)] font-medium leading-[1.3] tracking-[-0.02em] max-w-[860px]"
             style={{
               backgroundImage:
                 "linear-gradient(to right, rgba(255,255,255,1) 0%, rgba(255,255,255,0.95) 60%, rgba(255,255,255,0.75) 85%, rgba(255,255,255,0.45) 100%)",
