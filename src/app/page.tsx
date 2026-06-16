@@ -138,7 +138,11 @@ export default async function Page({
           )}
           <Eyebrow>Intelligence layer</Eyebrow>
           <h1 className="text-[clamp(3.25rem,7vw,4.75rem)] font-medium leading-[1.05] tracking-[-0.03em] text-white max-w-[18ch] mx-auto">
-            Most products react. The best ones predict.
+            Most products react.
+            <br />
+            The best ones
+            <br />
+            predict.
           </h1>
           <p className="mt-7 text-[clamp(1.05rem,1.45vw,1.2rem)] font-normal leading-[1.6] text-white/60 max-w-[600px] mx-auto">
             Tessa lives inside your product. Tessa uses each user&rsquo;s past to predict
