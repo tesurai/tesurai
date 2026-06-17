@@ -201,8 +201,8 @@ export default async function Page({
               Predict or lose them
             </h2>
             <p className="mt-5 text-[clamp(1rem,1.3vw,1.15rem)] font-normal leading-[1.6] text-white/60 max-w-[560px] mx-auto">
-              Churn does not happen at the cancel button. It happens weeks earlier, in a
-              moment your product cannot see.
+              In a mind and body app, churn does not happen at the cancel button. It
+              happens weeks earlier, in a moment your product cannot see.
             </p>
           </div>
 
