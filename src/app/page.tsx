@@ -188,6 +188,63 @@ export default async function Page({
         </div>
       </section>
 
+      {/* Tessa: an editorial index of what every user gets. Mono numerals in the margin,
+          large titles, generous hairline rows. */}
+      <section id="product" className="px-6 sm:px-10 py-24 sm:py-32 scroll-mt-24">
+        <div className="max-w-[1100px] mx-auto">
+          <div className="sm:text-center">
+            <Eyebrow>Tessa</Eyebrow>
+            <h2 className="text-[clamp(1.875rem,3.5vw,2.75rem)] font-medium leading-[1.1] tracking-[-0.03em] text-white">
+              Intelligence layer
+            </h2>
+          </div>
+
+          <div className="mt-12 sm:mt-16 max-w-[680px] mx-auto text-left">
+            <div className="divide-y divide-white/[0.10] border-y border-white/[0.10]">
+              {[
+                {
+                  t: "Start",
+                  d: "Tessa reads each user's real data to get clear on where they stand today. The picture gets sharper with everything they do.",
+                },
+                {
+                  t: "Patterns",
+                  d: "Tessa spots the habits that shape their results and shows how often they come up. Tessa never guesses and never makes things up.",
+                },
+                {
+                  t: "Feedback",
+                  d: "One clear next move, not a list of twenty things. Every pattern also feeds back to you, so you see what is working.",
+                },
+                {
+                  t: "Forecast",
+                  d: "Two paths in plain words. Where they land if they follow the feedback, and where they land if they keep doing what they are doing.",
+                },
+                {
+                  t: "Goal",
+                  d: "Tessa learns the result each user came for and keeps them pointed at it. Each user's Tessa is theirs alone. Never shared.",
+                },
+              ].map((f, i) => (
+                <div
+                  key={f.t}
+                  className="grid grid-cols-[48px_1fr] sm:grid-cols-[64px_1fr] gap-4 sm:gap-6 py-7 sm:py-8"
+                >
+                  <p className="text-[12px] font-mono text-white/30 tabular-nums pt-[7px]">
+                    {String(i + 1).padStart(2, "0")}
+                  </p>
+                  <div>
+                    <h3 className="text-[clamp(1.125rem,1.6vw,1.375rem)] font-medium tracking-[-0.02em] text-white">
+                      {f.t}
+                    </h3>
+                    <p className="mt-2 text-[14.5px] font-normal leading-[1.6] text-white/50 max-w-[480px]">
+                      {f.d}
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* The difference: one shared first step, then the path forks around a center
           spine. The dim path fades out on the left, the Tessa path lands on the right. */}
       <section id="tessa" className="px-6 sm:px-10 py-24 sm:py-32 scroll-mt-24">
@@ -251,63 +308,6 @@ export default async function Page({
                   ))}
                 </ol>
               </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Product: an editorial index. Mono numerals in the margin, large titles,
-          generous hairline rows. */}
-      <section id="product" className="px-6 sm:px-10 py-24 sm:py-32 scroll-mt-24">
-        <div className="max-w-[1100px] mx-auto">
-          <div className="sm:text-center">
-            <Eyebrow>Tessa</Eyebrow>
-            <h2 className="text-[clamp(1.875rem,3.5vw,2.75rem)] font-medium leading-[1.1] tracking-[-0.03em] text-white">
-              Intelligence layer
-            </h2>
-          </div>
-
-          <div className="mt-12 sm:mt-16 max-w-[680px] mx-auto text-left">
-            <div className="divide-y divide-white/[0.10] border-y border-white/[0.10]">
-              {[
-                {
-                  t: "Start",
-                  d: "Tessa reads each user's real data to get clear on where they stand today. The picture gets sharper with everything they do.",
-                },
-                {
-                  t: "Patterns",
-                  d: "Tessa spots the habits that shape their results and shows how often they come up. Tessa never guesses and never makes things up.",
-                },
-                {
-                  t: "Feedback",
-                  d: "One clear next move, not a list of twenty things. Every pattern also feeds back to you, so you see what is working.",
-                },
-                {
-                  t: "Forecast",
-                  d: "Two paths in plain words. Where they land if they follow the feedback, and where they land if they keep doing what they are doing.",
-                },
-                {
-                  t: "Goal",
-                  d: "Tessa learns the result each user came for and keeps them pointed at it. Each user's Tessa is theirs alone. Never shared.",
-                },
-              ].map((f, i) => (
-                <div
-                  key={f.t}
-                  className="grid grid-cols-[48px_1fr] sm:grid-cols-[64px_1fr] gap-4 sm:gap-6 py-7 sm:py-8"
-                >
-                  <p className="text-[12px] font-mono text-white/30 tabular-nums pt-[7px]">
-                    {String(i + 1).padStart(2, "0")}
-                  </p>
-                  <div>
-                    <h3 className="text-[clamp(1.125rem,1.6vw,1.375rem)] font-medium tracking-[-0.02em] text-white">
-                      {f.t}
-                    </h3>
-                    <p className="mt-2 text-[14.5px] font-normal leading-[1.6] text-white/50 max-w-[480px]">
-                      {f.d}
-                    </p>
-                  </div>
-                </div>
-              ))}
             </div>
           </div>
         </div>
