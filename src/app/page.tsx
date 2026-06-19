@@ -135,7 +135,7 @@ export default async function Page({
             </div>
           )}
           <Eyebrow>For mind and body apps</Eyebrow>
-          <h1 className="text-balance text-[clamp(3.25rem,7vw,4.75rem)] font-medium leading-[1.05] tracking-[-0.03em] text-white max-w-[22ch] mx-auto">
+          <h1 className="text-balance text-[clamp(3.25rem,6vw,4.25rem)] font-medium leading-[1.05] tracking-[-0.035em] text-white max-w-[20ch] mx-auto">
             Most products react. The best ones predict.
           </h1>
           <p className="mt-7 text-[clamp(1.05rem,1.45vw,1.2rem)] font-normal leading-[1.6] text-white/60 max-w-[600px] mx-auto">
