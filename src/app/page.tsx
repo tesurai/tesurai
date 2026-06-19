@@ -265,17 +265,13 @@ export default async function Page({
             <h2 className="text-[clamp(1.875rem,3.5vw,2.75rem)] font-medium leading-[1.1] tracking-[-0.03em] text-white">
               Intelligence layer
             </h2>
-            <p className="mt-5 text-[clamp(1rem,1.3vw,1.15rem)] font-normal leading-[1.6] text-white/60 max-w-[560px] mx-auto">
-              Tessa gets every user clear on where they are, where they want to go, and the
-              next move to close the gap.
-            </p>
           </div>
 
           <div className="mt-12 sm:mt-16 max-w-[680px] mx-auto text-left">
             <div className="divide-y divide-white/[0.10] border-y border-white/[0.10]">
               {[
                 {
-                  t: "Where they are",
+                  t: "Start",
                   d: "Tessa reads each user's real data to get clear on where they stand today. The picture gets sharper with everything they do.",
                 },
                 {
@@ -291,7 +287,7 @@ export default async function Page({
                   d: "Two paths in plain words. Where they land if they follow the feedback, and where they land if they keep doing what they are doing.",
                 },
                 {
-                  t: "Where they want to go",
+                  t: "Goal",
                   d: "Tessa learns the result each user came for and keeps them pointed at it. Each user's Tessa is theirs alone. Never shared.",
                 },
               ].map((f, i) => (
