@@ -277,8 +277,7 @@ export default async function Page({
                 Built around your business.
               </p>
               <p className="mt-4 text-[15px] font-normal leading-[1.6] text-white/55">
-                Tessa lives inside your product, ready for every user. Book a call to see how
-                it maps to your business.
+                Tessa lives inside your product, ready for every user.
               </p>
               <div className="mt-8 md:mt-auto md:pt-10">
                 <a
