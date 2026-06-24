@@ -315,23 +315,11 @@ export default async function Page({
                   },
                   {
                     t: "Formula",
-                    d: "A Tessa formula built around your business.",
+                    d: "A Tessa formula built around your business: the patterns, feedback, and forecast every user gets.",
                   },
                   {
                     t: "Integration",
                     d: "Tessa built into your product, ready for every user.",
-                  },
-                  {
-                    t: "Patterns",
-                    d: "The habits that shape each user's results.",
-                  },
-                  {
-                    t: "Feedback",
-                    d: "One clear next move for every user, and it feeds back to you.",
-                  },
-                  {
-                    t: "Forecast",
-                    d: "Two paths in plain words, based on if they follow the feedback.",
                   },
                   {
                     t: "Launch",
