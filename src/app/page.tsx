@@ -300,7 +300,7 @@ export default async function Page({
               <p className="text-[12px] font-mono tracking-[0.16em] uppercase text-white/55">
                 What you get
               </p>
-              <ul className="mt-3 divide-y divide-white/[0.08]">
+              <ul className="mt-6 space-y-6">
                 {[
                   {
                     t: "Metrics",
@@ -319,9 +319,13 @@ export default async function Page({
                     d: "Know who is on track and who is slipping, early.",
                   },
                 ].map((item) => (
-                  <li key={item.t} className="py-3.5 text-[15px] font-normal leading-[1.5]">
-                    <span className="font-medium text-white">{item.t}.</span>{" "}
-                    <span className="text-white/60">{item.d}</span>
+                  <li key={item.t}>
+                    <h3 className="text-[clamp(1.125rem,1.6vw,1.375rem)] font-medium tracking-[-0.02em] text-white">
+                      {item.t}
+                    </h3>
+                    <p className="mt-2 text-[15px] font-normal leading-[1.6] text-white/50">
+                      {item.d}
+                    </p>
                   </li>
                 ))}
               </ul>
