@@ -129,7 +129,7 @@ export default async function Page({
             </div>
           )}
           <Eyebrow>Intelligence layer</Eyebrow>
-          <h1 className="text-balance text-[clamp(3.25rem,6vw,4.25rem)] font-medium leading-[1.05] tracking-[-0.035em] text-white max-w-[20ch] mx-auto">
+          <h1 className="text-balance text-[clamp(2.5rem,6vw,4.25rem)] font-medium leading-[1.05] tracking-[-0.035em] text-white max-w-[20ch] mx-auto">
             Most products react, but the best ones predict.
           </h1>
           <p className="mt-7 text-balance text-[clamp(1.05rem,1.45vw,1.2rem)] font-normal leading-[1.6] text-white/60 max-w-[560px] mx-auto">
@@ -144,7 +144,7 @@ export default async function Page({
           text, three Theirs/Ours contrast rows, then the stance in full white. */}
       <section className="px-6 sm:px-10 py-24 sm:py-32">
         <div className="max-w-[1100px] mx-auto">
-          <div className="sm:text-center">
+          <div className="text-center">
             <Eyebrow>Mission</Eyebrow>
             <h2 className="text-[clamp(1.875rem,3.5vw,2.75rem)] font-medium leading-[1.1] tracking-[-0.03em] text-white">
               We are building the counterforce
@@ -164,7 +164,7 @@ export default async function Page({
                 ["Their AI keeps your users in the dark.", "Tessa makes your users aware."],
                 ["Their AI uses your users.", "Tessa serves your users."],
               ].map(([theirs, ours]) => (
-                <div key={theirs} className="grid sm:grid-cols-2 gap-2 sm:gap-8 py-5">
+                <div key={theirs} className="grid grid-cols-2 gap-3 sm:gap-8 py-5">
                   <p className="text-[15px] font-normal leading-[1.55] text-white/45">
                     {theirs}
                   </p>
@@ -188,12 +188,12 @@ export default async function Page({
           </div>
 
           <div className="mt-12 sm:mt-16 max-w-[680px] mx-auto">
-            <div className="grid grid-cols-2 text-left">
-              <div className="pr-4 sm:pr-8 pt-6 border-r border-white/[0.15]">
+            <div className="text-left">
+              <div className="pb-8 sm:pb-10 border-b border-white/[0.15]">
                 <p className="text-[11px] sm:text-[12px] font-mono tracking-[0.16em] uppercase text-white/45">
                   Without Tessa
                 </p>
-                <ol className="mt-5 space-y-5">
+                <ol className="mt-5 space-y-4">
                   {[
                     "Your product treats them like every other user.",
                     "They hit a wall your product cannot see.",
@@ -203,18 +203,18 @@ export default async function Page({
                   ].map((step) => (
                     <li
                       key={step}
-                      className="text-[13.5px] sm:text-[15px] font-normal leading-[1.55] text-white/40"
+                      className="text-[15px] font-normal leading-[1.55] text-white/40"
                     >
                       {step}
                     </li>
                   ))}
                 </ol>
               </div>
-              <div className="pl-4 sm:pl-8 pt-6">
+              <div className="pt-8 sm:pt-10">
                 <p className="text-[11px] sm:text-[12px] font-mono tracking-[0.16em] uppercase text-white/70">
                   With Tessa
                 </p>
-                <ol className="mt-5 space-y-5">
+                <ol className="mt-5 space-y-4">
                   {[
                     "Tessa learns this user, not the average user.",
                     "Tessa spots the stall early.",
@@ -224,7 +224,7 @@ export default async function Page({
                   ].map((step) => (
                     <li
                       key={step}
-                      className="text-[13.5px] sm:text-[15px] font-normal leading-[1.55] text-white"
+                      className="text-[15px] font-normal leading-[1.55] text-white"
                     >
                       {step}
                     </li>
@@ -335,7 +335,7 @@ export default async function Page({
       <section className="px-6 sm:px-10 py-24 sm:py-36">
         <div className="max-w-[1100px] mx-auto text-left">
           <h2
-            className="bg-clip-text text-transparent text-[clamp(1.5rem,2.7vw,2rem)] font-medium leading-[1.3] tracking-[-0.02em]"
+            className="bg-clip-text text-transparent text-[clamp(1.75rem,3.2vw,2.5rem)] font-medium leading-[1.3] tracking-[-0.02em]"
             style={{
               backgroundImage:
                 "linear-gradient(to right, rgba(255,255,255,1) 0%, rgba(255,255,255,0.95) 60%, rgba(255,255,255,0.75) 85%, rgba(255,255,255,0.45) 100%)",
@@ -356,10 +356,6 @@ export default async function Page({
             {/* Brand */}
             <div>
               <Wordmark className="h-4 w-auto" />
-              <p className="mt-5 max-w-[300px] text-[14px] leading-[1.65] text-white/45">
-                The intelligence layer for consumer apps. Tessa lives inside your product
-                and guides every user to the outcome they want.
-              </p>
             </div>
 
             {/* Explore */}
@@ -493,9 +489,6 @@ export default async function Page({
           <div className="mt-14 sm:mt-20 pt-7 border-t border-white/[0.06] flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
             <span className="text-white/35 text-[11px] sm:text-[12px] font-mono tracking-[0.12em] uppercase tabular-nums">
               © 2026 Tesurai LLC
-            </span>
-            <span className="text-white/30 text-[11px] sm:text-[12px] font-mono tracking-[0.12em] uppercase">
-              Most products react, but the best ones predict
             </span>
           </div>
         </div>
