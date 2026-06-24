@@ -259,9 +259,6 @@ export default async function Page({
         <div className="max-w-[1100px] mx-auto">
           <div className="sm:text-center">
             <Eyebrow>Pricing</Eyebrow>
-            <h2 className="text-[clamp(1.875rem,3.5vw,2.75rem)] font-medium leading-[1.1] tracking-[-0.03em] text-white">
-              Everything in the build
-            </h2>
           </div>
 
           <div className="mt-14 max-w-[880px] mx-auto rounded-2xl border border-white/[0.12] bg-white/[0.03] md:grid md:grid-cols-2 text-left">
