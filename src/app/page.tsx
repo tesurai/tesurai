@@ -92,6 +92,12 @@ export default async function Page({
               >
                 Process
               </a>
+              <a
+                href="#pricing"
+                className="text-[13.5px] font-normal text-white/60 hover:text-white transition-colors"
+              >
+                Pricing
+              </a>
             </nav>
           </div>
           <div className="flex items-center gap-5">
@@ -373,6 +379,98 @@ export default async function Page({
         </div>
       </section>
 
+      {/* Pricing: the same split card as before, with the dollar amount held back so the
+          number comes on the call. Left drives the booking, right spells out the build. */}
+      <section id="pricing" className="px-6 sm:px-10 py-24 sm:py-32 scroll-mt-24">
+        <div className="max-w-[1100px] mx-auto">
+          <div className="sm:text-center">
+            <Eyebrow>Pricing</Eyebrow>
+            <h2 className="text-[clamp(1.875rem,3.5vw,2.75rem)] font-medium leading-[1.1] tracking-[-0.03em] text-white">
+              One build. One price.
+            </h2>
+          </div>
+
+          <div className="mt-14 max-w-[880px] mx-auto rounded-2xl border border-white/[0.12] bg-white/[0.03] md:grid md:grid-cols-2 text-left">
+            <div className="p-7 sm:p-10 border-b md:border-b-0 md:border-r border-white/[0.10] flex flex-col">
+              <p className="text-[12px] font-mono tracking-[0.16em] uppercase text-white/55">
+                Tessa
+              </p>
+              <p className="mt-6 text-[clamp(1.75rem,3.5vw,2.5rem)] font-medium leading-[1.1] tracking-[-0.02em] text-white">
+                We share the price on the call.
+              </p>
+              <p className="mt-4 text-[15px] font-normal leading-[1.6] text-white/55">
+                One flat price for the full build. Book a call and we will walk you through it.
+              </p>
+              <div className="mt-8 md:mt-auto md:pt-10">
+                <a
+                  href={CAL_LINK}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center gap-2 w-full rounded-full bg-white text-black px-7 py-3.5 text-[14px] font-medium hover:bg-white/90 transition-all duration-300"
+                >
+                  Book a call
+                  <svg
+                    width="15"
+                    height="15"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="1.6"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    aria-hidden="true"
+                  >
+                    <path d="M5 12h14M13 5l7 7-7 7" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <div className="p-7 sm:p-10">
+              <p className="text-[12px] font-mono tracking-[0.16em] uppercase text-white/55">
+                What you get
+              </p>
+              <ul className="mt-3 divide-y divide-white/[0.08]">
+                {[
+                  {
+                    t: "Onboarding",
+                    d: "A call to map your business, your users, and the results they want.",
+                  },
+                  {
+                    t: "Formula",
+                    d: "A Tessa formula built around your business.",
+                  },
+                  {
+                    t: "Integration",
+                    d: "Tessa built into your product, ready for every user.",
+                  },
+                  {
+                    t: "Patterns",
+                    d: "The habits that shape each user's results.",
+                  },
+                  {
+                    t: "Feedback",
+                    d: "One clear next move for every user, and it feeds back to you.",
+                  },
+                  {
+                    t: "Forecast",
+                    d: "Two paths in plain words, based on if they follow the feedback.",
+                  },
+                  {
+                    t: "Launch",
+                    d: "Test flights, then live.",
+                  },
+                ].map((item) => (
+                  <li key={item.t} className="py-3.5 text-[14px] font-normal leading-[1.5]">
+                    <span className="font-medium text-white">{item.t}.</span>{" "}
+                    <span className="text-white/60">{item.d}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Closing: the page summed up as one fade quote, fading right like the wordmark,
           capped with the single Book a call CTA. */}
       <section className="px-6 sm:px-10 py-24 sm:py-36">
@@ -434,6 +532,12 @@ export default async function Page({
                 className="text-[14px] font-normal text-white/65 hover:text-white transition-colors"
               >
                 Process
+              </a>
+              <a
+                href="#pricing"
+                className="text-[14px] font-normal text-white/65 hover:text-white transition-colors"
+              >
+                Pricing
               </a>
               <a
                 href="mailto:hello@tesurai.com"
