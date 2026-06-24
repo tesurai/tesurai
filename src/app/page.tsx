@@ -144,7 +144,7 @@ export default async function Page({
           text, three Theirs/Ours contrast rows, then the stance in full white. */}
       <section className="px-6 sm:px-10 py-24 sm:py-32">
         <div className="max-w-[1100px] mx-auto">
-          <div className="text-center">
+          <div className="sm:text-center">
             <Eyebrow>Mission</Eyebrow>
             <h2 className="text-[clamp(1.875rem,3.5vw,2.75rem)] font-medium leading-[1.1] tracking-[-0.03em] text-white">
               We are building the counterforce
@@ -164,7 +164,7 @@ export default async function Page({
                 ["Their AI keeps your users in the dark.", "Tessa makes your users aware."],
                 ["Their AI uses your users.", "Tessa serves your users."],
               ].map(([theirs, ours]) => (
-                <div key={theirs} className="grid grid-cols-2 gap-3 sm:gap-8 py-5">
+                <div key={theirs} className="grid sm:grid-cols-2 gap-2 sm:gap-8 py-5">
                   <p className="text-[15px] font-normal leading-[1.55] text-white/45">
                     {theirs}
                   </p>
