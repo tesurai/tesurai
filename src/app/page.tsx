@@ -133,9 +133,9 @@ export default async function Page({
             Most products react, but the best ones predict.
           </h1>
           <p className="mt-7 text-[clamp(1.05rem,1.45vw,1.2rem)] font-normal leading-[1.6] text-white/60 max-w-[600px] mx-auto">
-            Tessa lives inside your product. Tessa reads each user&rsquo;s past to see
-            where they are likely headed, and gives them the next step toward the result
-            they came for.
+            Tessa lives inside your product. Tessa reads each user&rsquo;s past to predict
+            their future, and gives them feedback based on their behavior to help them get
+            the outcome they came for.
           </p>
         </div>
       </section>
