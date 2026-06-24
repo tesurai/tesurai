@@ -117,7 +117,7 @@ export default async function Page({
 
       {/* Hero: eyebrow, headline, and subhead. No CTA here. */}
       <section className="px-6 sm:px-10 flex flex-col justify-center min-h-svh sm:block sm:min-h-0 pt-24 sm:pt-52 pb-20 sm:pb-32">
-        <div className="max-w-[860px] mx-auto sm:text-center">
+        <div className="max-w-[960px] mx-auto sm:text-center">
           {paid && (
             <div className="mb-10 rounded-xl border border-white/[0.15] bg-white/[0.04] p-5 sm:p-6 max-w-[560px] mx-auto">
               <p className="text-[11px] font-mono tracking-[0.22em] uppercase text-white mb-2">
@@ -129,7 +129,7 @@ export default async function Page({
             </div>
           )}
           <Eyebrow>Intelligence layer</Eyebrow>
-          <h1 className="text-balance text-[clamp(2.75rem,6.5vw,4.75rem)] font-medium leading-[1.05] tracking-[-0.035em] text-white max-w-[20ch] mx-auto">
+          <h1 className="text-balance text-[clamp(2.75rem,6.5vw,4.75rem)] font-medium leading-[1.05] tracking-[-0.035em] text-white max-w-[25ch] mx-auto">
             Most products react, but the best ones predict.
           </h1>
           <p className="mt-7 text-balance text-[clamp(1.05rem,1.45vw,1.2rem)] font-normal leading-[1.6] text-white/60 max-w-[560px] mx-auto">
