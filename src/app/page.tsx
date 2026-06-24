@@ -131,8 +131,9 @@ export default async function Page({
             Most products react. The best ones predict.
           </h1>
           <p className="mt-7 text-[clamp(1.05rem,1.45vw,1.2rem)] font-normal leading-[1.6] text-white/60 max-w-[600px] mx-auto">
-            Tessa lives inside your product. Tessa uses each user&rsquo;s past to predict
-            their future, and guides them step by step to the result they came for.
+            Tessa lives inside your product. Tessa reads each user&rsquo;s past to see
+            where they are likely headed, and gives them the next step toward the result
+            they came for.
           </p>
         </div>
       </section>
@@ -172,8 +173,8 @@ export default async function Page({
 
             <p className="text-[clamp(1.05rem,1.4vw,1.25rem)] font-normal leading-[1.65] text-white">
               We are not joining their game. We take the same system the giants built and
-              flip the script for consumer businesses like yours. Your users get real
-              results and grow into a more capable version of themselves. That is the
+              flip the script for consumer businesses like yours. Your users make real
+              progress and grow into a more capable version of themselves. That is the
               fight, and that is how we win it.
             </p>
           </div>
@@ -200,7 +201,7 @@ export default async function Page({
                 },
                 {
                   t: "Patterns",
-                  d: "Tessa spots the habits that shape their results and shows how often they come up. Tessa never guesses and never makes things up.",
+                  d: "Tessa spots the habits that shape their results and shows how often they come up. Tessa works only from each user's real data.",
                 },
                 {
                   t: "Feedback",
@@ -208,7 +209,7 @@ export default async function Page({
                 },
                 {
                   t: "Forecast",
-                  d: "Two paths in plain words. Where they land if they follow the feedback, and where they land if they keep doing what they are doing.",
+                  d: "Two paths in plain words. Where they are likely to land if they follow the feedback, and where they are likely to land if they keep doing what they are doing.",
                 },
                 {
                   t: "Goal",
@@ -282,10 +283,10 @@ export default async function Page({
                 <ol className="mt-5 space-y-5">
                   {[
                     "Tessa learns this user, not the average user.",
-                    "Tessa catches the stall the moment it starts.",
+                    "Tessa spots the stall early.",
                     "Tessa gives them the next move that fits where they are.",
                     "You see who is winning and who is slipping, early.",
-                    "They reach what they came for.",
+                    "They keep moving toward what they came for.",
                   ].map((step) => (
                     <li
                       key={step}
@@ -457,8 +458,8 @@ export default async function Page({
               WebkitTextFillColor: "transparent",
             }}
           >
-            Stop losing the users you could have kept. Tessa gets each user to the result
-            they came for. When your users win, you win.
+            Stop losing the users you could have kept. Tessa keeps each user moving toward
+            the result they came for. When your users win, you win.
           </h2>
         </div>
       </section>
