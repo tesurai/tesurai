@@ -15,8 +15,8 @@ import ProcessTimeline from "./process-timeline";
 
 const CAL_LINK = "https://cal.com/tesurai/call";
 
-const BROWSER_TITLE = "Tesurai | Most products react. The best ones predict";
-const SHARE_TITLE = "Most products react. The best ones predict";
+const BROWSER_TITLE = "Tesurai | Most products react, the best ones predict.";
+const SHARE_TITLE = "Most products react, the best ones predict.";
 const SHARE_DESCRIPTION =
   "Every user gets their own Tessa. Built right into your product.";
 const SHARE_IMAGE = "/og.png";
@@ -34,7 +34,7 @@ export const metadata = {
         url: SHARE_IMAGE,
         width: 1200,
         height: 630,
-        alt: "Tesurai. Most products react. The best ones predict.",
+        alt: "Tesurai. Most products react, the best ones predict.",
       },
     ],
   },
@@ -130,7 +130,7 @@ export default async function Page({
           )}
           <Eyebrow>Intelligence layer</Eyebrow>
           <h1 className="text-balance text-[clamp(3.25rem,6vw,4.25rem)] font-medium leading-[1.05] tracking-[-0.035em] text-white max-w-[20ch] mx-auto">
-            Most products react. The best ones predict
+            Most products react, the best ones predict.
           </h1>
           <p className="mt-7 text-[clamp(1.05rem,1.45vw,1.2rem)] font-normal leading-[1.6] text-white/60 max-w-[600px] mx-auto">
             Tessa lives inside your product. Tessa reads each user&rsquo;s past to see
