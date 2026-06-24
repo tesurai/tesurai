@@ -98,7 +98,7 @@ export default async function Page({
                 href="#pricing"
                 className="text-[13.5px] font-normal text-white/60 hover:text-white transition-colors"
               >
-                Scope
+                Pricing
               </a>
             </nav>
           </div>
@@ -132,7 +132,7 @@ export default async function Page({
           <h1 className="text-balance text-[clamp(3.25rem,6vw,4.25rem)] font-medium leading-[1.05] tracking-[-0.035em] text-white max-w-[20ch] mx-auto">
             Most products react, but the best ones predict.
           </h1>
-          <p className="mt-7 text-[clamp(1.05rem,1.45vw,1.2rem)] font-normal leading-[1.6] text-white/60 max-w-[600px] mx-auto">
+          <p className="mt-7 text-[clamp(0.95rem,1.2vw,1.05rem)] font-normal leading-[1.6] text-white/60 max-w-[600px] mx-auto">
             Tessa lives inside your product. Tessa reads each user&rsquo;s past to predict
             their future, and gives them feedback based on their behavior to help them get
             the outcome they came for.
@@ -185,10 +185,6 @@ export default async function Page({
             <h2 className="text-[clamp(1.875rem,3.5vw,2.75rem)] font-medium leading-[1.1] tracking-[-0.03em] text-white">
               Predict or lose them
             </h2>
-            <p className="mt-5 text-[clamp(1rem,1.3vw,1.15rem)] font-normal leading-[1.6] text-white/60 max-w-[560px] mx-auto">
-              Churn does not happen at the cancel button. It happens weeks earlier, in a
-              moment your product cannot see.
-            </p>
           </div>
 
           <div className="mt-12 sm:mt-16 max-w-[680px] mx-auto">
@@ -257,12 +253,12 @@ export default async function Page({
         </div>
       </section>
 
-      {/* Scope: the same split card, reframed as the deliverable. No price anywhere.
+      {/* Pricing: the same split card, reframed as the deliverable. No price anywhere.
           Left is a short pitch and the call CTA, right itemizes what every build includes. */}
       <section id="pricing" className="px-6 sm:px-10 py-24 sm:py-32 scroll-mt-24">
         <div className="max-w-[1100px] mx-auto">
           <div className="sm:text-center">
-            <Eyebrow>Scope</Eyebrow>
+            <Eyebrow>Pricing</Eyebrow>
             <h2 className="text-[clamp(1.875rem,3.5vw,2.75rem)] font-medium leading-[1.1] tracking-[-0.03em] text-white">
               Everything in the build
             </h2>
@@ -380,7 +376,7 @@ export default async function Page({
                 href="#pricing"
                 className="text-[14px] font-normal text-white/65 hover:text-white transition-colors"
               >
-                Scope
+                Pricing
               </a>
               <a
                 href="mailto:hello@tesurai.com"
