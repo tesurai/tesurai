@@ -308,15 +308,15 @@ export default async function Page({
                 {[
                   {
                     t: "Onboarding",
-                    d: "A call to map your business, your users, and the results they want.",
+                    d: "A call to map your business, your users, and the outcome they want.",
                   },
                   {
                     t: "Formula",
-                    d: "A Tessa formula built around your business: the patterns, feedback, and forecast every user gets.",
+                    d: "The patterns, feedback, and forecast each user gets.",
                   },
                   {
                     t: "Integration",
-                    d: "Tessa built into your product, ready for every user.",
+                    d: "Tessa wired into your app and your data.",
                   },
                   {
                     t: "Launch",
@@ -334,59 +334,83 @@ export default async function Page({
         </div>
       </section>
 
-      {/* Closing: the page summed up as one fade quote, fading right like the wordmark.
-          No buttons. */}
-      <section className="px-6 sm:px-10 py-24 sm:py-36">
-        <div className="max-w-[900px] mx-auto text-left">
-          <h2
-            className="bg-clip-text text-transparent text-[clamp(1.5rem,3vw,2.5rem)] font-medium leading-[1.3] tracking-[-0.02em]"
-            style={{
-              backgroundImage:
-                "linear-gradient(to right, rgba(255,255,255,1) 0%, rgba(255,255,255,0.95) 60%, rgba(255,255,255,0.75) 85%, rgba(255,255,255,0.45) 100%)",
-              WebkitTextFillColor: "transparent",
-            }}
-          >
+      {/* Closing: centered two-part send-off. Muted setup, then the payoff line in full
+          white as the punch. */}
+      <section className="px-6 sm:px-10 py-28 sm:py-40">
+        <div className="max-w-[760px] mx-auto text-center">
+          <p className="text-balance text-[clamp(1.25rem,2.4vw,1.875rem)] font-normal leading-[1.45] text-white/45">
             Stop losing the users you could have kept. Tessa keeps each user moving toward
-            the result they came for. When your users win, you win.
-          </h2>
+            the outcome they want.
+          </p>
+          <p className="mt-6 text-balance text-[clamp(1.875rem,3.6vw,2.875rem)] font-medium leading-[1.15] tracking-[-0.02em] text-white">
+            When your users win, you win.
+          </p>
         </div>
       </section>
 
-      {/* Footer: flat row on desktop, tight stack on mobile. No mono category labels above
-          single items. Touch targets padded for mobile thumbs. */}
-      <footer className="px-6 sm:px-10 py-12 sm:py-14 border-t border-white/[0.08]">
+      {/* Footer: brand block with tagline, then Explore and Connect columns, and a bottom
+          bar. Collapses to a single column on mobile. */}
+      <footer className="px-6 sm:px-10 pt-16 sm:pt-24 pb-10 border-t border-white/[0.08]">
         <div className="max-w-[1200px] mx-auto">
-          {/* Top row: wordmark + links/socials. Stacks on mobile, single row on desktop. */}
-          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-8 sm:gap-6">
-            <Wordmark className="h-3 w-auto" />
+          <div className="grid gap-12 md:gap-8 md:grid-cols-[1.6fr_1fr_1fr]">
+            {/* Brand */}
+            <div>
+              <Wordmark className="h-4 w-auto" />
+              <p className="mt-5 max-w-[300px] text-[14px] leading-[1.65] text-white/45">
+                The intelligence layer for consumer apps. Tessa lives inside your product
+                and guides every user to the outcome they want.
+              </p>
+            </div>
 
-            <div className="flex flex-col sm:flex-row sm:items-center gap-5 sm:gap-8">
-              <a
-                href="#tessa"
-                className="text-[14px] font-normal text-white/65 hover:text-white transition-colors"
-              >
-                Tessa
-              </a>
-              <a
-                href="#process"
-                className="text-[14px] font-normal text-white/65 hover:text-white transition-colors"
-              >
-                Process
-              </a>
-              <a
-                href="#pricing"
-                className="text-[14px] font-normal text-white/65 hover:text-white transition-colors"
-              >
-                Pricing
-              </a>
-              <a
-                href="mailto:hello@tesurai.com"
-                className="text-[14px] font-normal text-white/65 hover:text-white transition-colors"
-              >
-                hello@tesurai.com
-              </a>
+            {/* Explore */}
+            <div>
+              <p className="text-[11px] font-mono tracking-[0.18em] uppercase text-white/35">
+                Explore
+              </p>
+              <ul className="mt-5 space-y-3.5">
+                <li>
+                  <a
+                    href="#tessa"
+                    className="text-[14px] font-normal text-white/65 hover:text-white transition-colors"
+                  >
+                    Tessa
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#process"
+                    className="text-[14px] font-normal text-white/65 hover:text-white transition-colors"
+                  >
+                    Process
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#pricing"
+                    className="text-[14px] font-normal text-white/65 hover:text-white transition-colors"
+                  >
+                    Pricing
+                  </a>
+                </li>
+              </ul>
+            </div>
 
-              <div className="flex items-center gap-1 sm:gap-2 sm:ml-2">
+            {/* Connect */}
+            <div>
+              <p className="text-[11px] font-mono tracking-[0.18em] uppercase text-white/35">
+                Connect
+              </p>
+              <ul className="mt-5 space-y-3.5">
+                <li>
+                  <a
+                    href="mailto:hello@tesurai.com"
+                    className="text-[14px] font-normal text-white/65 hover:text-white transition-colors"
+                  >
+                    hello@tesurai.com
+                  </a>
+                </li>
+              </ul>
+              <div className="mt-5 -ml-2 flex items-center gap-1">
                 <a
                   href="https://www.instagram.com/gettesurai"
                   target="_blank"
@@ -465,10 +489,13 @@ export default async function Page({
             </div>
           </div>
 
-          {/* Copyright row */}
-          <div className="mt-10 sm:mt-12 pt-6 sm:pt-8 border-t border-white/[0.06]">
+          {/* Bottom bar */}
+          <div className="mt-14 sm:mt-20 pt-7 border-t border-white/[0.06] flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
             <span className="text-white/35 text-[11px] sm:text-[12px] font-mono tracking-[0.12em] uppercase tabular-nums">
               © 2026 Tesurai LLC
+            </span>
+            <span className="text-white/30 text-[11px] sm:text-[12px] font-mono tracking-[0.12em] uppercase">
+              Most products react, but the best ones predict
             </span>
           </div>
         </div>
