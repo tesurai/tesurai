@@ -107,7 +107,7 @@ export default function ProcessTimeline() {
           <h3 className="mt-2 text-[clamp(1.125rem,1.6vw,1.375rem)] font-medium tracking-[-0.02em] text-white">
             {s.t}
           </h3>
-          <p className="mt-2 text-[14.5px] font-normal leading-[1.6] text-white/50 max-w-[480px]">
+          <p className="mt-2 text-[15px] font-normal leading-[1.6] text-white/50 max-w-[480px]">
             {s.d}
           </p>
         </div>

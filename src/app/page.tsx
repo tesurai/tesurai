@@ -123,7 +123,7 @@ export default async function Page({
               <p className="text-[11px] font-mono tracking-[0.22em] uppercase text-white mb-2">
                 Payment received
               </p>
-              <p className="text-[14px] sm:text-[15px] font-normal leading-[1.55] text-white/70">
+              <p className="text-[15px] sm:text-[16px] font-normal leading-[1.55] text-white/70">
                 Our team will reach out within a few hours to find a time to hop on a call.
               </p>
             </div>
@@ -146,13 +146,13 @@ export default async function Page({
         <div className="max-w-[1100px] mx-auto">
           <div className="sm:text-center">
             <Eyebrow>Mission</Eyebrow>
-            <h2 className="text-[clamp(1.875rem,3.5vw,2.75rem)] font-medium leading-[1.1] tracking-[-0.03em] text-white">
+            <h2 className="text-[clamp(2.125rem,3.5vw,2.75rem)] font-medium leading-[1.1] tracking-[-0.03em] text-white">
               We are building the counterforce
             </h2>
           </div>
 
           <div className="mt-12 sm:mt-16 max-w-[680px] mx-auto text-left">
-            <p className="text-[clamp(1.05rem,1.4vw,1.25rem)] font-normal leading-[1.65] text-white/60">
+            <p className="text-[clamp(1.15rem,1.4vw,1.3rem)] font-normal leading-[1.65] text-white/60">
               Big companies use AI to make people weaker, dumber, more distracted, more
               dependent, and easier to control. Pretending AI will go away does not make it
               go away. Sitting on the sidelines is how we lose.
@@ -164,11 +164,11 @@ export default async function Page({
                 ["Their AI keeps your users in the dark.", "Tessa makes your users aware."],
                 ["Their AI uses your users.", "Tessa serves your users."],
               ].map(([theirs, ours]) => (
-                <div key={theirs} className="grid sm:grid-cols-2 gap-2 sm:gap-8 py-5">
-                  <p className="text-[15px] font-normal leading-[1.55] text-white/45">
+                <div key={theirs} className="grid grid-cols-2 gap-3 sm:gap-8 py-5">
+                  <p className="text-[16px] font-normal leading-[1.55] text-white/45">
                     {theirs}
                   </p>
-                  <p className="text-[15px] font-normal leading-[1.55] text-white">{ours}</p>
+                  <p className="text-[16px] font-normal leading-[1.55] text-white">{ours}</p>
                 </div>
               ))}
             </div>
@@ -182,7 +182,7 @@ export default async function Page({
         <div className="max-w-[1100px] mx-auto">
           <div className="sm:text-center">
             <Eyebrow>The difference</Eyebrow>
-            <h2 className="text-[clamp(1.875rem,3.5vw,2.75rem)] font-medium leading-[1.1] tracking-[-0.03em] text-white">
+            <h2 className="text-[clamp(2.125rem,3.5vw,2.75rem)] font-medium leading-[1.1] tracking-[-0.03em] text-white">
               Predict or lose them
             </h2>
           </div>
@@ -203,7 +203,7 @@ export default async function Page({
                   ].map((step) => (
                     <li
                       key={step}
-                      className="text-[15px] font-normal leading-[1.55] text-white/40"
+                      className="text-[16px] font-normal leading-[1.55] text-white/40"
                     >
                       {step}
                     </li>
@@ -224,7 +224,7 @@ export default async function Page({
                   ].map((step) => (
                     <li
                       key={step}
-                      className="text-[15px] font-normal leading-[1.55] text-white"
+                      className="text-[16px] font-normal leading-[1.55] text-white"
                     >
                       {step}
                     </li>
@@ -242,7 +242,7 @@ export default async function Page({
         <div className="max-w-[1100px] mx-auto">
           <div className="sm:text-center">
             <Eyebrow>Process</Eyebrow>
-            <h2 className="text-[clamp(1.875rem,3.5vw,2.75rem)] font-medium leading-[1.1] tracking-[-0.03em] text-white">
+            <h2 className="text-[clamp(2.125rem,3.5vw,2.75rem)] font-medium leading-[1.1] tracking-[-0.03em] text-white">
               Onboard. Build. Launch.
             </h2>
           </div>
@@ -269,7 +269,7 @@ export default async function Page({
               <p className="mt-6 text-[clamp(1.75rem,3.5vw,2.5rem)] font-medium leading-[1.1] tracking-[-0.02em] text-white">
                 Built around your business.
               </p>
-              <p className="mt-4 text-[15px] font-normal leading-[1.6] text-white/55">
+              <p className="mt-4 text-[16px] font-normal leading-[1.6] text-white/55">
                 Tessa lives inside your product, ready for every user.
               </p>
               <div className="mt-8 md:mt-auto md:pt-10">
@@ -277,7 +277,7 @@ export default async function Page({
                   href={CAL_LINK}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center gap-2 w-full rounded-full bg-white text-black px-7 py-3.5 text-[14px] font-medium hover:bg-white/90 transition-all duration-300"
+                  className="inline-flex items-center justify-center gap-2 w-full rounded-full bg-white text-black px-7 py-3.5 text-[15px] font-medium hover:bg-white/90 transition-all duration-300"
                 >
                   Book a call
                   <svg
@@ -319,7 +319,7 @@ export default async function Page({
                     d: "Know who is on track and who is slipping, early.",
                   },
                 ].map((item) => (
-                  <li key={item.t} className="py-3.5 text-[14px] font-normal leading-[1.5]">
+                  <li key={item.t} className="py-3.5 text-[15px] font-normal leading-[1.5]">
                     <span className="font-medium text-white">{item.t}.</span>{" "}
                     <span className="text-white/60">{item.d}</span>
                   </li>
@@ -367,7 +367,7 @@ export default async function Page({
                 <li>
                   <a
                     href="#tessa"
-                    className="text-[14px] font-normal text-white/65 hover:text-white transition-colors"
+                    className="text-[15px] font-normal text-white/65 hover:text-white transition-colors"
                   >
                     Tessa
                   </a>
@@ -375,7 +375,7 @@ export default async function Page({
                 <li>
                   <a
                     href="#process"
-                    className="text-[14px] font-normal text-white/65 hover:text-white transition-colors"
+                    className="text-[15px] font-normal text-white/65 hover:text-white transition-colors"
                   >
                     Process
                   </a>
@@ -383,7 +383,7 @@ export default async function Page({
                 <li>
                   <a
                     href="#pricing"
-                    className="text-[14px] font-normal text-white/65 hover:text-white transition-colors"
+                    className="text-[15px] font-normal text-white/65 hover:text-white transition-colors"
                   >
                     Pricing
                   </a>
@@ -400,7 +400,7 @@ export default async function Page({
                 <li>
                   <a
                     href="mailto:hello@tesurai.com"
-                    className="text-[14px] font-normal text-white/65 hover:text-white transition-colors"
+                    className="text-[15px] font-normal text-white/65 hover:text-white transition-colors"
                   >
                     hello@tesurai.com
                   </a>
