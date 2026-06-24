@@ -11,8 +11,6 @@
 // buttons (one white-filled primary), sharp boxed mono eyebrows, medium-weight display
 // type in solid white. No cards, no gradient text, no glows, no shadows, no accent color.
 
-import PayButton from "./pay-button";
-
 const CAL_LINK = "https://cal.com/tesurai/call";
 
 const BROWSER_TITLE = "Tesurai | Most products react. The best ones predict.";
@@ -94,12 +92,6 @@ export default async function Page({
               >
                 Process
               </a>
-              <a
-                href="#pricing"
-                className="text-[13.5px] font-normal text-white/60 hover:text-white transition-colors"
-              >
-                Pricing
-              </a>
             </nav>
           </div>
           <div className="flex items-center gap-5">
@@ -107,21 +99,15 @@ export default async function Page({
               href={CAL_LINK}
               target="_blank"
               rel="noopener noreferrer"
-              className="hidden sm:inline text-[13.5px] font-normal text-white/60 hover:text-white transition-colors"
-            >
-              Book a call
-            </a>
-            <a
-              href="#pricing"
               className="inline-flex items-center rounded-full bg-white text-black px-4 py-2 text-[13px] font-medium hover:bg-white/90 transition-colors"
             >
-              Get started
+              Book a call
             </a>
           </div>
         </div>
       </header>
 
-      {/* Hero: badge, gradient headline, subhead, dual CTAs, soft glow */}
+      {/* Hero: eyebrow, headline, subhead, and the primary Book a call CTA. */}
       <section className="px-6 sm:px-10 flex flex-col justify-center min-h-svh sm:block sm:min-h-0 pt-24 sm:pt-52 pb-20 sm:pb-32">
         <div className="max-w-[860px] mx-auto sm:text-center">
           {paid && (
@@ -142,6 +128,29 @@ export default async function Page({
             Tessa lives inside your product. Tessa uses each user&rsquo;s past to predict
             their future, and guides them step by step to the result they came for.
           </p>
+          <div className="mt-9 flex sm:justify-center">
+            <a
+              href={CAL_LINK}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center gap-2 rounded-full bg-white text-black px-7 py-3.5 text-[14px] font-medium hover:bg-white/90 transition-all duration-300"
+            >
+              Book a call
+              <svg
+                width="15"
+                height="15"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="1.6"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                aria-hidden="true"
+              >
+                <path d="M5 12h14M13 5l7 7-7 7" />
+              </svg>
+            </a>
+          </div>
         </div>
       </section>
 
@@ -364,85 +373,8 @@ export default async function Page({
         </div>
       </section>
 
-      {/* Pricing: split card. Left holds the price and the two ways to start, right
-          spells out what is included, both the build and what each user gets. */}
-      <section id="pricing" className="px-6 sm:px-10 py-24 sm:py-32 scroll-mt-24">
-        <div className="max-w-[1100px] mx-auto">
-          <div className="sm:text-center">
-            <Eyebrow>Pricing</Eyebrow>
-            <h2 className="text-[clamp(1.875rem,3.5vw,2.75rem)] font-medium leading-[1.1] tracking-[-0.03em] text-white">
-              One build. One price.
-            </h2>
-          </div>
-
-          <div className="mt-14 max-w-[880px] mx-auto rounded-2xl border border-white/[0.12] bg-white/[0.03] md:grid md:grid-cols-2 text-left">
-            <div className="p-7 sm:p-10 border-b md:border-b-0 md:border-r border-white/[0.10] flex flex-col">
-              <p className="text-[12px] font-mono tracking-[0.16em] uppercase text-white/55">
-                Tessa
-              </p>
-              <p className="mt-6 text-[clamp(2.75rem,5vw,3.75rem)] font-medium leading-none text-white tabular-nums tracking-[-0.03em]">
-                $2,500
-              </p>
-              <div className="mt-8 md:mt-auto md:pt-10 flex flex-col gap-3">
-                <PayButton />
-                <a
-                  href={CAL_LINK}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center w-full rounded-full border border-white/[0.15] bg-white/[0.02] px-7 py-3.5 text-[14px] font-normal text-white hover:bg-white/[0.08] transition-colors"
-                >
-                  Book a call
-                </a>
-              </div>
-            </div>
-            <div className="p-7 sm:p-10">
-              <p className="text-[12px] font-mono tracking-[0.16em] uppercase text-white/55">
-                What you get
-              </p>
-              <ul className="mt-3 divide-y divide-white/[0.08]">
-                {[
-                  {
-                    t: "Onboarding",
-                    d: "A call to map your business, your users, and the results they want.",
-                  },
-                  {
-                    t: "Formula",
-                    d: "A Tessa formula built around your business.",
-                  },
-                  {
-                    t: "Integration",
-                    d: "Tessa built into your product, ready for every user.",
-                  },
-                  {
-                    t: "Patterns",
-                    d: "The habits that shape each user's results.",
-                  },
-                  {
-                    t: "Feedback",
-                    d: "One clear next move for every user, and it feeds back to you.",
-                  },
-                  {
-                    t: "Forecast",
-                    d: "Two paths in plain words, based on if they follow the feedback.",
-                  },
-                  {
-                    t: "Launch",
-                    d: "Test flights, then live.",
-                  },
-                ].map((item) => (
-                  <li key={item.t} className="py-3.5 text-[14px] font-normal leading-[1.5]">
-                    <span className="font-medium text-white">{item.t}.</span>{" "}
-                    <span className="text-white/60">{item.d}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Closing: the page summed up as one fade quote, fading right like the wordmark.
-          No buttons. */}
+      {/* Closing: the page summed up as one fade quote, fading right like the wordmark,
+          capped with the single Book a call CTA. */}
       <section className="px-6 sm:px-10 py-24 sm:py-36">
         <div className="max-w-[900px] mx-auto text-left">
           <h2
@@ -456,6 +388,29 @@ export default async function Page({
             Stop losing the users you could have kept. Tessa gets each user to the result
             they came for. When your users win, you win.
           </h2>
+          <div className="mt-10 sm:mt-12">
+            <a
+              href={CAL_LINK}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center gap-2 rounded-full bg-white text-black px-7 py-3.5 text-[14px] font-medium hover:bg-white/90 transition-all duration-300"
+            >
+              Book a call
+              <svg
+                width="15"
+                height="15"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="1.6"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                aria-hidden="true"
+              >
+                <path d="M5 12h14M13 5l7 7-7 7" />
+              </svg>
+            </a>
+          </div>
         </div>
       </section>
 
@@ -479,12 +434,6 @@ export default async function Page({
                 className="text-[14px] font-normal text-white/65 hover:text-white transition-colors"
               >
                 Process
-              </a>
-              <a
-                href="#pricing"
-                className="text-[14px] font-normal text-white/65 hover:text-white transition-colors"
-              >
-                Pricing
               </a>
               <a
                 href="mailto:hello@tesurai.com"
