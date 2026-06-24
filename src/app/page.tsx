@@ -11,6 +11,8 @@
 // buttons (one white-filled primary), sharp boxed mono eyebrows, medium-weight display
 // type in solid white. No cards, no gradient text, no glows, no shadows, no accent color.
 
+import ProcessTimeline from "./process-timeline";
+
 const CAL_LINK = "https://cal.com/tesurai/call";
 
 const BROWSER_TITLE = "Tesurai | Most products react. The best ones predict.";
@@ -238,8 +240,8 @@ export default async function Page({
         </div>
       </section>
 
-      {/* Process: a vertical timeline. Square nodes on a left rail echo the sharp
-          boxed eyebrows. */}
+      {/* Process: a vertical timeline whose line draws on scroll (ProcessTimeline, a
+          client component). Square nodes on a left rail echo the sharp eyebrows. */}
       <section id="process" className="px-6 sm:px-10 py-24 sm:py-32 scroll-mt-24">
         <div className="max-w-[1100px] mx-auto">
           <div className="sm:text-center">
@@ -250,41 +252,7 @@ export default async function Page({
           </div>
 
           <div className="mt-12 sm:mt-16 max-w-[680px] mx-auto text-left">
-            <div className="relative ml-1 border-l border-white/[0.15]">
-              {[
-                {
-                  n: "01",
-                  t: "Onboard",
-                  d: "We hop on a call with you to understand your business, your users, and the results you want them to achieve.",
-                },
-                {
-                  n: "02",
-                  t: "Build",
-                  d: "We build the Tessa formula around your business so users get the right patterns and feedback to reach the results.",
-                },
-                {
-                  n: "03",
-                  t: "Launch",
-                  d: "We wire Tessa up to your business, clean up bugs with test flights, and then push it to live.",
-                },
-              ].map((s) => (
-                <div key={s.n} className="relative pl-8 sm:pl-12 pb-12 last:pb-0">
-                  <span
-                    aria-hidden
-                    className="absolute -left-[4.5px] top-[5px] h-2 w-2 bg-white"
-                  />
-                  <p className="text-[11px] font-mono tracking-[0.16em] uppercase text-white/40">
-                    Step {s.n}
-                  </p>
-                  <h3 className="mt-2 text-[clamp(1.125rem,1.6vw,1.375rem)] font-medium tracking-[-0.02em] text-white">
-                    {s.t}
-                  </h3>
-                  <p className="mt-2 text-[14.5px] font-normal leading-[1.6] text-white/50 max-w-[480px]">
-                    {s.d}
-                  </p>
-                </div>
-              ))}
-            </div>
+            <ProcessTimeline />
           </div>
         </div>
       </section>
