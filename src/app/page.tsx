@@ -300,7 +300,7 @@ export default async function Page({
               <p className="text-[12px] font-mono tracking-[0.16em] uppercase text-white/55">
                 What you get
               </p>
-              <ul className="mt-6 space-y-6">
+              <div className="mt-6 relative ml-1 border-l border-white/[0.15]">
                 {[
                   {
                     t: "Metrics",
@@ -318,17 +318,24 @@ export default async function Page({
                     t: "Visibility",
                     d: "Know who is on track and who is slipping, early.",
                   },
-                ].map((item) => (
-                  <li key={item.t}>
-                    <h3 className="text-[clamp(1.125rem,1.6vw,1.375rem)] font-medium tracking-[-0.02em] text-white">
+                ].map((item, i) => (
+                  <div key={item.t} className="relative pl-8 sm:pl-10 pb-9 last:pb-0">
+                    <span
+                      aria-hidden
+                      className="absolute -left-[4.5px] top-[5px] h-2 w-2 bg-white"
+                    />
+                    <p className="text-[11px] font-mono tracking-[0.16em] uppercase text-white/40">
+                      {String(i + 1).padStart(2, "0")}
+                    </p>
+                    <h3 className="mt-2 text-[clamp(1.125rem,1.6vw,1.375rem)] font-medium tracking-[-0.02em] text-white">
                       {item.t}
                     </h3>
                     <p className="mt-2 text-[15px] font-normal leading-[1.6] text-white/50">
                       {item.d}
                     </p>
-                  </li>
+                  </div>
                 ))}
-              </ul>
+              </div>
             </div>
           </div>
         </div>
