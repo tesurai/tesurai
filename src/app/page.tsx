@@ -98,7 +98,7 @@ export default async function Page({
                 href="#pricing"
                 className="text-[13.5px] font-normal text-white/60 hover:text-white transition-colors"
               >
-                Included
+                Scope
               </a>
             </nav>
           </div>
@@ -257,12 +257,12 @@ export default async function Page({
         </div>
       </section>
 
-      {/* Included: the same split card, reframed as the deliverable. No price anywhere.
+      {/* Scope: the same split card, reframed as the deliverable. No price anywhere.
           Left is a short pitch and the call CTA, right itemizes what every build includes. */}
       <section id="pricing" className="px-6 sm:px-10 py-24 sm:py-32 scroll-mt-24">
         <div className="max-w-[1100px] mx-auto">
           <div className="sm:text-center">
-            <Eyebrow>Included</Eyebrow>
+            <Eyebrow>Scope</Eyebrow>
             <h2 className="text-[clamp(1.875rem,3.5vw,2.75rem)] font-medium leading-[1.1] tracking-[-0.03em] text-white">
               Everything in the build
             </h2>
@@ -392,7 +392,7 @@ export default async function Page({
                 href="#pricing"
                 className="text-[14px] font-normal text-white/65 hover:text-white transition-colors"
               >
-                Included
+                Scope
               </a>
               <a
                 href="mailto:hello@tesurai.com"
