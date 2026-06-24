@@ -132,15 +132,11 @@ export default async function Page({
           <h1 className="text-balance text-[clamp(3.25rem,6vw,4.25rem)] font-medium leading-[1.05] tracking-[-0.035em] text-white max-w-[20ch] mx-auto">
             Most products react, but the best ones predict.
           </h1>
-          <div className="mt-8 max-w-[600px] mx-auto">
-            <p className="text-balance text-[clamp(1.2rem,1.9vw,1.5rem)] font-medium leading-[1.35] tracking-[-0.01em] text-white">
-              Tessa lives inside your product.
-            </p>
-            <p className="mt-4 text-balance text-[clamp(1.05rem,1.35vw,1.2rem)] font-normal leading-[1.55] text-white/55">
-              Tessa reads each user&rsquo;s past to predict their future, and gives them
-              feedback based on their behavior to help them get the outcome they came for.
-            </p>
-          </div>
+          <p className="mt-7 text-[clamp(1.05rem,1.45vw,1.2rem)] font-normal leading-[1.6] text-white/60 max-w-[600px] mx-auto">
+            Tessa lives inside your product. Tessa reads each user&rsquo;s past to predict
+            their future, and gives them feedback based on their behavior to help them get
+            the outcome they came for.
+          </p>
         </div>
       </section>
 
@@ -334,17 +330,21 @@ export default async function Page({
         </div>
       </section>
 
-      {/* Closing: centered two-part send-off. Muted setup, then the payoff line in full
-          white as the punch. */}
-      <section className="px-6 sm:px-10 py-28 sm:py-40">
-        <div className="max-w-[760px] mx-auto text-center">
-          <p className="text-balance text-[clamp(1.25rem,2.4vw,1.875rem)] font-normal leading-[1.45] text-white/45">
+      {/* Closing: the page summed up as one fade quote, fading right like the wordmark.
+          No buttons. */}
+      <section className="px-6 sm:px-10 py-24 sm:py-36">
+        <div className="max-w-[900px] mx-auto text-left">
+          <h2
+            className="bg-clip-text text-transparent text-[clamp(1.5rem,3vw,2.5rem)] font-medium leading-[1.3] tracking-[-0.02em]"
+            style={{
+              backgroundImage:
+                "linear-gradient(to right, rgba(255,255,255,1) 0%, rgba(255,255,255,0.95) 60%, rgba(255,255,255,0.75) 85%, rgba(255,255,255,0.45) 100%)",
+              WebkitTextFillColor: "transparent",
+            }}
+          >
             Stop losing the users you could have kept. Tessa keeps each user moving toward
-            the outcome they want.
-          </p>
-          <p className="mt-6 text-balance text-[clamp(1.875rem,3.6vw,2.875rem)] font-medium leading-[1.15] tracking-[-0.02em] text-white">
-            When your users win, you win.
-          </p>
+            the outcome they want. When your users win, you win.
+          </h2>
         </div>
       </section>
 
