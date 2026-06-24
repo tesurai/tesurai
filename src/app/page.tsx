@@ -113,7 +113,7 @@ export default async function Page({
         </div>
       </header>
 
-      {/* Hero: eyebrow, headline, subhead, and the primary Book a call CTA. */}
+      {/* Hero: eyebrow, headline, and subhead. No CTA here. */}
       <section className="px-6 sm:px-10 flex flex-col justify-center min-h-svh sm:block sm:min-h-0 pt-24 sm:pt-52 pb-20 sm:pb-32">
         <div className="max-w-[860px] mx-auto sm:text-center">
           {paid && (
@@ -134,29 +134,6 @@ export default async function Page({
             Tessa lives inside your product. Tessa uses each user&rsquo;s past to predict
             their future, and guides them step by step to the result they came for.
           </p>
-          <div className="mt-9 flex sm:justify-center">
-            <a
-              href={CAL_LINK}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 rounded-full bg-white text-black px-7 py-3.5 text-[14px] font-medium hover:bg-white/90 transition-all duration-300"
-            >
-              Book a call
-              <svg
-                width="15"
-                height="15"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="1.6"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                aria-hidden="true"
-              >
-                <path d="M5 12h14M13 5l7 7-7 7" />
-              </svg>
-            </a>
-          </div>
         </div>
       </section>
 
@@ -276,10 +253,6 @@ export default async function Page({
           </div>
 
           <div className="mt-12 sm:mt-16 max-w-[680px] mx-auto">
-            <p className="text-[15px] font-normal leading-[1.55] text-white text-center">
-              Signs up wanting a clear result.
-            </p>
-            <div aria-hidden className="mx-auto mt-4 h-6 w-px bg-white/[0.15]" />
             <div className="grid grid-cols-2 text-left">
               <div className="pr-4 sm:pr-8 pt-6 border-r border-white/[0.15]">
                 <p className="text-[11px] sm:text-[12px] font-mono tracking-[0.16em] uppercase text-white/45">
@@ -472,8 +445,8 @@ export default async function Page({
         </div>
       </section>
 
-      {/* Closing: the page summed up as one fade quote, fading right like the wordmark,
-          capped with the single Book a call CTA. */}
+      {/* Closing: the page summed up as one fade quote, fading right like the wordmark.
+          No buttons. */}
       <section className="px-6 sm:px-10 py-24 sm:py-36">
         <div className="max-w-[900px] mx-auto text-left">
           <h2
@@ -487,29 +460,6 @@ export default async function Page({
             Stop losing the users you could have kept. Tessa gets each user to the result
             they came for. When your users win, you win.
           </h2>
-          <div className="mt-10 sm:mt-12">
-            <a
-              href={CAL_LINK}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 rounded-full bg-white text-black px-7 py-3.5 text-[14px] font-medium hover:bg-white/90 transition-all duration-300"
-            >
-              Book a call
-              <svg
-                width="15"
-                height="15"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="1.6"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                aria-hidden="true"
-              >
-                <path d="M5 12h14M13 5l7 7-7 7" />
-              </svg>
-            </a>
-          </div>
         </div>
       </section>
 
