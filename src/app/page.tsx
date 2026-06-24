@@ -96,7 +96,7 @@ export default async function Page({
                 href="#pricing"
                 className="text-[13.5px] font-normal text-white/60 hover:text-white transition-colors"
               >
-                Pricing
+                Included
               </a>
             </nav>
           </div>
@@ -379,14 +379,14 @@ export default async function Page({
         </div>
       </section>
 
-      {/* Pricing: the same split card as before, with the dollar amount held back so the
-          number comes on the call. Left drives the booking, right spells out the build. */}
+      {/* Included: the same split card, reframed as the deliverable. No price anywhere.
+          Left is a short pitch and the call CTA, right itemizes what every build includes. */}
       <section id="pricing" className="px-6 sm:px-10 py-24 sm:py-32 scroll-mt-24">
         <div className="max-w-[1100px] mx-auto">
           <div className="sm:text-center">
-            <Eyebrow>Pricing</Eyebrow>
+            <Eyebrow>Included</Eyebrow>
             <h2 className="text-[clamp(1.875rem,3.5vw,2.75rem)] font-medium leading-[1.1] tracking-[-0.03em] text-white">
-              One build. One price.
+              Everything in the build
             </h2>
           </div>
 
@@ -396,10 +396,11 @@ export default async function Page({
                 Tessa
               </p>
               <p className="mt-6 text-[clamp(1.75rem,3.5vw,2.5rem)] font-medium leading-[1.1] tracking-[-0.02em] text-white">
-                We share the price on the call.
+                Built around your business.
               </p>
               <p className="mt-4 text-[15px] font-normal leading-[1.6] text-white/55">
-                One flat price for the full build. Book a call and we will walk you through it.
+                Tessa lives inside your product, ready for every user. Book a call to see how
+                it maps to your business.
               </p>
               <div className="mt-8 md:mt-auto md:pt-10">
                 <a
@@ -537,7 +538,7 @@ export default async function Page({
                 href="#pricing"
                 className="text-[14px] font-normal text-white/65 hover:text-white transition-colors"
               >
-                Pricing
+                Included
               </a>
               <a
                 href="mailto:hello@tesurai.com"
