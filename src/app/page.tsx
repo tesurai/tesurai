@@ -188,12 +188,12 @@ export default async function Page({
           </div>
 
           <div className="mt-12 sm:mt-16 max-w-[680px] mx-auto">
-            <div className="text-left">
-              <div className="pb-8 sm:pb-10 border-b border-white/[0.15]">
+            <div className="grid grid-cols-2 text-left">
+              <div className="pr-4 sm:pr-8 pt-6 border-r border-white/[0.15]">
                 <p className="text-[11px] sm:text-[12px] font-mono tracking-[0.16em] uppercase text-white/45">
                   Without Tessa
                 </p>
-                <ol className="mt-5 space-y-4">
+                <ol className="mt-5 space-y-5">
                   {[
                     "Your product treats them like every other user.",
                     "They hit a wall your product cannot see.",
@@ -203,18 +203,18 @@ export default async function Page({
                   ].map((step) => (
                     <li
                       key={step}
-                      className="text-[16px] font-normal leading-[1.55] text-white/40"
+                      className="text-[13.5px] sm:text-[16px] font-normal leading-[1.55] text-white/40"
                     >
                       {step}
                     </li>
                   ))}
                 </ol>
               </div>
-              <div className="pt-8 sm:pt-10">
+              <div className="pl-4 sm:pl-8 pt-6">
                 <p className="text-[11px] sm:text-[12px] font-mono tracking-[0.16em] uppercase text-white/70">
                   With Tessa
                 </p>
-                <ol className="mt-5 space-y-4">
+                <ol className="mt-5 space-y-5">
                   {[
                     "Tessa learns this user, not the average user.",
                     "Tessa spots the stall early.",
@@ -224,7 +224,7 @@ export default async function Page({
                   ].map((step) => (
                     <li
                       key={step}
-                      className="text-[16px] font-normal leading-[1.55] text-white"
+                      className="text-[13.5px] sm:text-[16px] font-normal leading-[1.55] text-white"
                     >
                       {step}
                     </li>
@@ -300,7 +300,7 @@ export default async function Page({
               <p className="text-[12px] font-mono tracking-[0.16em] uppercase text-white/55">
                 What you get
               </p>
-              <div className="mt-6 relative ml-1 border-l border-white/[0.15]">
+              <ul className="mt-3 divide-y divide-white/[0.08]">
                 {[
                   {
                     t: "Metrics",
@@ -318,24 +318,13 @@ export default async function Page({
                     t: "Visibility",
                     d: "Know who is on track and who is slipping, early.",
                   },
-                ].map((item, i) => (
-                  <div key={item.t} className="relative pl-8 sm:pl-10 pb-9 last:pb-0">
-                    <span
-                      aria-hidden
-                      className="absolute -left-[4.5px] top-[5px] h-2 w-2 bg-white"
-                    />
-                    <p className="text-[11px] font-mono tracking-[0.16em] uppercase text-white/40">
-                      {String(i + 1).padStart(2, "0")}
-                    </p>
-                    <h3 className="mt-2 text-[clamp(1.125rem,1.6vw,1.375rem)] font-medium tracking-[-0.02em] text-white">
-                      {item.t}
-                    </h3>
-                    <p className="mt-2 text-[15px] font-normal leading-[1.6] text-white/50">
-                      {item.d}
-                    </p>
-                  </div>
+                ].map((item) => (
+                  <li key={item.t} className="py-3.5 text-[15px] font-normal leading-[1.5]">
+                    <span className="font-medium text-white">{item.t}.</span>{" "}
+                    <span className="text-white/60">{item.d}</span>
+                  </li>
                 ))}
-              </div>
+              </ul>
             </div>
           </div>
         </div>
