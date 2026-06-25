@@ -253,63 +253,45 @@ export default async function Page({
         </div>
       </section>
 
-      {/* Pricing: the same split card, reframed as the deliverable. No price anywhere.
-          Left is a short pitch and the call CTA, right itemizes what every build includes. */}
+      {/* Pricing: a single offer card with the pitch and the call CTA. No price anywhere. */}
       <section id="pricing" className="px-6 sm:px-10 py-24 sm:py-32 scroll-mt-24">
         <div className="max-w-[1100px] mx-auto">
           <div className="sm:text-center">
             <Eyebrow>Pricing</Eyebrow>
           </div>
 
-          <div className="mt-14 max-w-[880px] mx-auto rounded-2xl border border-white/[0.12] bg-white/[0.03] md:grid md:grid-cols-2 text-left">
-            <div className="p-7 sm:p-10 border-b md:border-b-0 md:border-r border-white/[0.10] flex flex-col">
-              <p className="text-[12px] font-mono tracking-[0.16em] uppercase text-white/55">
-                Tessa
-              </p>
-              <p className="mt-6 text-[clamp(1.75rem,3.5vw,2.5rem)] font-medium leading-[1.1] tracking-[-0.02em] text-white">
-                Built around your business.
-              </p>
-              <p className="mt-4 text-[16px] font-normal leading-[1.6] text-white/55">
-                Tessa lives inside your product, ready for every user.
-              </p>
-              <div className="mt-8 md:mt-auto md:pt-10">
-                <a
-                  href={CAL_LINK}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center gap-2 w-full rounded-full bg-white text-black px-7 py-3.5 text-[15px] font-medium hover:bg-white/90 transition-all duration-300"
+          <div className="mt-14 max-w-[560px] mx-auto rounded-2xl border border-white/[0.12] bg-white/[0.03] p-7 sm:p-10 text-left">
+            <p className="text-[12px] font-mono tracking-[0.16em] uppercase text-white/55">
+              Tessa
+            </p>
+            <p className="mt-6 text-[clamp(1.75rem,3.5vw,2.5rem)] font-medium leading-[1.1] tracking-[-0.02em] text-white">
+              Built around your business.
+            </p>
+            <p className="mt-4 text-[16px] font-normal leading-[1.6] text-white/55">
+              Tessa lives inside your product, ready for every user.
+            </p>
+            <div className="mt-8">
+              <a
+                href={CAL_LINK}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center gap-2 w-full rounded-full bg-white text-black px-7 py-3.5 text-[15px] font-medium hover:bg-white/90 transition-all duration-300"
+              >
+                Book a call
+                <svg
+                  width="15"
+                  height="15"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="1.6"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  aria-hidden="true"
                 >
-                  Book a call
-                  <svg
-                    width="15"
-                    height="15"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="1.6"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    aria-hidden="true"
-                  >
-                    <path d="M5 12h14M13 5l7 7-7 7" />
-                  </svg>
-                </a>
-              </div>
-            </div>
-            <div className="p-7 sm:p-10">
-              <p className="text-[12px] font-mono tracking-[0.16em] uppercase text-white/55">
-                What you get
-              </p>
-              <ul className="mt-5 divide-y divide-white/[0.08]">
-                {["Patterns", "Feedback", "Forecast", "Visibility"].map((item) => (
-                  <li
-                    key={item}
-                    className="py-4 text-[clamp(1.125rem,1.5vw,1.375rem)] font-medium tracking-[-0.02em] text-white"
-                  >
-                    {item}
-                  </li>
-                ))}
-              </ul>
+                  <path d="M5 12h14M13 5l7 7-7 7" />
+                </svg>
+              </a>
             </div>
           </div>
         </div>
