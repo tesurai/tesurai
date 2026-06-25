@@ -132,7 +132,7 @@ export default async function Page({
           <h1 className="text-pretty sm:text-balance text-[clamp(2.5rem,6vw,4.25rem)] font-medium leading-[1.1] tracking-[-0.03em] text-white">
             Most products react, but the best ones predict.
           </h1>
-          <p className="mt-6 text-pretty text-[clamp(1.0625rem,1.4vw,1.1875rem)] font-normal leading-[1.65] text-white/55 max-w-[560px] mx-auto">
+          <p className="mt-6 text-pretty sm:text-balance text-[clamp(1.0625rem,1.4vw,1.1875rem)] font-normal leading-[1.65] text-white/55 max-w-[720px] mx-auto">
             Tessa lives inside your product. Tessa reads each user&rsquo;s behavior,
             predicts their future, and gives them the feedback to reach the outcome they
             want.
