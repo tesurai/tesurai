@@ -303,8 +303,8 @@ export default async function Page({
               <ul className="mt-3 divide-y divide-white/[0.08]">
                 {[
                   {
-                    t: "Metrics",
-                    d: "Tessa tracks each user's behavior inside your app.",
+                    t: "Patterns",
+                    d: "The habits that shape each user's results.",
                   },
                   {
                     t: "Feedback",
