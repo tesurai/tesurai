@@ -300,28 +300,13 @@ export default async function Page({
               <p className="text-[12px] font-mono tracking-[0.16em] uppercase text-white/55">
                 What you get
               </p>
-              <ul className="mt-3 divide-y divide-white/[0.08]">
-                {[
-                  {
-                    t: "Patterns",
-                    d: "The habits that shape each user's results.",
-                  },
-                  {
-                    t: "Feedback",
-                    d: "One clear next move for every user.",
-                  },
-                  {
-                    t: "Forecast",
-                    d: "Where each user is likely headed, in plain words.",
-                  },
-                  {
-                    t: "Visibility",
-                    d: "Know who is on track and who is slipping, early.",
-                  },
-                ].map((item) => (
-                  <li key={item.t} className="py-3.5 text-[15px] font-normal leading-[1.5]">
-                    <span className="font-medium text-white">{item.t}.</span>{" "}
-                    <span className="text-white/60">{item.d}</span>
+              <ul className="mt-5 divide-y divide-white/[0.08]">
+                {["Patterns", "Feedback", "Forecast", "Visibility"].map((item) => (
+                  <li
+                    key={item}
+                    className="py-4 text-[clamp(1.125rem,1.5vw,1.375rem)] font-medium tracking-[-0.02em] text-white"
+                  >
+                    {item}
                   </li>
                 ))}
               </ul>
