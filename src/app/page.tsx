@@ -12,6 +12,7 @@
 // type in solid white. No cards, no gradient text, no glows, no shadows, no accent color.
 
 import ProcessTimeline from "./process-timeline";
+import CalEmbed from "./cal-embed";
 
 const CAL_LINK = "https://cal.com/tesurai/call";
 
@@ -93,12 +94,6 @@ export default async function Page({
                 className="text-[13.5px] font-normal text-white/60 hover:text-white transition-colors"
               >
                 Process
-              </a>
-              <a
-                href="#pricing"
-                className="text-[13.5px] font-normal text-white/60 hover:text-white transition-colors"
-              >
-                Pricing
               </a>
             </nav>
           </div>
@@ -253,46 +248,18 @@ export default async function Page({
         </div>
       </section>
 
-      {/* Pricing: a single offer card with the pitch and the call CTA. No price anywhere. */}
+      {/* Booking: the Cal.com calendar embedded inline as the section (CalEmbed). */}
       <section id="pricing" className="px-6 sm:px-10 py-24 sm:py-32 scroll-mt-24">
         <div className="max-w-[1100px] mx-auto">
           <div className="sm:text-center">
-            <Eyebrow>Pricing</Eyebrow>
+            <Eyebrow>Get started</Eyebrow>
+            <h2 className="text-[clamp(2.125rem,3.5vw,2.75rem)] font-medium leading-[1.1] tracking-[-0.03em] text-white">
+              Book a call
+            </h2>
           </div>
 
-          <div className="mt-14 max-w-[560px] mx-auto rounded-2xl border border-white/[0.12] bg-white/[0.03] p-7 sm:p-10 text-left">
-            <p className="text-[12px] font-mono tracking-[0.16em] uppercase text-white/55">
-              Tessa
-            </p>
-            <p className="mt-6 text-[clamp(1.75rem,3.5vw,2.5rem)] font-medium leading-[1.1] tracking-[-0.02em] text-white">
-              Built around your business.
-            </p>
-            <p className="mt-4 text-[16px] font-normal leading-[1.6] text-white/55">
-              Tessa lives inside your product, ready for every user.
-            </p>
-            <div className="mt-8">
-              <a
-                href={CAL_LINK}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 w-full rounded-full bg-white text-black px-7 py-3.5 text-[15px] font-medium hover:bg-white/90 transition-all duration-300"
-              >
-                Book a call
-                <svg
-                  width="15"
-                  height="15"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="1.6"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  aria-hidden="true"
-                >
-                  <path d="M5 12h14M13 5l7 7-7 7" />
-                </svg>
-              </a>
-            </div>
+          <div className="mt-12 sm:mt-14 max-w-[1000px] mx-auto">
+            <CalEmbed />
           </div>
         </div>
       </section>
@@ -352,7 +319,7 @@ export default async function Page({
                     href="#pricing"
                     className="text-[15px] font-normal text-white/65 hover:text-white transition-colors"
                   >
-                    Pricing
+                    Book a call
                   </a>
                 </li>
               </ul>
