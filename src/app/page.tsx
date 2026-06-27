@@ -110,7 +110,7 @@ export default async function Page({
         </div>
       </header>
 
-      {/* Hero: eyebrow, headline, and subhead. No CTA here. */}
+      {/* Hero: eyebrow, headline, subhead, and the Book a call CTA (scrolls to calendar). */}
       <section className="px-6 sm:px-10 flex flex-col justify-center min-h-svh sm:block sm:min-h-0 pt-24 sm:pt-52 pb-20 sm:pb-32">
         <div className="max-w-[800px] mx-auto sm:text-center">
           {paid && (
@@ -129,50 +129,37 @@ export default async function Page({
           </h1>
           <p className="mt-6 text-pretty sm:text-balance text-[clamp(1.0625rem,1.4vw,1.1875rem)] font-normal leading-[1.65] text-white/55 max-w-[720px] mx-auto">
             Tessa lives inside your product. Tessa reads each user&rsquo;s behavior,
-            predicts their future, and gives them the feedback to reach the outcome they
-            want.
+            sees who is about to quit, and gives them the next step to stay.
           </p>
-        </div>
-      </section>
-
-      {/* Mission: the counterforce manifesto, right under the hero. The threat in muted
-          text, three Theirs/Ours contrast rows, then the stance in full white. */}
-      <section className="px-6 sm:px-10 py-24 sm:py-32">
-        <div className="max-w-[1100px] mx-auto">
-          <div className="sm:text-center">
-            <Eyebrow>Mission</Eyebrow>
-            <h2 className="text-[clamp(2.125rem,3.5vw,2.75rem)] font-medium leading-[1.1] tracking-[-0.03em] text-white">
-              We are building the counterforce
-            </h2>
-          </div>
-
-          <div className="mt-12 sm:mt-16 max-w-[680px] mx-auto text-left">
-            <p className="text-[clamp(1.15rem,1.4vw,1.3rem)] font-normal leading-[1.65] text-white/60">
-              Big companies use AI to make people weaker, dumber, more distracted, more
-              dependent, and easier to control. Pretending AI will go away does not make it
-              go away. Sitting on the sidelines is how we lose.
+          <div className="mt-9 flex flex-col gap-3 items-start sm:items-center">
+            <a
+              href="#pricing"
+              className="inline-flex items-center justify-center gap-2 rounded-full bg-white text-black px-7 py-3.5 text-[15px] font-medium hover:bg-white/90 transition-all duration-300"
+            >
+              Book a call
+              <svg
+                width="15"
+                height="15"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="1.6"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                aria-hidden="true"
+              >
+                <path d="M5 12h14M13 5l7 7-7 7" />
+              </svg>
+            </a>
+            <p className="text-[13px] font-normal text-white/45">
+              30 minutes. Free. We show you where your users are slipping.
             </p>
-
-            <div className="my-10 sm:my-12 divide-y divide-white/[0.10] border-y border-white/[0.10]">
-              {[
-                ["Their AI distracts your users.", "Tessa directs your users."],
-                ["Their AI keeps your users in the dark.", "Tessa makes your users aware."],
-                ["Their AI uses your users.", "Tessa serves your users."],
-              ].map(([theirs, ours]) => (
-                <div key={theirs} className="grid grid-cols-2 gap-3 sm:gap-8 py-5">
-                  <p className="text-[16px] font-normal leading-[1.55] text-white/45">
-                    {theirs}
-                  </p>
-                  <p className="text-[16px] font-normal leading-[1.55] text-white">{ours}</p>
-                </div>
-              ))}
-            </div>
           </div>
         </div>
       </section>
 
-      {/* The difference: the path forks around a center spine. The dim path fades out on
-          the left, the Tessa path lands on the right. */}
+      {/* The difference: moved right under the hero. The path forks around a center spine;
+          the dim path fades out on the left, the Tessa path lands on the right. */}
       <section id="tessa" className="px-6 sm:px-10 py-24 sm:py-32 scroll-mt-24">
         <div className="max-w-[1100px] mx-auto">
           <div className="sm:text-center">
@@ -231,6 +218,42 @@ export default async function Page({
         </div>
       </section>
 
+      {/* Mission: the counterforce manifesto, after the difference fork. The threat in
+          muted text, three Theirs/Ours contrast rows, then the stance in full white. */}
+      <section className="px-6 sm:px-10 py-24 sm:py-32">
+        <div className="max-w-[1100px] mx-auto">
+          <div className="sm:text-center">
+            <Eyebrow>Mission</Eyebrow>
+            <h2 className="text-[clamp(2.125rem,3.5vw,2.75rem)] font-medium leading-[1.1] tracking-[-0.03em] text-white">
+              We are building the counterforce
+            </h2>
+          </div>
+
+          <div className="mt-12 sm:mt-16 max-w-[680px] mx-auto text-left">
+            <p className="text-[clamp(1.15rem,1.4vw,1.3rem)] font-normal leading-[1.65] text-white/60">
+              Big companies use AI to make people weaker, dumber, more distracted, more
+              dependent, and easier to control. Pretending AI will go away does not make it
+              go away. Sitting on the sidelines is how we lose.
+            </p>
+
+            <div className="my-10 sm:my-12 divide-y divide-white/[0.10] border-y border-white/[0.10]">
+              {[
+                ["Their AI distracts your users.", "Tessa directs your users."],
+                ["Their AI keeps your users in the dark.", "Tessa makes your users aware."],
+                ["Their AI uses your users.", "Tessa serves your users."],
+              ].map(([theirs, ours]) => (
+                <div key={theirs} className="grid grid-cols-2 gap-3 sm:gap-8 py-5">
+                  <p className="text-[16px] font-normal leading-[1.55] text-white/45">
+                    {theirs}
+                  </p>
+                  <p className="text-[16px] font-normal leading-[1.55] text-white">{ours}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Process: a vertical timeline whose line draws on scroll (ProcessTimeline, a
           client component). Square nodes on a left rail echo the sharp eyebrows. */}
       <section id="process" className="px-6 sm:px-10 py-24 sm:py-32 scroll-mt-24">
@@ -256,10 +279,17 @@ export default async function Page({
             <h2 className="text-[clamp(2.125rem,3.5vw,2.75rem)] font-medium leading-[1.1] tracking-[-0.03em] text-white">
               Book a call
             </h2>
+            <p className="mt-5 text-[15px] font-normal leading-[1.6] text-white/55 max-w-[600px] mx-auto">
+              Free, and no pitch. We see if Tessa fits, map where your users are slipping,
+              and show you what Tessa would do. You leave with a clear picture either way.
+            </p>
           </div>
 
           <div className="mt-12 sm:mt-14 max-w-[1000px] mx-auto">
             <CalEmbed />
+            <p className="mt-6 text-center text-[14px] font-normal text-white/45">
+              Pick any time that works. If it is not a fit, we will tell you on the call.
+            </p>
           </div>
         </div>
       </section>
