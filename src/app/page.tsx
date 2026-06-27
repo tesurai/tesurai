@@ -110,7 +110,7 @@ export default async function Page({
         </div>
       </header>
 
-      {/* Hero: eyebrow, headline, subhead, and the Book a call CTA (scrolls to calendar). */}
+      {/* Hero: eyebrow, headline, and subhead. */}
       <section className="px-6 sm:px-10 flex flex-col justify-center min-h-svh sm:block sm:min-h-0 pt-24 sm:pt-52 pb-20 sm:pb-32">
         <div className="max-w-[800px] mx-auto sm:text-center">
           {paid && (
@@ -131,27 +131,6 @@ export default async function Page({
             Tessa lives inside your product. Tessa reads each user&rsquo;s behavior,
             sees who is about to quit, and gives them the next step to stay.
           </p>
-          <div className="mt-9 flex flex-col gap-3 items-start sm:items-center">
-            <a
-              href="#pricing"
-              className="inline-flex items-center justify-center gap-2 rounded-full bg-white text-black px-7 py-3.5 text-[15px] font-medium hover:bg-white/90 transition-all duration-300"
-            >
-              Book a call
-              <svg
-                width="15"
-                height="15"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="1.6"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                aria-hidden="true"
-              >
-                <path d="M5 12h14M13 5l7 7-7 7" />
-              </svg>
-            </a>
-          </div>
         </div>
       </section>
 
