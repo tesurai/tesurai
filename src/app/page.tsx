@@ -151,9 +151,6 @@ export default async function Page({
                 <path d="M5 12h14M13 5l7 7-7 7" />
               </svg>
             </a>
-            <p className="text-[13px] font-normal text-white/45">
-              30 minutes. Free. We show you where your users are slipping.
-            </p>
           </div>
         </div>
       </section>
@@ -279,17 +276,10 @@ export default async function Page({
             <h2 className="text-[clamp(2.125rem,3.5vw,2.75rem)] font-medium leading-[1.1] tracking-[-0.03em] text-white">
               Book a call
             </h2>
-            <p className="mt-5 text-[15px] font-normal leading-[1.6] text-white/55 max-w-[600px] mx-auto">
-              Free, and no pitch. We see if Tessa fits, map where your users are slipping,
-              and show you what Tessa would do. You leave with a clear picture either way.
-            </p>
           </div>
 
           <div className="mt-12 sm:mt-14 max-w-[1000px] mx-auto">
             <CalEmbed />
-            <p className="mt-6 text-center text-[14px] font-normal text-white/45">
-              Pick any time that works. If it is not a fit, we will tell you on the call.
-            </p>
           </div>
         </div>
       </section>
@@ -342,14 +332,6 @@ export default async function Page({
                     className="text-[15px] font-normal text-white/65 hover:text-white transition-colors"
                   >
                     Process
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#pricing"
-                    className="text-[15px] font-normal text-white/65 hover:text-white transition-colors"
-                  >
-                    Book a call
                   </a>
                 </li>
               </ul>
