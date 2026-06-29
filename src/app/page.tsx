@@ -1,7 +1,7 @@
 // Tesurai company landing page.
 // Voice: written as a category-defining product. Confident, declarative, short.
-// The category is "the intelligence layer for digital products." Less first-person,
-// more product-as-protagonist.
+// The category is retention for consumer apps: catching users before they quit. Less
+// first-person, more product-as-protagonist.
 // Copy rules: fifth grade reading level, no dashes anywhere, no pronouns for Tessa,
 // no language framing Tessa as a team replacement, no made up outcome claims.
 // Design system: modern dark SaaS, kept plain on purpose. Near-black canvas, glassy
@@ -123,7 +123,7 @@ export default async function Page({
               </p>
             </div>
           )}
-          <Eyebrow>Intelligence layer</Eyebrow>
+          <Eyebrow>Retention for consumer apps</Eyebrow>
           <h1 className="text-pretty sm:text-balance text-[clamp(2.5rem,6vw,4.25rem)] font-medium leading-[1.1] tracking-[-0.03em] text-white">
             Most products react, but the best ones predict.
           </h1>
