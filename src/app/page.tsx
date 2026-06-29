@@ -1,7 +1,7 @@
 // Tesurai company landing page.
 // Voice: written as a category-defining product. Confident, declarative, short.
-// The category is retention for consumer apps: catching users before they quit. Less
-// first-person, more product-as-protagonist.
+// The category is a coach for every user: data to patterns to a forecast to feedback that
+// moves each user to their outcome. Less first-person, more product-as-protagonist.
 // Copy rules: fifth grade reading level, no dashes anywhere, no pronouns for Tessa,
 // no language framing Tessa as a team replacement, no made up outcome claims.
 // Design system: modern dark SaaS, kept plain on purpose. Near-black canvas, glassy
@@ -123,13 +123,14 @@ export default async function Page({
               </p>
             </div>
           )}
-          <Eyebrow>Retention for consumer apps</Eyebrow>
+          <Eyebrow>A coach for every user</Eyebrow>
           <h1 className="text-pretty sm:text-balance text-[clamp(2.5rem,6vw,4.25rem)] font-medium leading-[1.1] tracking-[-0.03em] text-white">
             Most products react, but the best ones predict.
           </h1>
           <p className="mt-6 text-pretty sm:text-balance text-[clamp(1.0625rem,1.4vw,1.1875rem)] font-normal leading-[1.65] text-white/55 max-w-[720px] mx-auto">
-            Tessa lives inside your product. Tessa reads each user&rsquo;s behavior,
-            sees who is about to quit, and gives them the next step to stay.
+            Tessa lives inside your product. Tessa uses each user&rsquo;s data to find their
+            patterns, predict their future, and give them the feedback to reach the outcome
+            they came for.
           </p>
         </div>
       </section>
