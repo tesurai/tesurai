@@ -16,8 +16,8 @@ import CalEmbed from "./cal-embed";
 
 const CAL_LINK = "https://cal.com/tesurai/call";
 
-const BROWSER_TITLE = "Tesurai | Turn signups into results.";
-const SHARE_TITLE = "Turn signups into results.";
+const BROWSER_TITLE = "Tesurai | Show every user how to get results.";
+const SHARE_TITLE = "Show every user how to get results.";
 const SHARE_DESCRIPTION =
   "Every user gets their own Tessa. Built right into your product.";
 const SHARE_IMAGE = "/og.png";
@@ -35,7 +35,7 @@ export const metadata = {
         url: SHARE_IMAGE,
         width: 1200,
         height: 630,
-        alt: "Tesurai. Turn signups into results.",
+        alt: "Tesurai. Show every user how to get results.",
       },
     ],
   },
@@ -123,9 +123,13 @@ export default async function Page({
               </p>
             </div>
           )}
-          <h1 className="text-pretty sm:text-balance text-[clamp(3rem,7.5vw,5rem)] font-semibold leading-[1.02] tracking-[-0.04em] text-white">
-            Turn signups into results.
+          <h1 className="text-pretty sm:text-balance text-[clamp(2.75rem,6vw,4.5rem)] font-semibold leading-[1.05] tracking-[-0.035em] text-white">
+            Show every user how to get results.
           </h1>
+          <p className="mt-6 text-pretty sm:text-balance text-[clamp(1.0625rem,1.4vw,1.1875rem)] font-normal leading-[1.65] text-white/55 max-w-[640px] mx-auto">
+            Tessa lives in your app, so every user can see where they stand and the next
+            move to get there.
+          </p>
         </div>
       </section>
 
