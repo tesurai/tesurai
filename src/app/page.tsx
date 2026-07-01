@@ -16,8 +16,8 @@ import CalEmbed from "./cal-embed";
 
 const CAL_LINK = "https://cal.com/tesurai/call";
 
-const BROWSER_TITLE = "Tesurai | Get every user what they came for.";
-const SHARE_TITLE = "Get every user what they came for.";
+const BROWSER_TITLE = "Tesurai | Every user. Every outcome.";
+const SHARE_TITLE = "Every user. Every outcome.";
 const SHARE_DESCRIPTION =
   "Every user gets their own Tessa. Built right into your product.";
 const SHARE_IMAGE = "/og.png";
@@ -35,7 +35,7 @@ export const metadata = {
         url: SHARE_IMAGE,
         width: 1200,
         height: 630,
-        alt: "Tesurai. Get every user what they came for.",
+        alt: "Tesurai. Every user. Every outcome.",
       },
     ],
   },
@@ -123,8 +123,8 @@ export default async function Page({
               </p>
             </div>
           )}
-          <h1 className="text-pretty sm:text-balance text-[clamp(2.75rem,7vw,5rem)] font-medium leading-[1.05] tracking-[-0.035em] text-white">
-            Get every user what they came for.
+          <h1 className="text-pretty sm:text-balance text-[clamp(3rem,7.5vw,5rem)] font-semibold leading-[1.02] tracking-[-0.04em] text-white">
+            Every user. Every outcome.
           </h1>
         </div>
       </section>
