@@ -16,10 +16,10 @@ import CalEmbed from "./cal-embed";
 
 const CAL_LINK = "https://cal.com/tesurai/call";
 
-const BROWSER_TITLE = "Tesurai | Every user reaches their goal.";
-const SHARE_TITLE = "Every user reaches their goal.";
+const BROWSER_TITLE = "Tesurai | Results for every user.";
+const SHARE_TITLE = "Results for every user.";
 const SHARE_DESCRIPTION =
-  "Tessa uses each user's data to find their patterns and give them the feedback to reach their goal on your platform.";
+  "Tessa uses each user's data to find their patterns and give them the feedback to get results on your platform.";
 const SHARE_IMAGE = "/og.png";
 
 export const metadata = {
@@ -35,7 +35,7 @@ export const metadata = {
         url: SHARE_IMAGE,
         width: 1200,
         height: 630,
-        alt: "Tesurai. Every user reaches their goal.",
+        alt: "Tesurai. Results for every user.",
       },
     ],
   },
@@ -124,11 +124,11 @@ export default async function Page({
             </div>
           )}
           <h1 className="text-pretty sm:text-balance text-[clamp(2.75rem,6vw,4.5rem)] font-semibold leading-[1.05] tracking-[-0.035em] text-white">
-            Every user reaches their goal.
+            Results for every user.
           </h1>
           <p className="mt-6 text-pretty sm:text-balance text-[clamp(1.0625rem,1.4vw,1.1875rem)] font-normal leading-[1.65] text-white/55 max-w-[660px] mx-auto">
             Tessa uses each user&rsquo;s data to find their patterns and give them the
-            feedback to reach their goal on your platform.
+            feedback to get results on your platform.
           </p>
         </div>
       </section>
