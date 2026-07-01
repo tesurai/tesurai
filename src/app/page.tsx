@@ -16,8 +16,8 @@ import CalEmbed from "./cal-embed";
 
 const CAL_LINK = "https://cal.com/tesurai/call";
 
-const BROWSER_TITLE = "Tesurai | Get the outcome you came for.";
-const SHARE_TITLE = "Get the outcome you came for.";
+const BROWSER_TITLE = "Tesurai | A better experience for every user.";
+const SHARE_TITLE = "A better experience for every user.";
 const SHARE_DESCRIPTION =
   "Every user gets their own Tessa. Built right into your product.";
 const SHARE_IMAGE = "/og.png";
@@ -35,7 +35,7 @@ export const metadata = {
         url: SHARE_IMAGE,
         width: 1200,
         height: 630,
-        alt: "Tesurai. Get the outcome you came for.",
+        alt: "Tesurai. A better experience for every user.",
       },
     ],
   },
@@ -124,10 +124,10 @@ export default async function Page({
             </div>
           )}
           <h1 className="text-pretty sm:text-balance text-[clamp(2.75rem,6vw,4.5rem)] font-semibold leading-[1.05] tracking-[-0.035em] text-white">
-            Get the outcome you came for.
+            A better experience for every user.
           </h1>
           <p className="mt-6 text-pretty sm:text-balance text-[clamp(1.0625rem,1.4vw,1.1875rem)] font-normal leading-[1.65] text-white/55 max-w-[640px] mx-auto">
-            Tessa lives inside your product and shows every user the way there.
+            Tessa reads each user&rsquo;s data and gives them the next move to reach their goal.
           </p>
         </div>
       </section>
