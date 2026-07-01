@@ -16,8 +16,8 @@ import CalEmbed from "./cal-embed";
 
 const CAL_LINK = "https://cal.com/tesurai/call";
 
-const BROWSER_TITLE = "Tesurai | Most products react, but the best ones predict.";
-const SHARE_TITLE = "Most products react, but the best ones predict.";
+const BROWSER_TITLE = "Tesurai | Get every user what they came for.";
+const SHARE_TITLE = "Get every user what they came for.";
 const SHARE_DESCRIPTION =
   "Every user gets their own Tessa. Built right into your product.";
 const SHARE_IMAGE = "/og.png";
@@ -35,7 +35,7 @@ export const metadata = {
         url: SHARE_IMAGE,
         width: 1200,
         height: 630,
-        alt: "Tesurai. Most products react, but the best ones predict.",
+        alt: "Tesurai. Get every user what they came for.",
       },
     ],
   },
@@ -123,13 +123,9 @@ export default async function Page({
               </p>
             </div>
           )}
-          <h1 className="text-pretty sm:text-balance text-[clamp(2.5rem,6vw,4.25rem)] font-medium leading-[1.1] tracking-[-0.03em] text-white">
-            Most products react, but the best ones predict.
+          <h1 className="text-pretty sm:text-balance text-[clamp(2.75rem,7vw,5rem)] font-medium leading-[1.05] tracking-[-0.035em] text-white">
+            Get every user what they came for.
           </h1>
-          <p className="mt-6 text-pretty sm:text-balance text-[clamp(1.0625rem,1.4vw,1.1875rem)] font-normal leading-[1.65] text-white/55 max-w-[720px] mx-auto">
-            Tessa lives inside your product, reads each user&rsquo;s data, predicts their
-            future, and gives the feedback to reach their outcome.
-          </p>
         </div>
       </section>
 
