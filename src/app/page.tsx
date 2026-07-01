@@ -123,14 +123,12 @@ export default async function Page({
               </p>
             </div>
           )}
-          <Eyebrow>A coach for every user</Eyebrow>
           <h1 className="text-pretty sm:text-balance text-[clamp(2.5rem,6vw,4.25rem)] font-medium leading-[1.1] tracking-[-0.03em] text-white">
             Most products react, but the best ones predict.
           </h1>
           <p className="mt-6 text-pretty sm:text-balance text-[clamp(1.0625rem,1.4vw,1.1875rem)] font-normal leading-[1.65] text-white/55 max-w-[720px] mx-auto">
-            Tessa lives inside your product. Tessa uses each user&rsquo;s data to find their
-            patterns, predict their future, and give them the feedback to reach the outcome
-            they came for.
+            Tessa lives inside your product. Tessa reads each user&rsquo;s data, predicts
+            their future, and gives the feedback to reach their outcome.
           </p>
         </div>
       </section>
