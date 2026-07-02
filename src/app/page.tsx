@@ -16,8 +16,8 @@ import CalEmbed from "./cal-embed";
 
 const CAL_LINK = "https://cal.com/tesurai/call";
 
-const BROWSER_TITLE = "Tesurai | Turn each user's data into real results.";
-const SHARE_TITLE = "Turn each user's data into real results.";
+const BROWSER_TITLE = "Tesurai | Turn each user's data into results.";
+const SHARE_TITLE = "Turn each user's data into results.";
 const SHARE_DESCRIPTION =
   "Tessa uses each user's data to find their patterns and give them the feedback to get results on your platform.";
 const SHARE_IMAGE = "/og.png";
@@ -35,7 +35,7 @@ export const metadata = {
         url: SHARE_IMAGE,
         width: 1200,
         height: 630,
-        alt: "Tesurai. Turn each user's data into real results.",
+        alt: "Tesurai. Turn each user's data into results.",
       },
     ],
   },
@@ -124,7 +124,7 @@ export default async function Page({
             </div>
           )}
           <h1 className="text-pretty sm:text-balance text-[clamp(2.5rem,5.5vw,4rem)] font-semibold leading-[1.08] tracking-[-0.03em] text-white">
-            Turn each user&rsquo;s data into real results.
+            Turn each user&rsquo;s data into results.
           </h1>
           <p className="mt-6 text-pretty sm:text-balance text-[clamp(1.0625rem,1.4vw,1.1875rem)] font-normal leading-[1.65] text-white/55 max-w-[660px] mx-auto">
             Tessa uses each user&rsquo;s data to find their patterns and give them the
