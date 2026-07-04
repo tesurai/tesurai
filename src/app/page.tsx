@@ -161,6 +161,9 @@ export default async function Page({
               traits, patterns, and commitments: one living map of you, recalled
               instantly whenever you talk.
             </p>
+            <p className="mt-6 text-[clamp(1.15rem,1.4vw,1.3rem)] font-normal leading-[1.65] text-white">
+              Like an LLM, but for your brain.
+            </p>
           </div>
         </div>
       </section>
@@ -177,8 +180,11 @@ export default async function Page({
           <div className="mt-12 sm:mt-16 max-w-[680px] mx-auto text-left">
             <p className="text-[clamp(1.15rem,1.4vw,1.3rem)] font-normal leading-[1.65] text-white/60">
               Tessa tracks Shiloh&rsquo;s data, spots the patterns you cannot see
-              yourself, and tells you what to fix and what to keep doing. Tessa is the
-              intelligence layer: the thing that helps you accomplish your goals.
+              yourself, and tells you what to fix and what to keep doing.
+            </p>
+            <p className="mt-6 text-[clamp(1.15rem,1.4vw,1.3rem)] font-normal leading-[1.65] text-white">
+              The intelligence layer on top of Shiloh: the thing that helps you
+              accomplish your goals.
             </p>
           </div>
         </div>
@@ -196,8 +202,11 @@ export default async function Page({
           <div className="mt-12 sm:mt-16 max-w-[680px] mx-auto text-left">
             <p className="text-[clamp(1.15rem,1.4vw,1.3rem)] font-normal leading-[1.65] text-white/60">
               Voice is how users talk to Shiloh, Tessa, and Senna. They speak, and the
-              software speaks back. No menus, no forms, no charts. Talking to your
-              product feels like talking to a person.
+              software speaks back in real time, in a natural voice, like Gemini Live.
+              No menus, no forms, no charts.
+            </p>
+            <p className="mt-6 text-[clamp(1.15rem,1.4vw,1.3rem)] font-normal leading-[1.65] text-white">
+              Talking to your product feels like talking to a person.
             </p>
           </div>
         </div>
@@ -214,8 +223,9 @@ export default async function Page({
 
           <div className="mt-12 sm:mt-16 max-w-[680px] mx-auto text-left">
             <p className="text-[clamp(1.15rem,1.4vw,1.3rem)] font-normal leading-[1.65] text-white/60">
-              Pair with a friend, a partner, or your team. Run the same program side by
-              side and share every check in.
+              A social platform inside your product, built for growing together instead
+              of scrolling alone. Pair with a friend, a partner, or your team. Run the
+              same program side by side and share every check in.
             </p>
             <p className="mt-6 text-[clamp(1.15rem,1.4vw,1.3rem)] font-normal leading-[1.65] text-white/60">
               Tessa sits in the middle, reads both sides, shares the patterns you have
