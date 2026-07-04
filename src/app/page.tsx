@@ -1,9 +1,11 @@
 // Tesurai company landing page.
 // Voice: written as a category-defining company. Confident, declarative, short.
 // The category is AI software for digital consumer products, four products in order:
-// Shiloh is a private chat on each user's own data, Tessa is the coach that moves each
-// user to their outcome, Voice makes talking to the software feel human, and Senna
-// brings people closer. Less first-person, more product-as-protagonist.
+// Shiloh is a digital brain that builds a living map of each user, Tessa is the
+// intelligence layer that reads Shiloh's data and moves the user toward their goals,
+// Voice makes talking to the software feel human, and Senna pairs users so they grow
+// together with Tessa in the middle. Product bodies speak to the end user (you);
+// the hero speaks to the business. Less first-person, more product-as-protagonist.
 // Copy rules: fifth grade reading level, no dashes anywhere, no pronouns for the
 // products, no language framing them as a team replacement, no made up outcome claims.
 // Design system: modern dark SaaS, kept plain on purpose. Near-black canvas, glassy
@@ -136,10 +138,10 @@ export default async function Page({
         </div>
       </section>
 
-      {/* Products: the four in flow order. Shiloh is the chat on each user's data,
-          Tessa is the coach, Voice makes the talking feel human, Senna brings people
-          closer. Each section uses the same editorial device: indexed mono eyebrow,
-          headline, body copy on the narrow column. */}
+      {/* Products: the four in flow order. Shiloh is the digital brain, Tessa is the
+          intelligence layer that reads it, Voice makes the talking feel human, Senna
+          pairs people with Tessa in the middle. Each section uses the same editorial
+          device: indexed mono eyebrow, headline, body copy on the narrow column. */}
       <section id="shiloh" className="px-6 sm:px-10 py-24 sm:py-32 scroll-mt-24">
         <div className="max-w-[1100px] mx-auto">
           <div className="sm:text-center">
@@ -151,13 +153,13 @@ export default async function Page({
 
           <div className="mt-12 sm:mt-16 max-w-[680px] mx-auto text-left">
             <p className="text-[clamp(1.15rem,1.4vw,1.3rem)] font-normal leading-[1.65] text-white/60">
-              Shiloh is a chat that belongs to one user and runs on their data alone.
-              Every session, every entry, every action feeds it. Users ask, and Shiloh
-              answers from their own goals, their own patterns, and their own history.
+              A digital brain that remembers every session, learns how you think, and
+              grows sharper the longer you use it.
             </p>
             <p className="mt-6 text-[clamp(1.15rem,1.4vw,1.3rem)] font-normal leading-[1.65] text-white/60">
-              Returning users never start from zero. The data belongs to the user:
-              private by default, exportable, deletable.
+              After every conversation it compiles what it heard into your skills,
+              traits, patterns, and commitments: one living map of you, recalled
+              instantly whenever you talk.
             </p>
           </div>
         </div>
@@ -174,9 +176,9 @@ export default async function Page({
 
           <div className="mt-12 sm:mt-16 max-w-[680px] mx-auto text-left">
             <p className="text-[clamp(1.15rem,1.4vw,1.3rem)] font-normal leading-[1.65] text-white/60">
-              Tessa is the coach. Tessa reads each user&rsquo;s data, finds the patterns
-              they cannot see themselves, and gives them the next step toward the outcome
-              they came for.
+              Tessa tracks Shiloh&rsquo;s data, spots the patterns you cannot see
+              yourself, and tells you what to fix and what to keep doing. Tessa is the
+              intelligence layer: the thing that helps you accomplish your goals.
             </p>
           </div>
         </div>
@@ -206,20 +208,18 @@ export default async function Page({
           <div className="sm:text-center">
             <Eyebrow>04 · Senna</Eyebrow>
             <h2 className="text-[clamp(2.125rem,3.5vw,2.75rem)] font-medium leading-[1.1] tracking-[-0.03em] text-white">
-              Software that gets people closer in real life
+              Grow together, not alone
             </h2>
           </div>
 
           <div className="mt-12 sm:mt-16 max-w-[680px] mx-auto text-left">
             <p className="text-[clamp(1.15rem,1.4vw,1.3rem)] font-normal leading-[1.65] text-white/60">
-              Senna is the social side of your product. Senna pairs two people and puts
-              an AI between them that works for both. They run the same goal side by
-              side, every check in is visible to both, and Senna coaches the pair, not
-              just the person.
+              Pair with a friend, a partner, or your team. Run the same program side by
+              side and share every check in.
             </p>
             <p className="mt-6 text-[clamp(1.15rem,1.4vw,1.3rem)] font-normal leading-[1.65] text-white/60">
-              Built for friends, couples, cofounders, and teams. It is the reason your
-              users do not quit: someone real is in it with them.
+              Tessa sits in the middle, reads both sides, shares the patterns you have
+              in common, and gives you both the feedback to grow stronger together.
             </p>
           </div>
         </div>
