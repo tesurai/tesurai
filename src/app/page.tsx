@@ -1,25 +1,26 @@
 // Tesurai company landing page.
-// Voice: written as a category-defining product. Confident, declarative, short.
-// The category is a coach for every user: data to patterns to a forecast to feedback that
-// moves each user to their outcome. Less first-person, more product-as-protagonist.
-// Copy rules: fifth grade reading level, no dashes anywhere, no pronouns for Tessa,
-// no language framing Tessa as a team replacement, no made up outcome claims.
+// Voice: written as a category-defining company. Confident, declarative, short.
+// The category is intelligence for digital consumer products, four layers in order:
+// Shiloh remembers each user, Tessa reads their data, Voice answers out loud, and
+// Senna pairs people up. Less first-person, more product-as-protagonist.
+// Copy rules: fifth grade reading level, no dashes anywhere, no pronouns for the
+// products, no language framing them as a team replacement, no made up outcome claims.
 // Design system: modern dark SaaS, kept plain on purpose. Near-black canvas, glassy
 // sticky nav with anchor links, editorial sections on a narrow 680px column that share
-// the same generous side spacing but each get their own device: contrast rows (Mission),
-// a forked path (Difference), an indexed list (Product), a timeline (Process). Pill
-// buttons (one white-filled primary), sharp boxed mono eyebrows, medium-weight display
-// type in solid white. No cards, no gradient text, no glows, no shadows, no accent color.
+// the same generous side spacing: four indexed product sections (Shiloh, Tessa, Voice,
+// Senna) and a timeline (How we work). Pill buttons (one white-filled primary), sharp
+// boxed mono eyebrows, medium-weight display type in solid white. No cards, no gradient
+// text, no glows, no shadows, no accent color.
 
 import ProcessTimeline from "./process-timeline";
 import CalEmbed from "./cal-embed";
 
 const CAL_LINK = "https://cal.com/tesurai/call";
 
-const BROWSER_TITLE = "Tesurai | Turn each user's data into results.";
-const SHARE_TITLE = "Turn each user's data into results.";
+const BROWSER_TITLE = "Tesurai | Intelligence for digital consumer products.";
+const SHARE_TITLE = "Intelligence for digital consumer products.";
 const SHARE_DESCRIPTION =
-  "Tessa uses each user's data to find their patterns and give them the feedback to get results on your platform.";
+  "Tesurai builds intelligence that remembers your users, talks to them, and brings them together. We implement it into your product, under your brand.";
 const SHARE_IMAGE = "/og.png";
 
 export const metadata = {
@@ -35,7 +36,7 @@ export const metadata = {
         url: SHARE_IMAGE,
         width: 1200,
         height: 630,
-        alt: "Tesurai. Turn each user's data into results.",
+        alt: "Tesurai. Intelligence for digital consumer products.",
       },
     ],
   },
@@ -83,18 +84,21 @@ export default async function Page({
           <div className="flex items-center gap-10">
             <Wordmark className="h-3 w-auto" />
             <nav className="hidden md:flex items-center gap-7">
-              <a
-                href="#tessa"
-                className="text-[13.5px] font-normal text-white/60 hover:text-white transition-colors"
-              >
-                Tessa
-              </a>
-              <a
-                href="#process"
-                className="text-[13.5px] font-normal text-white/60 hover:text-white transition-colors"
-              >
-                Process
-              </a>
+              {[
+                ["Shiloh", "#shiloh"],
+                ["Tessa", "#tessa"],
+                ["Voice", "#voice"],
+                ["Senna", "#senna"],
+                ["Process", "#process"],
+              ].map(([label, href]) => (
+                <a
+                  key={href}
+                  href={href}
+                  className="text-[13.5px] font-normal text-white/60 hover:text-white transition-colors"
+                >
+                  {label}
+                </a>
+              ))}
             </nav>
           </div>
           <div className="flex items-center gap-5">
@@ -124,107 +128,99 @@ export default async function Page({
             </div>
           )}
           <h1 className="text-pretty sm:text-balance text-[clamp(2.5rem,5.5vw,4rem)] font-semibold leading-[1.08] tracking-[-0.03em] text-white">
-            Turn each user&rsquo;s data into results.
+            Intelligence for digital consumer products.
           </h1>
           <p className="mt-6 text-pretty sm:text-balance text-[clamp(1.0625rem,1.4vw,1.1875rem)] font-normal leading-[1.65] text-white/55 max-w-[660px] mx-auto">
-            Tessa uses each user&rsquo;s data to find their patterns and give them the
-            feedback to get results on your platform.
+            Tesurai builds intelligence that remembers your users, talks to them, and
+            brings them together. We implement it into your product, under your brand.
           </p>
         </div>
       </section>
 
-      {/* The difference: moved right under the hero. The path forks around a center spine;
-          the dim path fades out on the left, the Tessa path lands on the right. */}
-      <section id="tessa" className="px-6 sm:px-10 py-24 sm:py-32 scroll-mt-24">
+      {/* Products: the four layers in the order users meet them. Shiloh remembers,
+          Tessa reads the data, Voice answers out loud, Senna pairs people up. Each
+          section uses the same editorial device: indexed mono eyebrow, headline,
+          body copy on the narrow column. */}
+      <section id="shiloh" className="px-6 sm:px-10 py-24 sm:py-32 scroll-mt-24">
         <div className="max-w-[1100px] mx-auto">
           <div className="sm:text-center">
-            <Eyebrow>The difference</Eyebrow>
+            <Eyebrow>01 · Shiloh</Eyebrow>
             <h2 className="text-[clamp(2.125rem,3.5vw,2.75rem)] font-medium leading-[1.1] tracking-[-0.03em] text-white">
-              Predict or lose them
-            </h2>
-          </div>
-
-          <div className="mt-12 sm:mt-16 max-w-[680px] mx-auto">
-            <div className="grid grid-cols-2 text-left">
-              <div className="pr-4 sm:pr-8 pt-6 border-r border-white/[0.15]">
-                <p className="text-[11px] sm:text-[12px] font-mono tracking-[0.16em] uppercase text-white/45">
-                  Without Tessa
-                </p>
-                <ol className="mt-5 space-y-5">
-                  {[
-                    "Your product treats them like every other user.",
-                    "They hit a wall your product cannot see.",
-                    "They stall, and nothing steps in.",
-                    "They go quiet and blame themselves.",
-                    "You find out at the cancel. Too late.",
-                  ].map((step) => (
-                    <li
-                      key={step}
-                      className="text-[13.5px] sm:text-[16px] font-normal leading-[1.55] text-white/40"
-                    >
-                      {step}
-                    </li>
-                  ))}
-                </ol>
-              </div>
-              <div className="pl-4 sm:pl-8 pt-6">
-                <p className="text-[11px] sm:text-[12px] font-mono tracking-[0.16em] uppercase text-white/70">
-                  With Tessa
-                </p>
-                <ol className="mt-5 space-y-5">
-                  {[
-                    "Tessa learns this user, not the average user.",
-                    "Tessa spots the stall early.",
-                    "Tessa gives them the next move that fits where they are.",
-                    "You see who is winning and who is slipping, early.",
-                    "They keep moving toward what they came for.",
-                  ].map((step) => (
-                    <li
-                      key={step}
-                      className="text-[13.5px] sm:text-[16px] font-normal leading-[1.55] text-white"
-                    >
-                      {step}
-                    </li>
-                  ))}
-                </ol>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Mission: the counterforce manifesto, after the difference fork. The threat in
-          muted text, three Theirs/Ours contrast rows, then the stance in full white. */}
-      <section className="px-6 sm:px-10 py-24 sm:py-32">
-        <div className="max-w-[1100px] mx-auto">
-          <div className="sm:text-center">
-            <Eyebrow>Mission</Eyebrow>
-            <h2 className="text-[clamp(2.125rem,3.5vw,2.75rem)] font-medium leading-[1.1] tracking-[-0.03em] text-white">
-              We are building the counterforce
+              Your product remembers everyone
             </h2>
           </div>
 
           <div className="mt-12 sm:mt-16 max-w-[680px] mx-auto text-left">
             <p className="text-[clamp(1.15rem,1.4vw,1.3rem)] font-normal leading-[1.65] text-white/60">
-              Big companies use AI to make people weaker, dumber, more distracted, more
-              dependent, and easier to control. Pretending AI will go away does not make it
-              go away. Sitting on the sidelines is how we lose.
+              Shiloh gives each of your users a private digital brain that grows with
+              their data. Every session, every entry, every action feeds it. Over time it
+              holds their goals, their patterns, and their history, so your product knows
+              each user the way a great coach knows a client.
             </p>
+            <p className="mt-6 text-[clamp(1.15rem,1.4vw,1.3rem)] font-normal leading-[1.65] text-white/60">
+              Returning users never start from zero. The brain belongs to the user:
+              private by default, exportable, deletable.
+            </p>
+          </div>
+        </div>
+      </section>
 
-            <div className="my-10 sm:my-12 divide-y divide-white/[0.10] border-y border-white/[0.10]">
-              {[
-                ["Their AI distracts your users.", "Tessa directs your users."],
-                ["Their AI keeps your users in the dark.", "Tessa makes your users aware."],
-                ["Their AI uses your users.", "Tessa serves your users."],
-              ].map(([theirs, ours]) => (
-                <div key={theirs} className="grid grid-cols-2 gap-3 sm:gap-8 py-5">
-                  <p className="text-[16px] font-normal leading-[1.55] text-white/45">
-                    {theirs}
-                  </p>
-                  <p className="text-[16px] font-normal leading-[1.55] text-white">{ours}</p>
-                </div>
-              ))}
-            </div>
+      <section id="tessa" className="px-6 sm:px-10 py-24 sm:py-32 scroll-mt-24">
+        <div className="max-w-[1100px] mx-auto">
+          <div className="sm:text-center">
+            <Eyebrow>02 · Tessa</Eyebrow>
+            <h2 className="text-[clamp(2.125rem,3.5vw,2.75rem)] font-medium leading-[1.1] tracking-[-0.03em] text-white">
+              Analytics your users can talk to
+            </h2>
+          </div>
+
+          <div className="mt-12 sm:mt-16 max-w-[680px] mx-auto text-left">
+            <p className="text-[clamp(1.15rem,1.4vw,1.3rem)] font-normal leading-[1.65] text-white/60">
+              Tessa tracks each user&rsquo;s activity, finds the patterns they cannot see
+              themselves, and tells them what to do next.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="voice" className="px-6 sm:px-10 py-24 sm:py-32 scroll-mt-24">
+        <div className="max-w-[1100px] mx-auto">
+          <div className="sm:text-center">
+            <Eyebrow>03 · Voice</Eyebrow>
+            <h2 className="text-[clamp(2.125rem,3.5vw,2.75rem)] font-medium leading-[1.1] tracking-[-0.03em] text-white">
+              No dashboards. Users just ask
+            </h2>
+          </div>
+
+          <div className="mt-12 sm:mt-16 max-w-[680px] mx-auto text-left">
+            <p className="text-[clamp(1.15rem,1.4vw,1.3rem)] font-normal leading-[1.65] text-white/60">
+              Voice is how users talk to the intelligence inside your product. They ask
+              out loud, and the answer comes back from their own data with a next step
+              they can act on. No charts to read, no menus to dig through.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="senna" className="px-6 sm:px-10 py-24 sm:py-32 scroll-mt-24">
+        <div className="max-w-[1100px] mx-auto">
+          <div className="sm:text-center">
+            <Eyebrow>04 · Senna</Eyebrow>
+            <h2 className="text-[clamp(2.125rem,3.5vw,2.75rem)] font-medium leading-[1.1] tracking-[-0.03em] text-white">
+              Software that gets people closer in real life
+            </h2>
+          </div>
+
+          <div className="mt-12 sm:mt-16 max-w-[680px] mx-auto text-left">
+            <p className="text-[clamp(1.15rem,1.4vw,1.3rem)] font-normal leading-[1.65] text-white/60">
+              Senna pairs two people inside your product and puts an AI between them that
+              works for both. They run the same goal side by side, every check in is
+              visible to both, and Senna coaches the pair, not just the person.
+            </p>
+            <p className="mt-6 text-[clamp(1.15rem,1.4vw,1.3rem)] font-normal leading-[1.65] text-white/60">
+              Built for friends, couples, cofounders, and teams. It is the reason your
+              users do not quit: someone real is in it with them.
+            </p>
           </div>
         </div>
       </section>
@@ -234,9 +230,9 @@ export default async function Page({
       <section id="process" className="px-6 sm:px-10 py-24 sm:py-32 scroll-mt-24">
         <div className="max-w-[1100px] mx-auto">
           <div className="sm:text-center">
-            <Eyebrow>Process</Eyebrow>
+            <Eyebrow>How we work</Eyebrow>
             <h2 className="text-[clamp(2.125rem,3.5vw,2.75rem)] font-medium leading-[1.1] tracking-[-0.03em] text-white">
-              Onboard. Build. Launch.
+              Fit. Implement. Grow.
             </h2>
           </div>
 
@@ -274,8 +270,8 @@ export default async function Page({
               WebkitTextFillColor: "transparent",
             }}
           >
-            Stop losing the users you could have kept. Tessa keeps each user moving toward
-            the outcome they want. When your users win, you win.
+            Your product remembers each user, talks to them, and brings them together.
+            When your users win, you win.
           </h2>
         </div>
       </section>
@@ -296,22 +292,22 @@ export default async function Page({
                 Explore
               </p>
               <ul className="mt-5 space-y-3.5">
-                <li>
-                  <a
-                    href="#tessa"
-                    className="text-[15px] font-normal text-white/65 hover:text-white transition-colors"
-                  >
-                    Tessa
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#process"
-                    className="text-[15px] font-normal text-white/65 hover:text-white transition-colors"
-                  >
-                    Process
-                  </a>
-                </li>
+                {[
+                  ["Shiloh", "#shiloh"],
+                  ["Tessa", "#tessa"],
+                  ["Voice", "#voice"],
+                  ["Senna", "#senna"],
+                  ["Process", "#process"],
+                ].map(([label, href]) => (
+                  <li key={href}>
+                    <a
+                      href={href}
+                      className="text-[15px] font-normal text-white/65 hover:text-white transition-colors"
+                    >
+                      {label}
+                    </a>
+                  </li>
+                ))}
               </ul>
             </div>
 

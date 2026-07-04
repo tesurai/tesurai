@@ -13,18 +13,18 @@ type Step = { n: string; t: string; d: string };
 const STEPS: Step[] = [
   {
     n: "01",
-    t: "Onboard",
-    d: "We hop on a call with you to understand your business, your users, and the results you want them to achieve.",
+    t: "Fit",
+    d: "We look at your product and find where a memory, a voice, or a pairing layer changes what it can do.",
   },
   {
     n: "02",
-    t: "Build",
-    d: "We build the Tessa formula around your business so users get the right patterns and feedback to reach the results.",
+    t: "Implement",
+    d: "We build it into your product under your brand. Your users never see us.",
   },
   {
     n: "03",
-    t: "Launch",
-    d: "We wire Tessa up to your business, clean up bugs with test flights, and then push it to live.",
+    t: "Grow",
+    d: "The systems learn from your users and get better on their own. We maintain the intelligence, you own the relationship.",
   },
 ];
 
