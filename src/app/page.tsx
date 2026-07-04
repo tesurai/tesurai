@@ -1,18 +1,18 @@
 // Tesurai company landing page.
 // Voice: written as a category-defining company. Confident, declarative, short.
-// The category is intelligence for digital consumer products, four layers in order:
-// Shiloh remembers each user, Tessa reads their data, Voice answers out loud, and
-// Senna pairs people up. Less first-person, more product-as-protagonist.
+// The category is AI software for digital consumer products, four products in order:
+// Shiloh is a private chat on each user's own data, Tessa is the coach that moves each
+// user to their outcome, Voice makes talking to the software feel human, and Senna
+// brings people closer. Less first-person, more product-as-protagonist.
 // Copy rules: fifth grade reading level, no dashes anywhere, no pronouns for the
 // products, no language framing them as a team replacement, no made up outcome claims.
 // Design system: modern dark SaaS, kept plain on purpose. Near-black canvas, glassy
 // sticky nav with anchor links, editorial sections on a narrow 680px column that share
 // the same generous side spacing: four indexed product sections (Shiloh, Tessa, Voice,
-// Senna) and a timeline (How we work). Pill buttons (one white-filled primary), plain
-// mono uppercase eyebrows, medium-weight display type in solid white. No cards, no
-// glows, no shadows, no accent color, no gradient text except the closing fade quote.
+// Senna). Pill buttons (one white-filled primary), plain mono uppercase eyebrows,
+// medium-weight display type in solid white. No cards, no glows, no shadows, no accent
+// color, no gradient text except the closing fade quote.
 
-import ProcessTimeline from "./process-timeline";
 import CalEmbed from "./cal-embed";
 
 const CAL_LINK = "https://cal.com/tesurai/call";
@@ -89,7 +89,6 @@ export default async function Page({
                 ["Tessa", "#tessa"],
                 ["Voice", "#voice"],
                 ["Senna", "#senna"],
-                ["How we work", "#process"],
               ].map(([label, href]) => (
                 <a
                   key={href}
@@ -137,10 +136,10 @@ export default async function Page({
         </div>
       </section>
 
-      {/* Products: the four layers in the order users meet them. Shiloh remembers,
-          Tessa reads the data, Voice answers out loud, Senna pairs people up. Each
-          section uses the same editorial device: indexed mono eyebrow, headline,
-          body copy on the narrow column. */}
+      {/* Products: the four in flow order. Shiloh is the chat on each user's data,
+          Tessa is the coach, Voice makes the talking feel human, Senna brings people
+          closer. Each section uses the same editorial device: indexed mono eyebrow,
+          headline, body copy on the narrow column. */}
       <section id="shiloh" className="px-6 sm:px-10 py-24 sm:py-32 scroll-mt-24">
         <div className="max-w-[1100px] mx-auto">
           <div className="sm:text-center">
@@ -152,13 +151,12 @@ export default async function Page({
 
           <div className="mt-12 sm:mt-16 max-w-[680px] mx-auto text-left">
             <p className="text-[clamp(1.15rem,1.4vw,1.3rem)] font-normal leading-[1.65] text-white/60">
-              Shiloh gives each of your users a private digital brain that grows with
-              their data. Every session, every entry, every action feeds it. Over time it
-              holds their goals, their patterns, and their history, so your product knows
-              each user the way a great coach knows a client.
+              Shiloh is a chat that belongs to one user and runs on their data alone.
+              Every session, every entry, every action feeds it. Users ask, and Shiloh
+              answers from their own goals, their own patterns, and their own history.
             </p>
             <p className="mt-6 text-[clamp(1.15rem,1.4vw,1.3rem)] font-normal leading-[1.65] text-white/60">
-              Returning users never start from zero. The brain belongs to the user:
+              Returning users never start from zero. The data belongs to the user:
               private by default, exportable, deletable.
             </p>
           </div>
@@ -176,8 +174,9 @@ export default async function Page({
 
           <div className="mt-12 sm:mt-16 max-w-[680px] mx-auto text-left">
             <p className="text-[clamp(1.15rem,1.4vw,1.3rem)] font-normal leading-[1.65] text-white/60">
-              Tessa tracks each user&rsquo;s activity, finds the patterns they cannot see
-              themselves, and tells them what to do next.
+              Tessa is the coach. Tessa reads each user&rsquo;s data, finds the patterns
+              they cannot see themselves, and gives them the next step toward the outcome
+              they came for.
             </p>
           </div>
         </div>
@@ -188,15 +187,15 @@ export default async function Page({
           <div className="sm:text-center">
             <Eyebrow>03 · Voice</Eyebrow>
             <h2 className="text-[clamp(2.125rem,3.5vw,2.75rem)] font-medium leading-[1.1] tracking-[-0.03em] text-white">
-              No dashboards. Users just ask
+              Feels like talking to a person
             </h2>
           </div>
 
           <div className="mt-12 sm:mt-16 max-w-[680px] mx-auto text-left">
             <p className="text-[clamp(1.15rem,1.4vw,1.3rem)] font-normal leading-[1.65] text-white/60">
-              Voice is how users talk to the intelligence inside your product. They ask
-              out loud, and the answer comes back from their own data with a next step
-              they can act on. No charts to read, no menus to dig through.
+              Voice is how users talk to Shiloh, Tessa, and Senna. They speak, and the
+              software speaks back. No menus, no forms, no charts. Talking to your
+              product feels like talking to a person.
             </p>
           </div>
         </div>
@@ -213,31 +212,15 @@ export default async function Page({
 
           <div className="mt-12 sm:mt-16 max-w-[680px] mx-auto text-left">
             <p className="text-[clamp(1.15rem,1.4vw,1.3rem)] font-normal leading-[1.65] text-white/60">
-              Senna pairs two people inside your product and puts an AI between them that
-              works for both. They run the same goal side by side, every check in is
-              visible to both, and Senna coaches the pair, not just the person.
+              Senna is the social side of your product. Senna pairs two people and puts
+              an AI between them that works for both. They run the same goal side by
+              side, every check in is visible to both, and Senna coaches the pair, not
+              just the person.
             </p>
             <p className="mt-6 text-[clamp(1.15rem,1.4vw,1.3rem)] font-normal leading-[1.65] text-white/60">
               Built for friends, couples, cofounders, and teams. It is the reason your
               users do not quit: someone real is in it with them.
             </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Process: a vertical timeline whose line draws on scroll (ProcessTimeline, a
-          client component). Square nodes on a left rail echo the sharp eyebrows. */}
-      <section id="process" className="px-6 sm:px-10 py-24 sm:py-32 scroll-mt-24">
-        <div className="max-w-[1100px] mx-auto">
-          <div className="sm:text-center">
-            <Eyebrow>How we work</Eyebrow>
-            <h2 className="text-[clamp(2.125rem,3.5vw,2.75rem)] font-medium leading-[1.1] tracking-[-0.03em] text-white">
-              Fit. Implement. Grow.
-            </h2>
-          </div>
-
-          <div className="mt-12 sm:mt-16 max-w-[680px] mx-auto text-left">
-            <ProcessTimeline />
           </div>
         </div>
       </section>
@@ -297,7 +280,6 @@ export default async function Page({
                   ["Tessa", "#tessa"],
                   ["Voice", "#voice"],
                   ["Senna", "#senna"],
-                  ["How we work", "#process"],
                 ].map(([label, href]) => (
                   <li key={href}>
                     <a
