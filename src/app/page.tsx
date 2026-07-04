@@ -8,9 +8,9 @@
 // Design system: modern dark SaaS, kept plain on purpose. Near-black canvas, glassy
 // sticky nav with anchor links, editorial sections on a narrow 680px column that share
 // the same generous side spacing: four indexed product sections (Shiloh, Tessa, Voice,
-// Senna) and a timeline (How we work). Pill buttons (one white-filled primary), sharp
-// boxed mono eyebrows, medium-weight display type in solid white. No cards, no gradient
-// text, no glows, no shadows, no accent color.
+// Senna) and a timeline (How we work). Pill buttons (one white-filled primary), plain
+// mono uppercase eyebrows, medium-weight display type in solid white. No cards, no
+// glows, no shadows, no accent color, no gradient text except the closing fade quote.
 
 import ProcessTimeline from "./process-timeline";
 import CalEmbed from "./cal-embed";
@@ -89,7 +89,7 @@ export default async function Page({
                 ["Tessa", "#tessa"],
                 ["Voice", "#voice"],
                 ["Senna", "#senna"],
-                ["Process", "#process"],
+                ["How we work", "#process"],
               ].map(([label, href]) => (
                 <a
                   key={href}
@@ -297,7 +297,7 @@ export default async function Page({
                   ["Tessa", "#tessa"],
                   ["Voice", "#voice"],
                   ["Senna", "#senna"],
-                  ["Process", "#process"],
+                  ["How we work", "#process"],
                 ].map(([label, href]) => (
                   <li key={href}>
                     <a
