@@ -147,6 +147,81 @@ const PRODUCTS: {
   },
 ];
 
+// Thin line art for each product, Grok style: wireframe drawings in a framed
+// artboard with corner dots. All strokes inherit currentColor from the frame.
+function ShilohArt() {
+  return (
+    <svg viewBox="0 0 400 280" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden className="h-full w-full">
+      <circle cx="200" cy="140" r="112" strokeOpacity="0.25" strokeDasharray="3 7" />
+      <circle cx="200" cy="140" r="70" strokeOpacity="0.2" strokeDasharray="2 6" />
+      <g strokeOpacity="0.5">
+        <path d="M200 60 140 95M200 60 255 90M140 95 120 150M140 95 200 140M255 90 200 140M255 90 275 150M120 150 155 205M200 140 155 205M200 140 235 210M275 150 235 210M200 140 120 150" />
+      </g>
+      <g fill="currentColor" stroke="none" fillOpacity="0.7">
+        <circle cx="200" cy="60" r="3" />
+        <circle cx="140" cy="95" r="3" />
+        <circle cx="255" cy="90" r="3" />
+        <circle cx="120" cy="150" r="3" />
+        <circle cx="275" cy="150" r="3" />
+        <circle cx="155" cy="205" r="3" />
+        <circle cx="235" cy="210" r="3" />
+      </g>
+      <circle cx="200" cy="140" r="4.5" fill="currentColor" stroke="none" />
+      <circle cx="200" cy="140" r="10" strokeOpacity="0.45" />
+    </svg>
+  );
+}
+
+function TessaArt() {
+  return (
+    <svg viewBox="0 0 400 280" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden className="h-full w-full">
+      <path d="M200 150 320 200 200 250 80 200Z" strokeOpacity="0.25" />
+      <path d="M200 95 320 145 200 195 80 145Z" strokeOpacity="0.45" />
+      <path d="M200 40 320 90 200 140 80 90Z" strokeOpacity="0.85" />
+      <path d="M80 90V200M320 90V200M200 140V250" strokeOpacity="0.18" strokeDasharray="2 6" />
+      <path d="M150 88 172 88 184 70 200 102 214 84 250 84" strokeOpacity="0.95" />
+      <circle cx="250" cy="84" r="3" fill="currentColor" stroke="none" />
+    </svg>
+  );
+}
+
+function VoiceArt() {
+  return (
+    <svg viewBox="0 0 400 280" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" aria-hidden className="h-full w-full">
+      <g strokeOpacity="0.55">
+        <path d="M60 133v14M76 128v24M92 120v40M108 110v60M124 96v88M156 104v72M188 88v104M220 100v80M252 92v96M284 112v56M300 122v36M316 128v24M332 133v14" />
+      </g>
+      <g strokeOpacity="0.95">
+        <path d="M140 78v124M172 70v140M236 76v128M268 102v76" />
+      </g>
+    </svg>
+  );
+}
+
+function SennaArt() {
+  return (
+    <svg viewBox="0 0 400 280" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden className="h-full w-full">
+      <ellipse cx="200" cy="150" rx="168" ry="98" strokeOpacity="0.2" strokeDasharray="3 7" />
+      <g strokeOpacity="0.8">
+        <circle cx="110" cy="112" r="22" />
+        <path d="M70 186a40 34 0 0 1 80 0" />
+        <circle cx="290" cy="112" r="22" />
+        <path d="M250 186a40 34 0 0 1 80 0" />
+      </g>
+      <path d="M144 150h40M216 150h40" strokeOpacity="0.5" />
+      <circle cx="200" cy="150" r="7" fill="currentColor" stroke="none" />
+      <circle cx="200" cy="150" r="15" strokeOpacity="0.45" strokeDasharray="2 5" />
+    </svg>
+  );
+}
+
+const ART: Record<string, () => React.ReactNode> = {
+  shiloh: ShilohArt,
+  tessa: TessaArt,
+  voice: VoiceArt,
+  senna: SennaArt,
+};
+
 // The system in one line per product, for the How it fits together strip.
 const FLOW: { n: string; t: string; d: string }[] = [
   { n: "01", t: "Shiloh", d: "Builds the living map of each user." },
@@ -275,44 +350,53 @@ export default async function Page({
           </div>
 
           <div className={`border-t ${LINE} divide-y divide-white/[0.08]`}>
-            {PRODUCTS.map((p) => (
-              <div
-                key={p.id}
-                id={p.id}
-                className="scroll-mt-16 min-h-svh flex items-center px-6 sm:px-10 py-16"
-              >
-                <div className="w-full grid gap-8 lg:gap-12 lg:grid-cols-12">
-                  <div className="lg:col-span-2">
-                    <p className="font-mono text-[12px] tracking-[0.2em] uppercase text-white/45 tabular-nums">
-                      {p.n}
-                    </p>
-                    <h3 className="mt-4 text-[clamp(1.125rem,1.6vw,1.375rem)] font-medium text-white">
-                      {p.name}
-                    </h3>
-                  </div>
-                  <div className="lg:col-span-5">
-                    <p className="text-[clamp(1.75rem,3.2vw,2.75rem)] font-medium leading-[1.12] tracking-[-0.025em] text-white text-balance">
-                      {p.title}
-                    </p>
-                    {p.anchor && (
-                      <p className="mt-6 text-[clamp(1rem,1.3vw,1.1875rem)] font-medium leading-[1.55] text-white/85">
-                        {p.anchor}
+            {PRODUCTS.map((p) => {
+              const Art = ART[p.id];
+              return (
+                <div
+                  key={p.id}
+                  id={p.id}
+                  className="scroll-mt-16 min-h-svh flex items-center px-6 sm:px-10 py-16"
+                >
+                  <div className="w-full grid gap-10 lg:gap-12 lg:grid-cols-12 lg:items-center">
+                    <div className="lg:col-span-2">
+                      <p className="font-mono text-[12px] tracking-[0.2em] uppercase text-white/45 tabular-nums">
+                        {p.n}
                       </p>
-                    )}
-                  </div>
-                  <div className="lg:col-span-5">
-                    {p.body.map((line) => (
-                      <p
-                        key={line.slice(0, 32)}
-                        className="mt-4 first:mt-0 text-[clamp(0.9375rem,1.2vw,1.0625rem)] font-normal leading-[1.75] text-white/55"
-                      >
-                        {line}
+                      <h3 className="mt-4 text-[clamp(1.125rem,1.6vw,1.375rem)] font-medium text-white">
+                        {p.name}
+                      </h3>
+                    </div>
+                    <div className="lg:col-span-5">
+                      <p className="text-[clamp(1.625rem,2.8vw,2.375rem)] font-medium leading-[1.12] tracking-[-0.025em] text-white text-balance">
+                        {p.title}
                       </p>
-                    ))}
+                      {p.anchor && (
+                        <p className="mt-5 text-[clamp(1rem,1.2vw,1.125rem)] font-medium leading-[1.55] text-white/85">
+                          {p.anchor}
+                        </p>
+                      )}
+                      {p.body.map((line) => (
+                        <p
+                          key={line.slice(0, 32)}
+                          className="mt-4 text-[15px] font-normal leading-[1.7] text-white/55"
+                        >
+                          {line}
+                        </p>
+                      ))}
+                    </div>
+                    {/* framed artboard with corner dots, Grok style */}
+                    <div className={`lg:col-span-5 relative border ${LINE} p-8 sm:p-10 h-[260px] sm:h-[340px] text-white/40`}>
+                      <span aria-hidden className="absolute -top-[3px] -left-[3px] h-1.5 w-1.5 bg-white/50" />
+                      <span aria-hidden className="absolute -top-[3px] -right-[3px] h-1.5 w-1.5 bg-white/50" />
+                      <span aria-hidden className="absolute -bottom-[3px] -left-[3px] h-1.5 w-1.5 bg-white/50" />
+                      <span aria-hidden className="absolute -bottom-[3px] -right-[3px] h-1.5 w-1.5 bg-white/50" />
+                      <Art />
+                    </div>
                   </div>
                 </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </section>
