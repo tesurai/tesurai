@@ -1,6 +1,6 @@
 "use client";
 
-// Inline Cal.com booking calendar, themed dark to match the site. The embed
+// Inline Cal.com booking calendar, themed light to match the site. The embed
 // auto-resizes to fit its content. calLink points at the same event the CTA
 // buttons use (cal.com/tesurai/call).
 import { useEffect } from "react";
@@ -11,7 +11,7 @@ export default function CalEmbed() {
     (async () => {
       const cal = await getCalApi({ namespace: "call" });
       cal("ui", {
-        theme: "dark",
+        theme: "light",
         hideEventTypeDetails: false,
         layout: "month_view",
       });
@@ -23,7 +23,7 @@ export default function CalEmbed() {
       namespace="call"
       calLink="tesurai/call"
       style={{ width: "100%" }}
-      config={{ layout: "month_view", theme: "dark" }}
+      config={{ layout: "month_view", theme: "light" }}
     />
   );
 }
