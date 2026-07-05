@@ -8,13 +8,12 @@
 // the hero speaks to the business. Less first-person, more product-as-protagonist.
 // Copy rules: fifth grade reading level, no dashes anywhere, no pronouns for the
 // products, no language framing them as a team replacement, no made up outcome claims.
-// Design system: Framer type on a sharp editorial grid, black and white only. White
-// canvas, black display type with tight tracking and heavy weights, gray secondary
-// text. Full bleed 1px horizontal rules between sections and vertical rails on the
-// 1200px frame run the whole page; products and steps are square grid cells divided
-// by 1px lines that meet the rails. Structure is sharp (no rounded corners on cards,
-// cells, badges, or bands); only action buttons are pills. One full black statement
-// band. No color anywhere.
+// Design system: Grok / xAI style, black and white only. Near black canvas, a hero
+// with a giant ghosted wordmark lit by a white beam from the right edge and a centered
+// ask box, mono uppercase for nav links, labels, and pill buttons, bracketed section
+// labels like [ PRODUCTS ], medium weight sans headlines, products and steps as cells
+// divided by 1px lines, full width section rules and frame rails, dark Cal embed.
+// No color anywhere: the light is white, the page is black.
 
 import CalEmbed from "./cal-embed";
 
@@ -52,38 +51,66 @@ export const metadata = {
 };
 
 // The 1px line color used for every rule, rail, and grid line on the page.
-const LINE = "border-black/[0.08]";
+const LINE = "border-white/[0.08]";
 
-// Small wordmark used in the nav and footer. The black brand SVG with the
+// Small wordmark used in the nav and footer. The white brand SVG with the
 // alpha-fade gradient so the trailing letters dissolve to almost nothing.
 function Wordmark({ className = "h-4 w-auto" }: { className?: string }) {
   return (
     // eslint-disable-next-line @next/next/no-img-element
-    <img src="/logo.svg" alt="Tesurai" className={className} />
+    <img src="/logo-white.svg" alt="Tesurai" className={className} />
   );
 }
 
-// Small square badge above section headlines. Sharp corners on purpose.
-function Badge({ children }: { children: React.ReactNode }) {
+// Bracketed mono section label, Grok style: [ PRODUCTS ]
+function SectionLabel({ children }: { children: React.ReactNode }) {
   return (
-    <span className="inline-flex items-center border border-black/[0.15] bg-black/[0.03] px-3 py-1.5 text-[13px] font-medium text-black/55">
-      {children}
-    </span>
+    <p className="font-mono text-[11px] tracking-[0.22em] uppercase text-white/45">
+      [ {children} ]
+    </p>
   );
 }
 
-// The four products as square grid cells. Equal halves so the center grid
-// line runs straight through both rows.
+// Mono uppercase pill link, thin border, Grok style.
+function PillLink({
+  href,
+  children,
+  filled = false,
+  external = false,
+}: {
+  href: string;
+  children: React.ReactNode;
+  filled?: boolean;
+  external?: boolean;
+}) {
+  return (
+    <a
+      href={href}
+      {...(external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+      className={`inline-flex items-center gap-1.5 rounded-full border px-4 py-2 font-mono text-[11px] tracking-[0.16em] uppercase whitespace-nowrap transition-colors ${
+        filled
+          ? "border-white/[0.25] bg-white/[0.12] text-white hover:bg-white/[0.2]"
+          : "border-white/[0.18] text-white/75 hover:text-white hover:border-white/[0.45]"
+      }`}
+    >
+      {children}
+    </a>
+  );
+}
+
+// The four products as cells divided by 1px lines.
 const PRODUCTS: {
   id: string;
-  label: string;
+  n: string;
+  name: string;
   title: string;
   body: string[];
   anchor: string;
 }[] = [
   {
     id: "shiloh",
-    label: "01 · Shiloh",
+    n: "01",
+    name: "Shiloh",
     title: "Your product remembers everyone",
     body: [
       "A digital brain that remembers every session, learns how you think, and grows sharper the longer you use it.",
@@ -93,7 +120,8 @@ const PRODUCTS: {
   },
   {
     id: "tessa",
-    label: "02 · Tessa",
+    n: "02",
+    name: "Tessa",
     title: "Analytics your users can talk to",
     body: [
       "Tessa tracks Shiloh’s data, spots the patterns you cannot see yourself, and tells you what to fix and what to keep doing.",
@@ -102,7 +130,8 @@ const PRODUCTS: {
   },
   {
     id: "voice",
-    label: "03 · Voice",
+    n: "03",
+    name: "Voice",
     title: "Feels like talking to a person",
     body: [
       "Voice is how users talk to Shiloh, Tessa, and Senna. They speak, and the software speaks back in real time, in a natural voice, like Gemini Live.",
@@ -111,7 +140,8 @@ const PRODUCTS: {
   },
   {
     id: "senna",
-    label: "04 · Senna",
+    n: "04",
+    name: "Senna",
     title: "Grow together, not alone",
     body: [
       "A social platform inside your product, built for growing together instead of scrolling alone. Pair with a friend, a partner, or your team. Run the same program side by side and share every check in.",
@@ -138,15 +168,15 @@ export default async function Page({
   const paid = params?.paid === "1";
   return (
     <div
-      className="min-h-screen bg-white text-black antialiased"
+      className="min-h-screen bg-[#0a0a0a] text-white antialiased"
       style={{ fontFamily: "var(--font-inter), -apple-system, system-ui, sans-serif" }}
     >
-      {/* Nav: glassy sticky bar. The frame rails continue through it. */}
-      <header className={`fixed top-0 inset-x-0 z-50 border-b ${LINE} bg-white/80 backdrop-blur-xl`}>
-        <div className={`max-w-[1200px] mx-auto h-16 border-x ${LINE} px-6 flex items-center justify-between`}>
+      {/* Nav: mono uppercase links, thin outlined pill CTA. */}
+      <header className={`fixed top-0 inset-x-0 z-50 border-b ${LINE} bg-[#0a0a0a]/70 backdrop-blur-xl`}>
+        <div className={`max-w-[1240px] mx-auto h-16 border-x ${LINE} px-6 flex items-center justify-between`}>
           <div className="flex items-center gap-10">
             <Wordmark className="h-3 w-auto" />
-            <nav className="hidden md:flex items-center gap-7">
+            <nav className="hidden md:flex items-center gap-8">
               {[
                 ["Shiloh", "#shiloh"],
                 ["Tessa", "#tessa"],
@@ -156,129 +186,156 @@ export default async function Page({
                 <a
                   key={href}
                   href={href}
-                  className="text-[14px] font-medium text-black/55 hover:text-black transition-colors"
+                  className="font-mono text-[11px] tracking-[0.18em] uppercase text-white/55 hover:text-white transition-colors"
                 >
                   {label}
                 </a>
               ))}
             </nav>
           </div>
-          <div className="flex items-center gap-5">
-            <a
-              href={CAL_LINK}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center rounded-full bg-black text-white px-4.5 py-2 text-[13.5px] font-medium hover:bg-black/80 transition-colors"
-            >
-              Book a call
-            </a>
-          </div>
+          <PillLink href={CAL_LINK} external>
+            Book a call
+          </PillLink>
         </div>
       </header>
 
-      {/* Hero: huge black display type on white inside the frame. */}
-      <section className={`border-b ${LINE}`}>
-        <div
-          className={`max-w-[1200px] mx-auto border-x ${LINE} px-6 sm:px-10 flex flex-col justify-center min-h-svh sm:block sm:min-h-0 pt-24 sm:pt-48 pb-20 sm:pb-32`}
-        >
-          <div className="max-w-[960px] mx-auto sm:text-center">
+      {/* Hero: giant ghosted wordmark lit by a white beam from the right, a
+          centered ask box, and the announcement row pinned to the bottom. */}
+      <section className={`relative border-b ${LINE} overflow-hidden`}>
+        <div className={`relative max-w-[1240px] mx-auto border-x ${LINE} min-h-svh flex flex-col`}>
+          {/* white light beam sweeping in from the right edge */}
+          <div aria-hidden className="pointer-events-none absolute inset-0">
+            <div
+              className="absolute inset-0"
+              style={{
+                background:
+                  "radial-gradient(ellipse 50% 62% at 102% 50%, rgba(255,255,255,0.85) 0%, rgba(255,255,255,0.22) 34%, rgba(255,255,255,0.05) 58%, transparent 78%)",
+              }}
+            />
+            <div
+              className="absolute inset-0"
+              style={{
+                background:
+                  "conic-gradient(from 205deg at 101% 50%, transparent 0deg, rgba(255,255,255,0.12) 50deg, rgba(255,255,255,0.02) 95deg, transparent 130deg)",
+              }}
+            />
+          </div>
+
+          {/* ghosted brand wordmark behind everything */}
+          <div aria-hidden className="absolute inset-0 flex items-center justify-center px-6 sm:px-16">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/logo-white.svg"
+              alt=""
+              className="w-full max-w-[1040px] opacity-[0.09] select-none"
+            />
+          </div>
+
+          <h1 className="sr-only">Tesurai. Intelligence for digital consumer products.</h1>
+
+          {/* centered ask box, links to the booking section */}
+          <div className="relative flex-1 flex flex-col items-center justify-center px-6 pt-24 pb-10">
             {paid && (
-              <div className="mb-10 border border-black/[0.12] bg-black/[0.03] p-5 sm:p-6 max-w-[560px] mx-auto">
-                <p className="text-[13px] font-semibold text-black mb-1.5">
+              <div className="mb-8 w-full max-w-[560px] border border-white/[0.15] bg-black/60 backdrop-blur p-5">
+                <p className="font-mono text-[11px] tracking-[0.2em] uppercase text-white mb-2">
                   Payment received
                 </p>
-                <p className="text-[15px] sm:text-[16px] font-normal leading-[1.55] text-black/60">
+                <p className="text-[15px] font-normal leading-[1.55] text-white/70">
                   Our team will reach out within a few hours to find a time to hop on a call.
                 </p>
               </div>
             )}
-            <h1 className="text-pretty sm:text-balance text-[clamp(2.75rem,6.5vw,5rem)] font-bold leading-[1.02] tracking-[-0.04em] text-black">
-              Intelligence for digital consumer products.
-            </h1>
-            <p className="mt-7 text-pretty sm:text-balance text-[clamp(1.0625rem,1.5vw,1.25rem)] font-normal leading-[1.6] text-black/55 max-w-[680px] mx-auto">
+            <a
+              href="#pricing"
+              className="relative block w-full max-w-[560px] rounded-2xl border border-white/[0.12] bg-[#0d0d0d]/80 backdrop-blur p-5 pb-16 hover:border-white/[0.3] transition-colors"
+            >
+              <span className="text-[15px] text-white/45">What do you want to know?</span>
+              <span className="absolute bottom-4 right-4 flex h-8 w-8 items-center justify-center rounded-full bg-white/[0.12] text-white/80">
+                ↑
+              </span>
+            </a>
+          </div>
+
+          {/* bottom announcement row */}
+          <div className="relative px-6 sm:px-10 pb-10 grid gap-6 sm:grid-cols-[auto_1fr_auto] sm:items-end">
+            <span aria-hidden className="hidden sm:block font-mono text-[15px] text-white/50">
+              ↓
+            </span>
+            <p className="max-w-[460px] text-[13.5px] font-normal leading-[1.6] text-white/70">
               Tesurai builds intelligence that remembers your users, talks to them, and
               brings them together. We implement it into your product, under your brand.
             </p>
-            <div className="mt-9 flex flex-wrap sm:justify-center gap-3">
-              <a
-                href="#pricing"
-                className="inline-flex items-center rounded-full bg-black text-white px-6 py-3 text-[15px] font-medium hover:bg-black/80 transition-colors"
-              >
+            <div className="flex flex-wrap gap-3">
+              <PillLink href="#pricing" filled>
                 Book a call
-              </a>
-              <a
-                href="#shiloh"
-                className="inline-flex items-center rounded-full bg-black/[0.05] text-black px-6 py-3 text-[15px] font-medium hover:bg-black/[0.1] transition-colors"
-              >
-                Explore the suite
-              </a>
+              </PillLink>
+              <PillLink href="#shiloh">Learn more</PillLink>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Products: square grid cells divided by 1px lines that meet the rails.
-          Shiloh is the digital brain, Tessa is the intelligence layer that
-          reads it, Voice makes the talking feel human, Senna pairs people with
-          Tessa in the middle. */}
+      {/* Products: bracketed label, big clean headline, four cells divided by
+          1px lines. Shiloh is the digital brain, Tessa is the intelligence
+          layer that reads it, Voice makes the talking feel human, Senna pairs
+          people with Tessa in the middle. */}
       <section className={`border-b ${LINE}`}>
-        <div className={`max-w-[1200px] mx-auto border-x ${LINE}`}>
-          <div className="px-6 sm:px-10 pt-20 sm:pt-28 pb-14 sm:pb-16 sm:text-center">
-            <div className="max-w-[760px] mx-auto">
-              <Badge>The suite</Badge>
-              <h2 className="mt-6 text-[clamp(2.25rem,4.5vw,3.5rem)] font-bold leading-[1.05] tracking-[-0.035em] text-black">
-                Four products. One system.
-              </h2>
-              <p className="mt-5 text-[clamp(1.0625rem,1.3vw,1.1875rem)] font-normal leading-[1.6] text-black/55">
-                Shiloh remembers, Tessa reads, Voice speaks, and Senna connects.
-              </p>
-            </div>
+        <div className={`max-w-[1240px] mx-auto border-x ${LINE}`}>
+          <div className="px-6 sm:px-10 pt-20 sm:pt-28 pb-12 sm:pb-16">
+            <SectionLabel>Products</SectionLabel>
+            <h2 className="mt-7 text-[clamp(2rem,4.2vw,3.25rem)] font-medium leading-[1.08] tracking-[-0.02em] text-white max-w-[820px]">
+              Intelligence for digital consumer products.
+            </h2>
           </div>
 
-          <div className={`border-t ${LINE} grid md:grid-cols-2 gap-px bg-black/[0.08]`}>
+          <div className={`border-t ${LINE} grid sm:grid-cols-2 lg:grid-cols-4 gap-px bg-white/[0.08]`}>
             {PRODUCTS.map((p) => (
-              <div key={p.id} id={p.id} className="scroll-mt-28 bg-white p-8 sm:p-12">
-                <p className="text-[13px] font-medium text-black/40">{p.label}</p>
-                <h3 className="mt-3 text-[clamp(1.5rem,2.4vw,1.9375rem)] font-semibold leading-[1.15] tracking-[-0.025em] text-black text-balance">
+              <div key={p.id} id={p.id} className="scroll-mt-24 bg-[#0a0a0a] p-7 sm:p-8 flex flex-col">
+                <p className="font-mono text-[11px] tracking-[0.2em] uppercase text-white/45">
+                  {p.n}
+                </p>
+                <h3 className="mt-5 text-[17px] font-medium text-white">{p.name}</h3>
+                <p className="mt-1.5 text-[15px] font-medium leading-[1.4] text-white/85 text-balance">
                   {p.title}
-                </h3>
+                </p>
                 {p.body.map((line) => (
                   <p
                     key={line.slice(0, 32)}
-                    className="mt-4 text-[16px] font-normal leading-[1.65] text-black/60"
+                    className="mt-3 text-[13.5px] font-normal leading-[1.65] text-white/50"
                   >
                     {line}
                   </p>
                 ))}
-                <p className="mt-5 text-[16px] font-medium leading-[1.55] text-black">
+                <p className="mt-4 text-[13.5px] font-medium leading-[1.55] text-white/85">
                   {p.anchor}
                 </p>
+                <div className="mt-auto pt-8">
+                  <PillLink href="#pricing">Learn more ↗</PillLink>
+                </div>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* How it fits together: the system as four square cells in a strip. */}
+      {/* How it fits together: the system as four cells in a strip. */}
       <section className={`border-b ${LINE}`}>
-        <div className={`max-w-[1200px] mx-auto border-x ${LINE}`}>
-          <div className="px-6 sm:px-10 pt-20 sm:pt-28 pb-14 sm:pb-16 sm:text-center">
-            <div className="max-w-[760px] mx-auto">
-              <Badge>The system</Badge>
-              <h2 className="mt-6 text-[clamp(2.25rem,4.5vw,3.5rem)] font-bold leading-[1.05] tracking-[-0.035em] text-black">
-                How it fits together
-              </h2>
-            </div>
+        <div className={`max-w-[1240px] mx-auto border-x ${LINE}`}>
+          <div className="px-6 sm:px-10 pt-20 sm:pt-28 pb-12 sm:pb-16">
+            <SectionLabel>The system</SectionLabel>
+            <h2 className="mt-7 text-[clamp(2rem,4.2vw,3.25rem)] font-medium leading-[1.08] tracking-[-0.02em] text-white">
+              How it fits together
+            </h2>
           </div>
 
-          <div className={`border-t ${LINE} grid sm:grid-cols-2 lg:grid-cols-4 gap-px bg-black/[0.08]`}>
+          <div className={`border-t ${LINE} grid sm:grid-cols-2 lg:grid-cols-4 gap-px bg-white/[0.08]`}>
             {FLOW.map((s) => (
-              <div key={s.n} className="bg-white p-8 sm:p-10">
-                <p className="text-[13px] font-medium text-black/35 tabular-nums">{s.n}</p>
-                <h3 className="mt-3 text-[20px] font-semibold tracking-[-0.02em] text-black">
-                  {s.t}
-                </h3>
-                <p className="mt-2 text-[15.5px] font-normal leading-[1.6] text-black/55">
+              <div key={s.n} className="bg-[#0a0a0a] p-7 sm:p-8">
+                <p className="font-mono text-[11px] tracking-[0.2em] uppercase text-white/45 tabular-nums">
+                  {s.n}
+                </p>
+                <h3 className="mt-4 text-[17px] font-medium text-white">{s.t}</h3>
+                <p className="mt-2 text-[13.5px] font-normal leading-[1.6] text-white/50">
                   {s.d}
                 </p>
               </div>
@@ -287,17 +344,14 @@ export default async function Page({
         </div>
       </section>
 
-      {/* Booking: the Cal.com calendar embedded inline, light theme, below a
-          full width rule. */}
+      {/* Booking: the Cal.com calendar embedded inline, dark theme. */}
       <section id="pricing" className={`border-b ${LINE} scroll-mt-16`}>
-        <div className={`max-w-[1200px] mx-auto border-x ${LINE}`}>
-          <div className="px-6 sm:px-10 pt-20 sm:pt-28 pb-12 sm:pb-14 sm:text-center">
-            <div className="max-w-[760px] mx-auto">
-              <Badge>Get started</Badge>
-              <h2 className="mt-6 text-[clamp(2.25rem,4.5vw,3.5rem)] font-bold leading-[1.05] tracking-[-0.035em] text-black">
-                Book a call
-              </h2>
-            </div>
+        <div className={`max-w-[1240px] mx-auto border-x ${LINE}`}>
+          <div className="px-6 sm:px-10 pt-20 sm:pt-28 pb-12 sm:pb-14">
+            <SectionLabel>Get started</SectionLabel>
+            <h2 className="mt-7 text-[clamp(2rem,4.2vw,3.25rem)] font-medium leading-[1.08] tracking-[-0.02em] text-white">
+              Book a call
+            </h2>
           </div>
 
           <div className={`border-t ${LINE} p-4 sm:p-10`}>
@@ -306,20 +360,28 @@ export default async function Page({
         </div>
       </section>
 
-      {/* Closing: the page summed up as one statement on a full black band
-          flush with the frame. */}
+      {/* Closing: the page summed up as one statement. */}
       <section className={`border-b ${LINE}`}>
-        <div className={`max-w-[1200px] mx-auto border-x ${LINE} bg-[#0a0a0a] px-8 sm:px-16 py-16 sm:py-24`}>
-          <h2 className="text-balance text-[clamp(1.875rem,3.6vw,3rem)] font-semibold leading-[1.15] tracking-[-0.03em] text-white max-w-[900px]">
+        <div className={`max-w-[1240px] mx-auto border-x ${LINE} px-6 sm:px-10 py-20 sm:py-28`}>
+          <h2 className="text-balance text-[clamp(1.75rem,3.4vw,2.75rem)] font-medium leading-[1.2] tracking-[-0.02em] text-white max-w-[900px]">
             Your product remembers each user, talks to them, and brings them together.
             When your users win, you win.
           </h2>
         </div>
       </section>
 
-      {/* Footer: brand block, Explore and Connect columns, bottom bar. */}
-      <footer>
-        <div className={`max-w-[1200px] mx-auto border-x ${LINE} px-6 sm:px-10 pt-16 sm:pt-24 pb-10`}>
+      {/* Footer: brand block, Explore and Connect columns, bottom bar, and a
+          white horizon glow rising from the bottom edge. */}
+      <footer className="relative overflow-hidden">
+        <div
+          aria-hidden
+          className="pointer-events-none absolute inset-x-0 bottom-0 h-[420px]"
+          style={{
+            background:
+              "radial-gradient(ellipse 90% 85% at 50% 125%, rgba(255,255,255,0.32) 0%, rgba(255,255,255,0.1) 40%, rgba(255,255,255,0.03) 60%, transparent 80%)",
+          }}
+        />
+        <div className={`relative max-w-[1240px] mx-auto border-x ${LINE} px-6 sm:px-10 pt-16 sm:pt-24 pb-10`}>
           <div className="grid gap-12 md:gap-8 md:grid-cols-[1.6fr_1fr_1fr]">
             {/* Brand */}
             <div>
@@ -328,7 +390,9 @@ export default async function Page({
 
             {/* Explore */}
             <div>
-              <p className="text-[13px] font-medium text-black/40">Explore</p>
+              <p className="font-mono text-[11px] tracking-[0.2em] uppercase text-white/45">
+                Explore
+              </p>
               <ul className="mt-5 space-y-3.5">
                 {[
                   ["Shiloh", "#shiloh"],
@@ -339,7 +403,7 @@ export default async function Page({
                   <li key={href}>
                     <a
                       href={href}
-                      className="text-[15px] font-normal text-black/60 hover:text-black transition-colors"
+                      className="text-[15px] font-normal text-white/60 hover:text-white transition-colors"
                     >
                       {label}
                     </a>
@@ -350,12 +414,14 @@ export default async function Page({
 
             {/* Connect */}
             <div>
-              <p className="text-[13px] font-medium text-black/40">Connect</p>
+              <p className="font-mono text-[11px] tracking-[0.2em] uppercase text-white/45">
+                Connect
+              </p>
               <ul className="mt-5 space-y-3.5">
                 <li>
                   <a
                     href="mailto:hello@tesurai.com"
-                    className="text-[15px] font-normal text-black/60 hover:text-black transition-colors"
+                    className="text-[15px] font-normal text-white/60 hover:text-white transition-colors"
                   >
                     hello@tesurai.com
                   </a>
@@ -367,7 +433,7 @@ export default async function Page({
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Instagram"
-                  className="p-2 text-black/50 hover:text-black transition-colors"
+                  className="p-2 text-white/50 hover:text-white transition-colors"
                 >
                   <svg
                     width="18"
@@ -390,7 +456,7 @@ export default async function Page({
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="X"
-                  className="p-2 text-black/50 hover:text-black transition-colors"
+                  className="p-2 text-white/50 hover:text-white transition-colors"
                 >
                   <svg
                     width="16"
@@ -407,7 +473,7 @@ export default async function Page({
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="TikTok"
-                  className="p-2 text-black/50 hover:text-black transition-colors"
+                  className="p-2 text-white/50 hover:text-white transition-colors"
                 >
                   <svg
                     width="18"
@@ -424,7 +490,7 @@ export default async function Page({
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="YouTube"
-                  className="p-2 text-black/50 hover:text-black transition-colors"
+                  className="p-2 text-white/50 hover:text-white transition-colors"
                 >
                   <svg
                     width="20"
@@ -442,7 +508,7 @@ export default async function Page({
 
           {/* Bottom bar */}
           <div className={`mt-14 sm:mt-20 pt-7 border-t ${LINE} flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3`}>
-            <span className="text-black/40 text-[13px] font-normal tabular-nums">
+            <span className="font-mono text-[11px] tracking-[0.16em] uppercase text-white/45 tabular-nums">
               © 2026 Tesurai LLC
             </span>
           </div>
