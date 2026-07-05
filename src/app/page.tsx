@@ -278,33 +278,37 @@ export default async function Page({
               <div
                 key={p.id}
                 id={p.id}
-                className="scroll-mt-24 grid gap-8 lg:gap-10 lg:grid-cols-12 px-6 sm:px-10 py-12 sm:py-16"
+                className="scroll-mt-16 min-h-svh flex items-center px-6 sm:px-10 py-16"
               >
-                <div className="lg:col-span-2">
-                  <p className="font-mono text-[11px] tracking-[0.2em] uppercase text-white/45 tabular-nums">
-                    {p.n}
-                  </p>
-                  <h3 className="mt-3 text-[17px] font-medium text-white">{p.name}</h3>
-                </div>
-                <div className="lg:col-span-5">
-                  <p className="text-[clamp(1.375rem,2vw,1.75rem)] font-medium leading-[1.2] tracking-[-0.02em] text-white text-balance">
-                    {p.title}
-                  </p>
-                  {p.anchor && (
-                    <p className="mt-4 text-[14.5px] font-medium leading-[1.55] text-white/85">
-                      {p.anchor}
+                <div className="w-full grid gap-8 lg:gap-12 lg:grid-cols-12">
+                  <div className="lg:col-span-2">
+                    <p className="font-mono text-[12px] tracking-[0.2em] uppercase text-white/45 tabular-nums">
+                      {p.n}
                     </p>
-                  )}
-                </div>
-                <div className="lg:col-span-5">
-                  {p.body.map((line) => (
-                    <p
-                      key={line.slice(0, 32)}
-                      className="mt-3 first:mt-0 text-[14.5px] font-normal leading-[1.7] text-white/50"
-                    >
-                      {line}
+                    <h3 className="mt-4 text-[clamp(1.125rem,1.6vw,1.375rem)] font-medium text-white">
+                      {p.name}
+                    </h3>
+                  </div>
+                  <div className="lg:col-span-5">
+                    <p className="text-[clamp(1.75rem,3.2vw,2.75rem)] font-medium leading-[1.12] tracking-[-0.025em] text-white text-balance">
+                      {p.title}
                     </p>
-                  ))}
+                    {p.anchor && (
+                      <p className="mt-6 text-[clamp(1rem,1.3vw,1.1875rem)] font-medium leading-[1.55] text-white/85">
+                        {p.anchor}
+                      </p>
+                    )}
+                  </div>
+                  <div className="lg:col-span-5">
+                    {p.body.map((line) => (
+                      <p
+                        key={line.slice(0, 32)}
+                        className="mt-4 first:mt-0 text-[clamp(0.9375rem,1.2vw,1.0625rem)] font-normal leading-[1.75] text-white/55"
+                      >
+                        {line}
+                      </p>
+                    ))}
+                  </div>
                 </div>
               </div>
             ))}
