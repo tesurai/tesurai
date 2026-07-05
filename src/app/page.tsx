@@ -164,9 +164,36 @@ export default async function Page({
   const paid = params?.paid === "1";
   return (
     <div
-      className="min-h-screen bg-[#0a0a0a] text-white antialiased"
+      className="relative isolate min-h-screen bg-[#0a0a0a] text-white antialiased"
       style={{ fontFamily: "var(--font-inter), -apple-system, system-ui, sans-serif" }}
     >
+      {/* Fixed backdrop: the ghosted wordmark and the white beam sit behind
+          the whole page, so the logo fades into every section as you scroll. */}
+      <div aria-hidden className="pointer-events-none fixed inset-0 -z-10">
+        <div
+          className="absolute inset-0"
+          style={{
+            background:
+              "radial-gradient(ellipse 50% 62% at 102% 50%, rgba(255,255,255,0.85) 0%, rgba(255,255,255,0.22) 34%, rgba(255,255,255,0.05) 58%, transparent 78%)",
+          }}
+        />
+        <div
+          className="absolute inset-0"
+          style={{
+            background:
+              "conic-gradient(from 205deg at 101% 50%, transparent 0deg, rgba(255,255,255,0.12) 50deg, rgba(255,255,255,0.02) 95deg, transparent 130deg)",
+          }}
+        />
+        <div className="absolute inset-0 flex items-center justify-center px-6 sm:px-16">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/logo-white.svg"
+            alt=""
+            className="w-full max-w-[1080px] opacity-[0.12] select-none"
+          />
+        </div>
+      </div>
+
       {/* Nav: mono uppercase links, thin outlined pill CTA. */}
       <header className={`fixed top-0 inset-x-0 z-50 border-b ${LINE} bg-[#0a0a0a]/70 backdrop-blur-xl`}>
         <div className={`max-w-[1240px] mx-auto h-16 border-x ${LINE} px-6 flex items-center justify-between`}>
@@ -199,34 +226,6 @@ export default async function Page({
           with the announcement row pinned to the bottom. */}
       <section className={`relative border-b ${LINE} overflow-hidden`}>
         <div className={`relative max-w-[1240px] mx-auto border-x ${LINE} min-h-svh flex flex-col`}>
-          {/* white light beam sweeping in from the right edge */}
-          <div aria-hidden className="pointer-events-none absolute inset-0">
-            <div
-              className="absolute inset-0"
-              style={{
-                background:
-                  "radial-gradient(ellipse 50% 62% at 102% 50%, rgba(255,255,255,0.85) 0%, rgba(255,255,255,0.22) 34%, rgba(255,255,255,0.05) 58%, transparent 78%)",
-              }}
-            />
-            <div
-              className="absolute inset-0"
-              style={{
-                background:
-                  "conic-gradient(from 205deg at 101% 50%, transparent 0deg, rgba(255,255,255,0.12) 50deg, rgba(255,255,255,0.02) 95deg, transparent 130deg)",
-              }}
-            />
-          </div>
-
-          {/* the brand wordmark, ghosted and lit by the beam, is the hero */}
-          <div aria-hidden className="absolute inset-0 flex items-center justify-center px-6 sm:px-16">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src="/logo-white.svg"
-              alt=""
-              className="w-full max-w-[1080px] opacity-[0.14] select-none"
-            />
-          </div>
-
           <h1 className="sr-only">Tesurai. Intelligence for digital consumer products.</h1>
 
           <div className="relative flex-1 flex flex-col items-center justify-center px-6 pt-24 pb-10">
@@ -296,9 +295,6 @@ export default async function Page({
                       {p.anchor}
                     </p>
                   )}
-                  <div className="mt-7">
-                    <PillLink href="/book">Learn more ↗</PillLink>
-                  </div>
                 </div>
                 <div className="lg:col-span-5">
                   {p.body.map((line) => (
@@ -326,9 +322,12 @@ export default async function Page({
             </h2>
           </div>
 
-          <div className={`border-t ${LINE} grid sm:grid-cols-2 lg:grid-cols-4 gap-px bg-white/[0.08]`}>
+          <div className={`border-t ${LINE} grid lg:grid-cols-4`}>
             {FLOW.map((s) => (
-              <div key={s.n} className="bg-[#0a0a0a] p-7 sm:p-8">
+              <div
+                key={s.n}
+                className={`p-7 sm:p-8 border-t ${LINE} first:border-t-0 lg:border-t-0 lg:border-l lg:first:border-l-0`}
+              >
                 <p className="font-mono text-[11px] tracking-[0.2em] uppercase text-white/45 tabular-nums">
                   {s.n}
                 </p>
@@ -349,6 +348,26 @@ export default async function Page({
             Your product remembers each user, talks to them, and brings them together.
             When your users win, you win.
           </h2>
+        </div>
+      </section>
+
+      {/* Learn more: the invitation below the closing statement. */}
+      <section className={`border-b ${LINE}`}>
+        <div className={`max-w-[1240px] mx-auto border-x ${LINE} px-6 sm:px-10 py-20 sm:py-28`}>
+          <SectionLabel>Learn more</SectionLabel>
+          <h2 className="mt-7 text-[clamp(2rem,4.2vw,3.25rem)] font-medium leading-[1.08] tracking-[-0.02em] text-white max-w-[760px]">
+            See how it fits your product.
+          </h2>
+          <p className="mt-5 text-[15px] font-normal leading-[1.65] text-white/55 max-w-[520px]">
+            Book a call. We look at your product together and show you what Shiloh,
+            Tessa, Voice, and Senna would do inside it.
+          </p>
+          <div className="mt-8 flex flex-wrap gap-3">
+            <PillLink href="/book" filled>
+              Book a call
+            </PillLink>
+            <PillLink href="mailto:hello@tesurai.com">Email us</PillLink>
+          </div>
         </div>
       </section>
 
