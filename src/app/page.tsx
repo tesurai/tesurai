@@ -8,10 +8,13 @@
 // the hero speaks to the business. Less first-person, more product-as-protagonist.
 // Copy rules: fifth grade reading level, no dashes anywhere, no pronouns for the
 // products, no language framing them as a team replacement, no made up outcome claims.
-// Design system: Framer style, black and white only. White canvas, black display type
-// with tight tracking and heavy weights, gray secondary text, black pill buttons,
-// rounded bento cards on light gray for the products, one full black statement band,
-// pill badges instead of mono eyebrows, generous whitespace. No color anywhere.
+// Design system: Framer type on a sharp editorial grid, black and white only. White
+// canvas, black display type with tight tracking and heavy weights, gray secondary
+// text. Full bleed 1px horizontal rules between sections and vertical rails on the
+// 1200px frame run the whole page; products and steps are square grid cells divided
+// by 1px lines that meet the rails. Structure is sharp (no rounded corners on cards,
+// cells, badges, or bands); only action buttons are pills. One full black statement
+// band. No color anywhere.
 
 import CalEmbed from "./cal-embed";
 
@@ -48,6 +51,9 @@ export const metadata = {
   },
 };
 
+// The 1px line color used for every rule, rail, and grid line on the page.
+const LINE = "border-black/[0.08]";
+
 // Small wordmark used in the nav and footer. The black brand SVG with the
 // alpha-fade gradient so the trailing letters dissolve to almost nothing.
 function Wordmark({ className = "h-4 w-auto" }: { className?: string }) {
@@ -57,24 +63,23 @@ function Wordmark({ className = "h-4 w-auto" }: { className?: string }) {
   );
 }
 
-// Small pill badge above section headlines, Framer style.
+// Small square badge above section headlines. Sharp corners on purpose.
 function Badge({ children }: { children: React.ReactNode }) {
   return (
-    <span className="inline-flex items-center rounded-full border border-black/[0.12] bg-black/[0.03] px-3.5 py-1.5 text-[13px] font-medium text-black/55">
+    <span className="inline-flex items-center border border-black/[0.15] bg-black/[0.03] px-3 py-1.5 text-[13px] font-medium text-black/55">
       {children}
     </span>
   );
 }
 
-// The four products as bento cards. Wide cards span 7 of 12 columns, narrow
-// cards span 5, alternating per row for the asymmetric bento rhythm.
+// The four products as square grid cells. Equal halves so the center grid
+// line runs straight through both rows.
 const PRODUCTS: {
   id: string;
   label: string;
   title: string;
   body: string[];
   anchor: string;
-  wide: boolean;
 }[] = [
   {
     id: "shiloh",
@@ -85,7 +90,6 @@ const PRODUCTS: {
       "After every conversation it compiles what it heard into your skills, traits, patterns, and commitments: one living map of you, recalled instantly whenever you talk.",
     ],
     anchor: "Like an LLM, but for your brain.",
-    wide: true,
   },
   {
     id: "tessa",
@@ -95,7 +99,6 @@ const PRODUCTS: {
       "Tessa tracks Shiloh’s data, spots the patterns you cannot see yourself, and tells you what to fix and what to keep doing.",
     ],
     anchor: "The intelligence layer on top of Shiloh: the thing that helps you accomplish your goals.",
-    wide: false,
   },
   {
     id: "voice",
@@ -105,7 +108,6 @@ const PRODUCTS: {
       "Voice is how users talk to Shiloh, Tessa, and Senna. They speak, and the software speaks back in real time, in a natural voice, like Gemini Live.",
     ],
     anchor: "No menus, no forms, no charts.",
-    wide: false,
   },
   {
     id: "senna",
@@ -116,7 +118,6 @@ const PRODUCTS: {
       "Tessa sits in the middle, reads both sides, shares the patterns you have in common, and gives you both the feedback to grow stronger together.",
     ],
     anchor: "Someone real is in it with you.",
-    wide: true,
   },
 ];
 
@@ -140,9 +141,9 @@ export default async function Page({
       className="min-h-screen bg-white text-black antialiased"
       style={{ fontFamily: "var(--font-inter), -apple-system, system-ui, sans-serif" }}
     >
-      {/* Nav: glassy sticky bar with anchor links and a black pill CTA */}
-      <header className="fixed top-0 inset-x-0 z-50 border-b border-black/[0.08] bg-white/80 backdrop-blur-xl">
-        <div className="max-w-[1200px] mx-auto h-16 px-6 flex items-center justify-between">
+      {/* Nav: glassy sticky bar. The frame rails continue through it. */}
+      <header className={`fixed top-0 inset-x-0 z-50 border-b ${LINE} bg-white/80 backdrop-blur-xl`}>
+        <div className={`max-w-[1200px] mx-auto h-16 border-x ${LINE} px-6 flex items-center justify-between`}>
           <div className="flex items-center gap-10">
             <Wordmark className="h-3 w-auto" />
             <nav className="hidden md:flex items-center gap-7">
@@ -175,68 +176,68 @@ export default async function Page({
         </div>
       </header>
 
-      {/* Hero: huge black display type on white, gray subhead, pill buttons. */}
-      <section className="px-6 sm:px-10 flex flex-col justify-center min-h-svh sm:block sm:min-h-0 pt-24 sm:pt-52 pb-20 sm:pb-36">
-        <div className="max-w-[960px] mx-auto sm:text-center">
-          {paid && (
-            <div className="mb-10 rounded-2xl border border-black/[0.1] bg-black/[0.03] p-5 sm:p-6 max-w-[560px] mx-auto">
-              <p className="text-[13px] font-semibold text-black mb-1.5">
-                Payment received
-              </p>
-              <p className="text-[15px] sm:text-[16px] font-normal leading-[1.55] text-black/60">
-                Our team will reach out within a few hours to find a time to hop on a call.
-              </p>
+      {/* Hero: huge black display type on white inside the frame. */}
+      <section className={`border-b ${LINE}`}>
+        <div
+          className={`max-w-[1200px] mx-auto border-x ${LINE} px-6 sm:px-10 flex flex-col justify-center min-h-svh sm:block sm:min-h-0 pt-24 sm:pt-48 pb-20 sm:pb-32`}
+        >
+          <div className="max-w-[960px] mx-auto sm:text-center">
+            {paid && (
+              <div className="mb-10 border border-black/[0.12] bg-black/[0.03] p-5 sm:p-6 max-w-[560px] mx-auto">
+                <p className="text-[13px] font-semibold text-black mb-1.5">
+                  Payment received
+                </p>
+                <p className="text-[15px] sm:text-[16px] font-normal leading-[1.55] text-black/60">
+                  Our team will reach out within a few hours to find a time to hop on a call.
+                </p>
+              </div>
+            )}
+            <h1 className="text-pretty sm:text-balance text-[clamp(2.75rem,6.5vw,5rem)] font-bold leading-[1.02] tracking-[-0.04em] text-black">
+              Intelligence for digital consumer products.
+            </h1>
+            <p className="mt-7 text-pretty sm:text-balance text-[clamp(1.0625rem,1.5vw,1.25rem)] font-normal leading-[1.6] text-black/55 max-w-[680px] mx-auto">
+              Tesurai builds intelligence that remembers your users, talks to them, and
+              brings them together. We implement it into your product, under your brand.
+            </p>
+            <div className="mt-9 flex flex-wrap sm:justify-center gap-3">
+              <a
+                href="#pricing"
+                className="inline-flex items-center rounded-full bg-black text-white px-6 py-3 text-[15px] font-medium hover:bg-black/80 transition-colors"
+              >
+                Book a call
+              </a>
+              <a
+                href="#shiloh"
+                className="inline-flex items-center rounded-full bg-black/[0.05] text-black px-6 py-3 text-[15px] font-medium hover:bg-black/[0.1] transition-colors"
+              >
+                Explore the suite
+              </a>
             </div>
-          )}
-          <h1 className="text-pretty sm:text-balance text-[clamp(2.75rem,6.5vw,5rem)] font-bold leading-[1.02] tracking-[-0.04em] text-black">
-            Intelligence for digital consumer products.
-          </h1>
-          <p className="mt-7 text-pretty sm:text-balance text-[clamp(1.0625rem,1.5vw,1.25rem)] font-normal leading-[1.6] text-black/55 max-w-[680px] mx-auto">
-            Tesurai builds intelligence that remembers your users, talks to them, and
-            brings them together. We implement it into your product, under your brand.
-          </p>
-          <div className="mt-9 flex flex-wrap sm:justify-center gap-3">
-            <a
-              href="#pricing"
-              className="inline-flex items-center rounded-full bg-black text-white px-6 py-3 text-[15px] font-medium hover:bg-black/80 transition-colors"
-            >
-              Book a call
-            </a>
-            <a
-              href="#shiloh"
-              className="inline-flex items-center rounded-full bg-black/[0.05] text-black px-6 py-3 text-[15px] font-medium hover:bg-black/[0.1] transition-colors"
-            >
-              Explore the suite
-            </a>
           </div>
         </div>
       </section>
 
-      {/* Products: asymmetric bento grid of rounded light gray cards. Shiloh is
-          the digital brain, Tessa is the intelligence layer that reads it, Voice
-          makes the talking feel human, Senna pairs people with Tessa in the
-          middle. Each card keeps its anchor id for the nav links. */}
-      <section className="px-6 sm:px-10 py-20 sm:py-28">
-        <div className="max-w-[1200px] mx-auto">
-          <div className="sm:text-center max-w-[760px] mx-auto">
-            <Badge>The suite</Badge>
-            <h2 className="mt-6 text-[clamp(2.25rem,4.5vw,3.5rem)] font-bold leading-[1.05] tracking-[-0.035em] text-black">
-              Four products. One system.
-            </h2>
-            <p className="mt-5 text-[clamp(1.0625rem,1.3vw,1.1875rem)] font-normal leading-[1.6] text-black/55">
-              Shiloh remembers, Tessa reads, Voice speaks, and Senna connects.
-            </p>
+      {/* Products: square grid cells divided by 1px lines that meet the rails.
+          Shiloh is the digital brain, Tessa is the intelligence layer that
+          reads it, Voice makes the talking feel human, Senna pairs people with
+          Tessa in the middle. */}
+      <section className={`border-b ${LINE}`}>
+        <div className={`max-w-[1200px] mx-auto border-x ${LINE}`}>
+          <div className="px-6 sm:px-10 pt-20 sm:pt-28 pb-14 sm:pb-16 sm:text-center">
+            <div className="max-w-[760px] mx-auto">
+              <Badge>The suite</Badge>
+              <h2 className="mt-6 text-[clamp(2.25rem,4.5vw,3.5rem)] font-bold leading-[1.05] tracking-[-0.035em] text-black">
+                Four products. One system.
+              </h2>
+              <p className="mt-5 text-[clamp(1.0625rem,1.3vw,1.1875rem)] font-normal leading-[1.6] text-black/55">
+                Shiloh remembers, Tessa reads, Voice speaks, and Senna connects.
+              </p>
+            </div>
           </div>
 
-          <div className="mt-14 sm:mt-16 grid gap-4 md:grid-cols-12">
+          <div className={`border-t ${LINE} grid md:grid-cols-2 gap-px bg-black/[0.08]`}>
             {PRODUCTS.map((p) => (
-              <div
-                key={p.id}
-                id={p.id}
-                className={`scroll-mt-28 rounded-[28px] bg-[#f4f4f4] p-8 sm:p-10 ${
-                  p.wide ? "md:col-span-7" : "md:col-span-5"
-                }`}
-              >
+              <div key={p.id} id={p.id} className="scroll-mt-28 bg-white p-8 sm:p-12">
                 <p className="text-[13px] font-medium text-black/40">{p.label}</p>
                 <h3 className="mt-3 text-[clamp(1.5rem,2.4vw,1.9375rem)] font-semibold leading-[1.15] tracking-[-0.025em] text-black text-balance">
                   {p.title}
@@ -258,22 +259,21 @@ export default async function Page({
         </div>
       </section>
 
-      {/* How it fits together: the system as a four step strip. */}
-      <section className="px-6 sm:px-10 py-20 sm:py-28">
-        <div className="max-w-[1200px] mx-auto">
-          <div className="sm:text-center max-w-[760px] mx-auto">
-            <Badge>The system</Badge>
-            <h2 className="mt-6 text-[clamp(2.25rem,4.5vw,3.5rem)] font-bold leading-[1.05] tracking-[-0.035em] text-black">
-              How it fits together
-            </h2>
+      {/* How it fits together: the system as four square cells in a strip. */}
+      <section className={`border-b ${LINE}`}>
+        <div className={`max-w-[1200px] mx-auto border-x ${LINE}`}>
+          <div className="px-6 sm:px-10 pt-20 sm:pt-28 pb-14 sm:pb-16 sm:text-center">
+            <div className="max-w-[760px] mx-auto">
+              <Badge>The system</Badge>
+              <h2 className="mt-6 text-[clamp(2.25rem,4.5vw,3.5rem)] font-bold leading-[1.05] tracking-[-0.035em] text-black">
+                How it fits together
+              </h2>
+            </div>
           </div>
 
-          <div className="mt-14 sm:mt-16 grid gap-y-10 sm:grid-cols-2 lg:grid-cols-4">
+          <div className={`border-t ${LINE} grid sm:grid-cols-2 lg:grid-cols-4 gap-px bg-black/[0.08]`}>
             {FLOW.map((s) => (
-              <div
-                key={s.n}
-                className="lg:px-8 lg:border-l lg:border-black/[0.1] lg:first:border-l-0 lg:first:pl-0"
-              >
+              <div key={s.n} className="bg-white p-8 sm:p-10">
                 <p className="text-[13px] font-medium text-black/35 tabular-nums">{s.n}</p>
                 <h3 className="mt-3 text-[20px] font-semibold tracking-[-0.02em] text-black">
                   {s.t}
@@ -287,25 +287,29 @@ export default async function Page({
         </div>
       </section>
 
-      {/* Booking: the Cal.com calendar embedded inline, light theme, in a card. */}
-      <section id="pricing" className="px-6 sm:px-10 py-20 sm:py-28 scroll-mt-24">
-        <div className="max-w-[1200px] mx-auto">
-          <div className="sm:text-center max-w-[760px] mx-auto">
-            <Badge>Get started</Badge>
-            <h2 className="mt-6 text-[clamp(2.25rem,4.5vw,3.5rem)] font-bold leading-[1.05] tracking-[-0.035em] text-black">
-              Book a call
-            </h2>
+      {/* Booking: the Cal.com calendar embedded inline, light theme, below a
+          full width rule. */}
+      <section id="pricing" className={`border-b ${LINE} scroll-mt-16`}>
+        <div className={`max-w-[1200px] mx-auto border-x ${LINE}`}>
+          <div className="px-6 sm:px-10 pt-20 sm:pt-28 pb-12 sm:pb-14 sm:text-center">
+            <div className="max-w-[760px] mx-auto">
+              <Badge>Get started</Badge>
+              <h2 className="mt-6 text-[clamp(2.25rem,4.5vw,3.5rem)] font-bold leading-[1.05] tracking-[-0.035em] text-black">
+                Book a call
+              </h2>
+            </div>
           </div>
 
-          <div className="mt-12 sm:mt-14 max-w-[1040px] mx-auto rounded-[28px] border border-black/[0.08] bg-[#fafafa] p-3 sm:p-6">
+          <div className={`border-t ${LINE} p-4 sm:p-10`}>
             <CalEmbed />
           </div>
         </div>
       </section>
 
-      {/* Closing: the page summed up as one statement inside a full black band. */}
-      <section className="px-6 sm:px-10 py-20 sm:py-28">
-        <div className="max-w-[1200px] mx-auto rounded-[32px] bg-[#0a0a0a] px-8 sm:px-16 py-16 sm:py-24">
+      {/* Closing: the page summed up as one statement on a full black band
+          flush with the frame. */}
+      <section className={`border-b ${LINE}`}>
+        <div className={`max-w-[1200px] mx-auto border-x ${LINE} bg-[#0a0a0a] px-8 sm:px-16 py-16 sm:py-24`}>
           <h2 className="text-balance text-[clamp(1.875rem,3.6vw,3rem)] font-semibold leading-[1.15] tracking-[-0.03em] text-white max-w-[900px]">
             Your product remembers each user, talks to them, and brings them together.
             When your users win, you win.
@@ -314,8 +318,8 @@ export default async function Page({
       </section>
 
       {/* Footer: brand block, Explore and Connect columns, bottom bar. */}
-      <footer className="px-6 sm:px-10 pt-16 sm:pt-24 pb-10 border-t border-black/[0.08]">
-        <div className="max-w-[1200px] mx-auto">
+      <footer>
+        <div className={`max-w-[1200px] mx-auto border-x ${LINE} px-6 sm:px-10 pt-16 sm:pt-24 pb-10`}>
           <div className="grid gap-12 md:gap-8 md:grid-cols-[1.6fr_1fr_1fr]">
             {/* Brand */}
             <div>
@@ -437,7 +441,7 @@ export default async function Page({
           </div>
 
           {/* Bottom bar */}
-          <div className="mt-14 sm:mt-20 pt-7 border-t border-black/[0.06] flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
+          <div className={`mt-14 sm:mt-20 pt-7 border-t ${LINE} flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3`}>
             <span className="text-black/40 text-[13px] font-normal tabular-nums">
               © 2026 Tesurai LLC
             </span>
