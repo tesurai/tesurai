@@ -164,36 +164,9 @@ export default async function Page({
   const paid = params?.paid === "1";
   return (
     <div
-      className="relative isolate min-h-screen bg-[#0a0a0a] text-white antialiased"
+      className="min-h-screen bg-[#0a0a0a] text-white antialiased"
       style={{ fontFamily: "var(--font-inter), -apple-system, system-ui, sans-serif" }}
     >
-      {/* Fixed backdrop: the ghosted wordmark and the white beam sit behind
-          the whole page, so the logo fades into every section as you scroll. */}
-      <div aria-hidden className="pointer-events-none fixed inset-0 -z-10">
-        <div
-          className="absolute inset-0"
-          style={{
-            background:
-              "radial-gradient(ellipse 50% 62% at 102% 50%, rgba(255,255,255,0.85) 0%, rgba(255,255,255,0.22) 34%, rgba(255,255,255,0.05) 58%, transparent 78%)",
-          }}
-        />
-        <div
-          className="absolute inset-0"
-          style={{
-            background:
-              "conic-gradient(from 205deg at 101% 50%, transparent 0deg, rgba(255,255,255,0.12) 50deg, rgba(255,255,255,0.02) 95deg, transparent 130deg)",
-          }}
-        />
-        <div className="absolute inset-0 flex items-center justify-center px-6 sm:px-16">
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
-            src="/logo-white.svg"
-            alt=""
-            className="w-full max-w-[1080px] opacity-[0.12] select-none"
-          />
-        </div>
-      </div>
-
       {/* Nav: mono uppercase links, thin outlined pill CTA. */}
       <header className={`fixed top-0 inset-x-0 z-50 border-b ${LINE} bg-[#0a0a0a]/70 backdrop-blur-xl`}>
         <div className={`max-w-[1240px] mx-auto h-16 border-x ${LINE} px-6 flex items-center justify-between`}>
@@ -226,6 +199,34 @@ export default async function Page({
           with the announcement row pinned to the bottom. */}
       <section className={`relative border-b ${LINE} overflow-hidden`}>
         <div className={`relative max-w-[1240px] mx-auto border-x ${LINE} min-h-svh flex flex-col`}>
+          {/* white light beam sweeping in from the right edge */}
+          <div aria-hidden className="pointer-events-none absolute inset-0">
+            <div
+              className="absolute inset-0"
+              style={{
+                background:
+                  "radial-gradient(ellipse 50% 62% at 102% 50%, rgba(255,255,255,0.85) 0%, rgba(255,255,255,0.22) 34%, rgba(255,255,255,0.05) 58%, transparent 78%)",
+              }}
+            />
+            <div
+              className="absolute inset-0"
+              style={{
+                background:
+                  "conic-gradient(from 205deg at 101% 50%, transparent 0deg, rgba(255,255,255,0.12) 50deg, rgba(255,255,255,0.02) 95deg, transparent 130deg)",
+              }}
+            />
+          </div>
+
+          {/* the brand wordmark, ghosted and faded, is the headline */}
+          <div aria-hidden className="absolute inset-0 flex items-center justify-center px-6 sm:px-16">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/logo-white.svg"
+              alt=""
+              className="w-full max-w-[1080px] opacity-[0.14] select-none"
+            />
+          </div>
+
           <h1 className="sr-only">Tesurai. Intelligence for digital consumer products.</h1>
 
           <div className="relative flex-1 flex flex-col items-center justify-center px-6 pt-24 pb-10">
