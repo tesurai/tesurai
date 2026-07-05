@@ -11,8 +11,9 @@
 // Design system: Grok / xAI style, black and white only. Near black canvas, a hero
 // with the giant ghosted wordmark lit by a white beam from the right edge, mono
 // uppercase for nav links, labels, and pill buttons, bracketed section labels like
-// [ PRODUCTS ], medium weight sans headlines, products as full width rows and steps
-// as cells divided by 1px lines, full width section rules and frame rails.
+// [ PRODUCTS ], medium weight sans headlines, products as full screen rows with a
+// framed line art board each, divided by 1px lines, full width section rules and
+// frame rails, a future of AI statement, and a short Get started closer.
 // No color anywhere: the light is white, the page is black.
 // Booking lives on its own page at /book; every Book a call button points there.
 
@@ -110,9 +111,10 @@ const PRODUCTS: {
     name: "Shiloh",
     title: "Your product remembers everyone",
     body: [
-      "A digital brain that remembers every session, learns how you think, and grows sharper the longer you use it.",
-      "After every conversation it compiles what it heard into your skills, traits, patterns, and commitments: one living map of you, recalled instantly whenever you talk.",
+      "Shiloh is an LLM brain, like Claude, ChatGPT, or Grok, with one difference: this one belongs to you and is built from your life inside the product.",
+      "Every session, every entry, every action feeds it. Over time it compiles what it hears into your skills, traits, patterns, and commitments: one living map of you, recalled instantly whenever you talk.",
     ],
+    anchor: "Like an LLM, but for your brain.",
   },
   {
     id: "tessa",
@@ -120,9 +122,10 @@ const PRODUCTS: {
     name: "Tessa",
     title: "Analytics your users can talk to",
     body: [
-      "Tessa tracks Shiloh’s data, spots the patterns you cannot see yourself, and tells you what to fix and what to keep doing.",
+      "Tessa is the intelligence layer that sits on top of Shiloh. Tessa reads the map Shiloh builds, finds the patterns you cannot see yourself, and turns them into feedback.",
+      "What to fix, what to keep doing, and the next step to take: clear feedback from your own data, aimed at one thing, getting you the results you came for.",
     ],
-    anchor: "The intelligence layer on top of Shiloh: the thing that helps you accomplish your goals.",
+    anchor: "The intelligence layer on top of Shiloh.",
   },
   {
     id: "voice",
@@ -130,9 +133,10 @@ const PRODUCTS: {
     name: "Voice",
     title: "Feels like talking to a person",
     body: [
-      "Voice is how users talk to Shiloh, Tessa, and Senna. They speak, and the software speaks back in real time, in a natural voice, like Gemini Live.",
+      "Voice is built on Gemini Live, real time voice AI from Google, with Tesurai as the wrapper that fits it to your product and your brand.",
+      "Users talk to Shiloh, Tessa, and Senna out loud. They speak, and the software speaks back in the moment, in a natural voice. No menus, no forms, no charts.",
     ],
-    anchor: "No menus, no forms, no charts.",
+    anchor: "Powered by Gemini Live. Wrapped by Tesurai.",
   },
   {
     id: "senna",
@@ -140,8 +144,8 @@ const PRODUCTS: {
     name: "Senna",
     title: "Grow together, not alone",
     body: [
-      "A social platform inside your product, built for growing together instead of scrolling alone. Pair with a friend, a partner, or your team. Run the same program side by side and share every check in.",
-      "Tessa sits in the middle, reads both sides, shares the patterns you have in common, and gives you both the feedback to grow stronger together.",
+      "Senna is the social side of your product: a place for users to connect, run programs together, and hold each other accountable.",
+      "Pair with a friend, a partner, or your team. Run the same program side by side and share every check in. Tessa sits in the middle, reads both sides, shares the patterns you have in common, and gives you both the feedback to grow stronger together.",
     ],
     anchor: "Someone real is in it with you.",
   },
@@ -221,14 +225,6 @@ const ART: Record<string, () => React.ReactNode> = {
   voice: VoiceArt,
   senna: SennaArt,
 };
-
-// The system in one line per product, for the How it fits together strip.
-const FLOW: { n: string; t: string; d: string }[] = [
-  { n: "01", t: "Shiloh", d: "Builds the living map of each user." },
-  { n: "02", t: "Tessa", d: "Reads the map and picks the next move." },
-  { n: "03", t: "Voice", d: "Says it out loud, like a person would." },
-  { n: "04", t: "Senna", d: "Pairs people up so nobody grows alone." },
-];
 
 export default async function Page({
   searchParams,
@@ -385,12 +381,8 @@ export default async function Page({
                         </p>
                       ))}
                     </div>
-                    {/* framed artboard with corner dots, Grok style */}
-                    <div className={`lg:col-span-5 relative border ${LINE} p-8 sm:p-10 h-[260px] sm:h-[340px] text-white/40`}>
-                      <span aria-hidden className="absolute -top-[3px] -left-[3px] h-1.5 w-1.5 bg-white/50" />
-                      <span aria-hidden className="absolute -top-[3px] -right-[3px] h-1.5 w-1.5 bg-white/50" />
-                      <span aria-hidden className="absolute -bottom-[3px] -left-[3px] h-1.5 w-1.5 bg-white/50" />
-                      <span aria-hidden className="absolute -bottom-[3px] -right-[3px] h-1.5 w-1.5 bg-white/50" />
+                    {/* plain square framed artboard */}
+                    <div className={`lg:col-span-5 border ${LINE} p-8 sm:p-10 h-[260px] sm:h-[340px] text-white/40`}>
                       <Art />
                     </div>
                   </div>
@@ -401,61 +393,27 @@ export default async function Page({
         </div>
       </section>
 
-      {/* How it fits together: the system as four cells in a strip. */}
+      {/* Vision: the future of AI, used with your company. */}
       <section className={`border-b ${LINE}`}>
-        <div className={`max-w-[1240px] mx-auto border-x ${LINE}`}>
-          <div className="px-6 sm:px-10 pt-20 sm:pt-28 pb-12 sm:pb-16">
-            <SectionLabel>The system</SectionLabel>
-            <h2 className="mt-7 text-[clamp(2rem,4.2vw,3.25rem)] font-medium leading-[1.08] tracking-[-0.02em] text-white">
-              How it fits together
-            </h2>
-          </div>
-
-          <div className={`border-t ${LINE} grid lg:grid-cols-4`}>
-            {FLOW.map((s) => (
-              <div
-                key={s.n}
-                className={`p-7 sm:p-8 border-t ${LINE} first:border-t-0 lg:border-t-0 lg:border-l lg:first:border-l-0`}
-              >
-                <p className="font-mono text-[11px] tracking-[0.2em] uppercase text-white/45 tabular-nums">
-                  {s.n}
-                </p>
-                <h3 className="mt-4 text-[17px] font-medium text-white">{s.t}</h3>
-                <p className="mt-2 text-[13.5px] font-normal leading-[1.6] text-white/50">
-                  {s.d}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Closing: the page summed up as one statement. */}
-      <section className={`border-b ${LINE}`}>
-        <div className={`max-w-[1240px] mx-auto border-x ${LINE} px-6 sm:px-10 py-20 sm:py-28`}>
-          <h2 className="text-balance text-[clamp(1.75rem,3.4vw,2.75rem)] font-medium leading-[1.2] tracking-[-0.02em] text-white max-w-[900px]">
-            Your product remembers each user, talks to them, and brings them together.
-            When your users win, you win.
+        <div className={`max-w-[1240px] mx-auto border-x ${LINE} px-6 sm:px-10 py-24 sm:py-36`}>
+          <SectionLabel>The future</SectionLabel>
+          <h2 className="mt-7 text-balance text-[clamp(1.875rem,3.6vw,2.875rem)] font-medium leading-[1.18] tracking-[-0.025em] text-white max-w-[920px]">
+            The future of AI is not another chatbot on the side. It is intelligence
+            built into your product, working for your users, under your brand.
           </h2>
         </div>
       </section>
 
-      {/* Learn more: the invitation below the closing statement. */}
+      {/* Get started: super short, the buttons are the section. */}
       <section className={`border-b ${LINE}`}>
-        <div className={`max-w-[1240px] mx-auto border-x ${LINE} px-6 sm:px-10 py-20 sm:py-28`}>
-          <SectionLabel>Learn more</SectionLabel>
-          <h2 className="mt-7 text-[clamp(2rem,4.2vw,3.25rem)] font-medium leading-[1.08] tracking-[-0.02em] text-white max-w-[760px]">
-            See how it fits your product.
+        <div className={`max-w-[1240px] mx-auto border-x ${LINE} px-6 sm:px-10 py-24 sm:py-32`}>
+          <h2 className="text-[clamp(2.5rem,6vw,4.5rem)] font-medium leading-[1.02] tracking-[-0.03em] text-white">
+            Get started.
           </h2>
-          <p className="mt-5 text-[15px] font-normal leading-[1.65] text-white/55 max-w-[520px]">
-            Book a call. We look at your product together and show you what Shiloh,
-            Tessa, Voice, and Senna would do inside it.
-          </p>
-          <div className="mt-8 flex flex-wrap gap-3">
+          <div className="mt-9 flex flex-wrap gap-3">
             <PillLink href="/book" filled>
               Book a call
             </PillLink>
-            <PillLink href="mailto:hello@tesurai.com">Email us</PillLink>
           </div>
         </div>
       </section>
