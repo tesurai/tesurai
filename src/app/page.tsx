@@ -9,15 +9,12 @@
 // Copy rules: fifth grade reading level, no dashes anywhere, no pronouns for the
 // products, no language framing them as a team replacement, no made up outcome claims.
 // Design system: Grok / xAI style, black and white only. Near black canvas, a hero
-// with a giant ghosted wordmark lit by a white beam from the right edge and a centered
-// ask box, mono uppercase for nav links, labels, and pill buttons, bracketed section
-// labels like [ PRODUCTS ], medium weight sans headlines, products and steps as cells
-// divided by 1px lines, full width section rules and frame rails, dark Cal embed.
+// with the giant ghosted wordmark lit by a white beam from the right edge, mono
+// uppercase for nav links, labels, and pill buttons, bracketed section labels like
+// [ PRODUCTS ], medium weight sans headlines, products as full width rows and steps
+// as cells divided by 1px lines, full width section rules and frame rails.
 // No color anywhere: the light is white, the page is black.
-
-import CalEmbed from "./cal-embed";
-
-const CAL_LINK = "https://cal.com/tesurai/call";
+// Booking lives on its own page at /book; every Book a call button points there.
 
 const BROWSER_TITLE = "Tesurai | Intelligence for digital consumer products.";
 const SHARE_TITLE = "Intelligence for digital consumer products.";
@@ -98,14 +95,14 @@ function PillLink({
   );
 }
 
-// The four products as cells divided by 1px lines.
+// The four products as full width rows divided by 1px lines.
 const PRODUCTS: {
   id: string;
   n: string;
   name: string;
   title: string;
   body: string[];
-  anchor: string;
+  anchor?: string;
 }[] = [
   {
     id: "shiloh",
@@ -116,7 +113,6 @@ const PRODUCTS: {
       "A digital brain that remembers every session, learns how you think, and grows sharper the longer you use it.",
       "After every conversation it compiles what it heard into your skills, traits, patterns, and commitments: one living map of you, recalled instantly whenever you talk.",
     ],
-    anchor: "Like an LLM, but for your brain.",
   },
   {
     id: "tessa",
@@ -193,14 +189,14 @@ export default async function Page({
               ))}
             </nav>
           </div>
-          <PillLink href={CAL_LINK} external>
+          <PillLink href="/book" filled>
             Book a call
           </PillLink>
         </div>
       </header>
 
-      {/* Hero: giant ghosted wordmark lit by a white beam from the right, a
-          centered ask box, and the announcement row pinned to the bottom. */}
+      {/* Hero: the giant ghosted wordmark lit by a white beam from the right,
+          with the announcement row pinned to the bottom. */}
       <section className={`relative border-b ${LINE} overflow-hidden`}>
         <div className={`relative max-w-[1240px] mx-auto border-x ${LINE} min-h-svh flex flex-col`}>
           {/* white light beam sweeping in from the right edge */}
@@ -221,22 +217,21 @@ export default async function Page({
             />
           </div>
 
-          {/* ghosted brand wordmark behind everything */}
+          {/* the brand wordmark, ghosted and lit by the beam, is the hero */}
           <div aria-hidden className="absolute inset-0 flex items-center justify-center px-6 sm:px-16">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src="/logo-white.svg"
               alt=""
-              className="w-full max-w-[1040px] opacity-[0.09] select-none"
+              className="w-full max-w-[1080px] opacity-[0.14] select-none"
             />
           </div>
 
           <h1 className="sr-only">Tesurai. Intelligence for digital consumer products.</h1>
 
-          {/* centered ask box, links to the booking section */}
           <div className="relative flex-1 flex flex-col items-center justify-center px-6 pt-24 pb-10">
             {paid && (
-              <div className="mb-8 w-full max-w-[560px] border border-white/[0.15] bg-black/60 backdrop-blur p-5">
+              <div className="w-full max-w-[560px] border border-white/[0.15] bg-black/60 backdrop-blur p-5">
                 <p className="font-mono text-[11px] tracking-[0.2em] uppercase text-white mb-2">
                   Payment received
                 </p>
@@ -245,15 +240,6 @@ export default async function Page({
                 </p>
               </div>
             )}
-            <a
-              href="#pricing"
-              className="relative block w-full max-w-[560px] rounded-2xl border border-white/[0.12] bg-[#0d0d0d]/80 backdrop-blur p-5 pb-16 hover:border-white/[0.3] transition-colors"
-            >
-              <span className="text-[15px] text-white/45">What do you want to know?</span>
-              <span className="absolute bottom-4 right-4 flex h-8 w-8 items-center justify-center rounded-full bg-white/[0.12] text-white/80">
-                ↑
-              </span>
-            </a>
           </div>
 
           {/* bottom announcement row */}
@@ -266,7 +252,7 @@ export default async function Page({
               brings them together. We implement it into your product, under your brand.
             </p>
             <div className="flex flex-wrap gap-3">
-              <PillLink href="#pricing" filled>
+              <PillLink href="/book" filled>
                 Book a call
               </PillLink>
               <PillLink href="#shiloh">Learn more</PillLink>
@@ -275,10 +261,10 @@ export default async function Page({
         </div>
       </section>
 
-      {/* Products: bracketed label, big clean headline, four cells divided by
-          1px lines. Shiloh is the digital brain, Tessa is the intelligence
-          layer that reads it, Voice makes the talking feel human, Senna pairs
-          people with Tessa in the middle. */}
+      {/* Products: bracketed label, big clean headline, then each product on
+          its own full width row divided by 1px rules, like the Grok news
+          rows. Number and name on the left, headline and pill in the middle,
+          body copy on the right. */}
       <section className={`border-b ${LINE}`}>
         <div className={`max-w-[1240px] mx-auto border-x ${LINE}`}>
           <div className="px-6 sm:px-10 pt-20 sm:pt-28 pb-12 sm:pb-16">
@@ -288,29 +274,41 @@ export default async function Page({
             </h2>
           </div>
 
-          <div className={`border-t ${LINE} grid sm:grid-cols-2 lg:grid-cols-4 gap-px bg-white/[0.08]`}>
+          <div className={`border-t ${LINE} divide-y divide-white/[0.08]`}>
             {PRODUCTS.map((p) => (
-              <div key={p.id} id={p.id} className="scroll-mt-24 bg-[#0a0a0a] p-7 sm:p-8 flex flex-col">
-                <p className="font-mono text-[11px] tracking-[0.2em] uppercase text-white/45">
-                  {p.n}
-                </p>
-                <h3 className="mt-5 text-[17px] font-medium text-white">{p.name}</h3>
-                <p className="mt-1.5 text-[15px] font-medium leading-[1.4] text-white/85 text-balance">
-                  {p.title}
-                </p>
-                {p.body.map((line) => (
-                  <p
-                    key={line.slice(0, 32)}
-                    className="mt-3 text-[13.5px] font-normal leading-[1.65] text-white/50"
-                  >
-                    {line}
+              <div
+                key={p.id}
+                id={p.id}
+                className="scroll-mt-24 grid gap-8 lg:gap-10 lg:grid-cols-12 px-6 sm:px-10 py-12 sm:py-16"
+              >
+                <div className="lg:col-span-2">
+                  <p className="font-mono text-[11px] tracking-[0.2em] uppercase text-white/45 tabular-nums">
+                    {p.n}
                   </p>
-                ))}
-                <p className="mt-4 text-[13.5px] font-medium leading-[1.55] text-white/85">
-                  {p.anchor}
-                </p>
-                <div className="mt-auto pt-8">
-                  <PillLink href="#pricing">Learn more ↗</PillLink>
+                  <h3 className="mt-3 text-[17px] font-medium text-white">{p.name}</h3>
+                </div>
+                <div className="lg:col-span-5">
+                  <p className="text-[clamp(1.375rem,2vw,1.75rem)] font-medium leading-[1.2] tracking-[-0.02em] text-white text-balance">
+                    {p.title}
+                  </p>
+                  {p.anchor && (
+                    <p className="mt-4 text-[14.5px] font-medium leading-[1.55] text-white/85">
+                      {p.anchor}
+                    </p>
+                  )}
+                  <div className="mt-7">
+                    <PillLink href="/book">Learn more ↗</PillLink>
+                  </div>
+                </div>
+                <div className="lg:col-span-5">
+                  {p.body.map((line) => (
+                    <p
+                      key={line.slice(0, 32)}
+                      className="mt-3 first:mt-0 text-[14.5px] font-normal leading-[1.7] text-white/50"
+                    >
+                      {line}
+                    </p>
+                  ))}
                 </div>
               </div>
             ))}
@@ -340,22 +338,6 @@ export default async function Page({
                 </p>
               </div>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Booking: the Cal.com calendar embedded inline, dark theme. */}
-      <section id="pricing" className={`border-b ${LINE} scroll-mt-16`}>
-        <div className={`max-w-[1240px] mx-auto border-x ${LINE}`}>
-          <div className="px-6 sm:px-10 pt-20 sm:pt-28 pb-12 sm:pb-14">
-            <SectionLabel>Get started</SectionLabel>
-            <h2 className="mt-7 text-[clamp(2rem,4.2vw,3.25rem)] font-medium leading-[1.08] tracking-[-0.02em] text-white">
-              Book a call
-            </h2>
-          </div>
-
-          <div className={`border-t ${LINE} p-4 sm:p-10`}>
-            <CalEmbed />
           </div>
         </div>
       </section>
