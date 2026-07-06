@@ -12,8 +12,9 @@
 // with the giant ghosted wordmark lit by a white beam from the right edge, mono
 // uppercase for nav links, labels, and pill buttons, bracketed section labels like
 // [ PRODUCTS ], medium weight sans headlines, products as full screen rows with a
-// framed line art board each, divided by 1px lines, full width section rules and
-// frame rails, a future of AI statement, and a short Get started closer.
+// framed line art board each (Obsidian style graph for Shiloh, a voice memo for
+// Voice), divided by 1px lines, full width section rules and frame rails, and a
+// short Get started closer with one big button.
 // No color anywhere: the light is white, the page is black.
 // Booking lives on its own page at /book; every Book a call button points there.
 
@@ -133,10 +134,10 @@ const PRODUCTS: {
     name: "Voice",
     title: "Feels like talking to a person",
     body: [
-      "Voice is built on Gemini Live, real time voice AI from Google, with Tesurai as the wrapper that fits it to your product and your brand.",
-      "Users talk to Shiloh, Tessa, and Senna out loud. They speak, and the software speaks back in the moment, in a natural voice. No menus, no forms, no charts.",
+      "Voice is what speaks to your users. It is the wrapper that lets them talk to Shiloh and Tessa out loud and hear the answer back in a natural voice.",
+      "Users ask a question in the moment and the software answers in the moment. No menus, no forms, no charts.",
     ],
-    anchor: "Powered by Gemini Live. Wrapped by Tesurai.",
+    anchor: "The voice of your product.",
   },
   {
     id: "senna",
@@ -151,27 +152,39 @@ const PRODUCTS: {
   },
 ];
 
-// Thin line art for each product, Grok style: wireframe drawings in a framed
-// artboard with corner dots. All strokes inherit currentColor from the frame.
+// Thin line art for each product, Grok style: wireframe drawings in a plain
+// square frame. All strokes inherit currentColor from the frame.
+// Shiloh: an Obsidian style graph view, a dense web of connected nodes.
 function ShilohArt() {
   return (
-    <svg viewBox="0 0 400 280" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden className="h-full w-full">
-      <circle cx="200" cy="140" r="112" strokeOpacity="0.25" strokeDasharray="3 7" />
-      <circle cx="200" cy="140" r="70" strokeOpacity="0.2" strokeDasharray="2 6" />
-      <g strokeOpacity="0.5">
-        <path d="M200 60 140 95M200 60 255 90M140 95 120 150M140 95 200 140M255 90 200 140M255 90 275 150M120 150 155 205M200 140 155 205M200 140 235 210M275 150 235 210M200 140 120 150" />
+    <svg viewBox="0 0 400 280" fill="none" stroke="currentColor" strokeWidth="1" aria-hidden className="h-full w-full">
+      <g strokeOpacity="0.32">
+        <path d="M200 140 120 92M200 140 288 178M200 140 216 98M200 140 242 150M200 140 138 162M200 140 176 216M200 140 252 52M120 92 58 64M120 92 158 46M120 92 64 150M120 92 44 112M120 92 138 162M120 92 216 98M288 178 256 224M288 178 342 198M288 178 242 150M288 178 300 108M288 178 354 142M288 178 176 216M158 46 252 52M252 52 216 98M252 52 332 78M332 78 300 108M300 108 216 98M300 108 354 142M64 150 44 112M64 150 92 214M92 214 176 216M176 216 256 224M138 162 92 214M242 150 256 224M342 198 354 142M58 64 44 112M158 46 216 98" />
       </g>
-      <g fill="currentColor" stroke="none" fillOpacity="0.7">
-        <circle cx="200" cy="60" r="3" />
-        <circle cx="140" cy="95" r="3" />
-        <circle cx="255" cy="90" r="3" />
-        <circle cx="120" cy="150" r="3" />
-        <circle cx="275" cy="150" r="3" />
-        <circle cx="155" cy="205" r="3" />
-        <circle cx="235" cy="210" r="3" />
+      <g fill="currentColor" stroke="none">
+        <g fillOpacity="0.6">
+          <circle cx="58" cy="64" r="2.5" />
+          <circle cx="158" cy="46" r="3" />
+          <circle cx="252" cy="52" r="2.5" />
+          <circle cx="332" cy="78" r="3" />
+          <circle cx="64" cy="150" r="2.5" />
+          <circle cx="92" cy="214" r="3" />
+          <circle cx="176" cy="216" r="2.5" />
+          <circle cx="256" cy="224" r="3" />
+          <circle cx="342" cy="198" r="2.5" />
+          <circle cx="300" cy="108" r="2.5" />
+          <circle cx="216" cy="98" r="3" />
+          <circle cx="138" cy="162" r="2.5" />
+          <circle cx="242" cy="150" r="3" />
+          <circle cx="354" cy="142" r="2.5" />
+          <circle cx="44" cy="112" r="2" />
+        </g>
+        <g fillOpacity="0.95">
+          <circle cx="200" cy="140" r="6" />
+          <circle cx="120" cy="92" r="5" />
+          <circle cx="288" cy="178" r="5" />
+        </g>
       </g>
-      <circle cx="200" cy="140" r="4.5" fill="currentColor" stroke="none" />
-      <circle cx="200" cy="140" r="10" strokeOpacity="0.45" />
     </svg>
   );
 }
@@ -189,14 +202,18 @@ function TessaArt() {
   );
 }
 
+// Voice: a voice memo, a play button and waveform inside a memo pill.
 function VoiceArt() {
   return (
-    <svg viewBox="0 0 400 280" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" aria-hidden className="h-full w-full">
-      <g strokeOpacity="0.55">
-        <path d="M60 133v14M76 128v24M92 120v40M108 110v60M124 96v88M156 104v72M188 88v104M220 100v80M252 92v96M284 112v56M300 122v36M316 128v24M332 133v14" />
-      </g>
-      <g strokeOpacity="0.95">
-        <path d="M140 78v124M172 70v140M236 76v128M268 102v76" />
+    <svg viewBox="0 0 400 280" fill="none" stroke="currentColor" aria-hidden className="h-full w-full">
+      {/* memo pill */}
+      <rect x="46" y="100" width="308" height="80" rx="40" strokeWidth="1.5" strokeOpacity="0.35" />
+      {/* play button */}
+      <circle cx="92" cy="140" r="22" strokeWidth="1.5" strokeOpacity="0.7" />
+      <path d="M85 129 L85 151 L107 140 Z" fill="currentColor" stroke="none" fillOpacity="0.85" />
+      {/* waveform */}
+      <g strokeWidth="3" strokeLinecap="round" strokeOpacity="0.7">
+        <path d="M134 134v12M148 128v24M162 118v44M176 110v60M190 122v36M204 104v72M218 116v48M232 126v28M246 116v48M260 108v64M274 122v36M288 128v24M302 132v16M316 124v32M330 132v16" />
       </g>
     </svg>
   );
@@ -288,13 +305,21 @@ export default async function Page({
             />
           </div>
 
-          {/* the brand wordmark, ghosted and faded, is the headline */}
+          {/* the brand wordmark as the headline, faded with a left to right
+              gradient so it dissolves across rather than reading as flat grey */}
           <div aria-hidden className="absolute inset-0 flex items-center justify-center px-6 sm:px-16">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src="/logo-white.svg"
               alt=""
-              className="w-full max-w-[1080px] opacity-[0.14] select-none"
+              className="w-full max-w-[1080px] select-none"
+              style={{
+                opacity: 0.32,
+                maskImage:
+                  "linear-gradient(90deg, transparent 0%, black 24%, black 50%, transparent 94%)",
+                WebkitMaskImage:
+                  "linear-gradient(90deg, transparent 0%, black 24%, black 50%, transparent 94%)",
+              }}
             />
           </div>
 
@@ -393,27 +418,19 @@ export default async function Page({
         </div>
       </section>
 
-      {/* Vision: the future of AI, used with your company. */}
+      {/* Get started: super short, the big button is the section. */}
       <section className={`border-b ${LINE}`}>
         <div className={`max-w-[1240px] mx-auto border-x ${LINE} px-6 sm:px-10 py-24 sm:py-36`}>
-          <SectionLabel>The future</SectionLabel>
-          <h2 className="mt-7 text-balance text-[clamp(1.875rem,3.6vw,2.875rem)] font-medium leading-[1.18] tracking-[-0.025em] text-white max-w-[920px]">
-            The future of AI is not another chatbot on the side. It is intelligence
-            built into your product, working for your users, under your brand.
-          </h2>
-        </div>
-      </section>
-
-      {/* Get started: super short, the buttons are the section. */}
-      <section className={`border-b ${LINE}`}>
-        <div className={`max-w-[1240px] mx-auto border-x ${LINE} px-6 sm:px-10 py-24 sm:py-32`}>
           <h2 className="text-[clamp(2.5rem,6vw,4.5rem)] font-medium leading-[1.02] tracking-[-0.03em] text-white">
             Get started.
           </h2>
-          <div className="mt-9 flex flex-wrap gap-3">
-            <PillLink href="/book" filled>
+          <div className="mt-10">
+            <a
+              href="/book"
+              className="inline-flex items-center justify-center rounded-full bg-white text-black px-10 sm:px-14 py-5 sm:py-6 font-mono text-[13px] sm:text-[15px] tracking-[0.16em] uppercase hover:bg-white/85 transition-colors"
+            >
               Book a call
-            </PillLink>
+            </a>
           </div>
         </div>
       </section>
