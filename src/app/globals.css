@@ -9,3 +9,53 @@ html,
 body {
   background: #0a0a0a;
 }
+
+/* Product artboard animations. Kept CSS only so the graph and waveform feel
+   live without extra JS. */
+
+/* Shiloh graph: a signal flows along the web edges. */
+@keyframes tsr-flow {
+  to {
+    stroke-dashoffset: -48;
+  }
+}
+.tsr-flow {
+  stroke-dasharray: 3 9;
+  animation: tsr-flow 2.4s linear infinite;
+}
+
+/* Shiloh graph: nodes twinkle in and out. */
+@keyframes tsr-twinkle {
+  0%,
+  100% {
+    opacity: 0.4;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+.tsr-twinkle {
+  animation: tsr-twinkle 2.8s ease-in-out infinite;
+}
+
+/* Voice memo: waveform equalizer while the demo is playing. */
+@keyframes tsr-eq {
+  0%,
+  100% {
+    transform: scaleY(0.28);
+  }
+  50% {
+    transform: scaleY(1);
+  }
+}
+.tsr-eq {
+  animation: tsr-eq 0.9s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tsr-flow,
+  .tsr-twinkle,
+  .tsr-eq {
+    animation: none;
+  }
+}

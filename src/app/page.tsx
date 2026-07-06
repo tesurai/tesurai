@@ -12,16 +12,19 @@
 // with the giant ghosted wordmark lit by a white beam from the right edge, mono
 // uppercase for nav links, labels, and pill buttons, bracketed section labels like
 // [ PRODUCTS ], medium weight sans headlines, products as full screen rows with a
-// framed line art board each (Obsidian style graph for Shiloh, a voice memo for
-// Voice), divided by 1px lines, full width section rules and frame rails, and a
-// short Get started closer with one big button.
+// framed line art board each (animated Obsidian style graph for Shiloh, an
+// interactive voice memo that speaks a demo for Voice, a shared progress track
+// for Senna), divided by 1px lines, full width section rules and frame rails, and
+// a short Book a call closer with one big button.
 // No color anywhere: the light is white, the page is black.
 // Booking lives on its own page at /book; every Book a call button points there.
+
+import VoiceMemo from "./voice-memo";
 
 const BROWSER_TITLE = "Tesurai | Intelligence for digital consumer products.";
 const SHARE_TITLE = "Intelligence for digital consumer products.";
 const SHARE_DESCRIPTION =
-  "Tesurai builds intelligence that remembers your users, talks to them, and brings them together. We implement it into your product, under your brand.";
+  "Four AI products for consumer apps, built into your product under your brand. They remember each user, guide them, talk to them, and bring them together.";
 const SHARE_IMAGE = "/og.png";
 
 export const metadata = {
@@ -154,31 +157,47 @@ const PRODUCTS: {
 
 // Thin line art for each product, Grok style: wireframe drawings in a plain
 // square frame. All strokes inherit currentColor from the frame.
-// Shiloh: an Obsidian style graph view, a dense web of connected nodes.
+// Shiloh: an animated Obsidian style graph view. A faint static web with a
+// signal flowing along the edges and nodes twinkling, so it reads as a live,
+// growing brain. The edge path is shared by a static underlay and a flowing
+// overlay. Falls still under prefers-reduced-motion (handled in globals.css).
+const SHILOH_EDGES =
+  "M200 140 120 92M200 140 288 178M200 140 216 98M200 140 242 150M200 140 138 162M200 140 176 216M200 140 252 52M120 92 58 64M120 92 158 46M120 92 64 150M120 92 44 112M120 92 138 162M120 92 216 98M288 178 256 224M288 178 342 198M288 178 242 150M288 178 300 108M288 178 354 142M288 178 176 216M158 46 252 52M252 52 216 98M252 52 332 78M332 78 300 108M300 108 216 98M300 108 354 142M64 150 44 112M64 150 92 214M92 214 176 216M176 216 256 224M138 162 92 214M242 150 256 224M342 198 354 142M58 64 44 112M158 46 216 98";
+
+const SHILOH_NODES: [number, number, number][] = [
+  [58, 64, 2.5],
+  [158, 46, 3],
+  [252, 52, 2.5],
+  [332, 78, 3],
+  [64, 150, 2.5],
+  [92, 214, 3],
+  [176, 216, 2.5],
+  [256, 224, 3],
+  [342, 198, 2.5],
+  [300, 108, 2.5],
+  [216, 98, 3],
+  [138, 162, 2.5],
+  [242, 150, 3],
+  [354, 142, 2.5],
+  [44, 112, 2],
+];
+
 function ShilohArt() {
   return (
     <svg viewBox="0 0 400 280" fill="none" stroke="currentColor" strokeWidth="1" aria-hidden className="h-full w-full">
-      <g strokeOpacity="0.32">
-        <path d="M200 140 120 92M200 140 288 178M200 140 216 98M200 140 242 150M200 140 138 162M200 140 176 216M200 140 252 52M120 92 58 64M120 92 158 46M120 92 64 150M120 92 44 112M120 92 138 162M120 92 216 98M288 178 256 224M288 178 342 198M288 178 242 150M288 178 300 108M288 178 354 142M288 178 176 216M158 46 252 52M252 52 216 98M252 52 332 78M332 78 300 108M300 108 216 98M300 108 354 142M64 150 44 112M64 150 92 214M92 214 176 216M176 216 256 224M138 162 92 214M242 150 256 224M342 198 354 142M58 64 44 112M158 46 216 98" />
-      </g>
+      <path d={SHILOH_EDGES} strokeOpacity="0.12" />
+      <path className="tsr-flow" d={SHILOH_EDGES} strokeOpacity="0.55" />
       <g fill="currentColor" stroke="none">
-        <g fillOpacity="0.6">
-          <circle cx="58" cy="64" r="2.5" />
-          <circle cx="158" cy="46" r="3" />
-          <circle cx="252" cy="52" r="2.5" />
-          <circle cx="332" cy="78" r="3" />
-          <circle cx="64" cy="150" r="2.5" />
-          <circle cx="92" cy="214" r="3" />
-          <circle cx="176" cy="216" r="2.5" />
-          <circle cx="256" cy="224" r="3" />
-          <circle cx="342" cy="198" r="2.5" />
-          <circle cx="300" cy="108" r="2.5" />
-          <circle cx="216" cy="98" r="3" />
-          <circle cx="138" cy="162" r="2.5" />
-          <circle cx="242" cy="150" r="3" />
-          <circle cx="354" cy="142" r="2.5" />
-          <circle cx="44" cy="112" r="2" />
-        </g>
+        {SHILOH_NODES.map(([cx, cy, r], i) => (
+          <circle
+            key={`${cx}-${cy}`}
+            cx={cx}
+            cy={cy}
+            r={r}
+            className="tsr-twinkle"
+            style={{ animationDelay: `${(i % 6) * 460}ms` }}
+          />
+        ))}
         <g fillOpacity="0.95">
           <circle cx="200" cy="140" r="6" />
           <circle cx="120" cy="92" r="5" />
@@ -202,36 +221,40 @@ function TessaArt() {
   );
 }
 
-// Voice: a voice memo, a play button and waveform inside a memo pill.
-function VoiceArt() {
-  return (
-    <svg viewBox="0 0 400 280" fill="none" stroke="currentColor" aria-hidden className="h-full w-full">
-      {/* memo pill */}
-      <rect x="46" y="100" width="308" height="80" rx="40" strokeWidth="1.5" strokeOpacity="0.35" />
-      {/* play button */}
-      <circle cx="92" cy="140" r="22" strokeWidth="1.5" strokeOpacity="0.7" />
-      <path d="M85 129 L85 151 L107 140 Z" fill="currentColor" stroke="none" fillOpacity="0.85" />
-      {/* waveform */}
-      <g strokeWidth="3" strokeLinecap="round" strokeOpacity="0.7">
-        <path d="M134 134v12M148 128v24M162 118v44M176 110v60M190 122v36M204 104v72M218 116v48M232 126v28M246 116v48M260 108v64M274 122v36M288 128v24M302 132v16M316 124v32M330 132v16" />
-      </g>
-    </svg>
-  );
-}
-
+// Senna: two members running the same program, joined by a shared progress
+// track. Filled checkpoints are shared check ins already done, the hollow one
+// is next, the ticks above are days they held each other accountable.
 function SennaArt() {
   return (
     <svg viewBox="0 0 400 280" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden className="h-full w-full">
-      <ellipse cx="200" cy="150" rx="168" ry="98" strokeOpacity="0.2" strokeDasharray="3 7" />
+      {/* two members */}
       <g strokeOpacity="0.8">
-        <circle cx="110" cy="112" r="22" />
-        <path d="M70 186a40 34 0 0 1 80 0" />
-        <circle cx="290" cy="112" r="22" />
-        <path d="M250 186a40 34 0 0 1 80 0" />
+        <circle cx="84" cy="140" r="30" />
+        <circle cx="316" cy="140" r="30" />
       </g>
-      <path d="M144 150h40M216 150h40" strokeOpacity="0.5" />
-      <circle cx="200" cy="150" r="7" fill="currentColor" stroke="none" />
-      <circle cx="200" cy="150" r="15" strokeOpacity="0.45" strokeDasharray="2 5" />
+      {/* person glyphs */}
+      <g strokeOpacity="0.5">
+        <circle cx="84" cy="130" r="8" />
+        <path d="M68 158a16 13 0 0 1 32 0" />
+        <circle cx="316" cy="130" r="8" />
+        <path d="M300 158a16 13 0 0 1 32 0" />
+      </g>
+      {/* shared progress track */}
+      <path d="M120 140h160" strokeOpacity="0.28" />
+      <g fill="currentColor" stroke="none">
+        <circle cx="150" cy="140" r="4.5" fillOpacity="0.9" />
+        <circle cx="185" cy="140" r="4.5" fillOpacity="0.9" />
+        <circle cx="220" cy="140" r="4.5" fillOpacity="0.9" />
+      </g>
+      <circle cx="255" cy="140" r="4.5" strokeOpacity="0.5" />
+      {/* accountability check ins */}
+      <path
+        d="M182 116l4 5 8-11M217 116l4 5 8-11"
+        strokeWidth="1.6"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeOpacity="0.75"
+      />
     </svg>
   );
 }
@@ -239,7 +262,7 @@ function SennaArt() {
 const ART: Record<string, () => React.ReactNode> = {
   shiloh: ShilohArt,
   tessa: TessaArt,
-  voice: VoiceArt,
+  voice: VoiceMemo,
   senna: SennaArt,
 };
 
@@ -343,9 +366,10 @@ export default async function Page({
             <span aria-hidden className="hidden sm:block font-mono text-[15px] text-white/50">
               ↓
             </span>
-            <p className="max-w-[460px] text-[13.5px] font-normal leading-[1.6] text-white/70">
-              Tesurai builds intelligence that remembers your users, talks to them, and
-              brings them together. We implement it into your product, under your brand.
+            <p className="max-w-[470px] text-[13.5px] font-normal leading-[1.6] text-white/70">
+              Four AI products for consumer apps, built into your product under your
+              brand. They remember each user, guide them, talk to them, and bring
+              them together.
             </p>
             <div className="flex flex-wrap gap-3">
               <PillLink href="/book" filled>
@@ -366,7 +390,7 @@ export default async function Page({
           <div className="px-6 sm:px-10 pt-20 sm:pt-28 pb-12 sm:pb-16">
             <SectionLabel>Products</SectionLabel>
             <h2 className="mt-7 text-[clamp(2rem,4.2vw,3.25rem)] font-medium leading-[1.08] tracking-[-0.02em] text-white max-w-[820px]">
-              Intelligence for digital consumer products.
+              Memory, intelligence, a voice, and a way to grow together.
             </h2>
           </div>
 
@@ -418,18 +442,18 @@ export default async function Page({
         </div>
       </section>
 
-      {/* Get started: super short, the big button is the section. */}
+      {/* Close: super short, the big button is the section. */}
       <section className={`border-b ${LINE}`}>
         <div className={`max-w-[1240px] mx-auto border-x ${LINE} px-6 sm:px-10 py-24 sm:py-36`}>
           <h2 className="text-[clamp(2.5rem,6vw,4.5rem)] font-medium leading-[1.02] tracking-[-0.03em] text-white">
-            Get started.
+            Book a call.
           </h2>
           <div className="mt-10">
             <a
               href="/book"
               className="inline-flex items-center justify-center rounded-full bg-white text-black px-10 sm:px-14 py-5 sm:py-6 font-mono text-[13px] sm:text-[15px] tracking-[0.16em] uppercase hover:bg-white/85 transition-colors"
             >
-              Book a call
+              Pick a time
             </a>
           </div>
         </div>
