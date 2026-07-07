@@ -1,6 +1,6 @@
 "use client";
 
-// Shiloh: an interactive graph view, modeled on the Obsidian graph. A small
+// Quantum: an interactive graph view, modeled on the Obsidian graph. A small
 // force simulation keeps the web alive (nodes repel, edges pull, everything
 // drifts). Hover a node to light up its connections; drag a node to disturb
 // the web and watch it settle. Falls still under prefers-reduced-motion.
@@ -37,7 +37,7 @@ const EDGES: readonly [number, number][] = [
   [7, 8], [8, 9], [9, 10], [14, 8], [15, 10], [13, 4], [3, 7],
 ];
 
-export default function ShilohGraph() {
+export default function QuantumGraph() {
   const svgRef = useRef<SVGSVGElement>(null);
   const nodes = useRef(NODES0.map(([x, y, r]) => ({ x, y, vx: 0, vy: 0, r })));
   const drag = useRef<number | null>(null);

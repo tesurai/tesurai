@@ -13,13 +13,13 @@ export type Product = {
 
 export const PRODUCTS: Product[] = [
   {
-    id: "shiloh",
+    id: "quantum",
     n: "01",
-    name: "Shiloh",
+    name: "Quantum",
     title: "A memory for every user",
     tagline: "Like an LLM, but for your brain.",
     body: [
-      "Shiloh is an AI brain that belongs to each user, built from their life inside your product. Every session, every entry, every action feeds it.",
+      "Quantum is an AI brain that belongs to each user, built from their life inside your product. Every session, every entry, every action feeds it.",
       "Over time it compiles what it hears into skills, traits, patterns, and commitments: one living map of the user, recalled instantly whenever they talk.",
     ],
   },
@@ -28,9 +28,9 @@ export const PRODUCTS: Product[] = [
     n: "02",
     name: "Tessa",
     title: "Analytics you can talk to",
-    tagline: "The intelligence layer on top of Shiloh.",
+    tagline: "The intelligence layer on top of Quantum.",
     body: [
-      "Tessa reads the map Shiloh builds, finds the patterns users cannot see themselves, and turns them into feedback.",
+      "Tessa reads the map Quantum builds, finds the patterns users cannot see themselves, and turns them into feedback.",
       "What to fix, what to keep doing, and the next step to take: clear feedback from a user's own data, aimed at the results they came for.",
     ],
   },
@@ -41,7 +41,7 @@ export const PRODUCTS: Product[] = [
     title: "A voice, not a screen",
     tagline: "The voice of your product.",
     body: [
-      "Voice is what speaks to your users. It is the layer that lets them talk to Shiloh and Tessa out loud and hear the answer back in a natural voice.",
+      "Voice is what speaks to your users. It is the layer that lets them talk to Quantum and Tessa out loud and hear the answer back in a natural voice.",
       "Users ask in the moment and the software answers in the moment. No menus, no forms, no charts.",
     ],
   },

@@ -13,7 +13,7 @@ body {
 /* Product artboard animations. Kept CSS only so the graph and waveform feel
    live without extra JS. */
 
-/* Shiloh graph: a signal flows along the web edges. */
+/* Quantum graph: a signal flows along the web edges. */
 @keyframes tsr-flow {
   to {
     stroke-dashoffset: -48;
@@ -24,7 +24,7 @@ body {
   animation: tsr-flow 2.4s linear infinite;
 }
 
-/* Shiloh graph: nodes twinkle in and out. */
+/* Quantum graph: nodes twinkle in and out. */
 @keyframes tsr-twinkle {
   0%,
   100% {

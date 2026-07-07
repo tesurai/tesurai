@@ -1,8 +1,8 @@
-// Renders the right line art for each product. Shiloh and Voice are interactive
+// Renders the right line art for each product. Quantum and Voice are interactive
 // client components; Tessa and Senna are static wireframes. All strokes inherit
 // currentColor from the frame.
 
-import ShilohGraph from "./shiloh-graph";
+import QuantumGraph from "./quantum-graph";
 import VoiceMemo from "./voice-memo";
 
 // Tessa: stacked intelligence planes with a pulse reading across the top layer.
@@ -46,7 +46,7 @@ function SennaArt() {
 }
 
 export function ProductArt({ id }: { id: string }) {
-  if (id === "shiloh") return <ShilohGraph />;
+  if (id === "quantum") return <QuantumGraph />;
   if (id === "voice") return <VoiceMemo />;
   if (id === "tessa") return <TessaArt />;
   return <SennaArt />;

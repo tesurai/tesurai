@@ -1,4 +1,4 @@
-// Shared layout for the four per product pages (/shiloh, /tessa, /voice,
+// Shared layout for the four per product pages (/quantum, /tessa, /voice,
 // /senna). Same Grok style black and white system as the landing page: frame
 // rails, mono labels, the product's line art in a square frame, and links to
 // the other products.

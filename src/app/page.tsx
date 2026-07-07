@@ -1,10 +1,10 @@
 // Tesurai company landing page.
 // Voice: written as a category-defining company. Confident, declarative, short.
 // The category is AI software for digital consumer products, four products:
-// Shiloh (an AI memory brain per user), Tessa (the intelligence layer on
-// Shiloh's data), Voice (what speaks to users), and Senna (the social side where
+// Quantum (an AI memory brain per user), Tessa (the intelligence layer on
+// Quantum's data), Voice (what speaks to users), and Senna (the social side where
 // users grow together). Product data and art live in shared modules so the
-// per product pages (/shiloh, /tessa, /voice, /senna) stay in sync.
+// per product pages (/quantum, /tessa, /voice, /senna) stay in sync.
 // Copy rules: fifth grade reading level, no dashes anywhere, no named LLMs, no
 // named voice provider on the page, no made up outcome claims.
 // Design system: Grok / xAI style, black and white only. Near black canvas, a
@@ -156,7 +156,7 @@ export default async function Page({
               <PillLink href="/book" filled>
                 Book a call
               </PillLink>
-              <PillLink href="#shiloh">Learn more</PillLink>
+              <PillLink href="#quantum">Learn more</PillLink>
             </div>
           </div>
         </div>
@@ -234,7 +234,7 @@ export default async function Page({
             Four products. One system.
           </h2>
           <p className="mt-5 max-w-[620px] text-[15px] font-normal leading-[1.7] text-white/55">
-            Shiloh, Tessa, Voice, and Senna work as one. We handle the intelligence
+            Quantum, Tessa, Voice, and Senna work as one. We handle the intelligence
             and keep it under your brand. The only thing you do is wire up your
             product, and your users get all four.
           </p>
